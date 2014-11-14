@@ -1,0 +1,19 @@
+# Site settings
+title: Style Guide Resources
+description: Resources for creating Front-End Style Guides and Pattern Library
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+
+collections:
+    resourcearticle:
+        output: true
+    resourcebook:
+        output: true
+    resourceexample:
+        output: true
+    resourcetool:
+        output: true
+    resourcetalk:
+        output: true

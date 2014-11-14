@@ -1,0 +1,23 @@
+---
+layout: page
+title: Articles
+---
+
+<section>
+
+    <h1>Articles</h1>
+    
+    <ul class="resources resource-type-article">
+    {% for resourcearticle in site.resourcearticle limit:3 %}
+          <li class="resource">
+            <a href="{{ resourcearticle.link }}" class="resource-url">
+                <h2 class="resource-title">{{ resourcearticle.title }}</h2>
+                {{ resourcearticle.content }}
+                <p class="resource-author">By <strong>{{ resourcearticle.author }}</strong></p>
+                <p class="resource-publisher">Published on <strong>{{ resourcearticle.site }}</strong></p>
+            </a>
+          </li>
+    {% endfor %}
+    </ul>
+
+</section>

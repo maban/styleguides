@@ -1,0 +1,23 @@
+---
+layout: page
+title: Tools
+---
+
+<section>
+
+    <h1>Tools</h1>
+    
+    <ul class="resources resource-type-tool">
+    {% for resourcetool in site.resourcetool limit:3 %}
+          <li class="resource">
+            <a href="{{ resourcetool.link }}" class="resource-url">
+                <h2 class="resource-title">{{ resourcetool.title }}</h2>
+                {{ resourcetool.content }}
+                <p class="resource-author">By <strong>{{ resourcetool.author }}</strong></p>
+                <p class="resource-language">Language/Platform: <strong>{{ resourcetool.language }}</strong></p>
+            </a>
+          </li>
+    {% endfor %}
+    </ul>
+
+</section>
