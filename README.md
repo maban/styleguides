@@ -8,7 +8,7 @@ Best of all, you can add your own resources to share with others. And you don't 
 
 ## How to add resources the easy way
 
-The site uses a templating system called Jekyll that generates static HTML files, and makes it easy (hopefully) to add files that share the same template.
+The site uses a templating system called Jekyll that generates static HTML files, and makes it easy (hopefully) to add files that share the same template. GitHub plays nicely with Jekyll, and lets you add and edit files using the web interface. So no need to download anything, you can do it straight in repository on GitHub.
 
 First, you'll need to decide whether your resource is a book, article, tool, example, or talk.
 
