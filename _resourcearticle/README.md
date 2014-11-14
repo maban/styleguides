@@ -1,6 +1,10 @@
-# Adding a link to an article
+# Adding an article
 
-To add an article, [create a new file within the _resourcearticle folder](https://github.com/maban/styleguides/new/gh-pages/_resourcearticle) and paste this templating code into it:
+To add an article:
+
+1. [create a new file within the _resourcearticle folder](https://github.com/maban/styleguides/new/gh-pages/_resourcearticle) (the same one as this README). 
+2. Give it a name that's the same as the title of the article, with words separated by hyphens.
+3. Paste the following templating code into it:
 
 ```
 ---
@@ -13,11 +17,13 @@ site: The site that the linked article is published on
 An optional short description of the article goes here
 ```
 
-The bit sandwiched between the --- is called YAML front matter and this takes the links and inserts the author's name into the template. The bit after that is the actual content.
+The text sandwiched between the --- --- is called "YAML front matter" and this takes the data and inserts it all into the template. The bit after that is the actual content.
 
-**Do not add any links to the content** because the whole thing is wrapped in a link tag.
+**Do not add any links to the content** because the whole thing is wrapped in a link tag, so adding another link will stop it working.
 
 ## Example
+
+Here's an example of an article I've added to the _resourcearticle folder:
 
 ```
 ---
