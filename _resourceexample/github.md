@@ -1,4 +1,4 @@
 ---
-title: GitHub: Styleguide
+title: GitHub
 link: https://github.com/styleguide
 ---
