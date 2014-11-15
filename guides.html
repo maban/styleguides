@@ -1,0 +1,28 @@
+---
+layout: page
+title: Guides
+---
+
+<section>
+
+    <h1>Guides</h1>
+    
+    <ul class="resources resource-type-guide">
+        {% for resourceguide in site.resourceguide %}
+        <li class="resource">
+            <a href="{{ resourceguide.link }}" class="resource-url">
+                <h2 class="resource-title">{{ resourceguide.title }}</h2>
+                {{ resourceguide.content }}
+                <p class="resource-author">By <strong>{{ resourceguide.author }}</strong></p>
+                <p class="resource-podcast">Type: <strong>{{ resourceguide.type }}</strong></p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourceguide" class="resource-url">
+                <h2 class="resource-title">Add a guide</h2>
+            </a>
+        </li>
+    </ul>
+
+</section>

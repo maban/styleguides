@@ -13,6 +13,8 @@ collections:
         output: true
     resourceexample:
         output: true
+    resourceguide:
+        output: true
     resourcepodcast:
         output: true
     resourcetalk:

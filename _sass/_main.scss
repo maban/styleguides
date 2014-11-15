@@ -56,6 +56,7 @@ section {
 .resource-type-talk .resource,
 .resource-type-tool .resource,
 .resource-type-podcast .resource,
+.resource-type-guide .resource,
 .resource-type-tool .resource-add {
     padding-top: 35px;
     border-radius: 3px;
@@ -87,6 +88,14 @@ section {
     background-image: url("/images/icons/website/website.svg");
     background-size: 34px;
     background-position: 98% 1px;
+}
+
+.resource-type-guide .resource {
+    background-color: #A3C0F5;
+    background-image: url("/images/icons/glasses/glasses.png");
+    background-image: url("/images/icons/glasses/glasses.svg");
+    background-size: 37px;
+    background-position: 98% 13px;
 }
 
 .resource-type-talk .resource {
