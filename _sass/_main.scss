@@ -55,6 +55,7 @@ section {
 .resource-type-example .resource,
 .resource-type-talk .resource,
 .resource-type-tool .resource,
+.resource-type-podcast .resource,
 .resource-type-tool .resource-add {
     padding-top: 35px;
     border-radius: 3px;
@@ -100,6 +101,14 @@ section {
     background-color: #C0B8EF;
     background-image: url("/images/icons/wrench/wrench.png");
     background-image: url("/images/icons/wrench/wrench.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+}
+
+.resource-type-podcast .resource {
+    background-color: #F4CB94;
+    background-image: url("/images/icons/podcast/podcast.png");
+    background-image: url("/images/icons/podcast/podcast.svg");
     background-size: 22px;
     background-position: 98% 7px;
 }
