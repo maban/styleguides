@@ -3,7 +3,7 @@
 To add a podcast episode:
 
 1. [create a new file within the _resourcepodcast folder](https://github.com/maban/styleguides/new/gh-pages/_resourcepodcast) (the same one as this README). 
-2. Give the file a name that's the podcast's name (eg webahead), a hyphen, and episode number.
+2. Give the file a name that's the podcast's name (eg webahead), a hyphen, and episode number, with .md at the end.
 3. Paste the following templating code into it:
 
 ```
