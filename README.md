@@ -6,6 +6,12 @@ This site lists lots of useful resources to help you learn about and create your
 
 Best of all, you can add your own resources to share with others. And you don't even need to download any files to do that, you can do it all within GitHub's web interface.
 
+## To do
+
+* Add screenshots to resources that are examples
+* Transfer all the resources from [https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides](Gimmiebar)
+* Set up a domain
+
 ## How to add resources the easy way
 
 The site uses a templating system called Jekyll that generates static HTML files, and makes it easy (hopefully) to add files that share the same template. GitHub plays nicely with Jekyll, and lets you add and edit files using the web interface. So no need to download anything, you can do it straight in repository on GitHub.
