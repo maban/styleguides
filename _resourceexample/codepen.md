@@ -1,4 +1,4 @@
 ---
-title: Codepen: Design Patterns
+title: Codepen Design Patterns
 link: http://codepen.io/patterns/
 ---

@@ -1,4 +1,4 @@
 ---
-title: Mailchimp: Voice and Tone
+title: Mailchimp's Voice and Tone
 link: http://voiceandtone.com/
 ---
