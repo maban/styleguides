@@ -3,7 +3,7 @@
 To add a tool:
 
 1. [create a new file within the _resourcetool folder](https://github.com/maban/styleguides/new/gh-pages/_resourcetool) (the same one as this README). 
-2. Give it a name that's the same as the tool, with words separated by hyphens.
+2. Give it a name that's the same as the tool, with words separated by hyphens, with .md at the end.
 3. Paste the following templating code into it:
 
 ```
