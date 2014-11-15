@@ -8,7 +8,7 @@ title: Examples
     <h1>Examples</h1>
     
     <ul class="resources resource-type-examples">
-    {% for resourceexample in site.resourceexample limit:3 %}
+    {% for resourceexample in site.resourceexample %}
           <li class="resource">
             <a href="{{ resourceexample.link }}" class="resource-url">
                 <h2 class="resource-title">{{ resourceexample.title }}</h2>
