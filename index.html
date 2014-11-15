@@ -3,44 +3,26 @@ layout: page
 ---
 
 <section>
-    
-    <h1>Examples</h1>
-    
-    <ul class="resources resource-type-examples">
-    {% for resourceexample in site.resourceexample limit:3 %}
-          <li class="resource">
-            <a href="{{ resourceexample.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourceexample.title }}</h2>
-                {{ resourceexample.content }}
-                <p class="resource-author">{{ resourceexample.author }}</p>
-                <p class="resource-site">{{ resourceexample.site }}</p>
-            </a>
-          </li>
-    {% endfor %}
-    </ul>
-    
-    <p><a href="examples.html">More examples…</a></p>
-
-</section>
-
-<section>
 
     <h1>Articles</h1>
     
     <ul class="resources resource-type-article">
-    {% for resourcearticle in site.resourcearticle limit:3 %}
-          <li class="resource">
+        {% for resourcearticle in site.resourcearticle %}
+        <li class="resource">
             <a href="{{ resourcearticle.link }}" class="resource-url">
                 <h2 class="resource-title">{{ resourcearticle.title }}</h2>
                 {{ resourcearticle.content }}
                 <p class="resource-author">By <strong>{{ resourcearticle.author }}</strong></p>
                 <p class="resource-publisher">Published on <strong>{{ resourcearticle.site }}</strong></p>
             </a>
-          </li>
-    {% endfor %}
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcearticle" class="resource-url">
+                <h2 class="resource-title">Add an article</h2>
+            </a>
+        </li>
     </ul>
-    
-    <p><a href="articles.html">More articles…</a></p>
 
 </section>
 
@@ -49,19 +31,22 @@ layout: page
     <h1>Talks</h1>
     
     <ul class="resources resource-type-talk">
-    {% for resourcetalk in site.resourcetalk limit:3 %}
-          <li class="resource">
+        {% for resourcetalk in site.resourcetalk %}
+        <li class="resource">
             <a href="{{ resourcetalk.link }}" class="resource-url">
                 <h2 class="resource-title">{{ resourcetalk.title }}</h2>
                 {{ resourcetalk.content }}
                 <p class="resource-author">By <strong>{{ resourcetalk.author }}</strong></p>
                 <p class="resource-publisher">At <strong>{{ resourcetalk.conference }}</strong></p>
             </a>
-          </li>
-    {% endfor %}
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcetalk" class="resource-url">
+                <h2 class="resource-title">Add a talk</h2>
+            </a>
+        </li>
     </ul>
-    
-    <p><a href="talks.html">More Talks…</a></p>
 
 </section>
 
@@ -70,19 +55,22 @@ layout: page
     <h1>Books</h1>
     
     <ul class="resources resource-type-book">
-    {% for resourcebook in site.resourcebook %}
-          <li itemscope itemtype="http://schema.org/Book" class="resource">
+        {% for resourcebook in site.resourcebook %}
+        <li itemscope itemtype="http://schema.org/Book" class="resource">
             <a href="{{ resourcebook.link }}" itemprop="url" class="resource-url">
                 <h2 itemprop="name" class="resource-title">{{ resourcebook.title }}</h2>
                 {{ resourcebook.content }}
                 <p class="resource-author">By <strong itemprop="author">{{ resourcebook.author }}</strong></p>
                 <p class="resource-publisher">Published by <strong itemprop="publisher">{{ resourcebook.publisher }}</strong></p>
             </a>
-          </li>
-    {% endfor %}
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcebook" class="resource-url">
+                <h2 class="resource-title">Add a book</h2>
+            </a>
+        </li>
     </ul>
-    
-    <p><a href="books.html">More books…</a></p>
 
 </section>
 
@@ -91,18 +79,45 @@ layout: page
     <h1>Tools</h1>
     
     <ul class="resources resource-type-tool">
-    {% for resourcetool in site.resourcetool limit:3 %}
-          <li class="resource">
+        {% for resourcetool in site.resourcetool %}
+        <li class="resource">
             <a href="{{ resourcetool.link }}" class="resource-url">
                 <h2 class="resource-title">{{ resourcetool.title }}</h2>
                 {{ resourcetool.content }}
                 <p class="resource-author">By <strong>{{ resourcetool.author }}</strong></p>
                 <p class="resource-language">Language/Platform: <strong>{{ resourcetool.language }}</strong></p>
             </a>
-          </li>
-    {% endfor %}
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcetool" class="resource-url">
+                <h2 class="resource-title">Add a tool</h2>
+            </a>
+        </li>
     </ul>
+
+</section>
+
+<section>
     
-    <p><a href="/tools.html">More tools…</a></p>
+    <h1>Examples</h1>
+    
+    <ul class="resources resource-type-example">
+        {% for resourceexample in site.resourceexample %}
+        <li class="resource">
+            <a href="{{ resourceexample.link }}" class="resource-url">
+                <h2 class="resource-title">{{ resourceexample.title }}</h2>
+                {{ resourceexample.content }}
+                <p class="resource-author">{{ resourceexample.author }}</p>
+                <p class="resource-site">{{ resourceexample.site }}</p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourceexample" class="resource-url">
+                <h2 class="resource-title">Add an example</h2>
+            </a>
+        </li>
+    </ul>
 
 </section>

@@ -11,23 +11,28 @@ section {
 .resource {
     margin: 0 0 20px 0;
     font-size: 15px;
-}
-
-.resource-url {
-    background-color: #fff;
     box-shadow: 0 0 1px rgba(0,0,0,0.3);
-    padding: 10px 20px;
-    display: block;
-    border-radius: 3px;
     transition: 0.2s;
-    color: #333;
     &:hover,
     &:focus {
         text-decoration: none;
-        color: #333;
         -webkit-transform: scale(1.05,1.05);
         
     }
+}
+
+.resource-url:link,
+.resource-url:visited,
+.resource-url:hover,
+.resource-url:focus,
+.resource-url:active {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 3px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 0 0 3px 3px;
 }
 
 .resource-type-article {
@@ -43,6 +48,73 @@ section {
 .resource-publisher,
 .resource-language {
     margin: 0;
+}
+
+.resource-type-article .resource,
+.resource-type-book .resource,
+.resource-type-example .resource,
+.resource-type-talk .resource,
+.resource-type-tool .resource,
+.resource-type-tool .resource-add {
+    padding-top: 35px;
+    border-radius: 3px;
+    background-size: 21px;
+    background-position: 98% 8px;
+    background-repeat: no-repeat;
+}
+
+
+.resource-type-article .resource {
+    background-color: #9DEAA1;
+    background-image: url("/images/icons/article/article.png");
+    background-image: url("/images/icons/article/article.svg");
+    background-size: 23px;
+    background-position: 98% 6px;
+}
+
+.resource-type-book .resource {
+    background-color: #E4DD97;
+    background-image: url("/images/icons/book/book.png");
+    background-image: url("/images/icons/book/book.svg");
+    background-size: 17px;
+    background-position: 98% 6px;
+}
+
+.resource-type-example .resource {
+    background-color: #80e5e5;
+    background-image: url("/images/icons/website/website.png");
+    background-image: url("/images/icons/website/website.svg");
+    background-size: 34px;
+    background-position: 98% 1px;
+}
+
+.resource-type-talk .resource {
+    background-color: #EFB7D3;
+    background-image: url("/images/icons/presentation/presentation.png");
+    background-image: url("/images/icons/presentation/presentation.svg");
+    background-size: 29px;
+    background-position: 98% 4px;
+}
+
+.resource-type-tool .resource {
+    background-color: #C0B8EF;
+    background-image: url("/images/icons/wrench/wrench.png");
+    background-image: url("/images/icons/wrench/wrench.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+}
+
+.resources .resource-add {
+    background-image: url("/images/icons/add/add.png");
+    background-image: url("/images/icons/add/add.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+    opacity: 0.55;
+    max-width: 250px;
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 600px) {

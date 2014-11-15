@@ -8,19 +8,21 @@ title: Talks
     <h1>Talks</h1>
     
     <ul class="resources resource-type-talk">
-    {% for resourcetalk in site.resourcetalk %}
-          <li class="resource">
+        {% for resourcetalk in site.resourcetalk %}
+        <li class="resource">
             <a href="{{ resourcetalk.link }}" class="resource-url">
                 <h2 class="resource-title">{{ resourcetalk.title }}</h2>
                 {{ resourcetalk.content }}
                 <p class="resource-author">By <strong>{{ resourcetalk.author }}</strong></p>
                 <p class="resource-publisher">At <strong>{{ resourcetalk.conference }}</strong></p>
-                <p class="resource-date">On <strong>{{ resourcetalk.date }}</strong></p>
             </a>
-          </li>
-    {% endfor %}
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcetalk" class="resource-url">
+                <h2 class="resource-title">Add a talk</h2>
+            </a>
+        </li>
     </ul>
-    
-    <p><a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcetalk">Add a talk</a></p>
 
 </section>
