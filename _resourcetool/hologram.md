@@ -1,5 +1,5 @@
 ---
-title: Kraken
+title: Hologram
 link: http://trulia.github.io/hologram/
 author: Trulia
 language: Markdown
