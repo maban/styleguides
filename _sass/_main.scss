@@ -133,6 +133,9 @@ section {
     .resource:nth-child(even) {
         margin-right: 0;
     }
+    .resource:nth-child(2n+3) {
+        clear: both;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -147,7 +150,15 @@ section {
         margin-right: 2%;
     }
     
+    .resource:nth-child(2n+3) {
+        clear: none;
+    }
+    
     .resource:nth-child(3n+3) {
         margin-right: 0;
+    }
+    
+    .resource:nth-child(3n+4) {
+        clear: both;
     }
 }
