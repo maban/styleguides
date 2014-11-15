@@ -7,13 +7,14 @@ layout: page
     <h1>Articles</h1>
     
     <ul class="resources resource-type-article">
-        {% for resourcearticle in site.resourcearticle %}
-        <li class="resource">
-            <a href="{{ resourcearticle.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcearticle.title }}</h2>
-                {{ resourcearticle.content }}
-                <p class="resource-author">By <strong>{{ resourcearticle.author }}</strong></p>
-                <p class="resource-publisher">Published on <strong>{{ resourcearticle.site }}</strong></p>
+        {% assign article = site.resourcearticle | sort: 'status' %}
+        {% for article in article reversed %}
+        <li class="resource {{ article.status }}">
+            <a href="{{ article.link }}" class="resource-url">
+                <h2 class="resource-title">{{ article.title }}</h2>
+                {{ article.content }}
+                <p class="resource-author">By <strong>{{ article.author }}</strong></p>
+                <p class="resource-publisher">Published on <strong>{{ article.site }}</strong></p>
             </a>
         </li>
         {% endfor %}
@@ -31,13 +32,14 @@ layout: page
     <h1>Talks</h1>
     
     <ul class="resources resource-type-talk">
-        {% for resourcetalk in site.resourcetalk %}
-        <li class="resource">
-            <a href="{{ resourcetalk.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcetalk.title }}</h2>
-                {{ resourcetalk.content }}
-                <p class="resource-author">By <strong>{{ resourcetalk.author }}</strong></p>
-                <p class="resource-publisher">At <strong>{{ resourcetalk.conference }}</strong></p>
+        {% assign talk = site.resourcetalk | sort: 'status' %}
+        {% for talk in talk reversed %}
+        <li class="resource {{ talk.status }}">
+            <a href="{{ talk.link }}" class="resource-url">
+                <h2 class="resource-title">{{ talk.title }}</h2>
+                {{ talk.content }}
+                <p class="resource-author">By <strong>{{ talk.author }}</strong></p>
+                <p class="resource-publisher">At <strong>{{ talk.conference }}</strong></p>
             </a>
         </li>
         {% endfor %}
@@ -55,13 +57,14 @@ layout: page
     <h1>Podcasts</h1>
     
     <ul class="resources resource-type-podcast">
-        {% for resourcepodcast in site.resourcepodcast %}
-        <li class="resource">
-            <a href="{{ resourcepodcast.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcepodcast.title }}</h2>
-                {{ resourcepodcast.content }}
-                <p class="resource-author">With <strong>{{ resourcepodcast.people }}</strong></p>
-                <p class="resource-podcast">On <strong>{{ resourcepodcast.podcast }}</strong></p>
+        {% assign podcast = site.resourcepodcast | sort: 'status' %}
+        {% for podcast in podcast reversed %}
+        <li class="resource {{ podcast.status }}">
+            <a href="{{ podcast.link }}" class="resource-url">
+                <h2 class="resource-title">{{ podcast.title }}</h2>
+                {{ podcast.content }}
+                <p class="resource-author">With <strong>{{ podcast.people }}</strong></p>
+                <p class="resource-podcast">On <strong>{{ podcast.podcast }}</strong></p>
             </a>
         </li>
         {% endfor %}
@@ -79,13 +82,14 @@ layout: page
     <h1>Books</h1>
     
     <ul class="resources resource-type-book">
-        {% for resourcebook in site.resourcebook %}
-        <li itemscope itemtype="http://schema.org/Book" class="resource">
-            <a href="{{ resourcebook.link }}" itemprop="url" class="resource-url">
-                <h2 itemprop="name" class="resource-title">{{ resourcebook.title }}</h2>
-                {{ resourcebook.content }}
-                <p class="resource-author">By <strong itemprop="author">{{ resourcebook.author }}</strong></p>
-                <p class="resource-publisher">Published by <strong itemprop="publisher">{{ resourcebook.publisher }}</strong></p>
+        {% assign book = site.resourcebook | sort: 'status' %}
+        {% for book in book reversed %}
+        <li itemscope itemtype="http://schema.org/Book" class="resource {{ book.status }}">
+            <a href="{{ book.link }}" itemprop="url" class="resource-url">
+                <h2 itemprop="name" class="resource-title">{{ book.title }}</h2>
+                {{ book.content }}
+                <p class="resource-author">By <strong itemprop="author">{{ book.author }}</strong></p>
+                <p class="resource-publisher">Published by <strong itemprop="publisher">{{ book.publisher }}</strong></p>
             </a>
         </li>
         {% endfor %}
@@ -103,13 +107,14 @@ layout: page
     <h1>Tools</h1>
     
     <ul class="resources resource-type-tool">
-        {% for resourcetool in site.resourcetool %}
-        <li class="resource">
-            <a href="{{ resourcetool.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcetool.title }}</h2>
-                {{ resourcetool.content }}
-                <p class="resource-author">By <strong>{{ resourcetool.author }}</strong></p>
-                <p class="resource-language">Language/Platform: <strong>{{ resourcetool.language }}</strong></p>
+        {% assign tool = site.resourcetool | sort: 'status' %}
+        {% for tool in tool reversed %}
+        <li class="resource {{ tool.status }}">
+            <a href="{{ tool.link }}" class="resource-url">
+                <h2 class="resource-title">{{ tool.title }}</h2>
+                {{ tool.content }}
+                <p class="resource-author">By <strong>{{ tool.author }}</strong></p>
+                <p class="resource-language">Language/Platform: <strong>{{ tool.language }}</strong></p>
             </a>
         </li>
         {% endfor %}
@@ -127,13 +132,14 @@ layout: page
     <h1>Examples</h1>
     
     <ul class="resources resource-type-example">
-        {% for resourceexample in site.resourceexample %}
-        <li class="resource">
-            <a href="{{ resourceexample.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourceexample.title }}</h2>
-                {{ resourceexample.content }}
-                <p class="resource-author">{{ resourceexample.author }}</p>
-                <p class="resource-site">{{ resourceexample.site }}</p>
+        {% assign example = site.resourceexample | sort: 'status' %}
+        {% for example in example reversed %}
+        <li class="resource {{ example.status }}">
+            <a href="{{ example.link }}" class="resource-url">
+                <h2 class="resource-title">{{ example.title }}</h2>
+                {{ example.content }}
+                <p class="resource-author">{{ example.author }}</p>
+                <p class="resource-site">{{ example.site }}</p>
             </a>
         </li>
         {% endfor %}
@@ -151,13 +157,14 @@ layout: page
     <h1>Guides</h1>
     
     <ul class="resources resource-type-guide">
-        {% for resourceguide in site.resourceguide %}
-        <li class="resource">
-            <a href="{{ resourceguide.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourceguide.title }}</h2>
-                {{ resourceguide.content }}
-                <p class="resource-author">By <strong>{{ resourceguide.author }}</strong></p>
-                <p class="resource-podcast">Type: <strong>{{ resourceguide.type }}</strong></p>
+        {% assign guide = site.resourceguide | sort: 'status' %}
+        {% for guide in guide reversed %}
+        <li class="resource {{ guide.status }}">
+            <a href="{{ guide.link }}" class="resource-url">
+                <h2 class="resource-title">{{ guide.title }}</h2>
+                {{ guide.content }}
+                <p class="resource-author">By <strong>{{ guide.author }}</strong></p>
+                <p class="resource-podcast">Type: <strong>{{ guide.type }}</strong></p>
             </a>
         </li>
         {% endfor %}

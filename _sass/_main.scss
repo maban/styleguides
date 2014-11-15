@@ -13,6 +13,7 @@ section {
     font-size: 15px;
     box-shadow: 0 0 1px rgba(0,0,0,0.3);
     transition: 0.2s;
+    position: relative;
     &:hover,
     &:focus {
         text-decoration: none;
@@ -72,6 +73,10 @@ section {
     background-image: url("/images/icons/article/article.svg");
     background-size: 23px;
     background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: #7BD880;
+    }
 }
 
 .resource-type-book .resource {
@@ -80,6 +85,10 @@ section {
     background-image: url("/images/icons/book/book.svg");
     background-size: 17px;
     background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: #E2D76D;
+    }
 }
 
 .resource-type-example .resource {
@@ -88,6 +97,10 @@ section {
     background-image: url("/images/icons/website/website.svg");
     background-size: 34px;
     background-position: 98% 1px;
+    &:hover,
+    &:focus {
+        background-color: #50C8C8;
+    }
 }
 
 .resource-type-guide .resource {
@@ -96,6 +109,10 @@ section {
     background-image: url("/images/icons/glasses/glasses.svg");
     background-size: 37px;
     background-position: 98% 13px;
+    &:hover,
+    &:focus {
+        background-color: #75A1F0;
+    }
 }
 
 .resource-type-talk .resource {
@@ -104,6 +121,10 @@ section {
     background-image: url("/images/icons/presentation/presentation.svg");
     background-size: 29px;
     background-position: 98% 4px;
+    &:hover,
+    &:focus {
+        background-color: #EFA0C8;
+    }
 }
 
 .resource-type-tool .resource {
@@ -112,6 +133,10 @@ section {
     background-image: url("/images/icons/wrench/wrench.svg");
     background-size: 22px;
     background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: #958CCB;
+    }
 }
 
 .resource-type-podcast .resource {
@@ -120,6 +145,10 @@ section {
     background-image: url("/images/icons/podcast/podcast.svg");
     background-size: 22px;
     background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: #E0AC65;
+    }
 }
 
 .resources .resource-add {
@@ -133,6 +162,19 @@ section {
     &:focus {
         opacity: 1;
     }
+}
+
+.recommended:before {
+    content: "★ Recommended";
+    position: absolute;
+    top: -1px;
+    left: 18px;
+    font-size: 13px;
+    background-color: #FAF97B;
+    padding: 3px 6px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.4), 
+                0px 1px 0px rgba(0,0,0,0.2);
 }
 
 @media (min-width: 600px) {
