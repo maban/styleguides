@@ -9,6 +9,7 @@ Best of all, you can add your own resources to share with others. And you don't 
 ## To do
 
 * Add screenshots to resources that are examples
+* Additional hover state to resources that doesn't rely on transform
 * Transfer all the resources from [https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides](Gimmiebar)
 * Set up a domain
 
