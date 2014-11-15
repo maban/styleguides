@@ -1,5 +1,5 @@
 ---
-title: Pears
+title: Living Style Guide
 link: http://livingstyleguide.org/
 author: Nico Hagenburger
 language: Sass, Compass
