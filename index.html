@@ -6,6 +6,8 @@ layout: page
 
     <h1>Articles</h1>
     
+    <p>Things people have written about style guides</p>
+    
     <ul class="resources resource-type-article">
         {% assign article = site.resourcearticle | sort: 'status' %}
         {% for article in article reversed %}
@@ -30,6 +32,8 @@ layout: page
 <section>
 
     <h1>Talks</h1>
+    
+    <p>Conference presentations about style guides</p>
     
     <ul class="resources resource-type-talk">
         {% assign talk = site.resourcetalk | sort: 'status' %}
@@ -56,6 +60,8 @@ layout: page
 
     <h1>Podcasts</h1>
     
+    <p>Episodes from various podcasts where style guides are discussed</p>
+    
     <ul class="resources resource-type-podcast">
         {% assign podcast = site.resourcepodcast | sort: 'status' %}
         {% for podcast in podcast reversed %}
@@ -80,6 +86,8 @@ layout: page
 <section>
 
     <h1>Books</h1>
+    
+    <p>Books written about style guides</p>
     
     <ul class="resources resource-type-book">
         {% assign book = site.resourcebook | sort: 'status' %}
@@ -106,6 +114,8 @@ layout: page
 
     <h1>Tools</h1>
     
+    <p>Things to help you make your own style guide</p>
+    
     <ul class="resources resource-type-tool">
         {% assign tool = site.resourcetool | sort: 'status' %}
         {% for tool in tool reversed %}
@@ -131,6 +141,8 @@ layout: page
     
     <h1>Examples</h1>
     
+    <p>Real life website style guides and pattern libraries</p>
+    
     <ul class="resources resource-type-example">
         {% assign example = site.resourceexample | sort: 'status' %}
         {% for example in example reversed %}
@@ -155,6 +167,8 @@ layout: page
 <section>
 
     <h1>Guides</h1>
+    
+    <p>Style guides specifically for a website's content or markup</p>
     
     <ul class="resources resource-type-guide">
         {% assign guide = site.resourceguide | sort: 'status' %}

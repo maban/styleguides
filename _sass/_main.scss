@@ -1,3 +1,7 @@
+p {
+    font-size: 18px;
+}
+
 section {
     clear: both;
 }
@@ -19,6 +23,9 @@ section {
         text-decoration: none;
         -webkit-transform: scale(1.05,1.05);
         
+    }
+    p {
+        font-size: 15px;
     }
 }
 
