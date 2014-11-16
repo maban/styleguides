@@ -9,21 +9,23 @@ Best of all, you can add your own resources to share with others. And you don't 
 ## To do
 
 * Add screenshots to resources that are examples
-* Additional hover state to resources that doesn't rely on transform
-* Transfer all the resources from [https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides](Gimmiebar)
+* ~~Additional hover state to resources that doesn't rely on transform~~
+* ~~Transfer all the resources from [Gimmiebar](https://gimmebar.com/collection/4ecd439c2f0aaad734000022/front-end-styleguides)~~
 * Set up a domain
 
 ## How to add resources the easy way
 
 The site uses a templating system called Jekyll that generates static HTML files, and makes it easy (hopefully) to add files that share the same template. GitHub plays nicely with Jekyll, and lets you add and edit files using the web interface. So no need to download anything, you can do it straight in repository on GitHub.
 
-First, you'll need to decide whether your resource is a book, article, tool, example, or talk.
+First, you'll need to decide whether your resource is a book, article, tool, podcast, guide, example, or talk.
 
 The only folders you'll need to worry about are:
 
 * _resourcearticle
 * _resourcebook
 * _resourceexample
+* _resourceguide
+* _resourcepodcast
 * _resourcetalk
 * _resourcetool
 
