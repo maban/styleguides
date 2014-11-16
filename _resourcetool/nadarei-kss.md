@@ -1,6 +1,6 @@
 ---
 title: Nadarei KSS
-link: http://cferdinandi.github.io/kraken/
+link: http://nadarei.co/nkss-rails/
 author: Nadarei Co
 language: Rails
 ---
