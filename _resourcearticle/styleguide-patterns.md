@@ -1,5 +1,5 @@
 ---
-title: Style Guide Boilerplate
+title: Styleguide & Boilerplate Patterns
 link: https://docs.google.com/spreadsheet/ccc?key=0AiN0QfBTPpOCdDFjWlM0eU1ra21XanZkekxGbjA2WWc#gid=0
 author: Tyler Sticka
 site: Google Docs
