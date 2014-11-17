@@ -8,7 +8,7 @@ To add a tool:
 
 ```
 ---
-title: Title of talk
+title: Title of tool
 link: A static link to the site or GitHub repo
 author: The creator's name
 language: The language/s used other than HTML and CSS (e.g. PHP, Jekyll, Sass) and platform if relevant (e.g. Wordpress)
