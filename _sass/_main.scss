@@ -17,7 +17,9 @@ section {
     font-size: 15px;
     box-shadow: 0 0 1px rgba(0,0,0,0.3);
     transition: 0.2s;
+    border-radius: 3px;
     position: relative;
+    overflow: hidden;
     &:hover,
     &:focus {
         text-decoration: none;
@@ -29,22 +31,23 @@ section {
     }
 }
 
-.resource-url:link,
-.resource-url:visited,
-.resource-url:hover,
-.resource-url:focus,
-.resource-url:active {
+.resource-description {
     background-color: #fff;
     padding: 10px 20px;
     display: block;
-    border-radius: 3px;
     color: #333;
     text-decoration: none;
-    border-radius: 0 0 3px 3px;
 }
 
-.resource-type-article {
+.resource-description > *:last-child {
+    margin-bottom: 0;
+}
 
+.resource-url {
+    display: block;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .resource-title {
@@ -59,13 +62,13 @@ section {
     margin: 0;
 }
 
-.resource-type-article .resource,
-.resource-type-book .resource,
-.resource-type-example .resource,
-.resource-type-talk .resource,
-.resource-type-tool .resource,
-.resource-type-podcast .resource,
-.resource-type-guide .resource,
+.resource-type-article .resource-url,
+.resource-type-book .resource-url,
+.resource-type-example .resource-url,
+.resource-type-talk .resource-url,
+.resource-type-tool .resource-url,
+.resource-type-podcast .resource-url,
+.resource-type-guide .resource-url,
 .resource-type-tool .resource-add {
     padding-top: 35px;
     border-radius: 3px;
@@ -75,7 +78,7 @@ section {
 }
 
 
-.resource-type-article .resource {
+.resource-type-article .resource-url {
     background-color: #9DEAA1;
     background-image: url("/images/icons/article/article.png");
     background-image: url("/images/icons/article/article.svg");
@@ -87,7 +90,7 @@ section {
     }
 }
 
-.resource-type-book .resource {
+.resource-type-book .resource-url {
     background-color: #E4DD97;
     background-image: url("/images/icons/book/book.png");
     background-image: url("/images/icons/book/book.svg");
@@ -99,7 +102,7 @@ section {
     }
 }
 
-.resource-type-example .resource {
+.resource-type-example .resource-url {
     background-color: #80e5e5;
     background-image: url("/images/icons/website/website.png");
     background-image: url("/images/icons/website/website.svg");
@@ -111,7 +114,7 @@ section {
     }
 }
 
-.resource-type-guide .resource {
+.resource-type-guide .resource-url {
     background-color: #A3C0F5;
     background-image: url("/images/icons/glasses/glasses.png");
     background-image: url("/images/icons/glasses/glasses.svg");
@@ -123,7 +126,7 @@ section {
     }
 }
 
-.resource-type-talk .resource {
+.resource-type-talk .resource-url {
     background-color: #EFB7D3;
     background-image: url("/images/icons/presentation/presentation.png");
     background-image: url("/images/icons/presentation/presentation.svg");
@@ -135,7 +138,7 @@ section {
     }
 }
 
-.resource-type-tool .resource {
+.resource-type-tool .resource-url {
     background-color: #C0B8EF;
     background-image: url("/images/icons/wrench/wrench.png");
     background-image: url("/images/icons/wrench/wrench.svg");
@@ -147,7 +150,7 @@ section {
     }
 }
 
-.resource-type-podcast .resource {
+.resource-type-podcast .resource-url {
     background-color: #F4CB94;
     background-image: url("/images/icons/podcast/podcast.png");
     background-image: url("/images/icons/podcast/podcast.svg");
@@ -159,17 +162,20 @@ section {
     }
 }
 
-.resources .resource-add {
-    background-image: url("/images/icons/add/add.png");
-    background-image: url("/images/icons/add/add.svg");
-    background-size: 22px;
-    background-position: 98% 7px;
+.resource-add {
     opacity: 0.55;
     max-width: 250px;
     &:hover,
     &:focus {
         opacity: 1;
     }
+}
+
+.resource-add .resource-url {
+    background-image: url("/images/icons/add/add.png");
+    background-image: url("/images/icons/add/add.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
 }
 
 .recommended:before {
