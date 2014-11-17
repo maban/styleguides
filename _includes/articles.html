@@ -1,0 +1,26 @@
+<section>
+
+    <h1>Articles</h1>
+    
+    <p>Things people have written about style guides</p>
+    
+    <ul class="resources resource-type-article">
+        {% assign article = site.resourcearticle | sort: 'status' %}
+        {% for article in article reversed %}
+        <li class="resource {{ article.status }}">
+            <a href="{{ article.link }}" class="resource-url">
+                <h2 class="resource-title">{{ article.title }}</h2>
+                {{ article.content }}
+                <p class="resource-author">By <strong>{{ article.author }}</strong></p>
+                <p class="resource-publisher">Published on <strong>{{ article.site }}</strong></p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcearticle" class="resource-url">
+                <h2 class="resource-title">Add an article</h2>
+            </a>
+        </li>
+    </ul>
+
+</section>

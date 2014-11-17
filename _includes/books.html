@@ -1,0 +1,26 @@
+<section>
+
+    <h1>Books</h1>
+    
+    <p>Books written about style guides</p>
+    
+    <ul class="resources resource-type-book">
+        {% assign book = site.resourcebook | sort: 'status' %}
+        {% for book in book reversed %}
+        <li itemscope itemtype="http://schema.org/Book" class="resource {{ book.status }}">
+            <a href="{{ book.link }}" itemprop="url" class="resource-url">
+                <h2 itemprop="name" class="resource-title">{{ book.title }}</h2>
+                {{ book.content }}
+                <p class="resource-author">By <strong itemprop="author">{{ book.author }}</strong></p>
+                <p class="resource-publisher">Published by <strong itemprop="publisher">{{ book.publisher }}</strong></p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcebook" class="resource-url">
+                <h2 class="resource-title">Add a book</h2>
+            </a>
+        </li>
+    </ul>
+
+</section>

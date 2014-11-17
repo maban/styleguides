@@ -3,26 +3,4 @@ layout: page
 title: Articles
 ---
 
-<section>
-
-    <h1>Articles</h1>
-    
-    <ul class="resources resource-type-article">
-        {% for resourcearticle in site.resourcearticle %}
-        <li class="resource">
-            <a href="{{ resourcearticle.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcearticle.title }}</h2>
-                {{ resourcearticle.content }}
-                <p class="resource-author">By <strong>{{ resourcearticle.author }}</strong></p>
-                <p class="resource-publisher">Published on <strong>{{ resourcearticle.site }}</strong></p>
-            </a>
-        </li>
-        {% endfor %}
-        <li class="resource resource-add">
-            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcearticle" class="resource-url">
-                <h2 class="resource-title">Add an article</h2>
-            </a>
-        </li>
-    </ul>
-
-</section>
+{% include articles.html %}

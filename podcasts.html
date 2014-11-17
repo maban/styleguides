@@ -3,26 +3,4 @@ layout: page
 title: Podcasts
 ---
 
-<section>
-
-    <h1>Podcasts</h1>
-    
-    <ul class="resources resource-type-podcast">
-        {% for resourcepodcast in site.resourcepodcast %}
-        <li class="resource">
-            <a href="{{ resourcepodcast.link }}" class="resource-url">
-                <h2 class="resource-title">{{ resourcepodcast.title }}</h2>
-                {{ resourcepodcast.content }}
-                <p class="resource-author">With <strong>{{ resourcepodcast.people }}</strong></p>
-                <p class="resource-podcast">On <strong>{{ resourcepodcast.podcast }}</strong></p>
-            </a>
-        </li>
-        {% endfor %}
-        <li class="resource resource-add">
-            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcepodcast" class="resource-url">
-                <h2 class="resource-title">Add a podcast</h2>
-            </a>
-        </li>
-    </ul>
-
-</section>
+{% include podcasts.html %}

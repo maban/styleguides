@@ -1,0 +1,26 @@
+<section>
+
+    <h1>Talks</h1>
+    
+    <p>Conference presentations about style guides</p>
+    
+    <ul class="resources resource-type-talk">
+        {% assign talk = site.resourcetalk | sort: 'status' %}
+        {% for talk in talk reversed %}
+        <li class="resource {{ talk.status }}">
+            <a href="{{ talk.link }}" class="resource-url">
+                <h2 class="resource-title">{{ talk.title }}</h2>
+                {{ talk.content }}
+                <p class="resource-author">By <strong>{{ talk.author }}</strong></p>
+                <p class="resource-publisher">At <strong>{{ talk.conference }}</strong></p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourcetalk" class="resource-url">
+                <h2 class="resource-title">Add a talk</h2>
+            </a>
+        </li>
+    </ul>
+
+</section>

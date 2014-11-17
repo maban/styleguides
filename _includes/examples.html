@@ -1,0 +1,26 @@
+<section>
+
+    <h1>Examples</h1>
+    
+    <p>Real life website style guides and pattern libraries</p>
+    
+    <ul class="resources resource-type-example">
+        {% assign example = site.resourceexample | sort: 'status' %}
+        {% for example in example reversed %}
+        <li class="resource {{ example.status }}">
+            <a href="{{ example.link }}" class="resource-url">
+                <h2 class="resource-title">{{ example.title }}</h2>
+                {{ example.content }}
+                <p class="resource-author">{{ example.author }}</p>
+                <p class="resource-site">{{ example.site }}</p>
+            </a>
+        </li>
+        {% endfor %}
+        <li class="resource resource-add">
+            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resourceexample" class="resource-url">
+                <h2 class="resource-title">Add an example</h2>
+            </a>
+        </li>
+    </ul>
+
+</section>
