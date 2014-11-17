@@ -8,7 +8,7 @@ To add a book:
 
 ```
 ---
-title:  Title of book
+title: Title of book
 link: A static link to the book (preferably the author's own book page on their site)
 author: The author's name
 publisher: The publisher

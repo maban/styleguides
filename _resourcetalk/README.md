@@ -8,7 +8,7 @@ To add a talk:
 
 ```
 ---
-title:  Title of talk
+title: Title of talk
 link: A static link to the talk (A Lanyrd link is preferable because further resources about the talk can be added)
 author: The speaker's name
 conference: The conference that the talk was given at

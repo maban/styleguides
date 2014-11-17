@@ -8,7 +8,7 @@ To add an article:
 
 ```
 ---
-title:  Title of article
+title: Title of article
 link: A static link to the article
 author: The author's name
 site: The site that the linked article is published on
