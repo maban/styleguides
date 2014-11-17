@@ -10,7 +10,7 @@ To add a guide:
 
 ```
 ---
-title:  Title of guide
+title: Title of guide
 link: A static link to the guide
 author: The person/company that wrote the guide
 type: What type of guide it is

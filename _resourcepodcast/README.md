@@ -8,7 +8,7 @@ To add a podcast episode:
 
 ```
 ---
-title:  Title of podcast episode
+title: Title of podcast episode
 link: A static link to the podcast (preferably a link to the episode on the podcast's website rather than an iTunes link)
 people: The names of the people talking on the podcast
 podcast: The name of the podcast
