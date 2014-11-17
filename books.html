@@ -1,0 +1,6 @@
+---
+layout: page
+title: Books
+---
+
+{% include books.html %}
