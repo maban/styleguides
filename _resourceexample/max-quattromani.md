@@ -2,6 +2,5 @@
 title: Max Quattromani
 link: http://maxquattromani.com/styleguide
 status: recommended
+image: maxquattromani.jpg
 ---
-
-A style guide collective for projects
