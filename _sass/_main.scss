@@ -222,17 +222,20 @@ section {
         width: 100%;
     }
     
+    // Set 2-column config
+    
     .resource {
         float: left;
         width: 48%;
         margin-right: 4%;
     }
+
+    .resource:nth-child(odd) {
+        clear: left;
+    }
     
     .resource:nth-child(even) {
         margin-right: 0;
-    }
-    .resource:nth-child(2n+3) {
-        clear: both;
     }
 }
 
@@ -244,19 +247,52 @@ section {
         margin-right: 2%;
     }
     
+    // Undo 2-column config
+    
+    .resource:nth-child(odd) {
+        clear: none;
+    }
+    
     .resource:nth-child(even) {
         margin-right: 2%;
     }
     
-    .resource:nth-child(2n+3) {
-        clear: none;
+    // Set 3-column config
+    
+    .resource:nth-child(3n+1) {
+        clear: left;
     }
     
     .resource:nth-child(3n+3) {
         margin-right: 0;
     }
+}
+
+@media (min-width: 1500px) {
     
-    .resource:nth-child(3n+4) {
-        clear: both;
+    .resource {
+        float: left;
+        width: 23%;
+        margin-right: 2.6666%;
+    }
+    
+    // Undo 3-column config
+    
+    .resource:nth-child(3n+1) {
+        clear: none;
+    }
+    
+    .resource:nth-child(3n+3) {
+        margin-right: 2.6666%;
+    }
+    
+    // Set 4-column config
+    
+    .resource:nth-child(4n+1) {
+        clear: left;
+    }
+    
+    .resource:nth-child(4n+4) {
+        margin-right: 0;
     }
 }
