@@ -5,7 +5,6 @@ author: Github
 type: CSS Style Guide
 tags: 
 - code
-- frontend
 ---
 
 Github's guidelines on writing CSS
