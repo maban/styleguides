@@ -6,6 +6,16 @@ section {
     clear: both;
 }
 
+.hidden {
+    /* technique via http://webaim.org/techniques/css/invisiblecontent/ */
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 .resources {
     list-style-type: none;
     margin: 0 0 20px 0;
