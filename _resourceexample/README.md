@@ -28,5 +28,6 @@ Here's an example of an example I've added to the _resourceexample folder:
 title: Starbucks
 link: http://www.starbucks.com/static/reference/styleguide/
 ---
+
 A style guide for Starbucks's website
 ```

@@ -1,5 +1,5 @@
 ---
-title:  Creating Style Guides
+title: Creating Style Guides
 link: http://alistapart.com/article/creating-style-guides
 author: Susan Robertson
 site: A List Apart
