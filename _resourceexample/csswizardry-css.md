@@ -6,7 +6,6 @@ type: CSS Style Guide
 status: recommended
 tags: 
 - code
-- frontend
 ---
 
 High-level advice and guidelines for writing sane, manageable, scalable CSS
