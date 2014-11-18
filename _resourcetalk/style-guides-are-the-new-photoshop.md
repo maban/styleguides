@@ -1,5 +1,5 @@
 ---
-title:  Style Guides Are The New Photoshop
+title: Style Guides Are The New Photoshop
 link: http://www.slideshare.net/stephenhay/style-guides-are-the-new-photoshop-fronteers-2012
 author: Stephen Hay
 conference: Fronteers 2012

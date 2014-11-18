@@ -1,5 +1,5 @@
 ---
-title:  "Style Guides: Why I love them"
+title: "Style Guides: Why I love them"
 link: https://speakerdeck.com/susanjrobertson/style-guides-why-i-love-them
 author: Susan Robertson
 conference: Refresh Portland
