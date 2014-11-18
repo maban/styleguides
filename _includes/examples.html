@@ -18,7 +18,7 @@
                     {% if example.site %}<p class="resource-site">{{ example.site }}</p>{% endif %}
                 </span>
                 {% if example.image %}<img src="/images/screenshots/{{ example.image }}"/>{% endif %}		<div class="resource-description">
-	                <ul>
+	                <ul class="resource-tags">
 					  {% for tags in example.tags %}
 					    <li>{{ tags }}</li>
 					  {% endfor %}
