@@ -185,9 +185,10 @@ section {
     }
 }
 
-.resource-add {
+.resources .resource-add {
     opacity: 0.55;
     max-width: 250px;
+    padding-top: 0;
     &:hover,
     &:focus {
         opacity: 1;
