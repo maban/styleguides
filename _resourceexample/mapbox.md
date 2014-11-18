@@ -5,4 +5,5 @@ tags:
  - frontend
  - code
  - writing
+ - patterns
 ---

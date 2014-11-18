@@ -4,4 +4,5 @@ link: http://developer.fellowshipone.com/patterns/
 tags:
 - frontend
 - code
+- patterns
 ---

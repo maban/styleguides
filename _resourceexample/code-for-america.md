@@ -4,5 +4,6 @@ link: http://codeforamerica.clearleft.com/
 status: recommended
 image: code-for-america.jpg
 tags:
- - frontend
+- frontend
+- patterns
 ---

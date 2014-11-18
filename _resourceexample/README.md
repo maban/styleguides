@@ -10,6 +10,10 @@ To add an example:
 ---
 title: Title of site
 link: A static link to the example or GitHub repo
+image: file name with extension
+tags:
+ - atag
+ - anothertag
 ---
 
 An optional short description of the site goes here
@@ -19,6 +23,22 @@ The text sandwiched between the --- --- is called "YAML front matter" and this t
 
 **Do not add any links to the content** because the whole thing is wrapped in a link tag, so adding another link will stop it working.
 
+## Tags
+
+You can add optional tags to a resource, but they must be from one of the following existing tags:
+
+* branding
+* frontend
+* voiceandtone
+* writing
+* designlanguage
+* code
+* patterns
+
+## Adding an image
+
+If you want to add an image, the dimensions will need to be **800px x 400px**. The file size should be no larger than 90KB. Save it in the images/screenshots folder, and give it a file name that's the same or similar to the title of the site.
+
 ## Example
 
 Here's an example of an example I've added to the _resourceexample folder:
@@ -27,6 +47,9 @@ Here's an example of an example I've added to the _resourceexample folder:
 ---
 title: Starbucks
 link: http://www.starbucks.com/static/reference/styleguide/
+image: starbucks.jpg
+tags:
+ - frontend
 ---
 
 A style guide for Starbucks's website

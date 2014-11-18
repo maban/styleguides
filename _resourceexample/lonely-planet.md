@@ -5,4 +5,5 @@ status: recommended
 image: lonely-planet.jpg
 tags:
  - frontend
+ - patterns
 ---

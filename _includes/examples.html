@@ -16,14 +16,16 @@
                     {{ example.content }}
                     {% if example.author %}<p class="resource-author">{{ example.author }}</p>{% endif %}
                     {% if example.site %}<p class="resource-site">{{ example.site }}</p>{% endif %}
+                    {% if example.tags %}
+                        <ul class="resource-tags">
+                    	  {% for tags in example.tags %}
+                    	    <li>{{ tags }}</li>
+                    	  {% endfor %}
+                    	</ul>
+                    {% endif %}
                 </span>
-                {% if example.image %}<img src="/images/screenshots/{{ example.image }}"/>{% endif %}		<div class="resource-description">
-	                <ul class="resource-tags">
-					  {% for tags in example.tags %}
-					    <li>{{ tags }}</li>
-					  {% endfor %}
-					</ul>
-                </div>
+                {% if example.image %}<img src="/images/screenshots/{{ example.image }}"/>{% endif %}
+                
             </a>
         </li>
         {% endfor %}

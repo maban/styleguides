@@ -11,13 +11,13 @@
         {% for talk in talk reversed %}
         <li class="resource {{ talk.status }}">
             <a href="{{ talk.link }}" class="resource-url">
+                {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}"/>{% endif %}
                 <span class="resource-description">
                     <h2 class="resource-title">{{ talk.title }}</h2>
                     {{ talk.content }}
                     {% if talk.author %}<p class="resource-author">By <strong>{{ talk.author }}</strong></p>{% endif %}
                     {% if talk.conference %}<p class="resource-publisher">At <strong>{{ talk.conference }}</strong></p>{% endif %}
                 </span>
-                {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}"/>{% endif %}
             </a>
         </li>
         {% endfor %}

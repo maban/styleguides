@@ -5,4 +5,5 @@ status: recommended
 image: starbucks.jpg
 tags:
  - frontend
+ - patterns
 ---

@@ -13,6 +13,7 @@ link: A static link to the talk (A Lanyrd link is preferable because further res
 author: The speaker's name
 conference: The conference that the talk was given at
 date: The date the talk was given
+image: file name with extension
 ---
 
 An optional short description of the talk goes here
@@ -22,18 +23,23 @@ The text sandwiched between the --- --- is called "YAML front matter" and this t
 
 **Do not add any links to the content** because the whole thing is wrapped in a link tag, so adding another link will stop it working.
 
+## Adding an image
+
+If you want to add an image, the dimensions will need to be **800px x 600px**. The file size should be no larger than 90KB. Save it in the images/screenshots folder, and give it a file name that's the same or similar to the title of the talk.
+
 ## Example
 
 Here's an example of a talk I've added to the _resourcetalk folder:
 
 ```
 ---
-title: Design systems
-link: https://www.youtube.com/watch?v=z_ZLkEZtwLk
-author: Richard Saunders
-conference: Zengenti Rocket Conference 2014
-date: 2014-10-30
+title: Future Friendly Style Guides
+link: https://speakerdeck.com/lukebrooker/future-friendly-style-guides
+author: Luke Brooker
+conference: Web Directions
+status: recommended
+image: future-friendly-styleguides.jpg
 ---
 
-We are not designing for mobiles, tablets or desktops but a medium that is volatile. Richard Saunders looks at the elements that make up a responsible responsive design project in an ever changing landscape.
+How style guides can help in a responsive design workflow.
 ```

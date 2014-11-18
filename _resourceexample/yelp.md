@@ -5,4 +5,5 @@ status: recommended
 image: yelp.jpg
 tags:
  - frontend
+ - patterns
 ---

@@ -5,4 +5,5 @@ status: recommended
 image: quattromani.jpg
 tags:
  - frontend
+ - patterns
 ---

@@ -5,4 +5,5 @@ status: recommended
 image: mailchimp.jpg
 tags:
  - frontend
+ - patterns
 ---
