@@ -1,5 +1,5 @@
 ---
-title:  A Maintainable Style Guide
+title: A Maintainable Style Guide
 link: http://ianfeather.co.uk/a-maintainable-style-guide/
 author: Ian Feather
 site: ianfeather.co.uk

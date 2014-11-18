@@ -1,5 +1,5 @@
 ---
-title:  CSS Systems for writing maintainable CSS
+title: CSS Systems for writing maintainable CSS
 link: http://blog.natbat.net/post/46614243624/css-systems
 author: Natalie Downe
 conference: BarCamp London 5
