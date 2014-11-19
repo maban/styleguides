@@ -25,7 +25,6 @@ The only folders you'll need to worry about are:
 * _resourcearticle
 * _resourcebook
 * _resourceexample
-* _resourceguide
 * _resourcepodcast
 * _resourcetalk
 * _resourcetool
