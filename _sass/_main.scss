@@ -276,6 +276,12 @@ section {
         margin-right: 2.6666%;
     }
     
+    // Undo 2-column config
+    
+    .resource:nth-child(even) {
+        margin-right: 2.6666%;
+    }
+    
     // Undo 3-column config
     
     .resource:nth-child(3n+1) {
