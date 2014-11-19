@@ -24,7 +24,11 @@
                     	</ul>
                     {% endif %}
                 </span>
-                {% if example.image %}<img src="/images/screenshots/{{ example.image }}"/>{% endif %}
+                {% if page.title != "Style Guides" %}
+                    {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
+                {% elsif example.status == "recommended"%}
+                    {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
+                {% endif %}
                 
             </a>
         </li>
