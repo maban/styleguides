@@ -5,7 +5,6 @@ author: Google
 type: HTML and CSS Style Guide
 tags: 
 - code
-- frontend
 ---
 
 A CSS/HTML style guide rather than pattern portfolio, but still very useful.
