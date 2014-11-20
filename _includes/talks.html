@@ -11,7 +11,7 @@
         {% for talk in talk reversed %}
         <li class="resource {{ talk.status }}">
             <a href="{{ talk.link }}" class="resource-url">
-                {% if page.title != "Style Guides" %}
+                {% if page.type != "home" %}
                     {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
                 {% elsif talk.status == "recommended"%}
                     {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
