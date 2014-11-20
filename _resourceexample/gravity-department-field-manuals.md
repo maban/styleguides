@@ -1,5 +1,5 @@
 ---
-title: Gravity Department: Field Manuals
+title: "Gravity Department: Field Manuals"
 link: http://manuals.gravitydept.com
 image: gravity-department-field-manuals.jpg
 tags:
