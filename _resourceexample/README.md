@@ -29,6 +29,7 @@ You can add optional tags to a resource, but they must be from one of the follow
 
 * branding
 * frontend
+* backend
 * voiceandtone
 * writing
 * designlanguage
@@ -36,6 +37,8 @@ You can add optional tags to a resource, but they must be from one of the follow
 * patterns
 
 ## Adding an image
+
+*Images will only show on the homepage if the resource is also recommended*. This is to keep the page weight down.
 
 If you want to add an image, the dimensions will need to be **800px x 400px**. The file size should be no larger than 90KB. Save it in the images/screenshots folder, and give it a file name that's the same or similar to the title of the site.
 
