@@ -30,10 +30,13 @@ section {
     border-radius: 3px;
     position: relative;
     overflow: hidden;
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
     &:hover,
     &:focus {
         text-decoration: none;
         -webkit-transform: scale(1.05,1.05);
+        transform: scale(1.05,1.05);
         
     }
     p {
