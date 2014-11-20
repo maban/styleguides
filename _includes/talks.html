@@ -17,7 +17,7 @@
                     {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
                 {% endif %}
                 <span class="resource-description">
-                    {% if talk.image == null %}
+                    {% if talk.image == null or page.title == "Style Guides" %}
                         <h2 class="resource-title">{{ talk.title }}</h2>
                     {% else %}
                         <h2 class="resource-title hidden">{{ talk.title }}</h2>
