@@ -25,6 +25,8 @@ The text sandwiched between the --- --- is called "YAML front matter" and this t
 
 ## Adding an image
 
+*Images will only show on the homepage if the resource is also recommended*. This is to keep the page weight down.
+
 If you want to add an image, the dimensions will need to be **800px x 600px**. The file size should be no larger than 90KB. Save it in the images/screenshots folder, and give it a file name that's the same or similar to the title of the talk.
 
 ## Example
