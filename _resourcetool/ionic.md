@@ -1,8 +1,8 @@
 ---
 title: Ionic
 link: http://ionicframework.com/docs/components/
-author: Sass, AngularJS
-language: node
+author: Drifty
+language: Sass, AngularJS
 ---
 
-Build your own UI toolkit.
+Ionic offers a library of mobile-optimized HTML, CSS and JS components, gestures, and tools for building highly interactive apps. 
