@@ -3,6 +3,7 @@ title: Frontify
 link: https://frontify.com/styleguide
 author: Josip Budzaki
 language: N/A
+image: frontify-style-guide.png
 ---
 
 Visually specify colors, typo, dimensions and more. 
