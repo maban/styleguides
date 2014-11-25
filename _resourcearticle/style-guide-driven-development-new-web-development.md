@@ -5,4 +5,4 @@ author: John Albin Wilkins
 site: http://john.albin.net/
 ---
 
-An overview of style-guide-drivien development and how it relates to agile development and modern web development practices.
+An overview of style-guide-driven development and how it relates to agile development and modern web development practices.
