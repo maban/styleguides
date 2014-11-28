@@ -9,4 +9,4 @@ tags:
  - angularjs
 ---
 
-Potion is built it on top of SASS and utilizes AngularJS and the core for routing, creating custom DOM elements and more.
+Potion is built it on top of SASS and utilizes AngularJS at the core for routing, creating custom DOM elements and more.
