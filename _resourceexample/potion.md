@@ -1,7 +1,7 @@
 ---
-title: getpotion.com
+title: Potion - getpotion.com
 link: http://www.getpotion.com
-image: file name with extension
+image: getpotionscreenshot.jpg
 tags:
  - frontend
  - patterns
