@@ -1,6 +1,6 @@
 ---
-title: Paul Robert Lloyd
-link: http://paulrobertlloyd.com/about/styleguide/
+title: Pivotal
+link: https://console.run.pivotal.io/style_guide
 tags:
 - frontend
 - patterns
