@@ -5,4 +5,5 @@ author: Google
 language: HTML, Sass, JavaScript
 image: web-starter-kit
 ---
+
 Google's Web Starter Kit includes an HTTP server, responsive boilerplate, live reloading, and a component style guide.
