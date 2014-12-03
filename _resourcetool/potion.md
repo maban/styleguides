@@ -1,5 +1,5 @@
 ---
-title: Potion - getpotion.com
+title: Potion
 link: http://www.getpotion.com
 image: getpotionscreenshot.jpg
 tags:
