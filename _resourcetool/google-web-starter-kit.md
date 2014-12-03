@@ -3,6 +3,7 @@ title: Web Starter Kit
 link: https://developers.google.com/web/starter-kit/
 author: Google
 language: HTML, Sass, JavaScript
+status: recommended
 image: web-starter-kit.png
 ---
 
