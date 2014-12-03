@@ -1,7 +1,7 @@
 ---
 title: Potion
 link: http://www.getpotion.com
-image: getpotionscreenshot.jpg
+image: potion.jpg
 tags:
  - frontend
  - patterns
