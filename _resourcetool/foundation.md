@@ -1,10 +1,10 @@
 ---
 title: Foundation
 link: http://foundation.zurb.com/
-author: Zurb
+author: ZURB
 language: HTML, CSS, JavaScript
 status: recommended
-image: web-starter-kit.png
+image: foundation.png
 ---
 
-Responsive front-end framework.
+Mobile-first responsive frontend framework
