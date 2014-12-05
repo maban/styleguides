@@ -7,4 +7,4 @@ status: recommended
 image: foundation.png
 ---
 
-Mobile-first responsive frontend framework
+Front-end framework created for developing fully responsive web apps.
