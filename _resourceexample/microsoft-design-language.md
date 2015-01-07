@@ -1,11 +1,11 @@
 ---
 title: Microsoft design language
 link: http://dev.windows.com/en-us/design/
-image: windows.png
+image: microsoft.png
 tags:
 - designlanguage
 - frontend
 - patterns
 ---
 
-Design language for creating Microsoft apps.
+Design language for creating Microsoft Windows apps.
