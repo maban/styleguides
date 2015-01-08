@@ -31,7 +31,7 @@
       
       // Filter tag
       function filterTag (filter, tag) {
-        var items = document.querySelectorAll('.' + filter + ' li');
+        var items = document.querySelectorAll('.' + filter + ' > li');
       
         for (var i = 0; i < items.length; i++) {
           var itemTags = items[i].getAttribute('data-tags');
@@ -44,7 +44,7 @@
       
       // Reset filters
       function resetFilter (filter) {
-        var items = document.querySelectorAll('.' + filter + ' li');
+        var items = document.querySelectorAll('.' + filter + ' > li');
       
         for (var i = 0; i < items.length; i++) {
           items[i].setAttribute('data-toggle', 'on');
