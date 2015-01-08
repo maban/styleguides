@@ -36,8 +36,11 @@
         for (var i = 0; i < items.length; i++) {
           var itemTags = items[i].getAttribute('data-tags');
       
-          if (itemTags.indexOf(tag) < 0) {
-            items[i].setAttribute('data-toggle', 'off');
+          // Catch case with no tags
+          if (itemTags != null) {
+            if (itemTags.indexOf(tag) < 0) {
+              items[i].setAttribute('data-toggle', 'off');
+            }
           }
         }
       }
