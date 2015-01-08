@@ -323,3 +323,15 @@ section {
         margin-right: 0;
     }
 }
+
+
+// ----------------------------------------------
+// Filter by tags
+
+[data-toggle='on'] {
+  display:block;
+}
+
+[data-toggle='off'] {
+  display:none;
+}
