@@ -1,5 +1,5 @@
 ---
-title: Modular Web Design: Creating Reusable Components for User Experience Design and Documentation
+title: Modular Web Design - Creating Reusable Components for User Experience Design and Documentation
 link: http://www.peachpit.com/store/modular-web-design-creating-reusable-components-for-9780321601353
 author: Nathan Curtis
 publisher: Peachpit
