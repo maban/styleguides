@@ -1,0 +1,37 @@
+---
+layout: episode
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper podcast-episode">
+
+      <h1>Website Style Guides with {{page.title}}</h1>
+
+      <section class="bio">
+        <h2>About {{page.title}}</h2>
+        <img src="/images/avatars/{{page.image}}" alt="photo of {{page.title}}" />
+        <p>{{ page.about }}</p>
+      </section>
+
+      <section class="media-player audio">
+        <h2>The interview</h2>
+        <audio controls="controls" preload="none" width="100%">
+          <source src="{{page.audio}}" type="audio/mpeg">
+          </audio>
+      </section>
+
+      <section class="transcript">
+        <h2>The transcript</h2>
+        {{ content }}
+      </section>
+
+    </div>
+  </div>
+
+  {% include footer.html %}
