@@ -38,14 +38,16 @@ ul, ol, dl, figure,
 
 
 /**
- * Images
+ * Media
  */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
+audio {
+  width: 100%;
+}
 
 /**
  * Figures
