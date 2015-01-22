@@ -1,0 +1,57 @@
+section {
+    clear: both;
+}
+
+abbr {
+    border-bottom: 1px dotted #888;
+}
+
+.small {
+    font-size: 0.85em;
+}
+
+.hidden {
+    /* technique via http://webaim.org/techniques/css/invisiblecontent/ */
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.media-player {
+  margin: 2em 0;
+}
+
+.site-header .wrapper {
+        padding: 0;
+}
+
+.lede {
+    text-align: center;
+}
+
+.timestamp {
+    font-size: 14px;
+    color: #888;
+    padding: 0 0 1em;
+    display: block;
+    text-align: right;
+}
+
+.fancy {
+    font-size: 32px;
+    font-family: baskerville;
+    font-style: italic;
+    color: #888;
+    vertical-align: text-bottom;
+    display: inline-block;
+}
+
+.credits {
+    font-size: 0.85em;
+    ul {
+        margin-left: 0;
+    }
+}
