@@ -313,6 +313,35 @@
     }
 }
 
+
+.resources.episodes .number {
+    position: absolute;
+    top: -1px;
+    left: 10px;
+
+    font-size: 14px;
+    background-color: $color-4;
+    padding: 3px 6px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8), 0px 1px 0px rgba(0, 0, 0, 0.3);
+    width: 14px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    pointer-events: none;
+    @media (min-width: 600px) {
+        left: auto;
+        right: 18px;
+        font-size: 19px;
+        width: 20px;
+    }
+}
+
+.resources.episodes .resource:hover .number,
+.resources.episodes .resource:focus .number {
+    background-color: $color-4-darken;
+}
+
 .resources.episodes img {
     float: left;
     width: 120px;
@@ -324,13 +353,11 @@
 .resources.episodes .resource-description {
     width: auto;
     padding-left: 135px;
-    @media (min-width: 600px) {
-        padding-left: 170px;
-        min-height: 120px;
-    }
     padding-top: 10px;
     @media (min-width: 600px) {
-    padding-top: 20px;
+        padding-top: 20px;
+        padding-left: 170px;
+        min-height: 120px;
     }
     p {
         @media (min-width: 600px) {
