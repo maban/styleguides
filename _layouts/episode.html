@@ -5,27 +5,31 @@ layout: episode
 <html lang="en">
 {% include head.html %}
 
-<body>
+<body class="template-{{ page.section }} template-episode">
   {% include header.html %}
 
   <div class="page-content">
     <div class="wrapper podcast-episode">
 
-      <h1>Style Guide Podcast with {{page.title}}</h1>
+      <h1>Style Guides <span class="fancy">with</span> {{page.title}}</h1>
 
-      <section class="media-player audio">
-        <audio controls="controls" preload="none" width="100%">
-          <source src="{{page.audio}}" type="audio/mpeg">
-        </audio>
-      </section>
+      {{page.audio}}
+
+      {% include podcast-actions.html %}
 
       <section class="bio">
         <h2>About {{page.title}}</h2>
-        <img src="/images/avatars/{{page.image}}" alt="photo of {{page.title}}" />
         <p>{{ page.about }}</p>
       </section>
 
-
+      <section class="episode-links">
+          <h2>Links</h2>
+          <ul class="links">
+              {% for item in page.links %}
+              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+              {% endfor %}
+          </ul>
+      </section>
 
       <section class="transcript">
         <h2>The Transcript</h2>

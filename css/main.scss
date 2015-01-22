@@ -14,7 +14,7 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #333;
-$background-color: #f3f3f3;
+$background-color: #f7f7f7;
 $brand-color:      #2a7ae2;
 
 $grey-color:       #828282;
@@ -47,7 +47,14 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "buttons",
+        "filter",
+        "icons",
         "layout",
+        "main",
+        "nav-sections",
+        "podcast",
+        "resources",
         "syntax-highlighting",
-        "main"
+        "pattern-lib"
 ;

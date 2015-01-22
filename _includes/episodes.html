@@ -1,25 +1,17 @@
-<section>
+<ul class="resources episodes">
 
-    <h1><a href="/podcast/index.html">The Style Guide Podcast</a></h1>
+    {% assign podcast = site.podcast | sort: 'number'  %}
 
-    <p>A small batch series of interviews on Style Guides, hosted by Brad Frost and Anna Debenham.</p>
+    {% for podcast in podcast %}
+    <li class="resource {{ podcast.status }}">
+        <a href="/podcast{{ podcast.link }}" class="resource-url">
+            {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
+            <span class="resource-description">
+                <h2 class="resource-title">{{ podcast.title }}</h2>
+                <div class="resource-summary">{{ podcast.content }}</div>
+            </span>
+        </a>
+    </li>
+    {% endfor %}
 
-    <ul class="resources episodes">
-
-        {% assign podcast = site.podcast | sort: 'number'  %}
-
-        {% for podcast in podcast %}
-        <li class="resource {{ podcast.status }}">
-            <a href="/podcast{{ podcast.link }}" class="resource-url">
-                {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-                <span class="resource-description">
-                    <h2 class="resource-title">{{ podcast.title }}</h2>
-                    <div class="resource-summary">{{ podcast.content }}</div>
-                </span>
-            </a>
-        </li>
-        {% endfor %}
-
-    </ul>
-
-</section>
+</ul>

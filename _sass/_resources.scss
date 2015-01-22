@@ -1,21 +1,3 @@
-section {
-    clear: both;
-}
-
-.small {
-    font-size: 0.85em;
-}
-
-.hidden {
-    /* technique via http://webaim.org/techniques/css/invisiblecontent/ */
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
 .resources {
     list-style-type: none;
     margin: 0 0 20px 0;
@@ -40,7 +22,8 @@ section {
         transform: scale(1.05) translateZ(0);
     }
     p {
-      font-size: 15px;
+        font-size: 15px;
+        font-weight: lighter;
     }
 }
 
@@ -111,86 +94,74 @@ section {
 
 
 .resource-type-article .resource-url {
-    background-color: #9DEAA1;
+    background-color: $color-3;
     background-image: url("/images/icons/article/article.png");
     background-image: url("/images/icons/article/article.svg");
     background-size: 23px;
     background-position: 98% 6px;
     &:hover,
     &:focus {
-        background-color: #7BD880;
+        background-color: $color-3-darken;
     }
 }
 
 .resource-type-book .resource-url {
-    background-color: #E4DD97;
+    background-color: $color-2;
     background-image: url("/images/icons/book/book.png");
     background-image: url("/images/icons/book/book.svg");
     background-size: 17px;
     background-position: 98% 6px;
     &:hover,
     &:focus {
-        background-color: #E2D76D;
+        background-color: $color-2-darken;
     }
 }
 
 .resource-type-example .resource-url {
-    background-color: #80e5e5;
+    background-color: $color-5;
     background-image: url("/images/icons/website/website.png");
     background-image: url("/images/icons/website/website.svg");
     background-size: 34px;
     background-position: 98% 1px;
     &:hover,
     &:focus {
-        background-color: #50C8C8;
-    }
-}
-
-.resource-type-guide .resource-url {
-    background-color: #A3C0F5;
-    background-image: url("/images/icons/glasses/glasses.png");
-    background-image: url("/images/icons/glasses/glasses.svg");
-    background-size: 37px;
-    background-position: 98% 13px;
-    &:hover,
-    &:focus {
-        background-color: #75A1F0;
+        background-color: $color-5-darken;
     }
 }
 
 .resource-type-talk .resource-url {
-    background-color: #EFB7D3;
+    background-color: $color-7;
     background-image: url("/images/icons/presentation/presentation.png");
     background-image: url("/images/icons/presentation/presentation.svg");
     background-size: 29px;
     background-position: 98% 4px;
     &:hover,
     &:focus {
-        background-color: #EFA0C8;
+        background-color: $color-7-darken;
     }
 }
 
 .resource-type-tool .resource-url {
-    background-color: #C0B8EF;
+    background-color: $color-6;
     background-image: url("/images/icons/wrench/wrench.png");
     background-image: url("/images/icons/wrench/wrench.svg");
     background-size: 22px;
     background-position: 98% 7px;
     &:hover,
     &:focus {
-        background-color: #958CCB;
+        background-color: $color-6-darken;
     }
 }
 
 .resource-type-podcast .resource-url {
-    background-color: #F4CB94;
+    background-color: $color-1;
     background-image: url("/images/icons/podcast/podcast.png");
     background-image: url("/images/icons/podcast/podcast.svg");
     background-size: 22px;
     background-position: 98% 7px;
     &:hover,
     &:focus {
-        background-color: #E0AC65;
+        background-color: $color-1-darken;
     }
 }
 
@@ -232,7 +203,7 @@ section {
     padding: 3px 6px;
     border-radius: 0 0 2px 2px;
     box-shadow: 0 0 1px rgba(0,0,0,0.4),
-                0px 1px 0px rgba(0,0,0,0.2);
+    0px 1px 0px rgba(0,0,0,0.2);
 }
 
 @media (min-width: 600px) {
@@ -323,205 +294,194 @@ section {
     }
 }
 
+.resources.episodes {
+    float: none;
+    clear: both;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .resources.episodes .resource {
-  float: left;
-  width: 48%;
-  margin-right: 4%;
-  clear: none;
+    float: left;
+    width: 100%;
+    margin-right: 0;
+    clear: both;
+    background-color: #fff;
+    &:hover,
+    &:focus {
+    }
+}
+
+.resources.episodes img {
+    float: left;
+    width: 120px;
+    @media (min-width: 600px) {
+    width: 150px;
+    }
+}
+
+.resources.episodes .resource-description {
+    width: auto;
+    padding-left: 135px;
+    @media (min-width: 600px) {
+        padding-left: 170px;
+        min-height: 120px;
+    }
+    padding-top: 10px;
+    @media (min-width: 600px) {
+    padding-top: 20px;
+    }
+    p {
+        @media (min-width: 600px) {
+        font-size: 16px;
+
+        }
+        &:last-child {
+            margin-bottom:0;
+        }
+    }
+}
+
+.resources.episodes .resource-title {
+
+    @media (min-width: 600px) {
+    font-size: 26px;
+    margin-bottom: 12px;
+    }
+    line-height: 24px;
+}
+
+/*.resources.episodes .resource {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    clear: none;
 }
 
 .resources.episodes .resource:nth-child(odd) {
-  clear: left;
+    clear: left;
 }
 
 .resources.episodes .resource:nth-child(even) {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .resources.episodes .resource-summary {
-  display: none;
+    display: none;
 }
 
 @media (min-width: 500px) {
 
-  .resources.episodes .resource {
-    float: left;
-    width: 32%;
-    margin-right: 2%;
-  }
+    .resources.episodes .resource {
+        float: left;
+        width: 32%;
+        margin-right: 2%;
+    }
 
-  // Undo 2-column config
+    // Undo 2-column config
 
-  .resources.episodes .resource:nth-child(odd) {
-    clear: none;
-  }
+    .resources.episodes .resource:nth-child(odd) {
+        clear: none;
+    }
 
-  .resources.episodes .resource:nth-child(even) {
-    margin-right: 2%;
-  }
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2%;
+    }
 
-  // Set 3-column config
+    // Set 3-column config
 
-  .resources.episodes .resource:nth-child(3n+1) {
-    clear: left;
-  }
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: left;
+    }
 
-  .resources.episodes .resource:nth-child(3n+3) {
-    margin-right: 0;
-  }
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 0;
+    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
 
-  .resources.episodes .resource {
-    float: left;
-    width: 23%;
-    margin-right: 2.6666%;
-  }
+    .resources.episodes .resource {
+        float: left;
+        width: 23%;
+        margin-right: 2.6666%;
+    }
 
-  // Undo 2-column config
+    // Undo 2-column config
 
-  .resources.episodes .resource:nth-child(even) {
-    margin-right: 2.6666%;
-  }
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2.6666%;
+    }
 
-  // Undo 3-column config
+    // Undo 3-column config
 
-  .resources.episodes .resource:nth-child(3n+1) {
-    clear: none;
-  }
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: none;
+    }
 
-  .resources.episodes .resource:nth-child(3n+3) {
-    margin-right: 2.6666%;
-  }
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 2.6666%;
+    }
 
-  // Set 4-column config
+    // Set 4-column config
 
-  .resources.episodes .resource:nth-child(4n+1) {
-    clear: left;
-  }
+    .resources.episodes .resource:nth-child(4n+1) {
+        clear: left;
+    }
 
-  .resources.episodes .resource:nth-child(4n+4) {
-    margin-right: 0;
-  }
+    .resources.episodes .resource:nth-child(4n+4) {
+        margin-right: 0;
+    }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1100px) {
 
-  .resources.episodes .resource {
-    float: left;
-    width: 18%;
-    margin-right: 2.5%;
-  }
+    .resources.episodes .resource {
+        float: left;
+        width: 18%;
+        margin-right: 2.5%;
+    }
 
-  // Undo 2-column config
+    // Undo 2-column config
 
-  .resources.episodes .resource:nth-child(even) {
-    margin-right: 2.5%;
-  }
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2.5%;
+    }
 
-  // Undo 3-column config
+    // Undo 3-column config
 
-  .resources.episodes .resource:nth-child(3n+1) {
-    clear: none;
-  }
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: none;
+    }
 
-  .resources.episodes .resource:nth-child(3n+3) {
-    margin-right: 2.5%;
-  }
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 2.5%;
+    }
 
-  // Undo 4-column config
+    // Undo 4-column config
 
-  .resources.episodes .resource:nth-child(4n+1) {
-    clear: none;
-  }
+    .resources.episodes .resource:nth-child(4n+1) {
+        clear: none;
+    }
 
-  .resources.episodes .resource:nth-child(4n+4) {
-    margin-right: 2.5%;
-  }
+    .resources.episodes .resource:nth-child(4n+4) {
+        margin-right: 2.5%;
+    }
 
-  // Set 5-column config
+    // Set 5-column config
 
-  .resources.episodes .resource:nth-child(5n+1) {
-    clear: left;
-  }
+    .resources.episodes .resource:nth-child(5n+1) {
+        clear: left;
+    }
 
-  .resources.episodes .resource:nth-child(5n+5) {
-    margin-right: 0;
-  }
-}
-
-@media (min-width: 600px) {
-  .resources.episodes .resource-summary {
-    display: block;
-  }
-}
-
-.podcast-episode {
-  max-width: 700px;
-}
-
-.podcast-episode h1 {
-  text-align: center;
-}
-
-.podcast-episode aside {
-  float: right;
-  width: 50%;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-}
-
-.podcast-episode aside blockquote {
-  margin-bottom: 0;
-}
-
-.bio {
-  position: relative;
-  padding-left: 120px;
-  margin-bottom: 2em;
-}
-
-.bio img {
-  width: 100px;
-  margin-right: 25px;
-  float: left;
-  position: absolute;
-  left: 0;
-  top:8px;
+    .resources.episodes .resource:nth-child(5n+5) {
+        margin-right: 0;
+    }
 }
 
 @media (min-width: 600px) {
-  .bio {
-    padding-left: 180px;
-  }
-
-  .bio img {
-    width: 150px;
-
-  }
-}
-
-.media-player {
-  margin: 2em 0;
-}
-
-// ----------------------------------------------
-// Filter by tags
-
-[data-toggle='on'] {
-  display:block;
-}
-
-[data-toggle='off'] {
-  display:none;
-}
-
-.filters {
-    margin-bottom:1.5em;
-}
-
-.filters button {
-    font-size:13px;
-}
+    .resources.episodes .resource-summary {
+        display: block;
+    }
+}*/
