@@ -1,0 +1,132 @@
+.nav-sections {
+    clear: both;
+    width: 100%;
+    @media (min-width: 1050px) {
+        clear: none;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        @media (min-width: 1050px) {
+            display: flex;
+        }
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        display: block;
+        border-bottom: 5px solid #424242;
+        @media (min-width: 600px) {
+            float: left;
+        }
+    }
+    a {
+        display: block;
+        padding: 15px 15px 10px 15px;
+        color: #fff;
+        border-bottom: 5px solid #424242;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+
+    .section-home {
+        flex: 1;
+    }
+
+    .section-podcasts {
+        border-bottom-color: $color-1;
+    }
+
+    .section-books {
+        border-bottom-color: $color-2;
+    }
+
+    .section-articles {
+        border-bottom-color: $color-3;
+    }
+
+    .section-podcast {
+        border-bottom-color: $color-4;
+    }
+
+    .section-examples {
+        border-bottom-color: $color-5;
+    }
+
+    .section-tools {
+        border-bottom-color: $color-6;
+    }
+
+    .section-talks {
+        border-bottom-color: $color-7;
+    }
+
+}
+
+.nav-sections .section-podcasts:hover,
+.nav-sections .section-podcasts:focus,
+.nav-sections .section-podcasts:hover a,
+.nav-sections .section-podcasts:focus a,
+.template-podcasts .section-podcasts,
+.template-podcasts .section-podcasts a {
+    border-color: $color-1;
+}
+
+.nav-sections .section-books:hover,
+.nav-sections .section-books:focus,
+.nav-sections .section-books:hover a,
+.nav-sections .section-books:focus a,
+.template-books .section-books,
+.template-books .section-books a {
+    border-color: $color-2;
+}
+
+.nav-sections .section-articles:hover,
+.nav-sections .section-articles:focus,
+.nav-sections .section-articles:hover a,
+.nav-sections .section-articles:focus a,
+.template-articles .section-articles,
+.template-articles .section-articles a {
+    border-color: $color-3;
+}
+
+.nav-sections .section-podcast:hover,
+.nav-sections .section-podcast:focus,
+.nav-sections .section-podcast:hover a,
+.nav-sections .section-podcast:focus a,
+.template-podcast .section-podcast,
+.template-podcast .section-podcast a {
+    border-color: $color-4;
+}
+
+.nav-sections .section-examples:hover,
+.nav-sections .section-examples:focus,
+.nav-sections .section-examples:hover a,
+.nav-sections .section-examples:focus a,
+.template-examples .section-examples,
+.template-examples .section-examples a {
+    border-color: $color-5;
+}
+
+.nav-sections .section-tools:hover,
+.nav-sections .section-tools:focus,
+.nav-sections .section-tools:hover a,
+.nav-sections .section-tools:focus a,
+.template-tools .section-tools,
+.template-tools .section-tools a {
+    border-color: $color-6;
+}
+
+.nav-sections .section-talks:hover,
+.nav-sections .section-talks:focus,
+.nav-sections .section-talks:hover a,
+.nav-sections .section-talks:focus a,
+.template-talks .section-talks,
+.template-talks .section-talks a {
+    border-color: $color-7;
+}

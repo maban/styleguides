@@ -2,11 +2,9 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    background-color: $grey-color-dark;
     min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
+    color: #fff;
     position: relative;
 }
 
@@ -19,82 +17,25 @@
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: #fff;
     }
 }
-
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        z-index: 10;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
-}
-
 
 
 /**
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    background-color: $grey-color-dark;
+    color: #fff;
+    a {
+        color: $color-4;
+        &:hover,
+        &:focus {
+            color: $color-4-darken;
+        }
+    }
 }
 
 .footer-heading {
