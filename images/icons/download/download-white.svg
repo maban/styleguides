@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 29 + Triangle 1 + Rectangle 30</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-29-+-Triangle-1-+-Rectangle-30" sketch:type="MSLayerGroup" fill="#FFFFFF">
+            <g sketch:type="MSShapeGroup">
+                <rect id="Rectangle-29" x="0" y="11" width="16" height="3"></rect>
+                <polygon id="Triangle-1" transform="translate(8.000000, 7.555556) scale(1, -1) translate(-8.000000, -7.555556) " points="8 5.19444444 11.6285714 9.91666667 4.37142857 9.91666667 "></polygon>
+                <rect id="Rectangle-30" x="6.62857143" y="0.944444444" width="3" height="4.72222222"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

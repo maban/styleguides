@@ -21,4 +21,7 @@ collections:
         output: true
     resourcetool:
         output: true
-    
+    podcast:
+        output: true
+    patterns:
+        output: true
