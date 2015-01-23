@@ -4,6 +4,7 @@
 
     {% for podcast in podcast %}
     <li class="resource {{ podcast.status }}">
+        <span class="number">{{ podcast.number }}</span>
         <a href="/podcast{{ podcast.link }}" class="resource-url">
             {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
             <span class="resource-description">
