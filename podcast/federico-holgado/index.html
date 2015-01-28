@@ -1,0 +1,475 @@
+---
+layout: episode
+section: podcast
+number: 2
+title: Federico Holgado
+image: federico-holgado.jpg
+about: Federico is <a href="http://mailchimp.com/">MailChimp's</a> Lead UX Developer.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/188349524&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+links: [
+{text: "MailChimp's Pattern Library", url: "http://ux.mailchimp.com/patterns", type: "example"},
+{text: "MailChimp's Writing Style Guide", url: "http://mailchimp.com/about/style-guide/", type: "example"},
+{text: "Voice and Tone", url: "http://voiceandtone.com/", type: "example"},
+{text: "Lonely Planet's Style Guide", url: "http://rizzo.lonelyplanet.com/styleguide", type: "example"}
+]
+
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hello everybody. Welcome to another episode of the Style Guides Podcast, a podcast dedicated to style guides, pattern libraries and building effective interface systems. I am Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we're extremely excited to have Fed Holgado of MailChimp talking to us. So Fed, welcome to the programme, thanks for coming on.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Thank you so much; super-excited to chat with you guys.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So you're based in Hotlanta, which sounds like it's sort of cold right now?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Hotlanta, which is Coldlanta right now.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Coldlanta. Hopefully you guys don't have crazy ice storms like you did last year?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Hopefully not, because that was almost the end of the world here!  Literally!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I remember seeing this Flickr page for a set of patterns that made up the MailChimp UI</a> and I remembering being kind of blown away by it. I thought it was the coolest thing ever…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So you work at <a href="http://mailchimp.com/">MailChimp</a>. Do you want to just give a little bit of background?  How long have you been there; how long have you been working there; what do you usually do?  What's your job title and what are you doing on a daily basis?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, cool. I've been at MailChimp almost four years now and my roles have kind of progressed over those four years but the latest and greatest thing that we're working on is I'm Director of UX for MailChimp and I help the design and development teams come up with features, decide how we're going to build them, how we're going to design them, and actually help those guys build things as well.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Great. Wow, so sort of like high level, very strategic figuring out what are the best things that the company should be focusing on and then making that happen?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah. It actually is a gamut. I'm talking with design and engineering a lot; I'm talking with front end developers a lot, sketching a lot, thinking through design problems. Even coding some stuff, which is exciting.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's really cool. So, <a href="http://ux.mailchimp.com/patterns">MailChimp's had a style guide released into the wild</a>, publicly available which I think is absolutely phenomenal. It's been that way for a while now and you've actually iterated on it, so do you want to talk about where that style guide came from, its genesis and its trajectory, how it's gotten to the place it's at right now?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…we worked on the really basic pieces of MailChimp, started developing other new parts and pieces that we thought were really cool and we started to see a pattern forming where things could be re-used in different places…</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah. I think in the early days of MailChimp, I remember this is even before I started working at MailChimp, <a href="https://www.flickr.com/photos/aarronwalter/5579386649/">I remember seeing this Flickr page for a set of patterns that made up the MailChimp UI</a> and I remembering being kind of blown away by it. I thought it was the coolest thing ever….</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I saw that too!</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, it was on Flickr, I remember it was a huge jpeg or png and I think it was in <a href="https://twitter.com/aarron">Aarron Walter</a>'s Flickr account and I remember looking at that and just being really inspired, I'm a fan; this is something to strive for. </p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> But it's a jpeg!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…sharing was one part and the other part was we really just needed to keep ourselves honest…</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, but it's a jpeg, so it was kinda weird but I guess back in those days, I don't know, I think these ideas just weren't well formed enough. I think it was a jpeg of a website; I just think it was internal at the time, they did want to actually share the things, so they shared the next best thing.</p>
+    <p>But anyway, if you fast-forward I don't know; two, three years, maybe even more. When we were finally coming around to doing the MailChimp re-design, we know that we wanted to take the same approach just because it was so helpful for everybody in the team; for engineering and for the design and front end development teams to have this common language to share.</p>
+    <p>So we kind of started the MailChimp re-design with the really, really atomic pieces of the design; I'll steal your language for a little bit. And then eventually we worked on the base part of it and then we started working on MailChimp and then just kind of organically everything grew around it, but it's almost like we worked on the really basic pieces of MailChimp, started developing other new parts and pieces that we thought were really cool and we started to see a pattern forming where things could be re-used in different places, and almost at the end of it, at the end of that first big sprint, we stopped for a little bit and looked back and collected all those pieces and said, OK, based on the work that we all just did, this is what the MailChimp pattern library for the re-design has now become, and that was the genesis of our little pattern library.</p>
+</div>
+
+<span class="timestamp">(5:21)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, why did you make it public?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> There's a few reasons why we decided to make it public. I think one of the most important reasons was that we really used a lot of knowledge that was published by other designers, developers, by the community in general and we felt like we needed to contribute back a little bit and say; this is the way that we took all these ideas, some of them our own, some of them things that were shared by others, and this is how we've combined them and how we applied them to our own use case. Which I think was helpful for us to have it all there.</p>
+    <p>So, sharing was one part and the other part was we really just needed to keep ourselves honest; even still in this day and age our pattern library gets a little bit neglected. We try and work really fast and sometimes we'll forget to change things, like if you look at it right this second, the pattern library actually doesn't have all the new changes that we just implemented in this little refresh that we launched at the beginning of the year, but the guys are hard at work on it right now trying to clean it up and basically giving it an update as well.</p>
+    <p>So, sharing was one part, the other part's just kind of keeping us honest and making sure that we're taking care of it, we're maintaining it, just knowing that other people are looking and it's a resource that just makes us feel like we have to keep up with it.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and how many people are at MailChimp? Because what I found is for bigger organisations, it's sort of the bigger a company is, the more likely a resource is to slip between the cracks so not everyone is seeing it, so it's sort of like an invisibility thing, it's just like as an internal resource, so how many folks are at MailChimp these days?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p><abbr title="Quality Assurance">QA</abbr> uses it a lot; they're constantly looking at it, making sure that things are kind of in check and something hasn't blown up and of course designers, the front-end developers and the engineering teams all refer to it on a regular basis so it's actually really kind of crucial to our entire workflow with building things in MailChimp.</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> I think now we're over three hundred people.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Holy smokes, wow!</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's a lot!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's way different than I think even two years ago, it wasn't anywhere near that.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Wow, well congratulations, that's fantastic. So that's like three hundred people that need to know this thing exists, do you see that?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, totally. I mean really the people that it affects the most actually <abbr title="Quality Assurance">QA</abbr> uses it a lot; they're constantly looking at it, making sure that things are kind of in check and something hasn't blown up and of course designers, the front-end developers and the engineering teams all refer to it on a regular basis so it's actually really kind of crucial to our entire workflow with building things in MailChimp.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's awesome. Let's talk about that a little more and sort of specifically about what you're just talking about, so that challenge of keeping the style guide and your production environment in synch and what that means for your workflow and stuff, because this is a challenge I see literally across the board; even in my own work, and I actually go back a couple of years, talking to Aarron Walter about your guys' style guide and I'll never forget this. He said, yeah, it's sort of this Atlantis; it's this beautiful thing that's off in the distance that we're never, ever going to realistically implement across the board in our actual product. It's the sort of thing upon a hill and we're striving towards it but it's just not realistic to ever have them totally be in synch and up to date all the time.
+        <p>So I guess could you talk through some of that stuff, some of those challenges around maintainability and people's priority and you're working on the real product and the style guide isn't really the real product but it's important to it. How does all that work?</p>
+</div>
+
+<span class="timestamp">(9:47)</span>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Gosh, I mean I agree with you. It is one of those kind of idealistic things that you're always striving for, but it's very hard to get there.</p>
+    <p>So, some of the decisions, for example like an engineering decision that we made to try and force us to keep up with the pattern library a little bit more was that the pattern library is actually hosted out of the app, so it's just on an endpoint that's not behind the log-in, and it actually shares, it renders using the same style sheet that is actually being used in the app, so if something in the app is broken, or if something in the style guide is broken, it probably means that it's also broken in the app.</p>
+    <p>The only disconnect there is that the mark-up in the pattern library is on its own and it's not connected in any way to the mark-up that's on the site or in the app, so that's where the disconnect usually happens where we'll tweak a pattern somewhere and then we'll forget to tweak it in the style guide.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>we still have visual designers that work mostly in Photoshop or even we're trying out Sketch right now. So it's actually kind of funny, and they've been running into a similar situation where they want to create a style guide or a pattern library and the tools are not quite there yet, but they're rapidly approaching</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yup, that's been my experience too; it's sort of porting over the CSS and the Javascript, making sure those things are shared between the two are sort of the easier side of it but it's that markup, that stuff that gets sort of blended in with the back-end logic and all of that; it's sort of hard to de-couple that into the little bite-sized chunks.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> And actually, I've seen it done and it is do-able. I can't remember which style guide it was. I think it was a travel site, it was an amazing style guide…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Oh, <a href="http://rizzo.lonelyplanet.com/styleguide">Lonely Planet</a>.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, Lonely Planet. We're going to be talking to <a href="https://twitter.com/ianfeather">Ian</a> a bit later on. I'm super-excited about that.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Oh man, that's awesome. I'm excited to hear what he has to say, but I noticed in their style guide, they actually, it's almost like they have function calls to generate a bit of <abbr title="User Interface">UI</abbr> and I'm assuming that's so they can actually make a change in one place and it propagate everywhere else, which sounds amazing and it also sounds like a gigantic amount of work!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>the grand vision for us has been that those guys would have something basically exactly the same thing, where they have a bin of parts that they can just basically drag into their document or whatever they're working on to build UIs, so that it's all the same and it's shared language</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah!  Exactly. But that is… we joke around; that is the Holy Grail, to just be able to have things in one place and it just works, but irrespective of that, there's no doubts that the benefits of these style guides, even if they are just a representation or an abstraction are helpful for other things.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, totally; absolutely.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, coming back to workflow and stuff. So you have engineers, you have front-end developers, you have UX designers, and visual folks as well, right? How… do you have people that are working in tools like Photoshop, more the sort of static tools, and how do they benefit from the style guide or how do they make sure that what they're cranking on aligns with what's live in the style guide?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> So yeah, we still have visual designers that work mostly in Photoshop or even we're trying out Sketch right now. So it's actually kind of funny, and they've been running into a similar situation where they want to create a style guide or a pattern library and the tools are not quite there yet, but they're rapidly approaching.</p>
+    <p>One of the things that I think they've been working on, Photoshop recently came out with the ability to have stored objects or patterns that you can basically replicate, and that's actually great and that can serve as the foundation for the pattern library, but they just can't be synched right now, so they can't be shared, so one designer can't develop them and build them and another designer use them in another….in their own Photoshop instance, which I'm sure it's coming; I'm sure it's something that they're thinking about.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, so you're reference, I want to say it's called the Creative Cloud Libraries Panel or something?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, OK.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's a shame that you can't share it right now, because that's obviously the main benefit of it, right? You have a bunch of different designers all leveraging the same toolkit.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> And the grand vision for us has been that those guys would have something basically exactly the same thing, where they have a bin of parts that they can just basically drag into their document or whatever they're working on to build UIs, so that it's all the same and it's shared language, but it's almost like even still, even now, they've got Photoshop files of their own patterns that reflect the patterns that are actually live on the pattern library, and this is where… yeah, which is hard to deal with, but it's almost like in reality, the patterns actually are born in Photoshop or Sketch and they eventually get extracted out into the pattern library, into the real thing.</p>
+</div>
+
+<span class="timestamp">(15:24)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and I think that that makes sense; you have the static, more free-formed sort of playful environment to really tinker with this stuff and bake these ideas and then once they're baked and start getting executed then you can actually make them part of the system.</p>
+    <p>I think that makes sense; I think there's a lot of opportunities for… not that I've railed against Photoshop or anything like that, but it is really encouraging I think to see those tools start to recognise that yeah, we need to be able to design things in a more systematic way. That changing border radius on one button shouldn't require you hunting for layers, seventeen other layers!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>it's just the way, again to keep everybody on the same page as far as how we'd think it's best to talk to our customers and talk to the people that use MailChimp</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Sometimes I feel so bad for those guys because you watch them work and it's almost like manual labour. It's like they're sitting their just changing exactly like what you're saying: changing the stroke on a button and there's seventeen different buttons on the page and they will be sitting there for the next fifteen minutes, changing the stroke. Like… oh Jeez… </p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> This is literally changing one character in CSS and it's taken you seven hours to….</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yep. Exactly. It's horrible.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Something I wanted to briefly talk about was, you don't just have the pattern library; you've also got <a href="http://voiceandtone.com/">Voice and Tone</a>, which is a style guide I guess specifically for content editors. Is that right?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Uh-huh, correct.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I guess the pattern library is more internal facing, it's really useful for people internally, but the voice and tone is much more for I guess people who write emails?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> For the brand, yeah, like a global language for the brand, right?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, I mean Kate, who's the person that was originally behind the whole concept idea and she can speak to it much better than I can, but from my point of view, it's just the way, again to keep everybody on the same page as far as how we'd think it's best to talk to our customers and talk to the people that use MailChimp. I still think, again, there's a note on the pattern library that says, this is for us; we're sharing with you, but really it's for us, and I really believe the same thing with voice and tone.</p>
+    <p>I think it's so much for our own internal communication; it kind of reflects how we interact with each other to some extent too. I think just our culture is well reflected in that voice and tone guide, but it just so happens that I think the way that she approached it and the way that it's kind of grown over the years, it just makes sense for a lot of people and it's so… it seems like it's accessible enough and, I don't know, to me it just makes sense. That's the way that I like to communicate and that's the way that to me just seems the right way to do it.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>Aarron and I will spend probably an entire morning just looking at every little thing that we design, every little flow interaction and just expose the copy and talk about it and just say OK, how does this sound, how does this make sense?  And we'll go through and almost like proof-read it and a lot of that is referencing voice and tone</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah. Do you ever find that your interface pattern library and voice and tone sort of intersect? Are there voice and tone considerations for specific interface elements or are they pretty much separate operations that just coincide?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> No. The people that are… generally one of the things that we tend to do in order to make sure that everything's kind of cohesive is we'll always be taking our best shot at coming up with copy that we feel fits a situation and it makes sense; sometimes we'll have discussions for hours on just what to call things or how to refer to them</p>
+    <p>But usually what we'll end up doing is before we wrap up a release, Aarron and I will spend probably an entire morning just looking at every little thing that we design, every little flow interaction and just expose the copy and talk about it and just say OK, how does this sound, how does this make sense?</p>
+    <p>And we'll go through and almost like proof-read it and a lot of that is referencing voice and tone and making sure that the way that we're speaking is …I think originally Aarron was the one that developed this kind of idea of how we should interact and to us it's just so important that we keep that consistent so it's almost like part of our workflow to make sure; it's like OK, let's stop, let's think about words one more time, even though we're thinking about words all the time. We need, now that it's all there, we need to look at it all together.</p>
+</div>
+
+<span class="timestamp">(20:27)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's phenomenal, that's great that you take the time to make that stuff happen, because as I've found and I've been repeating, especially the last couple of weeks, just naming things is so hard and how things are named very much influence how they get utilised and how people think about things and so it sounds like you guys actually bake that into your workflow; let's take a step back, let's take a look at these words, let's take a look at the clarify behind them. Is that sort of what you're saying?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah. And gosh, the naming part, it's so hard. We had, for example when we launched our new, I guess it's not so new any more, but automation features which used to be called auto-responders, which I think people somewhat understand what they are now but back in the day when that was first created, people had no idea what that meant!  I'd say, auto-responders; it's like… you can kind of put the two things together but if you don't have a technical background, it would mean nothing to you.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>Sometimes it's like things are too loosey-goosey and there's not enough guard rails around the world that you're living in, so to me I feel like it's natural to start building a system.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, right.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> So when we chose to re-design auto-responders, one of the things that we really considered was, what are we going to call this?  Because on one side we have all these people with history, they kind of already know what they are, and on the other side we see all these thousands of people signing up for MailChimp every day and a portion of them are going to look at that word and they're going to have no clue what it means, so we decided to rename it, and we called it automation, which it's still kind of a contrived kind of word, but at least you know, OK, something automated is happening, and that's probably as much as you need to know before you get in there to start playing around and discovering what the rest of the feature is.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> That was a lot of back and forth trying to figure out and make that decision.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's fascinating. Man, that stuff matters. Especially whenever you're seeing… whenever it's customer-facing it's like you can see really quickly, does this thing work or doesn't it?  It's sort of coming back to the workflow and who's involved, and it sounds like by now everyone's on board and understands the sort of pattern based workflow and to referencing the style guide and making use of it and striving to roll new thinking back into that sort of pattern library.<p>
+    <p>A two-part question is: has it always been that way or what were the growing pains to get people on board with that?  And then the second part is, who's actually maintaining and governing the style guide?  Are there dedicated people or how is the style guide enforced and who owns it?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>we started to see so many places where our patterns would actually work; different parts of the UI, different pages of the app, it was like, oh man, the slot system would work perfectly in here; or this pathway that we designed would work perfectly in here</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> So, coming up with it and starting to enforce the system, I think it's something that tech people and engineering focused people and design people to some extent, it's something that at least in our little world, it's something that I think people tend to gravitate towards you. Sometimes it's like things are too loosey-goosey and there's not enough guard rails around the world that you're living in, so to me I feel like it's natural to start building a system.</p>
+    <p>And I think it just so happened that everybody else that was working on the pattern library at the time and just MailChimp engineering in general just felt the same, so I think people were excited, but not until this latest re-design; not until that happened, we had… let me re-phrase that… until the re-design happened, we didn't really have a concrete system to say, OK, these are the things that we're going to use and this is the mark-up that we're going to use and we're actually going to force this and we're actually going to care and make sure that things remain as consistent as possible.</p>
+    <p>So, and again, I think all of us it was like a natural progression to the point where when we had to change the mark-up on, I think it was a thousand give or take views in the app, that really hurt!  We were like, man, this kinda sucks! I think we spent an entire… most of the re-design, I guess, literally just converting mark-up, making sure that things utilised the new system that we had come up with…</p>
+</div>
+
+<span class="timestamp">(25:44)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I guess… was it a good opportunity for code review?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> I'm sorry, could you repeat that?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Was it a good opportunity for a code review?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yes, absolutely. And I think this is one of those times where we actually had enough time to take a look at everything.</p>
+    <p>We were looking at so many pages of the app, we cut so many features and so many things that we felt were being under-utilised and just didn't really matter any more, and at the same time we were looking at mark-up, we were looking at the way things were done and I think this is the thing that kind of captivated me the most, was that we started to see so many places where our patterns would actually work; different parts of the UI, different pages of the app, it was like, oh man, the slot system would work perfectly in here; or this pathway that we designed would work perfectly in here.</p>
+    <p>But we actually didn't have enough time to re-think all those things, so we'd end up doing what we could during that process and tackled the most important sections of the app, but other parts that were less important but we could still see the potential there, we left to the side and we've been systematically attacking those, ever since the re-design.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So it's kind of on-going?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's fantastic. So Phase One was sort of building your tool-kit and then Phase Two is sort of, all right, we have these tools, we've established these patterns, and let's actually look for opportunities to make use of these, right?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…in twenty minutes, we had built a system that was responsive; it looked great on mobile and it was nice to look at. It was one of those pages that not a lot of people will see. We call them the dark corners…</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, and I would say Phase Two was after our re-design happened and after our first version of the pattern library was in place. Just because it's so hard to come up with a system from scratch that says, OK, I'm going to design this slot system that's going to work in twenty five different pages of the app with every single permutation, combination that you can think of.</p>
+    <p>That takes a lot of time and the scope just explodes, so we ended up actually starting with our four main pages of the app; the dashboard, the campaign dashboard, the reports dashboard, the list dashboard and we came up with something that worked across those four pages and then once we did that, as we were implementing things in other pages we started to realise: man, this system will actually work here and this system will actually work here and here.</p>
+    <p>But we didn't have enough time to do it all, so we kind of set those things aside, like I said, and we knew that we'd work on them later and we knew exactly what we were going to do to those pages and we're going to apply these new patterns, but that was going to be post re-design and post launch, and we're still working on it right now.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Oh that's awesome. So, are you seeing that as you start doing this, it's saving you time because you're utilising existing patterns rather than having to start from scratch?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…and by having a pattern that you could actually use that's already ninety five per cent of the way there, it just makes things… it brings up the quality of everything so those dark corners actually aren't so dark any more.</p>
+    </blockquote>
+</aside>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, totally. A great example, and this is something that I've used before, but I think we, must have been almost a year ago now, we built a segment export page. In MailChimp there's… you have your list of people and you can segment those lists of people into segments. So we built a little status page just to show when your segments were exporting, and we actually ended up taking again, same thing again, a mark-up for that slot system that's prominent in MailChimp, and just copied and pasted it, changed a few things, and in twenty minutes, we had built a system that was responsive; it looked great on mobile and it was nice to look at. It was one of those pages that not a lot of people will see. We call them the dark corners…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I like it!</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Where cobwebs collect, you know?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, right.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> And it's one of those things that generally, when you're deciding the scope of a project you're like… yeah, it just doesn't matter that much. Just do what you need to do: get the page up and move on.</p>
+    <p>And by having a pattern that you could actually use that's already ninety five per cent of the way there, it just makes things… it brings up the quality of everything so those dark corners actually aren't so dark any more. They actually share the same mark-up.</p>
+    <p>A page that gets one-one hundredth of the views of the dashboard actually has the same mark-up and it's comprised of the same CSS as the dashboard. Which is really cool and people feel that after they start using the product.</p>
+</div>
+
+<span class="timestamp">(30:40)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and I think that that just has huge ramifications on your brand; on consistency, cohesion, familiarity with your users and it's like what you just described as like at a stark contrast with any sort of big enterprise site, where you click four links into a big company's site and you end up with four different designs or those old crusty support pages look like they've been abandoned since 2001…</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yep. It's crazy.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So this sort of pattern based approach is really just plain old CSS, even without… like plain old CSS will magically update things to look consistent. That's so cool, and again, you guys are just head and shoulders above loads of people when it comes to that branding and that very consistent experience and I think that what you just described just makes that and really crystallises that. That's awesome.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Cool. Thank you.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So we're sort of running out of time, so the last question we have for you, it's what is that sort of end goal?  What do you see as that sort of Holy Grail as that perfect workflow, as that perfect style guide?  What would you say that that is?</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> We've had a lot of discussions about this, and I don't know that there's a right answer.</p>
+    <p>I think for us, we've gotten a lot better over the past four or five years from where we started. I think we're in a much better place now in terms of our pattern library, how consistent things are. But honestly, it's something that would be impossible if the guys that are actually working on the pattern library, if those guys didn't actually care and bought into it and really took ownership and implemented it themselves, so I think that the Holy Grail for anybody to strive for is to find a team that really cares and if you have a team that can actually get together and form together and all agree on this and realise how important it is, then everything else will work itself out.</p>
+    <p>If you're a small organisation or a company and you can't have a lot of overhead, keeping it simple's fine and whatever it is that you can do to actually use the patterns, whether it's just a single page on somebody's Dropbox or something a little bit more complex, if that's what works for you and actually lets you keep going, that's fine.</p>
+    <p>For MailChimp it's a little bit more overhead, but it's still in the grand scheme of things relatively simple and it's hard to make that call when you want to go to the next level and I think we'll figure it out at some point soon.</p>
+    <p>I don't know if that makes any sense to you guys, but that's kind of what I envisage.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I think that that's perfect, and I think that you absolutely nailed it, just really whatever works for the people and getting the people to care about it rather than the exact technical set-up is absolutely a big win.</p>
+    <p>Well hey, Fed, thank you so much for coming on, thanks for your time, this is has been just insanely insightful and again, I just… we have so much respect for MailChimp and all the stuff you do and especially with putting it all out there in the open, sharing your thoughts, sharing… your UX newsletter is always a wealth of really wonderful information and I'm just so glad that you guys have created this culture of sharing and putting things out there, because we're all benefiting from it. So, thanks for that.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Cool. It means a lot to us. Thank you. It's awesome to hear. I'm glad you guys are doing this. I feel like more people have to do this; it's such a life-changing endeavour, just in every step of the way, and it means a lot to us that you guys respect us and you look up to us, so it's awesome. Thank you.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Thank you so much for joining us.</p>
+</div>
+
+<div class="federico-holgado guest">
+    <p><b>Federico</b> Yeah, thanks, this is, like I said, so much fun. I love this!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So do we! So, OK. That concludes this episode. Thanks for tuning in and we will have another small dose of style guide pattern library inspiration for you coming soon, so thanks for tuning in.</p>
+</div>
