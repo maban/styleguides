@@ -1,1 +1,483 @@
----layout: episodesection: podcastnumber: 3title: Lincoln Mongilloimage: lincoln-mongillo.jpgabout: Before working on Product at <a href="https://www.simple.com/">Simple</a>, Lincoln helped build <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks's splendid style guide</a>. He also likes rebuilding old Volkswagens.audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189517945&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>links: [    {text: "Starbucks Style Guide", url: "http://www.starbucks.com/static/reference/styleguide/", type: "example"},    {text: "BBC GEL", url: "http://www.bbc.co.uk/gel", type: "example"},    {text: "24 Ways article on Style Guides", url: "http://24ways.org/2011/front-end-style-guides/", type: "article"},    {text: "Simple's Resolution Maker", url: "https://www.simple.com/resolution-maker", type: "website"}]---<div class="brad-frost host">  <p><b>Brad</b> Hello everybody; welcome to another episode of the Style Guides Podcast, a podcast that's dedicated to all things style guides, pattern libraries, standards related. My name is Brad Frost.</p></div><div class="anna-debenham host">    <p><b>Anna</b> I'm Anna Debenham.</p></div><div class="brad-frost host">  <p><b>Brad</b> And today we are extremely excited to welcome Lincoln Mongillo to the programme.<div class="lincoln-mongillo host">    <p><b>Lincoln</b> How are you?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> I'm doing well, thank you Brad, thank you Anna.</p></div><div class="brad-frost host">  <p><b>Brad</b> Yeah, well we're really excited to have you on the programme because you've been sort of neck-deep in style guides for a while now, so I'm really, really looking forward to hearing what you have to say on the subject, but just to get started; who are you, where are you based, who are you working for, what re you up to these days and what's been your path? How have you gotten here?</p></div><aside>    <blockquote>        <p>We developed it based on a need that we had internally to align our organisation around the design patterns that we saw in our website and have a common document to describe exactly what the mark-up was, what the visual design was and all the elements that powered our website.</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Sure. Well, for the past eight years I was working at <a href="http://www.starbucks.com/">Starbucks</a> as the Web and API Category Manager, which is kind of weird title but it really was a product management role, responsible for facilitating the strategy, vision and road-map for our company's websites and as part of that I helped re-launch starbucks.com as a responsive website and built <a href="http://www.starbucks.com/static/reference/styleguide/">an open and public style guide</a> and then just recently in December I switched over to a product company called <a href="https://www.simple.com/">Simple</a> which is an online application and website that basically helps customers manage their financial lives a little bit more effectively through a banking application.</p></div><div class="brad-frost host">  <p><b>Brad</b> That's fantastic. And so what's your role there at Simple?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> My role there is Product Lead, so I work on a very small team of a couple of product managers helping the engineering organisation with their vision, strategy and road-map.</p></div><div class="brad-frost host">  <p><b>Brad</b> That's excellent. So are you guys rolling up your sleeves with this pattern-based thinking, these sort of style guides, this sort of approach? Are you taking on that mission that you've crafted over the last eight years at Starbucks and getting that thinking involved and injected into Simple?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yes and no: when I did it at Starbucks, it was something that was completely new to us at the time. We developed it based on a need that we had internally to align our organisation around the design patterns that we saw in our website and have a common document to describe exactly what the mark-up was, what the visual design was and all the elements that powered our website. At Simple, they already had a head-start for that, given the pace in which they operate, so they were already well tuned in to what the industry was doing, and they have a pretty extensive style guide already; it's just not publicly available. It's all located within their internal GitHub repo and so they've been iterating on that for I'd say the past year and a half, and we've got some pretty big plans to further evolve that and who knows what will happen in the future with that.</p></div><aside>    <blockquote>        <p>a style guide really helps to ease some of the challenges with making design decisions in a way that is equally yoked to what the interests are of the designers and the developers.</p>    </blockquote></aside><div class="anna-debenham host">    <p><b>Anna</b> Do you plan to make it public?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Maybe!</p></div><div class="anna-debenham host">    <p><b>Anna</b> Go on!</p></div><div class="brad-frost host">  <p><b>Brad</b> That'd be the coolest thing for a banking institution to start sharing things publicly! (laughs)</p></div><aside>    <blockquote>        <p>I just brought it up on my phone and he was like: this is great, you have to show this to the world!</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Inasmuch as it's a bank, it's really just a website and an application that sits on top of a bank and so a lot of the challenges that other companies have is the same challenges that we have when it comes to building applications that are hard to build and harder to maintain and so a style guide really helps to ease some of the challenges with making design decisions in a way that is equally yoked to what the interests are of the designers and the developers.</p></div><div class="anna-debenham host">    <p><b>Anna</b> So, was it hard to convince Starbucks to make theirs public?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> No; the origin story of that is, we developed it when we were doing our responsive design project and it was done by a single developer at the time. We had a front-end development team who came together and decided that we needed to have that as an artefact for us when we went about doing the responsive design effort and there was a couple of developers on the team who had done that at previous companies when it was just getting off the ground as a concept, and they found it very fruitful for them and their design process and development processes.</p>    <p>So they ended up building the Starbucks responsive style guide and we've launched it publicly inside of a static directory; it just wasn't linked out externally from any part on our website, nor was it publicly mentioned, and then I was at <a href="http://sxsw.co.uk/interactive">SXSW</a> a few years ago and I think it was <a href="https://twitter.com/andyhume">Andy Hume</a> was giving a great talk on style guides and particularly he was commenting on the <a href="http://www.bbc.co.uk/gel">BBC GEL</a> style guide which at the time was a fascinating insight into how the BBC thought of their design thinking and after that I went up and talked with him and lo and behold <a href="https://twitter.com/adactio">Jeremy Keith</a> came up and started asking me about it and I mentioned that it was publicly available, so I just brought it up on my phone and he was like: this is great, you have to show this to the world!</p></div><span class="timestamp">(5.40)</span><div class="anna-debenham host">    <p><b>Anna</b> Yeah! I remember, I've heard his side of this story as well, and him going on about how amazing it was!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> It was, once he started to talk a little bit more about it, that's when it really gained a lot of interest within the development community; other people started to comment on it and the sheer fact that it was already publicly available was, to go back to your original question, it wasn't a conscientious decision, it was always out there in the open.</p></div><div class="anna-debenham host">    <p><b>Anna</b> That's really good.</p></div><div class="brad-frost host">  <p><b>Brad</b> That's fantastic. So this is huge and it was my introduction to a style guide; seeing the Starbucks style guide for me was like, life changing moment! And I'm being a little dramatic here but we would not be talking about this if it weren't for that and it is really amazing, how much of an impact that stuff could have, to just give credence to the fact that yes, this thing is a sound concept. Look: a large company is doing this. Especially large companies need to have a cohesive language, a cohesive system, a cohesive vocabulary that they can get things done with, and so it really was a huge epiphany seeing that, so thank you for that!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> All the credit really goes to the developer that put that together. It was a gentleman by the name of <a href="https://twitter.com/curtisj44">Curtis Jurgensen</a>, who was a front-end developer on the Starbucks team at the time, who really had the opportunity to step back from the day to day project work, and as we were thinking about the design challenges that were in front of us with taking the site and re-flowing it through because it was a desktop site.</p>    <p>He had the opportunity to re-think what he needed at the time, based on our team's needs, and born out of that was the style guide, so I think a lot of the credit goes to that front-end development team at Starbucks at the time.</p></div><div class="anna-debenham host">    <p><b>Anna</b> I kind of feel like it was the tipping point for a lot of people. It made them realise; wow: style guides are a real thing.</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Oh yeah.</p></div><aside>    <blockquote>        <p>…a lot of times there's such great talent out there, you just have to get out of the way and let them do what they need to do.</p>    </blockquote></aside><div class="brad-frost host">  <p><b>Brad</b> It's the <a href="http://www.bostonglobe.com/">Boston Globe</a> of style guides.</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Honestly it was born out of, I think Anna, you did a <a href="http://24ways.org/2011/front-end-style-guides/">24 Ways article on Style Guides</a> at the time, and I think that was also a tipping point for us when we were talking about it that it was an important enough talking point in the industry that we had to really consider doing that as part of our own work and so I think these sort of things fold on each other over time where the importance of it and the significance of it are based on what other people are doing.</p></div><div class="anna-debenham host">    <p><b>Anna</b> Yeah.</p></div><div class="brad-frost host">  <p><b>Brad</b> Yeah. So, you mentioned something: you had this developer who was able to take a step back and see the forest, if you will, through the trees. And this is something I see repeated over and over and over again; a lot of organisations, they're trying to get stuff done, trying to get a new project out the door. You have, especially in an organisation as sizeable as Starbucks, you have loads of different developers, loads of different teams with loads of different priorities and goals and stuff like that.</p>  <p>How important is it, even at your new gig, to have that layer above those siloed teams, to help steer and establish this common language, establish a sense of continuity and cohesion and just building tools to actually do that, because again, a lot of organisations don't have that layer; we need to get things done, we need these teams all hands on deck. Put your head down, put your horse blinders on and just get things done. So, organisationally, can you maybe speak to that, because it sounds like you're operating at a level above just practitioner developer, getting things done.</p></div><aside>    <blockquote>        <p>We needed something that was a living document of the site at the time, and we needed something that could change and morph as our design decisions were changing</p>    </blockquote></aside><span class="timestamp">(10:00)</span><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah. I think it really comes down to design leadership and giving the team the room and capacity to do what they need to do to be successful in whatever project that they're involved in and so if the team is really responding to a need where they have common interests and common goals and objectives where they need to have a style guide to work more effectively together, then it's probably up to the leadership of the company or the team to give them the ample time and room to focus their energy on that and a lot of times there's such great talent out there, you just have to get out of the way and let them do what they need to do.</p></div><div class="brad-frost host">  <p><b>Brad</b> That is a great piece of advice: absolutely. So, you guys built this thing, it got out there. Have you seen any sort of push-back or challenges, whenever this thing went live and you have a bunch of different teams or people that are used to working in a specific way. What I found in my own work is, sometimes people are apprehensive; they feel like a style guide or these standards are putting the handcuffs on creativity and stuff. So how do you combat that? How do you address that and get them on your side?</p></div><aside>    <blockquote>        <p>I think that's certainly one of the key benefits is that from a rapid iteration perspective, you're able to take concepts pretty rapidly with a living style guide and take those modular parts of that component library and then build something new out of that.</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah, I think that's certainly been one of the biggest challenges in that everybody needed to rationalise what the style guide means for them, be it a designer, a developer and I think there's different interests with that with respect to those parties and where it came down for us is that we needed something that was a living document of the site at the time, and we needed something that could change and morph as our design decisions were changing and the style guide really represented a way for us to all rally around different design decisions that were being made and understand how it's making an impact at what you would call the atomic level, to use some of your language, Brad, and I think that if you're looking at something as simple as a carousel or a button, you can see those things in context of where they sit in situ on the page, but when you see it at the atomic level, you're able to really interrogate the mark-up: what does that mean from a semantic point of view? What does it mean from a style point of view?</p>    <p>And then you can start to put these pieces together as components that make up your larger website, and I think the goal of a style guide for us at the time was to make it a living style guide; something that would change and evolve as our design decisions were changing and I think that's a worthy and noble mission, but it's also extremely challenging to continue to use that as the crucible in which you look at all your design thinking through. And this is something that I think that Simple as doing a great job at, that they're really focusing on all of their design decisions based on what is the impact to the style guide.</p></div><div class="anna-debenham host">    <p><b>Anna</b> Do you use it for prototyping?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Absolutely, yeah. I think that's certainly one of the key benefits is that from a rapid iteration perspective, you're able to take concepts pretty rapidly with a living style guide and take those modular parts of that component library and then build something new out of that and then do whatever you need to do to decorate it or change it in a way so you can make it something new.</p></div><div class="brad-frost host">  <p><b>Brad</b> So you get these massive gains; instead of re-inventing the wheel the whole time, you can just leverage existing patterns to explore new ideas?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah. And you're doing it with real code too. You're not doing it just in a blank white Photoshop canvas; you can start with something that's tangible and demonstrateable, so other interested parties, be it designers, developers or even senior management can take a look at something in the context of what is appropriate to the web, which is the browser itself.</p></div><aside>    <blockquote>        <p>I think that's part of the work that's being done right now is to start to bridge the gap between these two eco-systems, so what you'll see in the future is a fully functional website that's built on and powered by the style guide itself</p>    </blockquote></aside><div class="anna-debenham host">    <p><b>Anna</b> And I guess in any device as well?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Exactly.</p></div><div class="brad-frost host">  <p><b>Brad</b> Yeah, that's so cool. So, it sounds like you have at Simple the style guide, the pattern library is very much baked into the mindset and the workflow of the design and development teams. From a maintainability standpoint, are they connected? Does the style guide exist within the production code base? Is it a separate reference? What's that process like and how do you keep things maintained?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah, that's certainly one of the biggest challenges is maintainability, and at Simple I can certainly testify to the fact that they've had some pretty significant challenges to that where their style guide is a completely separate code base from their actual living website and I think that's part of the work that's being done right now is to start to bridge the gap between these two eco-systems, so what you'll see in the future is a fully functional website that's built on and powered by the style guide itself, and that process is under way right now.</p></div><span class="timestamp">(15:30)</span><div class="brad-frost host">  <p><b>Brad</b> And that's a pretty big undertaking!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> It is, yeah, but the benefit, the risk reward for that or the cost benefit for it is that we'll have at least one way in which we can talk about and look at semantic mark-up and style sheets to define how our site looks.</p></div><aside>    <blockquote>        <p>We're also trying to look at how mobile, particularly native apps, play a part in what a style guide might look like for those applications.</p>    </blockquote></aside><div class="brad-frost host">  <p><b>Brad</b> So, what's the make-up of the teams at Simple? Who's using the style guide and how does each discipline get unique benefits from the style guide?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Well, right now, there's a creative department which consists of…</p></div><div class="brad-frost host">  <p><b>Brad</b> Oh, really? (laughs)</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Well it's not a bad thing!</p></div><div class="brad-frost host">  <p><b>Brad</b> The word creative is… a dagger in my heart!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> I know! Well, this was an evolutionary process for Simple. It sounds like what they had previously was a completely cohesive front-end development UX and design team, all within one group and they sort of branched off as needs started to get a little bit more specific and so, recently they've had a creative lead that's been managing the evolution of the brand and the style guide and they've been working to connect that with the marketing website, so the marketing organisation has a reference to it and then also the application development teams who are responsible for what you see as the banking application itself and so we're working to make these things all connect one against the other. And we're also trying to look at how mobile, particularly native apps, play a part in what a style guide might look like for those applications.</p></div><div class="brad-frost host">  <p><b>Brad</b> That's a great meaty topic to go into. You have what it sounds like are these varied web experiences; you have your pre-login marketing pages; you have your post-login application pages and there's the question around, should those things be in synch and be managed by the same style guide, or are they justifiably different?</p></div><aside>    <blockquote>        <p>…it became a challenge to stay consistent when it comes to a definition of what an atomic element is as things evolve rapidly.</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Exactly.</p></div><div class="brad-frost host">  <p><b>Brad</b> And so it sounds like you made the decision that your entire web experience can operate under the same style guide pattern library?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Well, I think that's what we're really wrestling with right now; that's a great question that deserves a lot of care and attention when it comes to addressing how we answer that, because it has significant impacts to the various teams that are working on that code base and so we're working with the teams to come up with a game-plan that will give them what they need to do their job in the most effective way possible but gives us a common way in which we can look at code and mark-up and the overall brand of the company.</p></div><div class="anna-debenham host">    <p><b>Anna</b> So, how do you make sure that it's always kept up to date?</p></div><aside>    <blockquote>        <p>…it makes what you change in production a lot more easy to manage over the long term; you're able to debug things more effectively. You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> At Simple, I haven't had enough experience to know what it was like for them as their design processes evolved, but at Starbucks, I can tell you that it's been significantly challenging, because different projects are operating at different timescales and so what we've found is that we were always using the style guide as a reference point but we were iterating in our live code first, in the production site and I found that to be very, very challenging for us because you'd get almost versioning happening within your codebase where it's like you'd have a module that was Version 2 whereas the style guide version was Version 1 and it became a challenge to stay consistent when it comes to a definition of what an atomic element is as things evolve rapidly.</p></div><div class="brad-frost host">  <p><b>Brad</b> Right, so you have a disconnect between the production environment which is often running and then the style guide which is holding down the fort, but it's how do you bring that thinking that's happened in the new version in production back to that design language?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah, and I think the answer to that, or at least one of the answers to that, that we were trying to really vet was, how do we use the style guide as the definitive landmark or touchstone when it comes to the changes that we're going to make to the codebase and so when we make changes to that, it cascades and ripples across the entire site, so that becomes the single artefact for us when it comes to the look and feel and also the mark-up of the site.</p></div><aside>    <blockquote>        <p>You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p>    </blockquote></aside><span class="timestamp">(20:23)</span><div class="brad-frost host">  <p><b>Brad</b> So it's moving towards more strict adherence to the style guide rather than it's more a suggested starting point, right?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah, exactly. They've used the term style guide driven development, and I think that is definitely the desired end state for a lot of development teams where they can basically all land at one place because if you can do that, it makes what you change in production a lot more easy to manage over the long term; you're able to debug things more effectively. You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p></div><div class="brad-frost host">  <p><b>Brad</b> So, change the main pattern and it just propagates throughout wherever it's included and job's done!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> That's the promise of style sheets, isn't it?</p></div><aside>    <blockquote>        <p>what you'd see is a quick Photoshop comp of how something will look and then a rapid iterative process where we're coding and designing and making changes in the browser from that.</p>    </blockquote></aside><div class="brad-frost host">  <p><b>Brad</b> Yeah, exactly! And that's just it; it's almost like bringing the very fundamental philosophy of CSS; it's just bringing it into interface design period; it's how I see a lot of this stuff. You're just extending it towards mark-up, extending it towards that other stuff; modular thinking. It's great.</p></div><div class="anna-debenham host">    <p><b>Anna</b> I'd be quite interested to know how design fits in; what your workflow is at Simple. Whether they're designing in Photoshop or moving straight into the style guide?</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> I believe there's a little bit of back and forth at Simple where they're trying things out in raster-based image programme like Sketch or Photoshop, just to get a concept done, but they'll quickly move that into working code and iterate pretty rapidly on something.</p>    <p>Their ability to produce work in a rapid pace has been absolutely mind-blowing, how fast they're able to put things together and so typically, what you'd see is a quick Photoshop comp of how something will look and then a rapid iterative process where we're coding and designing and making changes in the browser from that.</p>    <p>A good example of that is that we just launched this <a href="https://www.simple.com/resolution-maker">New Year's Resolution project</a> which is a fully responsive, beautiful resolution-maker that ties directly into the banking application, so you can set up a goal based on your resolution.</p></div><div class="anna-debenham host">    <p><b>Anna</b> Oh wow!</p></div><div class="brad-frost host">  <p><b>Brad</b> That's awesome!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> It was cleverly put together and the team was able to take that concept and given the interactivity of it, it didn't obviously apply itself too well to a Photoshop mock-up and so our design team was able to quickly, rapidly prototype that in the browser and continued to iterate on the design from then on out.</p></div><div class="anna-debenham host">    <p><b>Anna</b> And does a style guide help with that, being able to take snippets of code and look through and see what's already existing?</p></div><aside>    <blockquote>        <p>the benefit of collaboration between a designer and developer is becoming the key differentiator to a project's success overall; you're able to move faster, you're able to make smarter decisions, you're able to be a little bit more realistic about what is changing in your design, and to that end you're able to I think work on the artefact that you're creating, the website itself, and ship something that's a little bit more meaningful than just a straight Photoshop comp.</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Yeah, I imagine so; honestly, I'm too new to the company to know how effective that was at that particular project, but I can imagine that it must have had some benefit.</p></div><div class="brad-frost host">  <p><b>Brad</b> And do you have folks that are more attuned to tools like Sketch and Photoshop and are they sitting side by side with the front-end developer that has a good aesthetic eye? How do those worlds collide, because this is something I struggle with a lot, just because people automatically assume: oh, you write HTML and CSS, therefore you are a developer, so go sit with the developers.</p>  <p>How has that worked, both at Simple but also at Starbucks? How does that cross-disciplinary, where do those lines meet, where do they cross, how do they get work done together in a way that's simultaneously good looking, especially for both Simple and Starbucks had this really rich, very visual brands and stuff like that. So how do you get that important design thinking, that aesthetic thinking, but also marry it with the realistic idea that yes, this is going to live in a browser and so it needs to follow the rules of Physics!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Well, I think importantly it's the checks and balances that come when you're working with different design teams and different development teams; when they're working together in harmony, it's when they're able to talk and collaborate around design decisions that ultimately are reflective of where the end product is going to be, which is going to be a website; it's going to be shown in the browser, and so the work that the designer is doing within a comp-based environment like Photoshop or Sketch; that's in support of the work that the front-end developer is doing and so inasmuch as possible where I've seen Starbucks be successful is when you have a designer sitting with the front-end development team, running through their ideas and then seeing how that parlays out into code as quickly as possible, and back in the day when it was I would say a little less successful was when you'd have a fully realised comp presented, approved and then thrown over the wall to a developer who then had to somehow miraculously pull off all the effects of what the design was…</p></div><span class="timestamp">(25:56)</span><div class="anna-debenham host">    <p><b>Anna</b> …Usually based on a print-out!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> And I think, I don't know if it's just time within the industry and where we're at as an industry, but those days seem to have gone by the wayside, at least from my experience, where the benefit of collaboration between a designer and developer is becoming the key differentiator to a project's success overall; you're able to move faster, you're able to make smarter decisions, you're able to be a little bit more realistic about what is changing in your design, and to that end you're able to I think work on the artefact that you're creating, the website itself, and ship something that's a little bit more meaningful than just a straight Photoshop comp.</p></div><aside>    <blockquote>        <p>…a developer who has a keen eye for design sensibilities and a designer who can maybe look at or interrogate some code and make some changes so it's not a burden on the developer, I think that's where I've found a strong, cohesive experience when it comes to the design process.</p>    </blockquote></aside><div class="brad-frost host">  <p><b>Brad</b> Yeah, and I actually literally just last night, I just got an email from a visual designer at a big brand, struggling with, saying, what tools should I be using, what tools should I be using, and the developers are working in this way and I need to be able to create more realistic designs and I need to be using these different tools but I've trialled them all and I don't feel comfortable in them and I feel like it's lousy, and I kept pushing back, there's a couple of threads in the email; it sort of sounds like a workflow issue more than anything else.</p>  <p>It's not really about the tools and even the disciplines, but it has everything to do with how you're working together and what those expectations are in working together, and if you could create a culture that encourages collaboration between disciplines, you're going to be left with more realistic projects rather than that sort of traditional waterfall workflow.</p></div><div class="anna-debenham host">    <p><b>Anna</b> I think at the end of the day, designers' best tool is often just a pencil and paper.</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Oh yeah.</p></div><div class="anna-debenham host">    <p><b>Anna</b> If you can the collaboration.</p></div><aside>    <blockquote>        <p>I think it is the common ground that designers and developers are all seeking and it's just that they have different tools to express themselves when it comes to that, but they're all trying to build the same thing ultimately and I find that that's when a style guide is really effective at providing a common ground;</p>    </blockquote></aside><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Exactly, and if the two parties can have empathy towards the others' needs, I think that's where you find a real impactful project where a developer who has a keen eye for design sensibilities and a designer who can maybe look at or interrogate some code and make some changes so it's not a burden on the developer, I think that's where I've found a strong, cohesive experience when it comes to the design process.</p></div><div class="brad-frost host">  <p><b>Brad</b> Yeah. How do you feel that bringing it back all to style guides and pattern libraries and stuff like… how do you feel these tools can really help facilitate that collaboration, that empathy establish again a sense of realism; of here's how these horizontal tabs break down for small screens; or here's how these tables work to give the designer a better sense of what's realistic and what's achievable…</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Isn't that just it Brad? It's really all about getting real and nothing is more real than what the actual interface is going to look like in the browser and from that point you're able to, I think, both realise that your work is contributing to a larger, greater good where the mark-up itself, the style sheets, are all the end product and I think it is the common ground that designers and developers are all seeking and it's just that they have different tools to express themselves when it comes to that, but they're all trying to build the same thing ultimately and I find that that's when a style guide is really effective at providing a common ground; I've referred to it as a lingua franca before, between designers and developers where they're able to use their own language when explaining something, like how a button should look or animate and they can have their common interest reflected in the style guide itself where they can see the mark-up, they can see the style, and then can start to interact with it in a way that they couldn't do previously before in any kind of design-based tool.</p></div><aside>    <blockquote>        <p>…the web is changing so rapidly with mobile first design thinking and style guides really help parlay what designers and developers have been working with the medium of the desktop-based interface design and now with responsive design and a style guide sitting on top of that, overlooking the entire landscape, is really such an exciting time to be in this field.</p>    </blockquote></aside><div class="brad-frost host">  <p><b>Brad</b> That's brilliant! I have nothing to say to that other than yeah, absolutely, that's brilliant and I think that that's one of the reasons why we're doing this podcast is to try to just make that stuff abundantly clear and I think that just hearing that coming from someone that's worked with these really successful brands; brands that are producing really gorgeous visuals and again, have really strong brands and visual and you've obviously heard the same things that I've heard about responsive design and it's like, oh, it's just a bunch of boxes and grids and it's all very flat and uninspiring, and I think that Starbucks and Simple, you guys are really proving that you can create these things that do marry the development and design together in a way that produces great work.</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> Oh absolutely, and it's a really exciting time to be in this field because the web is changing so rapidly with mobile first design thinking and style guides really help parlay what designers and developers have been working with the medium of the desktop-based interface design and now with responsive design and a style guide sitting on top of that, overlooking the entire landscape, is really such an exciting time to be in this field.</p></div><div class="brad-frost host">  <p><b>Brad</b> Couldn't agree any more! So I think that that's really all the time we have for today and I think that's a beautiful note to end on. You've done a great job of really running through the benefits of style guides, how that's really facilitating true collaboration and leading to really great, realistic work. So, thanks gain for coming on and again, really thanks for sharing and helping facilitate that openness, because again, we wouldn't be talking about this, especially if it weren't for that original Starbucks style guide, so thanks again for that.</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> No, thank you guys for all the work that you've put into sharing your thoughts and aspirations with the rest of the industry. I think it's because of your work that we're able to do the work for the companies that we work for.</p></div><div class="anna-debenham host">    <p><b>Anna</b> Awww…</p></div><div class="brad-frost host">  <p><b>Brad</b> Go team web!</p></div><div class="anna-debenham host">    <p><b>Anna</b> Yay! Thank you!</p></div><div class="lincoln-mongillo host">    <p><b>Lincoln</b> You're welcome.</p></div><div class="brad-frost host">  <p><b>Brad</b> All righty. Well, hey, we will talk to you later and thank you so much for coming on.</p></div>
+---
+layout: episode
+section: podcast
+number: 3
+title: Lincoln Mongillo
+image: lincoln-mongillo.jpg
+about: Before working on Product at <a href="https://www.simple.com/">Simple</a>, Lincoln helped build <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks's splendid style guide</a>. He also likes rebuilding old Volkswagens.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/189517945&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+links: [
+    {text: "Starbucks Style Guide", url: "http://www.starbucks.com/static/reference/styleguide/", type: "example"},
+    {text: "BBC GEL", url: "http://www.bbc.co.uk/gel", type: "example"},
+    {text: "24 Ways article on Style Guides", url: "http://24ways.org/2011/front-end-style-guides/", type: "article"},
+    {text: "Simple's Resolution Maker", url: "https://www.simple.com/resolution-maker", type: "website"}
+]
+
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hello everybody; welcome to another episode of the Style Guides Podcast, a podcast that's dedicated to all things style guides, pattern libraries, standards related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are extremely excited to welcome Lincoln Mongillo to the programme.
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> How are you?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> I'm doing well, thank you Brad, thank you Anna.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, well we're really excited to have you on the programme because you've been sort of neck-deep in style guides for a while now, so I'm really, really looking forward to hearing what you have to say on the subject, but just to get started; who are you, where are you based, who are you working for, what re you up to these days and what's been your path? How have you gotten here?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>We developed it based on a need that we had internally to align our organisation around the design patterns that we saw in our website and have a common document to describe exactly what the mark-up was, what the visual design was and all the elements that powered our website.</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Sure. Well, for the past eight years I was working at <a href="http://www.starbucks.com/">Starbucks</a> as the Web and API Category Manager, which is kind of weird title but it really was a product management role, responsible for facilitating the strategy, vision and road-map for our company's websites and as part of that I helped re-launch starbucks.com as a responsive website and built <a href="http://www.starbucks.com/static/reference/styleguide/">an open and public style guide</a> and then just recently in December I switched over to a product company called <a href="https://www.simple.com/">Simple</a> which is an online application and website that basically helps customers manage their financial lives a little bit more effectively through a banking application.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. And so what's your role there at Simple?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> My role there is Product Lead, so I work on a very small team of a couple of product managers helping the engineering organisation with their vision, strategy and road-map.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's excellent. So are you guys rolling up your sleeves with this pattern-based thinking, these sort of style guides, this sort of approach? Are you taking on that mission that you've crafted over the last eight years at Starbucks and getting that thinking involved and injected into Simple?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yes and no: when I did it at Starbucks, it was something that was completely new to us at the time. We developed it based on a need that we had internally to align our organisation around the design patterns that we saw in our website and have a common document to describe exactly what the mark-up was, what the visual design was and all the elements that powered our website. At Simple, they already had a head-start for that, given the pace in which they operate, so they were already well tuned in to what the industry was doing, and they have a pretty extensive style guide already; it's just not publicly available. It's all located within their internal GitHub repo and so they've been iterating on that for I'd say the past year and a half, and we've got some pretty big plans to further evolve that and who knows what will happen in the future with that.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>a style guide really helps to ease some of the challenges with making design decisions in a way that is equally yoked to what the interests are of the designers and the developers.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Do you plan to make it public?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Maybe!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Go on!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That'd be the coolest thing for a banking institution to start sharing things publicly! (laughs)</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I just brought it up on my phone and he was like: this is great, you have to show this to the world!</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Inasmuch as it's a bank, it's really just a website and an application that sits on top of a bank and so a lot of the challenges that other companies have is the same challenges that we have when it comes to building applications that are hard to build and harder to maintain and so a style guide really helps to ease some of the challenges with making design decisions in a way that is equally yoked to what the interests are of the designers and the developers.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, was it hard to convince Starbucks to make theirs public?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> No; the origin story of that is, we developed it when we were doing our responsive design project and it was done by a single developer at the time. We had a front-end development team who came together and decided that we needed to have that as an artefact for us when we went about doing the responsive design effort and there was a couple of developers on the team who had done that at previous companies when it was just getting off the ground as a concept, and they found it very fruitful for them and their design process and development processes.</p>
+    <p>So they ended up building the Starbucks responsive style guide and we've launched it publicly inside of a static directory; it just wasn't linked out externally from any part on our website, nor was it publicly mentioned, and then I was at <a href="http://sxsw.co.uk/interactive">SXSW</a> a few years ago and I think it was <a href="https://twitter.com/andyhume">Andy Hume</a> was giving a great talk on style guides and particularly he was commenting on the <a href="http://www.bbc.co.uk/gel">BBC GEL</a> style guide which at the time was a fascinating insight into how the BBC thought of their design thinking and after that I went up and talked with him and lo and behold <a href="https://twitter.com/adactio">Jeremy Keith</a> came up and started asking me about it and I mentioned that it was publicly available, so I just brought it up on my phone and he was like: this is great, you have to show this to the world!</p>
+</div>
+
+<span class="timestamp">(5.40)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah! I remember, I've heard his side of this story as well, and him going on about how amazing it was!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> It was, once he started to talk a little bit more about it, that's when it really gained a lot of interest within the development community; other people started to comment on it and the sheer fact that it was already publicly available was, to go back to your original question, it wasn't a conscientious decision, it was always out there in the open.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's really good.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. So this is huge and it was my introduction to a style guide; seeing the Starbucks style guide for me was like, life changing moment! And I'm being a little dramatic here but we would not be talking about this if it weren't for that and it is really amazing, how much of an impact that stuff could have, to just give credence to the fact that yes, this thing is a sound concept. Look: a large company is doing this. Especially large companies need to have a cohesive language, a cohesive system, a cohesive vocabulary that they can get things done with, and so it really was a huge epiphany seeing that, so thank you for that!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> All the credit really goes to the developer that put that together. It was a gentleman by the name of <a href="https://twitter.com/curtisj44">Curtis Jurgensen</a>, who was a front-end developer on the Starbucks team at the time, who really had the opportunity to step back from the day to day project work, and as we were thinking about the design challenges that were in front of us with taking the site and re-flowing it through because it was a desktop site.</p>
+    <p>He had the opportunity to re-think what he needed at the time, based on our team's needs, and born out of that was the style guide, so I think a lot of the credit goes to that front-end development team at Starbucks at the time.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I kind of feel like it was the tipping point for a lot of people. It made them realise; wow: style guides are a real thing.</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Oh yeah.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…a lot of times there's such great talent out there, you just have to get out of the way and let them do what they need to do.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's the <a href="http://www.bostonglobe.com/">Boston Globe</a> of style guides.</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Honestly it was born out of, I think Anna, you did a <a href="http://24ways.org/2011/front-end-style-guides/">24 Ways article on Style Guides</a> at the time, and I think that was also a tipping point for us when we were talking about it that it was an important enough talking point in the industry that we had to really consider doing that as part of our own work and so I think these sort of things fold on each other over time where the importance of it and the significance of it are based on what other people are doing.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah. So, you mentioned something: you had this developer who was able to take a step back and see the forest, if you will, through the trees. And this is something I see repeated over and over and over again; a lot of organisations, they're trying to get stuff done, trying to get a new project out the door. You have, especially in an organisation as sizeable as Starbucks, you have loads of different developers, loads of different teams with loads of different priorities and goals and stuff like that.</p>
+  <p>How important is it, even at your new gig, to have that layer above those siloed teams, to help steer and establish this common language, establish a sense of continuity and cohesion and just building tools to actually do that, because again, a lot of organisations don't have that layer; we need to get things done, we need these teams all hands on deck. Put your head down, put your horse blinders on and just get things done. So, organisationally, can you maybe speak to that, because it sounds like you're operating at a level above just practitioner developer, getting things done.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>We needed something that was a living document of the site at the time, and we needed something that could change and morph as our design decisions were changing</p>
+    </blockquote>
+</aside>
+
+<span class="timestamp">(10:00)</span>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah. I think it really comes down to design leadership and giving the team the room and capacity to do what they need to do to be successful in whatever project that they're involved in and so if the team is really responding to a need where they have common interests and common goals and objectives where they need to have a style guide to work more effectively together, then it's probably up to the leadership of the company or the team to give them the ample time and room to focus their energy on that and a lot of times there's such great talent out there, you just have to get out of the way and let them do what they need to do.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That is a great piece of advice: absolutely. So, you guys built this thing, it got out there. Have you seen any sort of push-back or challenges, whenever this thing went live and you have a bunch of different teams or people that are used to working in a specific way. What I found in my own work is, sometimes people are apprehensive; they feel like a style guide or these standards are putting the handcuffs on creativity and stuff. So how do you combat that? How do you address that and get them on your side?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think that's certainly one of the key benefits is that from a rapid iteration perspective, you're able to take concepts pretty rapidly with a living style guide and take those modular parts of that component library and then build something new out of that.</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah, I think that's certainly been one of the biggest challenges in that everybody needed to rationalise what the style guide means for them, be it a designer, a developer and I think there's different interests with that with respect to those parties and where it came down for us is that we needed something that was a living document of the site at the time, and we needed something that could change and morph as our design decisions were changing and the style guide really represented a way for us to all rally around different design decisions that were being made and understand how it's making an impact at what you would call the atomic level, to use some of your language, Brad, and I think that if you're looking at something as simple as a carousel or a button, you can see those things in context of where they sit in situ on the page, but when you see it at the atomic level, you're able to really interrogate the mark-up: what does that mean from a semantic point of view? What does it mean from a style point of view?</p>
+    <p>And then you can start to put these pieces together as components that make up your larger website, and I think the goal of a style guide for us at the time was to make it a living style guide; something that would change and evolve as our design decisions were changing and I think that's a worthy and noble mission, but it's also extremely challenging to continue to use that as the crucible in which you look at all your design thinking through. And this is something that I think that Simple as doing a great job at, that they're really focusing on all of their design decisions based on what is the impact to the style guide.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Do you use it for prototyping?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Absolutely, yeah. I think that's certainly one of the key benefits is that from a rapid iteration perspective, you're able to take concepts pretty rapidly with a living style guide and take those modular parts of that component library and then build something new out of that and then do whatever you need to do to decorate it or change it in a way so you can make it something new.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So you get these massive gains; instead of re-inventing the wheel the whole time, you can just leverage existing patterns to explore new ideas?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah. And you're doing it with real code too. You're not doing it just in a blank white Photoshop canvas; you can start with something that's tangible and demonstrateable, so other interested parties, be it designers, developers or even senior management can take a look at something in the context of what is appropriate to the web, which is the browser itself.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think that's part of the work that's being done right now is to start to bridge the gap between these two eco-systems, so what you'll see in the future is a fully functional website that's built on and powered by the style guide itself</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I guess in any device as well?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Exactly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that's so cool. So, it sounds like you have at Simple the style guide, the pattern library is very much baked into the mindset and the workflow of the design and development teams. From a maintainability standpoint, are they connected? Does the style guide exist within the production code base? Is it a separate reference? What's that process like and how do you keep things maintained?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah, that's certainly one of the biggest challenges is maintainability, and at Simple I can certainly testify to the fact that they've had some pretty significant challenges to that where their style guide is a completely separate code base from their actual living website and I think that's part of the work that's being done right now is to start to bridge the gap between these two eco-systems, so what you'll see in the future is a fully functional website that's built on and powered by the style guide itself, and that process is under way right now.</p>
+</div>
+
+<span class="timestamp">(15:30)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And that's a pretty big undertaking!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> It is, yeah, but the benefit, the risk reward for that or the cost benefit for it is that we'll have at least one way in which we can talk about and look at semantic mark-up and style sheets to define how our site looks.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>We're also trying to look at how mobile, particularly native apps, play a part in what a style guide might look like for those applications.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, what's the make-up of the teams at Simple? Who's using the style guide and how does each discipline get unique benefits from the style guide?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Well, right now, there's a creative department which consists of…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh, really? (laughs)</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Well it's not a bad thing!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> The word creative is… a dagger in my heart!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> I know! Well, this was an evolutionary process for Simple. It sounds like what they had previously was a completely cohesive front-end development UX and design team, all within one group and they sort of branched off as needs started to get a little bit more specific and so, recently they've had a creative lead that's been managing the evolution of the brand and the style guide and they've been working to connect that with the marketing website, so the marketing organisation has a reference to it and then also the application development teams who are responsible for what you see as the banking application itself and so we're working to make these things all connect one against the other. And we're also trying to look at how mobile, particularly native apps, play a part in what a style guide might look like for those applications.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's a great meaty topic to go into. You have what it sounds like are these varied web experiences; you have your pre-login marketing pages; you have your post-login application pages and there's the question around, should those things be in synch and be managed by the same style guide, or are they justifiably different?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…it became a challenge to stay consistent when it comes to a definition of what an atomic element is as things evolve rapidly.</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Exactly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And so it sounds like you made the decision that your entire web experience can operate under the same style guide pattern library?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Well, I think that's what we're really wrestling with right now; that's a great question that deserves a lot of care and attention when it comes to addressing how we answer that, because it has significant impacts to the various teams that are working on that code base and so we're working with the teams to come up with a game-plan that will give them what they need to do their job in the most effective way possible but gives us a common way in which we can look at code and mark-up and the overall brand of the company.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, how do you make sure that it's always kept up to date?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…it makes what you change in production a lot more easy to manage over the long term; you're able to debug things more effectively. You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> At Simple, I haven't had enough experience to know what it was like for them as their design processes evolved, but at Starbucks, I can tell you that it's been significantly challenging, because different projects are operating at different timescales and so what we've found is that we were always using the style guide as a reference point but we were iterating in our live code first, in the production site and I found that to be very, very challenging for us because you'd get almost versioning happening within your codebase where it's like you'd have a module that was Version 2 whereas the style guide version was Version 1 and it became a challenge to stay consistent when it comes to a definition of what an atomic element is as things evolve rapidly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right, so you have a disconnect between the production environment which is often running and then the style guide which is holding down the fort, but it's how do you bring that thinking that's happened in the new version in production back to that design language?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah, and I think the answer to that, or at least one of the answers to that, that we were trying to really vet was, how do we use the style guide as the definitive landmark or touchstone when it comes to the changes that we're going to make to the codebase and so when we make changes to that, it cascades and ripples across the entire site, so that becomes the single artefact for us when it comes to the look and feel and also the mark-up of the site.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p>
+    </blockquote>
+</aside>
+
+<span class="timestamp">(20:23)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So it's moving towards more strict adherence to the style guide rather than it's more a suggested starting point, right?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah, exactly. They've used the term style guide driven development, and I think that is definitely the desired end state for a lot of development teams where they can basically all land at one place because if you can do that, it makes what you change in production a lot more easy to manage over the long term; you're able to debug things more effectively. You're able to have a view into how your code base is looking across a site versus having various artefacts show up across hundreds of pages.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, change the main pattern and it just propagates throughout wherever it's included and job's done!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> That's the promise of style sheets, isn't it?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>what you'd see is a quick Photoshop comp of how something will look and then a rapid iterative process where we're coding and designing and making changes in the browser from that.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, exactly! And that's just it; it's almost like bringing the very fundamental philosophy of CSS; it's just bringing it into interface design period; it's how I see a lot of this stuff. You're just extending it towards mark-up, extending it towards that other stuff; modular thinking. It's great.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'd be quite interested to know how design fits in; what your workflow is at Simple. Whether they're designing in Photoshop or moving straight into the style guide?</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> I believe there's a little bit of back and forth at Simple where they're trying things out in raster-based image programme like Sketch or Photoshop, just to get a concept done, but they'll quickly move that into working code and iterate pretty rapidly on something.</p>
+    <p>Their ability to produce work in a rapid pace has been absolutely mind-blowing, how fast they're able to put things together and so typically, what you'd see is a quick Photoshop comp of how something will look and then a rapid iterative process where we're coding and designing and making changes in the browser from that.</p>
+    <p>A good example of that is that we just launched this <a href="https://www.simple.com/resolution-maker">New Year's Resolution project</a> which is a fully responsive, beautiful resolution-maker that ties directly into the banking application, so you can set up a goal based on your resolution.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Oh wow!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> It was cleverly put together and the team was able to take that concept and given the interactivity of it, it didn't obviously apply itself too well to a Photoshop mock-up and so our design team was able to quickly, rapidly prototype that in the browser and continued to iterate on the design from then on out.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And does a style guide help with that, being able to take snippets of code and look through and see what's already existing?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>the benefit of collaboration between a designer and developer is becoming the key differentiator to a project's success overall; you're able to move faster, you're able to make smarter decisions, you're able to be a little bit more realistic about what is changing in your design, and to that end you're able to I think work on the artefact that you're creating, the website itself, and ship something that's a little bit more meaningful than just a straight Photoshop comp.</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Yeah, I imagine so; honestly, I'm too new to the company to know how effective that was at that particular project, but I can imagine that it must have had some benefit.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And do you have folks that are more attuned to tools like Sketch and Photoshop and are they sitting side by side with the front-end developer that has a good aesthetic eye? How do those worlds collide, because this is something I struggle with a lot, just because people automatically assume: oh, you write HTML and CSS, therefore you are a developer, so go sit with the developers.</p>
+  <p>How has that worked, both at Simple but also at Starbucks? How does that cross-disciplinary, where do those lines meet, where do they cross, how do they get work done together in a way that's simultaneously good looking, especially for both Simple and Starbucks had this really rich, very visual brands and stuff like that. So how do you get that important design thinking, that aesthetic thinking, but also marry it with the realistic idea that yes, this is going to live in a browser and so it needs to follow the rules of Physics!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Well, I think importantly it's the checks and balances that come when you're working with different design teams and different development teams; when they're working together in harmony, it's when they're able to talk and collaborate around design decisions that ultimately are reflective of where the end product is going to be, which is going to be a website; it's going to be shown in the browser, and so the work that the designer is doing within a comp-based environment like Photoshop or Sketch; that's in support of the work that the front-end developer is doing and so inasmuch as possible where I've seen Starbucks be successful is when you have a designer sitting with the front-end development team, running through their ideas and then seeing how that parlays out into code as quickly as possible, and back in the day when it was I would say a little less successful was when you'd have a fully realised comp presented, approved and then thrown over the wall to a developer who then had to somehow miraculously pull off all the effects of what the design was…</p>
+</div>
+
+<span class="timestamp">(25:56)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> …Usually based on a print-out!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> And I think, I don't know if it's just time within the industry and where we're at as an industry, but those days seem to have gone by the wayside, at least from my experience, where the benefit of collaboration between a designer and developer is becoming the key differentiator to a project's success overall; you're able to move faster, you're able to make smarter decisions, you're able to be a little bit more realistic about what is changing in your design, and to that end you're able to I think work on the artefact that you're creating, the website itself, and ship something that's a little bit more meaningful than just a straight Photoshop comp.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…a developer who has a keen eye for design sensibilities and a designer who can maybe look at or interrogate some code and make some changes so it's not a burden on the developer, I think that's where I've found a strong, cohesive experience when it comes to the design process.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and I actually literally just last night, I just got an email from a visual designer at a big brand, struggling with, saying, what tools should I be using, what tools should I be using, and the developers are working in this way and I need to be able to create more realistic designs and I need to be using these different tools but I've trialled them all and I don't feel comfortable in them and I feel like it's lousy, and I kept pushing back, there's a couple of threads in the email; it sort of sounds like a workflow issue more than anything else.</p>
+  <p>It's not really about the tools and even the disciplines, but it has everything to do with how you're working together and what those expectations are in working together, and if you could create a culture that encourages collaboration between disciplines, you're going to be left with more realistic projects rather than that sort of traditional waterfall workflow.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think at the end of the day, designers' best tool is often just a pencil and paper.</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Oh yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> If you can the collaboration.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think it is the common ground that designers and developers are all seeking and it's just that they have different tools to express themselves when it comes to that, but they're all trying to build the same thing ultimately and I find that that's when a style guide is really effective at providing a common ground;</p>
+    </blockquote>
+</aside>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Exactly, and if the two parties can have empathy towards the others' needs, I think that's where you find a real impactful project where a developer who has a keen eye for design sensibilities and a designer who can maybe look at or interrogate some code and make some changes so it's not a burden on the developer, I think that's where I've found a strong, cohesive experience when it comes to the design process.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah. How do you feel that bringing it back all to style guides and pattern libraries and stuff like… how do you feel these tools can really help facilitate that collaboration, that empathy establish again a sense of realism; of here's how these horizontal tabs break down for small screens; or here's how these tables work to give the designer a better sense of what's realistic and what's achievable…</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Isn't that just it Brad? It's really all about getting real and nothing is more real than what the actual interface is going to look like in the browser and from that point you're able to, I think, both realise that your work is contributing to a larger, greater good where the mark-up itself, the style sheets, are all the end product and I think it is the common ground that designers and developers are all seeking and it's just that they have different tools to express themselves when it comes to that, but they're all trying to build the same thing ultimately and I find that that's when a style guide is really effective at providing a common ground; I've referred to it as a lingua franca before, between designers and developers where they're able to use their own language when explaining something, like how a button should look or animate and they can have their common interest reflected in the style guide itself where they can see the mark-up, they can see the style, and then can start to interact with it in a way that they couldn't do previously before in any kind of design-based tool.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…the web is changing so rapidly with mobile first design thinking and style guides really help parlay what designers and developers have been working with the medium of the desktop-based interface design and now with responsive design and a style guide sitting on top of that, overlooking the entire landscape, is really such an exciting time to be in this field.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's brilliant! I have nothing to say to that other than yeah, absolutely, that's brilliant and I think that that's one of the reasons why we're doing this podcast is to try to just make that stuff abundantly clear and I think that just hearing that coming from someone that's worked with these really successful brands; brands that are producing really gorgeous visuals and again, have really strong brands and visual and you've obviously heard the same things that I've heard about responsive design and it's like, oh, it's just a bunch of boxes and grids and it's all very flat and uninspiring, and I think that Starbucks and Simple, you guys are really proving that you can create these things that do marry the development and design together in a way that produces great work.</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> Oh absolutely, and it's a really exciting time to be in this field because the web is changing so rapidly with mobile first design thinking and style guides really help parlay what designers and developers have been working with the medium of the desktop-based interface design and now with responsive design and a style guide sitting on top of that, overlooking the entire landscape, is really such an exciting time to be in this field.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Couldn't agree any more! So I think that that's really all the time we have for today and I think that's a beautiful note to end on. You've done a great job of really running through the benefits of style guides, how that's really facilitating true collaboration and leading to really great, realistic work. So, thanks gain for coming on and again, really thanks for sharing and helping facilitate that openness, because again, we wouldn't be talking about this, especially if it weren't for that original Starbucks style guide, so thanks again for that.</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> No, thank you guys for all the work that you've put into sharing your thoughts and aspirations with the rest of the industry. I think it's because of your work that we're able to do the work for the companies that we work for.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Awww…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Go team web!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yay! Thank you!</p>
+</div>
+
+<div class="lincoln-mongillo host">
+    <p><b>Lincoln</b> You're welcome.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> All righty. Well, hey, we will talk to you later and thank you so much for coming on.</p>
+</div>
