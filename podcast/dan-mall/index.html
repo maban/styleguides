@@ -1,0 +1,557 @@
+---
+layout: episode
+section: podcast
+number: 5
+title: Dan Mall
+image: dan-mall.jpg
+about: <a href="https://twitter.com/danielmall">Dan Mall</a> is an art director and designer from Philadelphia, and Founder and Design Director at <a href="http://superfriend.ly/">SuperFriendly</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/191943028&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Element Collages", url: "http://danielmall.com/articles/rif-element-collages/", type: "article"},
+    {text: "Design is a Job by Mike Monterio", url: "http://www.abookapart.com/products/design-is-a-job", type: "book"},
+    {text: "You're my favourite client by Mike Monterio", url: "http://www.abookapart.com/products/youre-my-favorite-client", type: "book"},
+    {text: "Less Training, More Practice by Sara Wachter-Boettcher", url: "http://www.sarawb.com/2015/01/05/less-training-more-practice/", type: "article"},
+    {text: "Code for America Style Guide", url: "http://style.codeforamerica.org/", type: "example"},
+    {text: "Pattern Lab", url: "http://patternlab.io/", type: "tool"},
+    {text: "Grunt", url: "http://gruntjs.com/", type: "tool"},
+    {text: "Grunt Performance Budget", url: "http://timkadlec.com/2014/05/performance-budgeting-with-grunt/", type: "tool"}
+]
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hello everyone. Welcome to another episode of The Style Guides Podcast, a podcast dedicated to all things style guides, pattern library related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we are extraordinarily thrilled, elated even, to have the great Dan Mall with us. Dan; thanks for being on the show.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Hi guys! Thanks for having me. I'm very excited about this.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…they were really interested in how their site looked across different devices and different screen sizes and just different ways to access it, so I just thought it was going to be a waste of time to do a bunch of comps…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, we are too.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yay!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Before we dive into all sorts of stuff about style guides, do you want to just give everybody an idea, an overview of who you are, where you work and what you do?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, sure. So, my name is Dan Mall. I run a design collaborative called SuperFriendly out of Philadelphia, and I work for all sorts of businesses that need stuff figured out for them. That sometimes is design, that sometimes is strategy, sometimes they just need somebody… they just need a shoulder to cry on, so I'm available for that if anyone wants to hire me!  And yeah, my background is in design; I was trained in design and development and now I just do design work and some advising for other agencies.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Can you tell us a little bit about Element Collages?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, sure!  So, Element Collage was a thing that I made up because I was working with a client called Reading Is Fundamental and they're an awesome company; I won't spend too much time talking about them but they have a mission to give books to kids who've never had books, which I think is just great. And when we were working on the project together, they had worked with a few agencies before, they'd gone through the design process before, the web design process before and we just sort of got to the point together where we decided that full comps are probably not the thing that they wanted to see or be useful for them, because they were really interested in how their site looked across different devices and different screen sizes and just different ways to access it, so I just thought it was going to be a waste of time to do a bunch of comps and they agreed, but we didn't really agree on what the correct solution was for them.</p>
+    <p>So, as I was just tooling around and, from the kick-off meeting they were mentioning these really, really great things, these great phrases; they kept saying like, "electric" when they talked about their brand. They kept saying, they kept mentioning some of their brand elements like shapes and hearts and books and bubbles and things like that; stuff that they use a lot in their print publication, and so I wrote this all down in my sketch book and when I went home, I opened Photoshop and I just wanted to see what those things looked like and on canvas; I didn't intend to send that to them, but I just really liked how they look and I thought, hey, I think these guys would appreciate some of this stuff and I think we could have a good conversation about it, so in the spirit of openness, so we did the whole project in the open and blogged about it and all that stuff, in the spirit of openness I was just like, I'm not going to send them the best stuff of all of this; I'm going to send them all of it, and that's how the Element Collage was born.</p>
+    <p>It was just quite literally a collage of elements that some of those pieces I think captured their brand really well, and I was wrong about that; and some of them I thought didn't capture them very well and I was wrong about that too, and we were able to have a good conversation about things like that over looking at this Element Collage thing. So that's how they came to be.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's so cool.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…if I was going to try to illustrate every moment in time, it would just take too long and it would be wasteful work; here's it on a desktop, here's it on an Android phone, here's it on an iPad. It would just take too long because there are hundreds and hundreds of different devices and different moments in time…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent. And so in sort of a weird way too, what you're helping them doing is think a little more modular; you're not just… it's important obviously to eventually paint the whole picture, whatever, but this whole idea behind style guides and pattern libraries is about de-constructing an interface down into its component parts, and what you're doing with Element Collages is flipping that on its head and getting them comfortable with the idea of looking at bits and pieces to just get that feel; to move the conversation forward and eventually… is that still your workflow?  We've worked together on a couple of projects. Eventually you paint the whole picture but you're not coming out of the gate with it.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly. I find that it works really well for clients and also works really well for me, so it's partly self-serving in that it works for clients because if I were to give them a comp of anything, a full comp, whether it's a mobile comp or a desktop comp or whatever word you want to use, it's a moment in time, it's a snapshot.</p>
+    <p>Some people will see your site like this, but if I was going to try to illustrate every moment in time, it would just take too long and it would be wasteful work; here's it on a desktop, here's it on an Android phone, here's it on an iPad. It would just take too long because there are hundreds and hundreds of different devices and different moments in time, so what I want to show them is, here are all the pieces that we're going to be configuring in different ways for those different moments; can you imagine them put together in different configurations?  And if they can, then I've done good work and if they can't, then maybe I need to help them in a different way.</p>
+    <p>And so I find that it's good for them to be able to think in that way and if I can lead them in that direction, I think that's great. And then for me it's totally self-serving because it lets me design only the pieces that I'm excited about. The stuff that… I think designers have the hardest time with things that they don't know what to do with. Sometimes you just don't know what to do with the footer, but if you're doing a comp, you've got to design the footer; you can't just leave the footer out.</p>
+    <p>With Element Collages, you can because you can be like, well I don't know what the footer's going to be like, I'll design that later, but I do know what the search box is going to look like and I do know what the… and I had this great idea for how the map should work, and you get to show them those things and I find that designers tend to, at least for me, the pieces that I'm most excited to design are the ones that I can design super-fast. And the ones that I have no idea for, I can defer those because I don't want to spend all of my excitement, all of my momentum on the boring stuff, honestly. So I find that they're self-serving, they certainly let me just design the pieces that I'm excited about, and they lead to a good conversation with clients.</p>
+</div>
+
+<span class="timestamp">(6:11)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I guess that means that you can work in quite an agile way; you can be handing stuff off to the developers that you're happy with and that the client's happy with, while you figure out things like the footer.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I don't think I know of any deliverable that is the one deliverable to rule them all that works on every single project and I think a lot of people are looking for that. I haven't found that yet; I don't know that it exists, and if it exists, I just don't know; somebody please tell me what it is.</p>
+    </blockquote>
+</aside>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yep, exactly. And that's how we build websites; it's piecemeal, but we sort of have fooled our clients into thinking that we don't do that and so I like this process because it's more transparent; it's like, this is the way that we work. If you want to see how the sausage is made, you can get a peek in; if you don't, that's OK too, I'm happy to work the other way, so I think it's really great for that too. </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And are there clients you think this wouldn't work with?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Absolutely; I don't think I know of any deliverable that is the one deliverable to rule them all that works on every single project and I think a lot of people are looking for that. I haven't found that yet; I don't know that it exists, and if it exists, I just don't know; somebody please tell me what it is.</p>
+    <p>But there are some clients that just don't get Element Collages and they're like…cool…what is this?  And part of that is that designers don't know how to talk about them and I think there's some education needed there, and the second part is sometimes they're just really hard to come up with. One of the tricks that I do on sites where I just can't design elements only is I will design a full comp and then I'll deconstruct it and show the client the deconstructed version; I'll just break it apart, so you don't have to go… I think a lot of us make the mistake that the thing that we design has to be the thing that we show. And that's not true; you show the thing that's going to lead to the best conversation.</p>
+    <p>How you get there is on you. If you get there by sitting on the toilet, that's what you do!  If you get there by sitting in front of your computer for six hours; that's what you do too. So I think one way to go about it is if you're having trouble adopting it, deconstruct it; build the comp, build what's comfortable to you. Design the comp and then take screen-shots of the parts or build it in the browser and then take screen-shots of it.</p>
+    <p>There's so many ways to get to that result without having to take the journey to get directly there in the shortest way possible.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I've just adopted the goal that every deliverable that I make has to come with a conversation.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent. And obviously it takes a great deal of explanation and conversation with the client to make that happen but that's a worthy pursuit; I think that we historically have fallen into this trap of, here, I'm emailing you the Photoshop comp; give us feedback by Friday, and there's really no sort of conversation that goes along with it and having worked with you, that conversation is really the important part; it's helping them understand what it is you're trying to achieve and accomplish, the sort of sales pitch that goes along with it. Like you can't put style tiles and element collages in front of a client and just email to them and say, let me know what you think in a couple of days.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly! The full comp thing, it's really thrown us for a loop. It's really set us up for a bad thing because we've gotten used to the idea that, oh, this stands on its own; I don't need to talk about it, I don't need to sell it, I don't need to tell them what's in here, I can just send it over and it's enabled us to not have to have that conversation with the client.</p>
+    <p>And one of the things that I've been trying to pursue lately is, I've just adopted the goal that every deliverable that I make has to come with a conversation; so anything that I deliver, I'm not going to post on Basecamp and be like, OK, cool: post feedback here; talk to you in a few days. Everything that I deliver comes with a phone call or a Skype call or a Google Hang-out. And that has really freed me from trying to come up with a deliverable that stands on its own.</p>
+    <p>It's OK if it doesn't; it's OK if it's totally cryptic and it needs me to be able to translate for it. I feel like that's what clients are hiring. If they want comps, they can go to whatever, <a href="http://99designs.co.uk/">99 Designs</a> or they can get <a href="https://uk.fiverr.com/">Fiverr</a> or something and get a comp; that's not why they're hiring me. They're hiring me for my thoughts, for my expertise, not just for the deliverable, so I find that if I just assume that everything I make is going to come with a conversation, it frees me from having to make that thing so self-sustaining that I don't have to talk through it. I think <a href="https://twitter.com/monteiro">Mike Monteiro</a> says this a lot; <a href="http://www.abookapart.com/products/youre-my-favorite-client">in his new book</a>, <a href="http://www.abookapart.com/products/design-is-a-job">in his previous book</a> and in his talks, he says there's two steps to design: one is that you have to design something good and then you have to convince the client that it's good. You can't do one or the other; it doesn't work without both of those pieces.</p>
+</div>
+
+<span class="timestamp">(10:35)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right. So, speaking of convincing clients of things and selling it and setting expectations: this whole idea behind creating a style guide, creating a pattern library, creating not just a final website, not just a sort of ad hoc collection of good-looking web pages or even web pages that work well, but really not just delivering that but also this underlying system, how do you go about selling that process through setting their expectations and really making it clear to them that this is indeed what they need and how they need to be thinking?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…I find that we spend very little time talking about the graphic design of a thing and we spend a lot more time talking about, OK, well if we do this, if we put this here, what field in the CMS do we need in order to publish to that on every page of the site? I think that leads to more meaningful conversations.</p>
+    </blockquote>
+</aside>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah. I think the first part of it is that the majority of times, that's true, that's what clients need a lot. But sometimes it's not true, so I don't like to go in with the assumption that every time I can sell a style guide and that's going to be the right thing. Because sometimes it's not. Most times it is, especially with clients and teams and organisations that are hiring me as a kick-start, but then they're going to have to take over this thing and if they can't take it over in a meaningful way, then whatever I deliver is useless; they just threw their money in the trash.</p>
+    <p>So I think the first thing that I like to do is I like to go in and try to listen for the thing that the want; why are they actually hiring me?  Are they hiring me for the style guide?  Are they hiring me because they couldn’t do it?  Or are they hiring me because they could do it and they just don't have time?  And that really lets me focus on what is the thing that I'm actually delivering to them that's going to help their organisation. They have to feel some type of profit from whatever they're spending money on for me, so I think that's one thing.</p>
+    <p>But assuming that a style guide is the thing that they need, then I think all roads point to style guide. Every conversation along the way needs to inform the fact that this is what we're going to make on the end, so if you hand off a full comp, well, how's that comp going to point to a style guide?  How's that comp ultimately going to help them to continue to build the site and grow the site without you?  Or if it's a style tile or an element collage or whatever the design deliverable is, how is that thing, that prototype, how is it going to point to the style guide and let them maintain it later on?</p>
+    <p>And I find that's the thing that comes out in those conversations that almost never comes up in the Basecamp posts of feedback; we like blue, the logo's too big, move it over… that has nothing to do with how they're going to take over the site in the future, right?</p>
+    <p>And so I find that we spend very little time talking about the graphic design of a thing and we spend a lot more time talking about, OK, well if we do this, if we put this here, what field in the CMS do we need in order to publish to that on every page of the site? I think that leads to more meaningful conversations, so if the style guide is the thing or the maintainable thing is what is really the value of what they're hiring you for, for that project, then I think all conversations need to really point to that and that gives me a better way to talk about design.</p>
+    <p>I keep talking about Mike Monteiro here, but I think his book is fantastic in the way that he talks to designers about presenting their work. One of the biggest sins in talking about work that designers do is they do that real estate tour: here's the logo on top left; he's the nav in the top right, then there's the carousel… like yeah, they have eyes!</p>
+    <p>They can see what's there, but if you talk about it in the context of the goal; with a logo we put it over here because we could mark it up this way because you can manage it in the CMS this way and because it's more modular for you if you ever need to change it. Great! That's a really objective way to talk about design, not "do you like the size of this, yes/no; check this box". So I find all the conversations that I try to have are really about pointing to how maintainable is this for them and is this actually going to be valuable for them?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…the farthest that we go, often in our industry, is we train our clients… but what's she's saying is, we should create more time for people to practise using style guides and content management systems and let them fail in a way that we can coach them some more.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And what you were saying about maintainability is something that I think a lot more agencies should be considering because I think there's quite a habit of an agency flying in, doing their thing, dropping it off; it's perfect, it's done and then six months down the line, what's happening to the style guide? Is it still being maintained? And it's something that's a lot harder to do unless you're in-house, so it's good to hear that you're assessing their needs and finding out whether they will maintain it.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, let's be honest, I've done that a million times before; that's easy, it's the easier way out: you drop up, you drop the final deliverable on them and you pat them on the back and you say, good luck, let's get a drink some time, and then six months later you look at the site you're like, "oh I can't believe what they did with that site!" Well, you gave them the tools!</p>
+</div>
+
+<span class="timestamp">(15:06)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, or you look at the style guide and you see it hasn't been updated.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly, it's because you didn't empower them to do that. I read a great post recently by <a href="https://twitter.com/sara_ann_marie">Sara Wachter-Boettcher</a> that she wrote called something like, <a href="http://www.sarawb.com/2015/01/05/less-training-more-practice/">Less Training, More Practice</a>, and she makes a great point: the farthest that we go, often in our industry, is we train our clients. "We're going to train you how to use a CMS; we're going to do a one hour Skype call to show you how to use a CMS: good luck maintaining your site".</p>
+    <p>But what's she's saying is, we should create more time for people to practise using style guides and content management systems and let them fail in a way that we can coach them some more. Let them practise on it as opposed to just relying on training and I think that's a lot of the reason why people are hiring in-house and acquiring and doing all this stuff because then you don't risk the "drop off the deliverable, good luck to you".</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I'm leaning more and more towards just baking in a time where it's like we're going to spend whatever, six months on the site; you guys are going to live with it for a month or two and then we're going to come back and we're going to assess what worked and what didn't and help you fix it.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yep.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right. And it seems to me, this massive untapped resource for these agencies because that is a huge shift; people hiring more people in-house, internal teams building their own design and development teams which I think is absolutely wonderful, but there is such a potential for agencies doing work to sell this concept of not training, but practising or riding alongside them until they're very successful fishermen!</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> The whole, teach a man to fish, sort of thing and I think that it certainly flies in the face of, we are these experts and we make beautiful things and then we will give those to you and ride off into the sunset; it definitely undermines that whole thing, but especially when it comes to working in a client relationship in delivering these thoughtful atomic design systems and Pattern Lab; we've worked on a few projects like this. We'll deliver the thing but unless the project actually has that baked into the project plan, where we're going to hang around and make sure that this design system that we've spent a long time thinking about and developing and crafting doesn't just get thrown in the trash can, the same way that a pdf does or psd does.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, totally. I'm getting tired of working on projects that never launch. That sucks! You spend a lot of time on stuff and then they just never launch, for whatever reason. Sometimes it is that they didn't know what to do with it: you didn't give them the tools to do it. Other times it's other things out of your control, but as much as I can now, I'm more and more in every proposal I write and Anna, you might know this because we've pitched a couple of things before together, in every proposal I write, I'm leaning more and more towards just baking in a time where it's like we're going to spend whatever, six months on the site; you guys are going to live with it for a month or two and then we're going to come back and we're going to assess what worked and what didn't and help you fix it.</p>
+    <p>Anna, I think I got that idea from you because you mentioned that you had done that a couple of times with clients, that that worked really well, because there's a bunch of things that you don't anticipate; after a month, you come back and you go, OK, how did it go?  And they're like, "oh, we did this and this and this" and you're like, "why did you do that?  That's super-weird! Like I never would have thought you would have done that". And then it gives you the opportunity to fix it. So I've been just trying to bake that into every project anyway; this is just par for the course, this is how we do it. We give you a thing, you work with it, we let you practise and then we come back and that's part of the deal.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, I had that with <a href="http://codeforamerica.org/">Code for America</a>; <a href="http://style.codeforamerica.org/">I built a style guide</a> and six months later they asked me to come back and have another look at it based on how they were using it, which was so great; I love being the opportunity to do that. And there were things that I was quite surprised that they'd decided that they wanted fewer classes, which is going against the grain of modular CSS so I had to pivot and take out a lot of the classes and make it a lot more…you put one class into the parent element and then the rest all kind of trickles down.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Oh, interesting.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I see that a lot with a lot of clients that come to me is they want that outside perspective, they want someone who is removed from their day to day to come in and say, well here's a thing you might not have thought of, and that's the value of a consultant.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, making it much more specific in a way. Which I didn't really feel comfortable with, but at the end of the day, it meant that they could write better HTML and they could implement things more easily without…they had a lot of people writing the code, a lot of people who perhaps front-end development wasn't their main skill, so it was important that if they missed out a class somewhere, that it didn't break everything.</p>
+</div>
+
+<span class="timestamp">(20:00)</span>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, I'm all for that. I'm all for throwing theory out the window if it makes people be able to use a site better and maintain it better. I'm happy to discard that stuff. All right, so what if your CSS is not going to win any awards any more?  At least they can use the site, you know?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, I mean it's all just fashion, isn't it?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, that's right</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> CSS Flavour of the Week! But yeah, the trend is fascinating, and that's so cool to hear you guys' experience with that where you guys are both working in a client relationship; you're not in-house, you're not embedded, you're not the ones living and working with the thing that you've at one point in time delivered to them, so it's like, how do you, and that's the whole idea behind these style guides and pattern libraries and stuff, is to create a maintainable system, something that's meant to be lived with and grown and evolved over time for the benefit of the organisation, so that's really awesome how you guys have figured out a way to build that into your process in your workflow and hopefully go for it!</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, totally. One of the projects I worked on last year with <a href="https://twitter.com/tkadlec">Tim Kadlec</a> was a site called <a href="http://www.rferl.org/">Radio Free Europe</a>, it's for an organisation in Europe, it's a news site in areas where free press is usually banned, and one of the reasons that they hired us, when they hired us and we did a kick-off and I met their team, they have some of the smartest developers that I've ever met working there, and I asked them point blank, twenty minutes into the kick-off, I was like, OK, I've got to pause this. We flew to Prague for this. I live in Philadelphia!  We went to Prague and twenty minutes in I'm like… so I have to ask you, why did you guys hire us?  Obviously you have the talent here to do the thing that you need to do, and I think this is the difference between why people bring people in-house and what the value of actual client service still is, and this is why I don't believe that it's dead or anything like that, is because their answer to me was: well, because we needed an outside perspective, so we needed people that were experts, that's one thing, and people that will push our team, no matter how talented our team is, we wanted people that will push our team to do even better work and the second thing is, we just need an outside perspective; that's the value of hiring you. Somebody who's not mired in our politics, in our timeframes, in our schedules, just drowned with work, the internal stuff that we have going on. We want that. That's what we value.</p>
+    <p>So that's the thing, well OK, we can focus on doing that, we can focus on doing the things that you guys might not be able to do in-house because of time or maybe because of your particular backgrounds or the things that we've worked on that you might not have seen, or our experience working with multiple clients as opposed to working with one client in-house. And so that was the thing that was valuable to them and I see that a lot with a lot of clients that come to me is they want that outside perspective, they want someone who is removed from their day to day to come in and say, well here's a thing you might not have thought of, and that's the value of a consultant.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think the other reason that people bring them in is often, when their development team is very good, it's just the developers wanting someone else to say exactly the same things that they've been saying…</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>it wasn't one site; they publish a hundred and fifty different sites over sixty countries, so it's like, this is a massive site that has a hundred and fifty variations, so a strong style guide, a strong Pattern Lab was going to be really crucial to them</p>
+    </blockquote>
+</aside>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Oh, so true!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> …but you'll be listened to more because you're external.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Oh, absolutely.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I was joking around about putting that on my own website. Give me the script of the things you need me to tell your boss and I will say that… and just build a service around saying what your internal teams have been saying for a long time!</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> That's awesome!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Whatever, but yeah. So your Radio Free Europe project, were you tasked with creating a style guide for them?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Was that the project?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> We handed off <a href="http://patternlab.io/">Pattern Lab</a>, that was a deliverable, and we knew from the kick-off that they've used Pattern Lab before; all of their framework is on .NET, so they basically did a port of Pattern Lab to .NET and we delivered a PHP Pattern Lab which they would match against their .NET Pattern Lab and we'd sort of collaborate, so it was sort of like we worked in the same repository but half the repository was a PHP one and half of it was a .NET one; it was totally crazy!</p>
+    <p>But we knew that that was going to be the deliverable because they are going to have to maintain this site, not only for… it wasn't one site; they publish a hundred and fifty different sites over sixty countries, so it's like, this is a massive site that has a hundred and fifty variations, so a strong style guide, a strong Pattern Lab was going to be really crucial to them. And because we knew that we were going to deliver that, the first deliverable was a spreadsheet where we had one sheet for atoms, one sheet for molecules, one sheet for organisms and one sheet for a thing that we were called presets instead of templates, and we just listed all of the elements, all of the atoms, all the molecules, all of the organisms, all of the presets in the spreadsheets and just had cell by cell discussions in Google Docs about, well should this be a molecule or should this be an atom, and why is this a molecule instead of an organism?  What if we combined this one and this one?</p>
+    <p>It sounds tedious but it was actually really awesome because we were all speaking the same language from the start. We knew that that's what we were going to be building towards and so we could have those discussions, and it made building the Pattern Lab really easy because we'd worked out all the details in the Google Doc.</p>
+</div>
+
+<span class="timestamp">(25:31)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It's really great that you were working with the developers; they were in the style guide while it was being built, because I think it just doesn't work if you just hand it over at the end, "I've built this thing and now it's your problem"; they haven't had any experience with you developing that. The client feels a lot more invested in it if they're actually getting involved in producing it.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, and to be honest, we learn a ton from them too. They were writing their own version of Pattern Lab while we were writing, and we were trading notes with them, so they would build a thing completely different than the way that we would build it and we would have conversations about it and some of those things we were just like, yeah, your version's a lot better, we'll just use your version. Or we'll add this one thing to it. So it really was a collaborative process with their team.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>one of the things that was important on this project in particular is that performance is literally a matter of life or death for them. They have people in places like Uzbekistan who illegally cross country lines just to access the content because that's the only way that they get news.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Sounds like a really good client.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, it was cool, it was a lot of fun.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And are they still maintaining their version of Pattern Lab?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yep, exactly. So, they've got everything in their version and they're just porting over pieces from ours, just piece by piece as they do their unit testing and they're going through and rolling it out one site at a time because they've got these major sites, this massive directory of sites so they're doing all their testing now and rolling them out one by one, because each site has a different requirement and different reporters writing for them and all of it.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, with that, how do you manage things like localisation; different languages. Do you do that straight in the Pattern Lab or…</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> So that thing, yeah, that's a good question. That thing was out of our scope, so we knew that that was going to be a huge project that honestly we didn't have much experience with. They were way better at that, so we just said, hey, we're going to focus on front-end performance. That was the thing that we're going to do; really high quality mark-up, really, really fast performance for these sites, because one of the things that was important on this project in particular is that performance is literally a matter of life or death for them. They have people in places like Uzbekistan who illegally cross country lines just to access the content because that's the only way that they get news.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Wow!</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> And some of these people have been jailed or have been hanged just for accessing their website. So we can't have a page loading in thirty seconds; that just can't fly, and they only have mobile phones there, the highest speeds are 3G speeds, so it's all 3G on smartphones; no desktops, nothing like that, so our project was specifically focused on really, really well performing pages and elements and just the front-end experience, and then all the back-end stuff, all localisation, all that stuff they were handling in-house.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, a couple of things there. How did you, while you're not tasked with creating patterns and doing all the localisation, you're surely keeping that in mind as you're establishing the patterns in the pattern library, right?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly. So we would have tons of variations of the same pattern, so for example the header, we would have a left to right version of the header and then a right to left version of the header and that was actually I think just when you guys started rolling out the pattern modifiers and things like that, so that came in really handy for using the same pattern and just swapping up content and I think, if I'm not mistaken, Tim would be better to answer this, but I think Tim came up with a really good way to control it all using the directions stuff in CSS and he's a wizard at that stuff, so there's a ton of stuff that I don't even understand about what he did, but we use basically the same patterns and just had variations of them using pattern modifiers or just sending new JSON to it or things like that.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome. And that helps keep things dry and obviously…</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Exactly.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's important but you could add the overrides as needed. That's really cool. And then, how did you talk through, and I know that Tim obviously would be able to speak in more detail, but what was that process of working in this sort of modular fashion and how did that affect how that performance was there?  Were you able to hone in on particular… like this video player is crawling or…</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> …these accordions are too heavy; not necessarily page load; overall document.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, totally.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So how did you do that?</p>
+</div>
+
+<span class="timestamp">(30:00)</span>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> So, because of this project, while we were working on this project, Tim actually created a <a href="http://gruntjs.com/">Grunt</a>… I don't know what the right word is, a Grunt package I guess, for performance, so it's called <a href="http://timkadlec.com/2014/05/performance-budgeting-with-grunt/">Grunt Performance Budget</a> and it measures per element, per pattern, how fast that pattern is loading. So it's a little thing that sits in the top right of Pattern Lab that tells you in milliseconds that this pattern loaded in twenty seven hundred milliseconds. It was awesome, not just per template or per page, we were measuring performance for all of that stuff. We also were measuring performance at the element level, at the pattern level…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's so useful.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> …how quickly was this molecule loading, and we were able to track down, OK, well this molecule's pretty heavy, but maybe a variation of it wouldn't be so heavy so they could choose, do we want the heavyweight one or do we want the lightweight one, depending on the context of the actual page that they were trying to build, so that was one thing that we did. And then we just made really heavy use of performance budgets on this project. We were always inventorying the competitor sites and I do error quotes around competitors, it's a news site, it's not technically…they don't have competitors, but we were looking at places like Al Jazeerah and the BBC and the Guardian and places that are really taking into account performance on news sites and we were always looking at what they were doing, so there was a lot of <a href="https://decadecity.net/blog/2014/03/06/cutting-the-mustard">cutting the mustard</a> tests going on; there were a lot of using that Grunt module to measure performance on a molecule level and then we were constantly updating the performance budget to say, OK, this was the original budget that we had but this thing requires a little bit more JavaScript, so real-time monitoring the performance budgets were a big thing for us too. </p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>don't rely heavily on a deliverable to solve this for you: rely on your listening skills to solve it for you.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent. And so all that thinking, it sounds like that's going to be able to continue to live on with and sort of manage that.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> They're able to manage it?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, we were working in the same Git Repo, so it's like they had what they had what we as soon as we had it, so being pretty transparent about that and just giving them access to all of it, it let us have early conversations; earlier than we were comfortable with, but it was better overall for the process.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is there anything that you would've wanted to do for them that you couldn't because of time restraints?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Good question. So, the scope of the project was basically we were going to audit their organisms and we were going to create new ones where we needed them. The thing that we didn't get to do on that project, which I think had we done it over, I would want to do this, is go back after the usage, so the thing that we just talked about; once they roll it out, I have confidence that they're going to be good sites because they have a good team, but I would still love to be in there and check it out and make modifications and work with them on that, so as of right now, we haven't scheduled anything like that, and the sites are still in development right now, so probably over the year they're going to start rolling them out but I'd love to in six months or a year, just go back and check those things out and do some more work with them to figure out what assumptions we made that were good assumptions and what assumptions we made that were not so good assumptions…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Based on how people are using it?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, exactly.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent. So real quick, let's talk a little bit about how the workflow looked like; you're well versed in Photoshop, well versed in traditional static design environments; what does that workflow look like for designing a style guide?  You've talked a little bit about Photoshop's new, or should I say, Creative Cloud's new libraries… how are you starting to see… what's your advice for people who are well versed in these more static design tools?  How do you get them thinking more modular?  What do your deliverables look like beyond element collages and stuff like that?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, gotcha. The first piece of advice is, don't rely heavily on a deliverable to solve this for you: rely on your listening skills to solve it for you.</p>
+    <p>So, we did element collages for this project; I'm looking at the project hub right now. The first deliverable that we had was the Pattern Lab spreadsheet; that was the first thing that we gave them. Here's a spreadsheet with four sheets: atoms, molecules, organisms, precepts. The second deliverable was a performance budget. The third deliverable was an element collage, and these came within a few days of each other.</p>
+    <p>The element collage went over super-poorly; it wasn't the right thing for this project because they looked at the element collage and they were like, "this is so abstract for us; we're used to working in Pattern Lab. We would rather talk at that level".</p>
+    <p>So this project, they were less concerned about the brand, because this was a heavily templated site that had to roll out across sixty different sites, so each site was going to have its own brand, its own colours, its own typefaces, so they were less concerned with that, which I didn't really realise at the time, so I made the wrong deliverable; I made the element collage and then when we went through it, I was thinking in my brain, this isn't going as well as it should, and they gave us the feedback, they were like, well we're not really sure what we're looking at and why this is important.</p>
+    <p>So we switched gears, so we were like, OK, let's just stop doing the element collage stuff and I actually went to full comps on that one. I did small screen and large screen comps and that gave them a much better idea of what the sites would be, what the site would look like, so I did a home page and a sub-page and then from that point, then I started doing element by element; I would design organisms; I would design… let's see what we've got here… there's a sidebar that's a side nav drawer thing, so I designed that, do a couple of variations of that and then I would do the article body or a comment thread, and I would design organism by organism and each organism I would do at a wide screen and at a small screen.</p>
+    <p>And then while I was designing those things I would save each one of those organisms as an asset in the library and then once I got to designing enough organisms, I would test designing pages. So, what does the article detail page look like?  Well, I'll grab this element and this element and this element and this one and this one out of the library and I would build the page literally in like twelve seconds, because I have all the elements already designed.</p>
+</div>
+
+<span class="timestamp">(36:18)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I guess that simulates how it would work for developers as well, just grabbing the code?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Exactly, it's like the design equivalent of includes, right?  So that I would design pages just to look at them for myself and I'm showing to Tim hey, does this look right?  And then we'd made tweaks from there and some of those I would show to the Radio Free Europe team and some of them I wouldn't. Some of them were just me validating that these elements work well together, just testing them out, and some of them I had questions about so I'd show them to the team; hey, what do you guys think of this?  And they would say well, these two things aren't really working well but yeah, that's what I thought too, so go back and revise that.</p>
+    <p>And that wasn't a process that we'd planned from the start, so I don't know how we would've been able to plan for that. So I think just being kind of adaptable to what your clients are responding well to and not well to and just knowing that within the time-frame, you're going to come up with something that's going to be good for the client; you just have to figure out that thing and it's OK to figure it out real time, as long as you're honest with the client about that.</p>
+    <p>I think a lot of people have the fear that well, if we look like we don't know what we're doing, then the client's not going to feel good about paying us. That's partly true, but if you're transparent about it and say, look, there are a number of ways we could do this, we're just not sure which one is right because we haven't worked with you yet. Well, we'll figure that out together; just have confidence that we'll get to the right end point. But trust us that we'll do stuff in the middle and luckily Radio Free Europe, they trusted us enough to do that, so we got there, just not in the way that we initially charged in the beginning of the project.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>one of the things that I fall into this trap all the time is, I want to deliver everything. Every single element that they could possibly need to build the site; I'm going to style the keyboard selector. They might never, ever use that. They don't even know what that is!</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And that system itself means that they can go ahead and when you're gone, build their own pages, their own templates…</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, totally.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> You've given them a system.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Exactly. And for them, we handed our Photoshop files to them and they were like, yeah, we don't care about these, because they didn't use them; they wanted Pattern Lab files and they've got Pattern Lab, so that was their way of doing it. </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> They sound like a dream client…</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> It's good to be able to hand off…</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, I know, I was like, I love these guys! (laughs)</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I want them!</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, totally. They're a great team to work with. And so I think it's good to hand your client… here are six ways that you could update this site: pick the flavour that suits you best.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yep. And so the last question would be… what would you think would be the ideal style guide? What does that look like? What does that maintainable system look like? As someone who's handing this stuff off and working with organisations to eventually get them up and running on it. What goes into…what is that perfect system that allows people to do their jobs to the best of their ability?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Well, I'm still evolving what that definition is for me, but I think so far what I've come to is: everything that they need to build their site and no more, because I think one of the things that I fall into this trap all the time is, I want to deliver everything. Every single element that they could possibly need to build the site; I'm going to style the keyboard selector. They might never, ever use that. They don't even know what that is!</p>
+    <p>I've spent valuable time and their mind-share in looking at a style guide that has the keyboard selector. Maybe they would, and that's OK. I think there's a fine line between planning for all of the possible scenarios and playing for too many possible scenarios, so I think it kind of speaks to the point that Anna, that you brought up, which is like, we just want less classes. And it probably wasn't because you wrote too many classes: it was just too much to manage in your head.</p>
+    <p>So I think sometimes style guides tend to be too much. I would never use that element; I would never use the sixteenth variation of that alert… it's just there's too much. So I think spending more time up front to really understand what elements you're going to need or they're going to need and really making those as tight as possible, I think that's time better spent than every element possible, we're going to have twelve pull quotes for them, and then they only end up using one. That's a waste of your time, it's a waste of their mind-space and just wasting that HTML file I guess.</p>
+</div>
+
+<span class="timestamp">(40:25)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I guess as long as you've got good fallbacks, it all comes together?</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, try to avoid the kitchen sink.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome. Well hey Dan, thank you so much for your time. Thanks for being on the show, this is amazing.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, that was great.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> My pleasure.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It was really insightful. And thanks again also for all that you're sharing, all that you're putting out there; things like Element Collages have become a big thing and I travel around and talk to a lot of people and it's really inspiring to see what you could do for a non-profit but transcend that and come up with and share these techniques and tools that are proving to be really valuable for lots of other people, so thanks for taking the time to put all your thoughts and knowledge out there.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Oh yeah, I love it. I love doing it and I wouldn't be where I am if people hadn't shared that kind of stuff with me, so I feel like it's only fair to pay it forward.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Absolutely. Cool, man. Well thank you so much for your time. Great chatting, and have a great weekend.</p>
+</div>
+
+<div class="dan-mall guest">
+    <p><b>Dan</b> Thanks. Same to you guys.</p>
+</div>
