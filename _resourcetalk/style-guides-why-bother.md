@@ -2,7 +2,7 @@
 title: Style Guides: Why Bother?
 link: https://vimeo.com/117250454
 author: Susan Robertson
-conference: SmashingConf Whistler
+conference: SmashingConf Whistler 2014
 date: 2014-10-12
 ---
 
