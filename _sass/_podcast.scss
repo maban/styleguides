@@ -1,0 +1,130 @@
+
+
+b {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    font-size: 12px;
+    text-align: center;
+    width: 50px;
+}
+
+.host, .guest {
+    background-position: top left;
+    min-height: 60px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    padding-left: 65px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.anna-debenham {
+    background-image: url("/images/avatars/anna-debenham.jpg");
+}
+
+.brad-frost {
+    background-image: url("/images/avatars/brad-frost.jpg");
+}
+
+.jina-bolton {
+    background-image: url("/images/avatars/jina-bolton.jpg");
+}
+
+.federico-holgado {
+    background-image: url("/images/avatars/federico-holgado.jpg");
+}
+
+.lincoln-mongillo {
+    background-image: url("/images/avatars/lincoln-mongillo.jpg");
+}
+
+.dave-olsen {
+    background-image: url("/images/avatars/dave-olsen.jpg");
+}
+
+.dan-mall {
+    background-image: url("/images/avatars/dan-mall.jpg");
+}
+
+.bio {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.download {
+    margin: 1em auto 2em;
+    text-align: center;
+}
+
+.podcast-episode aside {
+    float: right;
+    width: 50%;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    font-weight: lighter;
+    line-height: 1.4em;
+}
+
+.podcast-episode aside blockquote {
+    font-style: normal;
+    font-size: 1em;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: #888;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    padding-left: 30px;
+    &:before {
+        content: "“";
+        font-size: 2.5em;
+        top: 10px;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.podcast-episode {
+    max-width: 700px;
+}
+
+.links {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    margin: 0;
+    list-style-type: disc;
+    margin-bottom: 2em;
+    li {
+        margin-bottom: 1em;
+        display: block;
+    }
+}
+
+.template-podcast h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    margin-top: 0.25em;
+    line-height: 1.2em;
+}
+
+.template-podcast .page-content a {
+    color: $color-4-darken;
+    &:hover,
+    &:focus {
+    }
+}
+
+.transcript .heading {
+    margin-bottom: 2px;
+    line-height: 1.25em;
+}
+
+.transcript .credit {
+    margin-bottom: 20px;
+    font-size: 15px;
+}

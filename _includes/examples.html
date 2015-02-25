@@ -3,11 +3,30 @@
     
     <p>Real life pattern libraries, code standards documents and content style guides</p>
     
+    <div class="filters">
+        <h2>Filters</h2>
+        
+        <div>
+            <button data-filter="resource-type-example" data-reset="true">Reset All Filters</button>
+        </div>
+        
+        <button data-filter="resource-type-example" data-filter-tag="backend">Backend</button>
+        <button data-filter="resource-type-example" data-filter-tag="brand">Brand</button>
+        <button data-filter="resource-type-example" data-filter-tag="branding">Branding</button>
+        <button data-filter="resource-type-example" data-filter-tag="code">Code</button>
+        <button data-filter="resource-type-example" data-filter-tag="designlanguage">Design Language</button>
+        <button data-filter="resource-type-example" data-filter-tag="frontend">Frontend</button>
+        <button data-filter="resource-type-example" data-filter-tag="jekyll">Jekyll</button>
+        <button data-filter="resource-type-example" data-filter-tag="patterns">Patterns</button>
+        <button data-filter="resource-type-example" data-filter-tag="voiceandtone">Voice And Tone</button>
+        <button data-filter="resource-type-example" data-filter-tag="writing">Writing</button>
+    </div>
+    
     <ul class="resources resource-type-example">
         {% assign example = site.resourceexample | sort: 'status' %}
         
         {% for example in example reversed %}
-            <li class="resource {{ example.status }}">
+            <li class="resource {{ example.status }}" data-tags="{% for tags in example.tags %}{{ tags | downcase }} {% endfor %}">
                 <a href="{{ example.link }}" class="resource-url">
                     {% if page.type != "home" %}
                         {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}

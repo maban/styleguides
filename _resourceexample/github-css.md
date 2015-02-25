@@ -6,4 +6,4 @@ tags:
 - code
 ---
 
-Github's guidelines on writing CSS
+GitHub's guidelines on writing CSS
