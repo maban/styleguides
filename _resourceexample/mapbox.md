@@ -9,3 +9,5 @@ tags:
  - writing
  - patterns
 ---
+
+An extensive guide featuring HTML and CSS patterns, a writing guide, and tutorials for implentation.
