@@ -10,4 +10,4 @@ tags:
  - patterns
 ---
 
-An extensive guide featuring HTML and CSS patterns, a writing guide, and tutorials for implentation.
+An extensive guide featuring HTML and CSS patterns, a writing guide, and tutorials for implementation.
