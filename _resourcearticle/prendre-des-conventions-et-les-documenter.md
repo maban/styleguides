@@ -6,4 +6,4 @@ site: Openweb
 ---
 
 This article talks about taking conventions and shows introduction to styleguides (with an example).
-(article in french, about to be translated into english soon)
+(Article in French, about to be translated into English soon).
