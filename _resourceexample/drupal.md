@@ -6,6 +6,6 @@ type: Content Style Guide
 tags: 
 - code
 - frontend
-- brand
+- branding
 - writing
 ---

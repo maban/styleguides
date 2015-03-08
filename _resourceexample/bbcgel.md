@@ -3,7 +3,7 @@ title: BBC GEL
 link: http://www.bbc.co.uk/gel
 tags:
 - designlanguage
-- brand
+- branding
 - frontend
 - patterns
 ---
