@@ -3,7 +3,7 @@ title: OpenTable Brand
 link: http://brand.opentable.com
 image: opentable.jpg
 tags:
- - brand
+ - branding
  - designlanguage
  - patterns
  - writing
