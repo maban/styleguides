@@ -1,0 +1,488 @@
+---
+layout: episode
+section: podcast
+number: 8
+title: Susan Robertson
+image: susan-robertson.jpg
+about: <a href="https://twitter.com/susanjrobertson">Susan</a> is a freelance <a href="http://snook.ca/archives/opinion/design-engineering">design implementer</a>. She specialises in style guides, CSS audits, and refactoring.
+audio:
+links: [
+    {text: "Editorially", url: "http://stet.editorially.com/", type: "site"},
+    {text: "Mailchimp's initial style guide on Flickr", url: "https://www.flickr.com/photos/aarronwalter/5579386649/", type: "example"},
+    {text: "Anna's style guides article on 24 ways", url: "http://24ways.org/2011/front-end-style-guides/", type: "article"},
+    {text: "Starbucks's style guide", url: "http://www.starbucks.com/static/reference/styleguide/", type: "example"},
+    {text: "Dave Shea's markup guide", url: "http://mezzoblue.com/downloads/markupguide/", type: "example"},
+    {text: "Dave Shea's markup guide", url: "http://mezzoblue.com/downloads/markupguide/", type: "example"},
+    {text: "Salesforce's Style Guide", url: "http://sfdc-styleguide.herokuapp.com/", type: "example"},
+    {text: "Styledown", url: "https://github.com/styledown/styledown", type: "tool"},
+    {text: "Nico's Living Style Guide", url: "https://github.com/hagenburger/livingstyleguide", type: "tool"},
+    {text: "Style Guide Generator Roundup on A List Apart", url: "http://alistapart.com/blog/post/style-guide-generator-roundup", type: "article"},
+    {text: "Anna's Jekyll style guide", url: "https://github.com/maban/styleguide", type: "tool"},
+    {text: "Rizzo", url: "https://github.com/lonelyplanet/rizzo", type: "tool"},
+    {text: "A Maintainable Style Guide by Ian Feather", url: "http://ianfeather.co.uk/a-maintainable-style-guide/", type: "article"},
+    {text: "Livia Labate on the Responsive Web Design podcast", url: "http://responsivewebdesign.com/podcast/marriott.html", type: "podcast"},
+    {text: "Knyle Style Sheets", url: "http://warpspire.com/kss/", type: "tool"},
+    {text: "Screenshot on Dribbble of Editorially's menu bars", url: "https://dribbble.com/shots/1133714-Many-Editorially-mastheads", type: "example"},
+    {text: "styleguides.io's style guide", url: "http://styleguides.io/styleguide.html", type: "example"},
+    {text: "Max Quattromani's style guide", url: "http://maxquattromani.com/styleguide/", type: "example"},
+    {text: "Ethan's blog isn't responsive", url: "https://twitter.com/beep/status/569967569404362753", type: "site"}
+
+
+
+]
+---
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Hello, and welcome to the eighth episode of the Style Guides Podcast. I'm your host Anna Debenham and normally we have Brad Frost joining us, but he's in Australia at the moment. Today we have Susan Robertson. Hello Susan!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Hi Anna!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> How are you doing?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Good. How are you today?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm doing great, thank you. Could you tell me a little bit about what you do?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Sure. Currently I'm a freelance front-end developer and I focus mostly actually on CSS and mark-up. I actually don't do a lot of JavaScript, so I focus a lot on CSS architecture, large-scale CSS, style guides, CSS audits and I like to think of myself as a <a href="http://snook.ca/archives/opinion/design-engineering">design implementer</a>, which is something that <a href="https://twitter.com/snookca">Jonathan Snook</a> coined on his blog, so I work a lot with designers and help them get things the way they're supposed to be.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I like that phrase. So, you work with a designer and you build what they design?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Pretty much, yes, and usually I'm brought in to just help get things going and it kind of varies from project to project but I usually work closest with the designer on any given team.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Excellent. And you've done a bit of work with <a href="http://stet.editorially.com/">Editorially</a>?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>It was the way I got to learn all the different CSS that was used in the application and could see it all, every single button that had been styled, even if they weren't all being used, and it was a way to familiarise myself with everything going on within the code. And I also took it as an opportunity to do some re-factor as well.</p>
+    </blockquote>
+</aside>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yes; I was the front-end developer at Editorially which I guess I should say, since it's been gone over almost a year now. For those who don't know, it was a collaborative writing software online.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It was so good. I really miss it.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Me too, believe me! And when I was brought in there, they were getting ready to head into public beta and <a href="https://twitter.com/beep">Ethan Marcotte</a> who built the application was going out of day to day and I was brought in to replace him, which was a little frightening, actually! And so I worked for them from probably the last six and a half months of the lifespan of the company before we shut down.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And you built a style guide for them?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah. When I came in there, I was really interested in building a style guide and so I had agitated pretty hard in the interviews about asking the co-founders what they thought of it and if they thought it was a good idea. They were all fairly receptive, so my first few weeks there I started building out a guide based on the existing application. I had gotten pretty used to guides in my workflow at previous jobs, so I kind of don't like working without one for any long-term project.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think when you're iterating quickly on an application, that happens a lot; you abandon a module for something totally different, so you want to start over and so I was able to clean a lot of that up…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And was it quite unusual to be building a style guide from something that already existed as opposed to something new?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, it was. My previous job I'd done a lot of building out, it was a development consultancy, so we'd done a lot of waterfall type of building out, so we would get designs and then build from there, so building on an existing application that's actually changing as you're building was definitely a different scenario for me, but I really enjoyed it. It was the way I got to learn all the different CSS that was used in the application and could see it all, every single button that had been styled, even if they weren't all being used, and it was a way to familiarise myself with everything going on within the code. And I also took it as an opportunity to do some re-factor as well.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's perfect. So, how did building a style guide help you with that re-factoring?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Well, the first part, the styles were in <a href="http://sass-lang.com/">Sass</a> but Ethan isn't a huge user of all the features of Sass so they were basically in Sass because it was a Rails app and the Rails pipeline could concatenate the files together, so even more breaking up of files to get things like, all the buttons were alone in a file and the navigation alone in a file and that kind of thing and then I implemented variables which we weren't using up until that point for colours and I was able to find CSS that wasn't being used anywhere and double and triple-check that and have a colleague check for me as well before I deleted it out. And that was pretty helpful because I think when you're iterating quickly on an application, that happens a lot; you abandon a module for something totally different, so you want to start over and so I was able to clean a lot of that up as well and get a system in place for prefixing as well for vendor prefixes, so it worked pretty well.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's excellent.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Did you have a separate Sass file for each module?</p>
+</div>
+
+<span class="timestamp">(5:01)</span>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> I tried. That got a little hairy in some of the situations, just because a lot of things were tied together and I didn't really know where to break them, but a colleague of mine that I worked with there, he and I liked to talked about screenfuls of code; we didn't want more than one to two screenfuls, so you were scrolling a lot in a code file, so my goal was usually to narrow it down just so that you wouldn't have as much to scroll through in any given file, but sometimes that's hard.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It's quite a leap, I remember when I first started working that way and just being horrified; I think I was working on a project with someone else who was working that way. I was just horrified: look at all these files; how am I going to know where anything is? And now I see the value of it, especially when you're building up modules, to have each module has its own style sheet effectively.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> And I think it's easier for someone to step into, because they can just find… here's the buttons, here's the icons, here's the colour box, here's the media box, or whatever it is, however you do it. You name the file after what the thing is that's in there and so it's easier, because with Sass it's become a little harder to find things. The inspector says some odd line and you're like, I have no idea where that is! It's usually a concatenated file, so I think that's made it easier to step into projects as well.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And also for version control I guess, because you're only editing that one file to change say a button, so there's less risk of breaking the entire style sheet.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Right, exactly, exactly. </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And what sort of tools did you use to help build the Editorially style guide?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> For Editorially it's pretty old-school. It was Rails App, so we had basically an HTML file or ERBs as they're known in the Rails world, sitting in our Admin area and I hooked up the production style sheets to that page and I hooked up a style guide only CSS to that page just in case I would need it, and then I actually just hand-wrote everything at the beginning, so I just started throwing everything in; the buttons and the paragraphs and things like that, so I could see them. And as I iterated, I then used… Ethan actually suggested after he took a look at some early iterations, using <a href="https://github.com/filamentgroup/X-rayHTML">Filament Group's X-Ray HTML</a>, so that we could spit out actually what the code actually was underneath each module.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It uses JavaScript, doesn't it?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, it uses just a little bit of JavaScript and you can use <a href="http://prismjs.com/">Lea Verou's Prism</a> for colour coding if you want. We used it, but since we were already using it in the application to colour code any code bits you put in a document, it was kind of Editorially grey colours; it didn't colour code in the same way that out of the box it does. But it was really nice to have and that's where I felt like the style guide took another giant step forward, because you could look at it and just see everything in one place.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> What was the process of when you were designing a feature and you came in to build it? Did you add it to the style guide first or did you add it after it had been implemented?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> We worked pretty quickly and we were a very small team, and we worked very agilely, and we didn't have a staging server or anything, so it was local and production, so we would do all our new features in local and typically we just did the features and the changes and then if it required mark-up changes to something or to a module, it was on me basically to go back and change it in the style guide and update it. I was the one who cared the most and since we were trying to move pretty quickly and we were in beta pretty much the entire lifespan of the app, it's just we moved from private to public, it was just easier that way to go forward and I would just double back. I think eventually I would have wanted an automation of some kind, but we were small enough that I didn't feel like it was worth the work at that point.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Going right back to the start, what was the first time that you encountered a style guide?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> My very, very first glimpse of anything relating to a style guide, and I don't know that it even used the word style guide was, I was sitting at <a href="http://aneventapart.com/">An Event Apart</a> in Seattle several years ago now, and <a href="https://twitter.com/aarron">Aaron Walter</a> from <a href="http://mailchimp.com/">MailChimp</a> was on stage and he was talking about how they'd implemented object-oriented CSS and done a lot of clean-up under the hood of MailChimp and at the same time they'd come out with a style guide that was just on their intranet, and he had an image of it. He actually still has an image of it; it's this huge, long image.</p>
+</div>
+
+<span class="timestamp">(10:20)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> <a href="https://www.flickr.com/photos/aarronwalter/5579386649/">The one on Flickr?</a></p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, on Flickr. And that was my first ever… wow, that's a thing? And kind of thinking about that, the job I was at I couldn't really figure out how I would get something like that, but it definitely piqued my interest and I started to look out for anything remotely like that as things were coming out.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> While doing this podcast, I've heard a few people reference that very same moment; seeing MailChimp's screenshot of their style guide and just, wow, this is really cool!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Well, I've been trying to timeline that and I'm pretty sure that that image from his talk was pre your <a href="http://24ways.org/2011/front-end-style-guides/">24 ways article</a> and pre <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a>' being released, so I think the year he did that talk was really the first, it would be for a lot of people, if they went to An Event Apart that year, or heard that particular talk, their first glimpse, because nothing else was really out there, nobody was talking about them very much.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It certainly wasn't public.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Right; exactly.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think perhaps <a href="http://mezzoblue.com/downloads/markupguide/">Dave Shea</a> had one.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And it was really cool to see MailChimp do it, because they're such a big company and they've got such a bit design team; it's just really nice to see what they're working on.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think our standards for what a style guide needs to look like are based on all the ones that are public and all the ones that are public have designers behind them who wouldn't let them be public unless they were beautiful!</p>
+    </blockquote>
+</aside>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, totally agree.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I think it was a while before they made that entirely public, to make that style guide, to put it on their site.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, I think it was too. I think it sat in their intranet for quite a while before anything came out publicly. So that image was kind of the one thing you could look at!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> The Editorially style guide is also public. Did you have to persuade… I'm guessing people were quite keen on putting it live?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Well, it never went public during the lifespan of that application; it went public as the application was in its final months and I was writing the article for A List Apart and I was using basically how I made that style guide to write the article and so I asked the co-founders, is there any way that could come out of the application and be public at this time, and so they agreed to put it out on <a href="https://github.com/">GitHub</a> so it's out there, but my big caveat that I tell everyone is, to get it out as a standalone little thing, I had to actually just view source and save the HTML and then save all the style sheets… so it is on GitHub but it is pretty dang gnarly to look at that code.</p>
+    <p>I think it would have taken a while for that to become public if the application had kept going because <a href="https://twitter.com/jasonsantamaria">Jason</a> would have wanted to design it and make it look better, but I've found it really helpful to have it out there looking kind of crappy because I think our standards for what a style guide needs to look like are based on all the ones that are public and all the ones that are public have designers behind them who wouldn't let them be public unless they were beautiful! And I think an internal team document doesn't need to look that good to be helpful and the majority of the style guides I have made in my time look bad. They don't look like Yelp or Starbucks or any of the others that are publicly available; Rizzo; they look pretty bad! But they were just internal team documents so nobody else had to see them but us!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> At the end of the day they are documentation and it's nice to have a really pretty design, but it's not necessary. I think it's just people like to share it and they like it to look good!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> If I were sharing I'd probably want it to look good too, so I totally understand the motivation! But it doesn't help the normal average person working on a team of people understand that you don't have to go to those lengths to make a style guide that's going to help you and your team; it's great if you want to do that but you don't have to do that.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Style guides like MailChimp's is particularly pretty and have you seen <a href="http://sfdc-styleguide.herokuapp.com/">Salesforce's style guide?</a></p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…the biggest thing I've found is, everybody wants you to use a tool but most tools aren't completely automated so you still have some maintenance that has to happen manually, even if you use a tool.</p>
+    </blockquote>
+</aside>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, I have. </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That is really pretty!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yep!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I love the icons on it. They've done a really good job on it; I'm getting quite a few ideas from that. But it doesn't need to be that pretty. What sort of tools have you come across? Not necessarily used but just explored over the past few months?</p>
+</div>
+
+<span class="timestamp">(15:11)</span>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> I just did a lot of tool research because I had a client who wanted something that would generate so I needed to come up with what I would use, and the one I ended up using was <a href="https://github.com/styledown/styledown">Styledown</a>. It's fairly lightweight and pretty easy to get going; it's a Node based tool and one command line spits out your style guide, once you have a config file you start putting comments in your style sheets and then you can run a command and it spits out HTML and he also has set up a bunch of CSS and JavaScript that's sitting on a <abbr title="Content Delivery Network">CDN</abbr> that you can access, so it can look pretty good pretty quickly right out of the gate, which is nice.</p>
+    <p>I also looked heavily at <a href="https://github.com/hagenburger/livingstyleguide">Nico's Living Style Guide</a>; he's in Berlin and he's getting ready I think for his 2.0 or something; he's tweeted at me a little bit about making changes, so I kind of have <a href="http://alistapart.com/blog/post/style-guide-generator-roundup">a run-down on the A List Apart blog</a> of all the ones I looked at. A lot of the Node ones are nice because they're fairly lightweight, so they're pretty easy to get up and running, but it depends on your application; if you're in Ruby, there's some great options that run right off of RubyGems, and so could be easy to use something like that. I've been looking at the pattern labs; I've never used Brad's but I've looked into it and I've also looked at your <a href="https://github.com/maban/styleguide">Jekyll version of a pattern lab</a>.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Really?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah! Which I'm intrigued by; I use Jekyll for my sites so I've considered doing my own little mini style guide for my site out of that but there's a lot of tools out there. And the biggest thing I've found is, everybody wants you to use a tool but most tools aren't completely automated so you still have some maintenance that has to happen manually, even if you use a tool.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yep, and I think as well it can depend on the type of team that you're working with; if they're very technically minded, one of these automation tools is going to be really hand. If they're less so, if they're mainly designers, giving them a load of commands that they need to run in the terminal, that can be not good.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah. My recent project I was really lucky, the designer was willing to run the one line in his command line, and so that was nice, but that's not always the ideal situation for people. You have to think about all that as well, for sure.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think a lot of these living style guides, things like <a href="https://github.com/lonelyplanet/rizzo">Rizzo</a> which is <a href="http://rizzo.lonelyplanet.com/styleguide/design-elements/colours">Lonely Planet</a>'s system that uses an API, I really like that; I really want to use it on projects but I know I probably can't because its dependencies, making sure the team that I'm working with is comfortable using that and it doesn't add extra work.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah. Rizzo is kind of the Holy Grail to a lot of people and I think it's great; I love Rizzo and I love <a href="http://ianfeather.co.uk/a-maintainable-style-guide/">what Ian's written about it</a> and how open he's been about it and how open he's been about it but the big thing with Rizzo is you have to have access to full stack and you also have to be able to… you probably want to tailor it to your needs; your needs might not be exactly the same as Lonely Planet's, so I think Rizzo would take a lot of up-front work, even if you were an in-house team, but then once it's running, it could be really great. But I get a lot of questions about Rizzo and I love Rizzo but like you, I work with clients so I don't have full stack access and that's not necessarily going to be a solution for them.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>But then on the flip side of that is Marriott who is a huge organisation with tons of digital teams and they actually have a team of four or five people who are paid to maintain their standards and govern.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Are style guides something that you need to sell to clients or is it something that they ask you to make?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> The first time I ever did one for a client was the project for <a href="https://www.fiftythree.com/">FiftyThree</a>, where I did this type style guide and they came to me looking for a refactor and a cleanup of the type across their site and I was like, well if we're going to do this, why don't we just tack on a style guide; wouldn't that make it easy? So they were pretty receptive to that and additionally it went out publically because they're FiftyThree and they design, so they gave me a beautiful design, basically, to get it out the door and make it look nice, which was great.</p>
+    <p>Last summer I worked with a startup where I did a style guide for them and that one was mostly me saying, I think this is a good idea; I don't know how long you guys are going to have me around and I should document this front-end, and so we did a rough and ready style guide so that the back-end folks would have something to reference if they needed it, because I was only with them part-time too, so I wasn't always around and there were time-change issues because they were on the East Coast. So I just did it, kind of thing! I said, I think you need this and it's not really going to take me that long so I'm just going to do this.</p>
+    <p>But the first time I ever had a client say, I want a style guide as part of what we're doing was the project I just wrapped a couple of weeks ago, so he came to me; he's a designer, he was working with a client, he was bringing me in to help architect and build out the front end and we were passing off static pages but he really wanted a style guide for reference for them as they moved forward with the application and even he wasn't around because he was on contact, so he was going to have an end date, so that was the first time it was like, we want this and we had to figure out how we can do this easily, so that's why I did a whole bunch of research and came out using Styledown, but that usually isn't the case. A lot of clients aren't quite sure what the benefit is so they see it as extra work.</p>
+</div>
+
+<span class="timestamp">(21:19)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> But then once you build them something, they realise the benefit! So it's kind of like this chicken and egg of trying to help them understand the benefit. I did a really fast five day project last week and she came to me with all these designs and it was great and I was like, well why don't we do a style guide because I could have just done all the components for her, and then out of that whipped up templates for her to start in on and she wasn't down with it, so I just did the flat file templates, so a lot of folks don't see benefit all the time, which is too bad.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Another thing I'd like to talk with you about, which I think you have quite a bit of experience in is maintenance. How do you encourage clients to maintain their style guides?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> This has become the hottest topic I've found in the last six months and I tweeted asking people basically, how do you maintain, last November and I tweeted about it and I ended up spending all day on Twitter talking about maintenance with people who either are like, "We don't know how to maintain: tell us." or people who were like "This is what we do."</p>
+    <p>It was a little nutty and it was interesting to see all the different types of people that were interested in it. And out of that came a conversation that I actually got to do a Google Hangout and talk with <a href="https://twitter.com/livlab">Livia Labate</a>, she was at <a href="http://www.marriott.co.uk/">Marriott</a> until the end of last year, now she's <a href="http://dansinker.com/post/100680608810/opennews-announcing-our-2015-knight-mozilla#livia">a Knight Fellow working with NPR</a>, visual stuff.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…all that historical mileage is documented so that everyone can see why they're doing it the way they're doing it and all the things they've thought about to get there, so the intent of how they use things is really well documented.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think <a href="http://responsivewebdesign.com/podcast/marriott.html">she's done a podcast with Ethan and Karen</a>.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> She has, yes, she's on the <a href="http://responsivewebdesign.com/podcast/">Responsive Web Design podcast</a>. The two things about maintenance are; Lonely Planet comes up a lot as we've discussed for fully automation, and I'm fairly sure that Ian and Lonely Planet are the only fully automated solution I've seen. I really haven't seen another one.</p>
+    <p>But then on the flip side of that is Marriott who is a huge organisation with tons of digital teams and they actually have a team of four or five people who are paid to maintain their standards and govern.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Wow!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah! It's really crazy.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's nice!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> And they have an internet standards library basically, and their standards team has issues that are submitted by the digital teams across Marriott; they work through issues in a sprint and then present back to the greater company and then if there are rush needs, they'll work with that team to figure out what needs to be done for that particular project and then they'll work it back into the standards after the fact and their standards are crazy; it's not just… I always use icon fonts because I think it's kind of controversial and everyone has different opinions on how to use them, so if you were to look in Marriott's standards portion of their intranet about how do you use icon fonts, it wouldn't just be like; here's what we do, here's how you use them. It's actually the entire history of how they decided to do what they did and then how you would use them so that anyone coming into the company, instead of re-hashing stuff that they've already gone through, all that historical mileage is documented so that everyone can see why they're doing it the way they're doing it and all the things they've thought about to get there, so the intent of how they use things is really well documented.</p>
+    <p>And then they have a smaller what we would consider more of a code style guide for front-end developers to use as reference and to quickly be able to get up to date but then they can always click back into the standards from there to read more should they need to.</p>
+    <p>So it's really amazing what they're doing, but they're paying a lot of people to do it, but they're a huge company and they have managed to rein in and standardise tons of stuff because of that. Governance is pretty hard and maintenance is definitely really hard and I think for small companies a lot of times it comes down to, there's a person on the team who care and they make sure it stays up to date. And who knows what happens when that person leaves the company? But that's usually what I'm hearing from a lot of people is they care and so they maintain.</p>
+    <p>But even a larger client that I've worked with, one that I worked with last fall on the size of Marriott, they would do a lot of <abbr title="Pull Requests">PR</abbr>s after the fact to clean up the style guide, so they'd get through, get things made and then there would be all these clean-up PRs coming through to update the style guide, because they were using <a href="http://warpspire.com/kss/">KSS</a> and they had to remember to do all the comments and put the mark-up in the files and stuff. But that was part of their process.</p>
+</div>
+
+<span class="timestamp">(26:08)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's usually quite a rush.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, but that was part of their process. One of the things I've talked a lot about is the same project I worked on last fall, the end client, I had to run a command-line test suite before I could even do a PR, and it was like a fifteen minute test suite; it was like you hit the button and you walked away because they were wanting to make sure that nothing broke and there were linters involved and it's the right thing to do; it's painful for the individual developer but their code base stayed much cleaner and so I think if you have those kind of standards already in place and you're using a style guide, that part of that workflow, so you hit the command-line test suite, you do your PR and then maybe as a part of the PR, the PR doesn't get signed off until the style guide's updated too. I think you can work these checks and balances in if you want. It's no different than testing in some ways.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think once you've settled on a design language and you know where you're at and you feel good about where you're at, I think that's actually the time to start documenting because your app is growing up…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It's kind of quality control.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yep.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is there a situation where you wouldn't build a style guide for a client?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> I think if I were working for… even if I weren't just client working, but I think teams that are working on a new app or a new thing and they're iterating really, really quickly, I don't know that they should do a style guide.</p>
+    <p>Editorially didn't have a style guide when I came on board and there were a lot of reasons for that and most of them are really good reasons; <a href="https://dribbble.com/shots/1133714-Many-Editorially-mastheads">Jason Santa Maria who was the creative director has an image on Dribbble of all the different menu bars</a> that were inside when you're working on a document; what you'd see at the top, and it's this huge image and it's just like one little menu bar after another of all the different things he designed and thought about when he was working through that, trying to find a design solution and according to Ethan, half of those got built out! So they're moving really fast and they're making changes and they're in private beta and they're trying to figure out what they're doing and I like to say, you're trying to figure out what the thing you're building is; what is it? And I don't think that at that point, a style guide's necessarily helpful for you.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So they're kind of designing in code?</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, and tons of design in code, tons of iteration, tons of changing. And if you had a style guide at that point, you would be constantly having to do maintenance to update it; you would constantly either be, even if you were using a tool, because the mark-up's probably changing, so I don't know that I would say you have to have a style guide at that point. I think once you've settled on a design language and you know where you're at and you feel good about where you're at, I think that's actually the time to start documenting because your app is growing up, if that makes sense?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yep.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Your app has gone through its crazy toddlerhood of changing all the time and… </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It's taken off the training wheels.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, exactly, and so once you're to the phase where you're kind of settling and growing up a little bit, then that might be the right time to start implementing a style guide.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I feel a bit better hearing that from you because with my own personal site, I'm very bad at keeping the style guide up to date but I do design in code and I do mess about with things and it's just very difficult to keep those in sync when I'm just trying something out; I'm not sure it's going to stay like that.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Right, yeah, I think that's perfectly OK. I don't have a style guide for my site!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> <a href="http://styleguides.io/styleguide.html">I had to make one for the Style Guides site</a> because I knew someone was going to ask me, "So, where's the style guide for this?" And someone did, and I was so happy! Phew!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> No kidding!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I actually have one. It's not great, but… </p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> I worry about that actually. Someone's going to ask me about the style guide for my own site because I've referred to <a href="http://maxquattromani.com/styleguide/">Max Quattromani's</a> and that's his personal site and he's got this killer style guide and I'm like, someone's going to ask me; one of these times someone's going to be like, "Where's your style guide?" and I'm going to be like, "Oh, yeah, I haven't done that!"  So… </p>
+</div>
+
+<span class="timestamp">(30:10)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think <a href="https://twitter.com/beep/status/569967569404362753">Ethan Marcotte, his site isn't responsive or something. He was stressing about that!</a></p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Yeah, it's always your own site that you leave until last I think.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I think that's all we've got time for. It was really great chatting with you and thank you so much for coming on the show.</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Thank you!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Bye!</p>
+</div>
+
+<div class="susan-robertson guest">
+    <p><b>Susan</b> Bye!
