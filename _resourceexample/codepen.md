@@ -2,6 +2,7 @@
 title: Codepen's design patterns
 link: http://codepen.io/guide/
 recommended: true
+status: recommended
 tags:
  - patterns
 ---
