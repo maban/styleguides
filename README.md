@@ -1,6 +1,6 @@
 # Style Guide Resources
 
-Temporary domain: http://styleguides.maban.co.uk
+Temporary domain: http://styleguides.io/
 
 This site lists lots of useful resources to help you learn about and create your own Front-End Style Guides and Pattern Libraries.
 
