@@ -1,9 +1,9 @@
 ---
 title: Fabricator
-link: http://resource.github.io/fabricator/
-author: Resource/Ammirati
+link: http://fbrctr.github.io/
+author: Luke Askew
 language: node
 image: fabricator.png
 ---
 
-Build your own UI toolkit.
+Build your UI toolkit.
