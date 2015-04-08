@@ -12,14 +12,16 @@
     border-radius: 3px;
     position: relative;
     overflow: hidden;
-    -webkit-transform:translate3d(0,0,0);
-    transform:translate3d(0,0,0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: inherit;
     &:hover,
     &:focus {
         text-decoration: none;
-        -moz-transform: scale(1.05) translateZ(0);
-        -webkit-transform: scale(1.05) translateZ(0);
-        transform: scale(1.05) translateZ(0);
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
     }
     p {
         font-size: 15px;
