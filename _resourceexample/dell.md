@@ -1,6 +1,6 @@
 ---
 title: Dell Design Library
-link: http://www.delldesignlibrary.com/
+link: http://www.delldesignlibrary.com
 image: dell-design-library.png
 tags:
  - frontend
