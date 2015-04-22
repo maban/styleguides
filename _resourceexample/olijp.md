@@ -1,7 +1,8 @@
 ---
 title: oli.jp style guide
 link: http://oli.jp/2011/style-guide/
-tags: 
+image: http_oli.jp_2011_style-guide_.jpg
+tags:
 - frontend
 - code
 - patterns

@@ -1,6 +1,7 @@
 ---
 title: BBC GEL
 link: http://www.bbc.co.uk/gel
+image: http_www.bbc.co.uk_gel.jpg
 tags:
 - designlanguage
 - branding

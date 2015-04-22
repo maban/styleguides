@@ -2,7 +2,7 @@
 title: GitHub CSS Styleguide
 link: https://github.com/styleguide/css
 type: CSS Style Guide
-tags: 
+tags:
 - code
 ---
 

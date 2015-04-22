@@ -1,7 +1,8 @@
 ---
 title: Frost Finery
 link: http://patterns.frostfinery.com/
-tags: 
+image: http_patterns.frostfinery.com_.jpg
+tags:
 - frontend
 - patterns
 ---

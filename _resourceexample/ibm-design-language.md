@@ -1,7 +1,8 @@
 ---
 title: IBM Design Language
 link: http://www.ibm.com/design/language/
-tags: 
+image: http_www.ibm.com_design_language_.jpg
+tags:
 - designlanguage
 - frontend
 - patterns
