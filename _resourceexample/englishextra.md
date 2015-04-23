@@ -1,5 +1,5 @@
 ---
-title: Static Web Resource UI Style Guide
+title: englishextra
 link: https://englishextra.github.io/pages/styleguide.html
 image: englishextra.jpg
 tags:
