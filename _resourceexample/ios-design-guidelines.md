@@ -1,9 +1,10 @@
 ---
 title: iOS Design Guidelines
 link: http://iosdesign.ivomynttinen.com/
+image: http_iosdesign.ivomynttinen.com_.jpg
 author: Ivo Mynttinen
 type: Design Language
-tags: 
+tags:
 - designlanguage
 - patterns
 ---

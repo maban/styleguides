@@ -1,7 +1,8 @@
 ---
 title: Best Buy Brand Identity
 link: http://bbybrandidentity.com/
-tags: 
+image: http_bbybrandidentity.com_.jpg
+tags:
 - branding
 - voiceandtone
 ---
