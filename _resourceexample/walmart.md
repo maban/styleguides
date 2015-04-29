@@ -7,4 +7,4 @@ tags:
  - patterns
 ---
 
-A style guide for Walmarts's website
+A style guide for Walmart's website
