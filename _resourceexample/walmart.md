@@ -1,7 +1,7 @@
 ---
 title: Walmart
 link: http://walmartlabs.github.io/web-style-guide
-image: walmart.jpg
+image: walmart.png
 tags:
  - frontend
  - patterns
