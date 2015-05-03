@@ -1,0 +1,27 @@
+<section>
+
+    <h1><a href="tools.html">Tools</a></h1>
+
+    <p>Things to help you make your own style guide</p>
+
+    <ul class="resources resource-type-tool">
+
+        {% assign tool = site.resourcetool | sort: 'title'  %}
+
+        {% for tool in tool %}
+        {% if tool.status == 'recommended' %}
+        {% include loop-tool.html %}
+        {% endif %}
+        {% endfor %}
+
+        {% for tool in tool %}
+        {% if tool.status == null %}
+        {% include loop-tool.html %}
+        {% endif %}
+        {% endfor %}
+
+        {% include add.html %}
+
+    </ul>
+
+</section>
