@@ -2,7 +2,7 @@
 title: SC5 Styleguide
 link: http://styleguide.sc5.io/
 author: SC5 Online
-language: CSS, SASS, LESS, KSS
+language: CSS, SASS, Less, KSS
 image: sc5-styleguide.png
 ---
 
