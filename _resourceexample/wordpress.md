@@ -7,4 +7,4 @@ tags:
 - frontend
 ---
 
-A baseline for contributing CSS, HTML, Javascript, and PHP to WordPress Core
+A baseline for contributing CSS, HTML, JavaScript, and PHP to WordPress Core

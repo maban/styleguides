@@ -1,7 +1,7 @@
 ---
 title: Polymer
 link: http://www.polymer-project.org/
-language: Javascript
+language: JavaScript
 author: Google
 ---
 
