@@ -2,7 +2,7 @@
 title: Web Fundamentals
 link: https://developers.google.com/web/fundamentals/resources/styleguide/index.html?hl=en
 author: Google
-language: NodeJS, SASS, Ruby
+language: NodeJS, Sass, Ruby
 status: recommended
 ---
 
