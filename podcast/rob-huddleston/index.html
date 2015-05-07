@@ -1,0 +1,346 @@
+---
+layout: episode
+section: podcast
+number: 10
+title: Rob Huddleston
+image: rob-huddleston.jpg
+about: <a href="https://twitter.com/robhuddlestonva">Rob</a> is a Senior Creative Director at <a href="https://www.capitalone.com/go-digital/">Capital One's Digital Design and Innovation Group</a>. He's been responsible for creating and maintaining the online version of their style guide.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/202333174&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+  {text: "Responsive Web Design Podcast on Capital One, Part One", url: "http://responsivewebdesign.com/podcast/capital-one.html", type: "podcast"},
+  {text: "Responsive Web Design Podcast on Capital One, Part Two", url: "http://responsivewebdesign.com/podcast/capital-one-part-two.html", type: "podcast"},
+  {text: "Google Material Design documents", url: "http://www.google.com/design/spec/material-design/introduction.html", type: "example"}
+
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hello everybody, welcome to another episode of The Style Guides Podcast, a podcast dedicated to all things style guides and pattern library related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we're really thrilled to talk with Rob Huddleston from <a href="https://www.capitalone.com/go-digital/">Capital One Digital Design and Innovation Group</a>, which sounds pretty fancy. Rob; how are ya?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> I'm good, thank you for having me. It does sound fancy, doesn't it?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah! Digital Design and Innovation. It's almost like Imagineer or something! Only for Banks!</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Exactly. Well, I think that's partially what we're going for; that's us re-branding ourselves and adding some excitement and adventure to the organisation.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent! Well, do you want to actually dive in and talk a little bit about what exactly you do, where you're coming from and what you're up to at Capital One?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…everyone refers to this document, this style guide; it's part of our on-boarding process with agencies and internal new hires; it's something that everyone talks about…</p>
+    </blockquote>
+</aside>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yes; so I am a Senior Creative Director at Capital One. I've been working for Capital One since January 2008, so a little while, and my primary focus of the last five or so years has been, well I guess in the context of what we're talking about, so we refer to it as our Build Book, historically, but ultimately I was one of two that was going back to 2010, responsible for creating our first non-brand-related style guide and then maintaining that style guide, evolving that style guide, creating a living, online version of that style guide and then creating a lot of process and team ownership of this thing that we refer to again as the Build Book, but ultimately the style guide and creating consulting groups so that we can partner with different business partners and product owners across the organisation to educate, to train, to help facilitate getting a product launched and really focusing on creating a design system that supports all of those various initiatives and the majority of that focus up until very recently has been within the CapitalOne.com framework; we're now moving into a place where we're going far beyond that and thinking at an enterprise level with a new visual design language, so that's been what I've spent the last ten or twelve months working on.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome. So, you're now five or six years into this design system thinking and starting with something and evolving that something and growing that something into something that's now bleeding out and really affecting and benefiting the entire organisation?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yeah. It's been a really interesting ride. We went from having a fifteen page pdf style guide to something a year later…</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>Our testers are writing test cases against the guidelines so that they can make sure that… the components and the content is displaying correctly</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Nice!</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> …yeah, to something that a year later was roughly a hundred and fifty pages pdf. Year after that was an online resource tool that is now, it's part of the Capital One vernacular, everyone refers to this document, this style guide; it's part of our on-boarding process with agencies and internal new hires; it's something that everyone talks about, everyone leverages and when I say everyone, our audience went from originally being a small design team to now designers, developers, product owners, system analysts and people writing business requirements, testers. Our testers are writing test cases against the guidelines so that they can make sure that, especially now that we're in a responsive framework, on mobile, on tablet, on desktop, whatever break-points or whatever component types and modules that we're talking about that the components and the content is displaying correctly, it's performing as it's intended to and it's gotten to be this huge thing that I'm pretty proud to say that our entire organisation has got behind.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> It wasn’t an easy journey getting to where we are today, but it's been pretty exciting I think, along the way, so it's been good. </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> What sort of things were problematic in releasing this?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Well… I think the problems didn't stem with the tools that we were creating or the release of these tools but more just culturally. I think, and I've heard this mentioned in some of the other podcasts, but I think culturally when you start talking about style guides and implementation guidelines, the first people that are going to react negatively to this are the designers, until they really understand the benefit that it brings, so designers, whether it's brand or our digital design team, ultimately any time words like governance or standards come into play, or style guides, it's viewed as a very restrictive thing.</p>
+  <p>We, very early on, for a long time I was a team of one. I owned this document, I helped create this document and then I was the one supporting it, and I learned a lot the first year that we really implemented this style guide as an organisational thing that everyone needed to follow and adhere to. And it really went from positioning myself very early on, recognising the fact that I was the last person invited to the meetings, I was simply viewed as the Web Police, and flipping that script…</p>
+</div>
+
+<span class="timestamp">(5:44)</span>
+
+<aside>
+    <blockquote>
+        <p>…ultimately any time words like governance or standards come into play, or style guides, it's viewed as a very restrictive thing… and it really went from positioning myself very early on, recognising the fact that I was the last person invited to the meetings, I was simply viewed as the Web Police, and flipping that script.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Did you have a little hat?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> A little hat and a little badge… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Nice!</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> But simply…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> No gun though? No gun?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> No gun, no gun! But flipping the script there to say, I'm not here to tell people, product owners, designers, anyone that something cannot be done; my goal simply became to say yes, it could be done, but here's how I want to influence the direction that you take to get this thing done, and then also beyond that to say, as I started really building my group as a consultant group within the organisation, to really think about I want to hear what is the problem you're trying to solve; what is the challenge you're trying to solve and deliver against? What is the experience you want to deliver? What are your requirements? What are your needs?</p>
+  <p>As a simplified example, if I'm being asked, I'm being told, whatever the project is or the need is, there's ten things that are being asked for; we can actually with the system we've built handle nine of those ten things; here's three or four different ways we can deliver those nine or ten things and you can decide which is the right one through testing or however, which is the right one for your specific need, but then let me and my group partner with you to figure out, how do we add that one additional thing that we don't currently have in the system today into the system, and once we do, so from our perspective it's we add this new element or component into the system; we define the details of it, but we think about it in a way that's flexible so in our world, it could be the credit card line of business that is coming to us with an ask.</p>
+  <p>I will then start to think, how might the Bank business use this? How might the auto loans or the home loans use this same feature? How am I to cross all of those groups? What are the things that are going to be consistently used or the features that are going to be consistently needed, and then what are the specific features that by each of those businesses, might be needed down the road and so we build in all of that flexibility at the top and then once that component or that feature is added to the system, the entire organisation benefits from it and they all have the ability to leverage that new thing, so we really try to think of all of these new features at a very high enterprise level, kind of head space and then focus on the specific needs that we need to deliver the specific thing that we're being asked to but then think way beyond that, whether it's other business partners or you're asking for these three things; might you need two additional things once you start using it?</p>
+  <p>So we really try to think at a much larger view about adding these new components or these new capabilities into the system than what the specific ask is, so that we build in these flexibilities, we build in the opportunity to continue to modify, continue to evolve and continue to grow, whether it's a component or some functional aspect or what have you.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>we give these other lines of business the opportunity to turn on and off these features that maybe they didn't realise they needed until they had an opportunity to actually test and see and prove them out</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's excellent. And so as part of your consulting group, they’re focused on the thing that's right in front of them, the itch they have to scratch or the things that they're trying to get done and you're coming in and saying, hang on, think of the bigger picture, but it sounds like you're doing it in a way that's empowering them to contribute to the broader system where it's like, hey guys, it's not just about your group but if we do this thing right, everyone can make use of it and so it's almost distributing what used to be your job solely into making sure it's a little more democratic, I guess?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yeah, absolutely. And the interesting thing there is, within the organisation that I'm a part of and the multiple products, the multiple business partners that we support, those business groups are very siloed, so what I see, because I kind of see it all happening as it's happening, whether it's through consulting or simply the fact that I'm responsible for to some degree revealing everything that goes live on the dotcom website, I have the opportunity to, as these new things are being asked of us, to start connecting the dots, so it could be that our banking partner, our credit card partner and our auto loan partner all have a similar request at the same time; they all have different ideas about how they want to solve for that request and they may have different, whether it's a visual solution, a technological solution, it could be anything from building this solution in-house to consuming a third party vendor app or something like that; instead of having the same thing solved three different ways, I have the ability to bring those three groups together to have a simple one singular conversation; maybe that conversation evolves into a workshop or a series of design exercises, but ultimately what it does is it breaks down those walls, it gets those three business partners and those three groups talking, solving the same problem, using the same strategies.</p>
+  <p>And again it gives us the opportunity to still focus on the bigger need but then also build in the flexibility to deliver the specific need by each of those groups, so we understand if we're building out ten features, our credit card business might use eight of them, our bank business might use two and then the home loans business might use a total of five but ultimately what we do when we build to that larger need, we give these other lines of business the opportunity to turn on and off these features that maybe they didn't realise they needed until they had an opportunity to actually test and see and prove them out. Again, for us it's really all about that flexibility and that scalability when we start talking about features and components.</p>
+</div>
+
+<span class="timestamp">(11:41)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic and I do see that as generally speaking in organisations, you have a lot of different silos, each doing their own thing and it's only a recent endeavour I think that there are starting to be people like you in place that have the bird's eye view on things and that can help massage those things to make sure that everyone's moving in the same direction or that there's not a bunch of redundancy and that different components aren't being build similarly but have differences in them and stuff like that.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Like an Evangelist.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, exactly.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Certainly, the first few years really felt like that; that was my number one job and duty really was to evangelise the system that we were creating. And it was an interesting challenge; you have, especially in an organisation as large as Capital One, it's not an easy thing to be heard in an organisation that large, so finding the right people to partner with, the right relationships to build; I spent a good year just building relationships with our brand organisation, with the different business groups and really just spreading that gospel to those people through those relationships and then letting them do the same on my behalf, so it really was like a grass-roots networking for the first twelve months, year and a half where it really was a word of mouth effort to, evangelise is probably the right word, just get the word out and then have people really intrigued and interested and when we start talking about things like speed to market; operationalising this design system, this componentised asset system that we've created and this flexible system that we've created, reducing what used to be a six month effort or a three month effort to deliver a new experience on the website is now a matter of days or weeks; that's huge when you start really thinking about expense and delays with speed to market and campaigns, our business partners they have TV campaigns, I'm sure everyone's seen the Capital One, <a href="https://www.youtube.com/watch?v=DWfpEjc7XVw">the Sam Jackson commercial</a>, so as these media buys are happening, these campaigns are happening, if my group… not necessarily my group, but if the dotcom group, the tech group, whoever is going to come back and say, you know, we can do that but it's going to take us four months to deliver this thing through whatever operational process is in place, that makes us the bad guy, so we needed a way, going back several years now, to roughly 2010 when we really ramped up creating this design system, speed to market and operational speed were two other big points that we wanted to solve for, in addition to the flexibility for the design and the experience piece, so really setting up this means for groups to come to us and say, whether it is simply saying, I need a new page, I need twenty new pages, I need this completely new experience added to the website, I need this experience deleted because we want to re-design and re-think what we're doing today; they don't want to hear the answer that five years ago we were giving them which was, this is going to take six months, this might take two years!</p>
+  <p>Now we're at a space where we're saying yeah, we can do that tomorrow. As long as you can come to us with strong strategy, your content developed and the basic creative assets, we've got an entire admin team, a Content and Contribution Team is what we call them, who run daily releases; we're releasing three to five times a day updating the website at a content level and then weekly or bi-weekly larger scale releases to where we can add entirely new experiences to the site. By operationalising the design system, that was a huge win just for speed to market and the ability to deliver higher quality work faster.</p>
+</div>
+
+<span class="timestamp">(15:50)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's incredible. So, what does your workflow look like now?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Well, which part of the workflow? So, the design workflow is still very much dependent on the group that we're working with. The release workflow wants creating… Brad, I know you hate the word creative…</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>it's not a page X, a product page or a business home page must fit this model and you must figure out how to fit content into these boxes; it's completely configurable and flexible</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah!</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Once the design is done, let's just say put it that way; once the design is finalised, usually for us the more treacherous part of the design flow is the review process, when you start getting your ideas out in front of executives or product owners or a large group of people who haven't been involved up until this review meeting; now they are involved they're weighing in with their opinion and their feedback. That become the more drawn-out phase of our design-flow currently, but the release piece is pretty simple, like I said. Once that work is handed off to the implementation teams, within our system we've separated code and content, so we don't have content editors writing or injecting code into the CMS any longer; we've removed all of the code aspect to a specific set of resources and teams who are responsible for the presentation layer, code of the website; we've got a team who's basically playing the admin role; they're using the CMS, they're using the component library that we have, they're using simple basic CMS tools, WYSIWYGs and input fields to contribute content and define the architecture of a page.</p>
+  <p>We don't use page templates any longer, we use components, and we templatise at the component level so again, flexibility; it's not a page X, a product page or a business home page must fit this model and you must figure out how to fit content into these boxes; it's completely configurable and flexible so the way those teams handle that work, again it's a daily process, depending on the scope of work or the scope of the release, whether it's simple content updates which we would consider modifying word and images, or if it's creating twenty or thirty new pages, if it's modifying global elements like the header or the primary navigation, these all filter into different types of releases and each of those different types has a different cadence just depending on complexity of the release. I don't know that I answered your question, but that's what I've got!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That sounds great!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>the designers now have the ability to say OK, I understand what you need to do; I've got all these Lego blocks, these tools, I can put them together in any fashion that I want, and within each of those groups I can turn on and off all of these different elements so that I can get such a wide variety of design choice out of these components; that's the big win</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that does sound great. I especially really like that point on componentising the CMS to really make sure it's not just like here, fill in the blanks and you have the full page to work with; it's OK, this component might have a couple of different options or you could pick and choose which one fit the need the best.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yeah, and I think with that in mind, going back actually to your question about the design process; this has really been the big benefit over the last several years for our designers who are leveraging this system, so if you think about… one thing we've done, we've mentioned the entire framework is component based. Each of these components, regardless of what the intent for the content type is, again we're thinking about flexibility, so we’re using a sixteen column grid system.</p>
+  <p>We wanted to make sure that these components, and this goes back to again, 2010 when we were in flight with the re-platforming exercise and we really broke down the site and the pages and the construction down to components. We wanted to make sure that we weren't being restrictive in the sense that component X, whatever type of component you're needing to use, we wanted to make sure that that could be configured in a way that could be four columns, five columns, six, ten, twelve, what have you; that way you've got flexibility built in there and then also within the same component, it may be that there's seven elements, let's just say that, and this is where Brad, you and I have talked where this gets really into that atomic design methodology of, this component may have seven elements; it may be a heading, a sub-heading, an icon, an image, a body container, a call to action and so-forth. What we wanted to do was simply define a means by which we're saying this is the set of elements that is available for use; we're not going to say that they all must be used or what combinations they must be used in, but simply you can turn on or off any of these elements, so we start to build this flexibility across the configuration, the sixteen column spans.</p>
+  <p>We also start to build presentationally this flexibility in those elements that are part of that specific component, so you can turn the H2 heading and the H3 heading; you can turn one or the other on or off if it's not needed; you can turn the image on or off; you can position the image on the right, the top, the left; you can define how the content is going to wrap around that image or if it's going to be in a block position so it doesn't wrap.</p>
+  <p>So again, a lot of flexibility, so for the designers as they're presented with a need, whether it's content, we're trying to push and we're doing great with this post-responsive, but our business partners are finally thinking content first, mobile first, so this is a huge, huge win for all of us, but the designers now have the ability to say OK, I understand what you need to do; I've got all these Lego blocks, these tools, I can put them together in any fashion that I want, and within each of those groups I can turn on and off all of these different elements so that I can get such a wide variety of design choice out of these components; that's the big win.</p>
+  <p>Again, it goes back to that flexibility but you'll notice if you travel throughout CapitalOne.com, you start to see patterns in page design depending on a business or a group that's working in that specific space, but you won't see very business home page looks the same, every business product page looks the same. Even across the products, if we're talking about five different credit cards, there's going to be common themes but we're not mandating that the same content is on every page the same or that it's even presented the same way; we're offering that flexibility through the components, so that's been a huge thing.</p>
+</div>
+
+<span class="timestamp">(22:28)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>so the designers who are prototyping, they actually have a framework that's a duplicate of the production environment; they can start to configure their own pages and grab code snippets, drop them into the containers</p>
+    </blockquote>
+</aside>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> On top of that, prototyping and designing is a much easier process now. As we all are very well aware, designing in Photoshop is great; however, it's time consuming. Or Sketch, or any of these other tools that are out now, but the thought of providing a flat, static file, a pdf or a screen-shot for review, getting feedback and then moving pixels around takes hours.</p>
+  <p>We've now provided a solution where we've got a duplicate version of our dotcom platform in a sandbox, a prototyping environment; our style guide now because of this includes code snippets, accessibility requirements and so forth, so the designers who are prototyping, they actually have a framework that's a duplicate of the production environment; they can start to configure their own pages and grab code snippets, drop them into the containers.</p>
+  <p>Instead of Photoshop. they're using browser to design, which I've been a huge advocate for, for years now, and it's really taken off in our group. But the process of getting those reviews done is so much more streamlined; you're sending a URL not a pdf or a static screenshot. Someone is reviewing the work in an actual browser where it's intended to be viewed once released, so we're not having this whole churn of review whether through UAT or post-release where someone's logging a defect because they're seeing a line break that's different than they saw in the Photoshop mock-up, or they're seeing a little more or a little less white space or something's closer or further apart; they're using a browser to view the work, they're giving feedback, they're reviewing through the browser and then what they see at UAT and at production time is the exact same thing, so there's no discrepancy between style sheets and Photoshop settings any more.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And that's especially useful for bringing up on different devices as well.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Huge, yes, so it's incredibly useful and especially so, we launched our responsive site it's been about two years now, and that's been a huge win for us at many levels but again I mention having our customers think about, our product customers, our business customers think about mobile first and content first; huge win.</p>
+  <p>Again that was something that took us a year, year and a half to get to, but there's a lot of excitement through us educating our business partners, they're coming back to us going, hey, you know, I've got this great idea on mobile: what if we use this adaptive strategy that you've delivered and we're delivering the same marketing message but its format is slightly different, the image is different or some UI specific for mobile is different than it is on desktop or tablet because that's what makes more sense to the mobile user. We're not the ones having to always fight that fight.</p>
+</div>
+
+<span class="timestamp">(25:22)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> The customers are actually interested in it; they're more engaged and more likely to bring us the ideas, which is a great place to be, I mean it's the flow of ideas that's coming back to us, it's incredible right now, you know; it's more than we can keep up with, which is a great place to be, I think.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I think so. And again, it just sounds like you've really…it's taken several years but really built a culture that is empowering everyone in the organisation and not just being, no, we're the hot-shot designers who are going to tell you how you should act, which is awesome. I want to come back to the responsive re-design and the role that the style guide played in making that happen, because I think that whole story is just absolutely incredible and I know that <a href="http://responsivewebdesign.com/podcast/capital-one.html">you were talking to Ethan and Karen on the Responsive Design Podcast</a>, so I highly recommend everybody check out, you did actually two episodes with them, where you talked about the nuts and bolts of everything that went into that responsive re-design, but I think that specific to this podcast, the role of the style guide just I think was absolutely incredible; I was down there, I guess it was around 2010 I went down to talk to you all and take a look at what you guys were doing and seeing this style guide and then subsequently seeing your responsive release just done in record time was just amazing, so could you talk a little bit more about that?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…ultimately, it was the style guide creation that solved all the problems, solved from a design and a coding perspective, it solved the political issues that we were discussing because we now had this prototype that we could show was completely responsive… it was an easy sell ultimately and we got so much attention and so much leeway just from that exercise; it just opened the doors for us across the board, across the company</p>
+    </blockquote>
+</aside>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yeah, absolutely, and you're a huge part of that story as well, so I think it was 2012… it was December 2012 when you came in and so ultimately what we were trying to do, nearly everyone especially when you think of Fortune 200 companies, we had just a very static site, desktop only; our design team, myself and a few of my peers were really excited, interested in the concept, the methodology of responsive and the idea that we can do this. We'd already been doing it side of desk, taking micro-sites as an example and retro-fitting them. We knew that this could be done at scale. We knew that no one had done it yet and for us that was a bit of some of the politics at play that we had to sell some of our executives on was, we couldn't really point to anyone, especially in the Top Ten bank world to prove that responsive worked, meaning that it was anything even worth the conversation, much less actually spending time and effort to do, so we kept being asked, is there a prototype? Is there a guinea pig? Is there a test pilot? What about a micro-site? What about a home page re-design and that's responsive? It wasn't really something that we were interested in, the idea of a responsive home page but then the rest of the site isn't; that just seemed like a bait and switch, and we weren't really into that idea but the thought of, OK, if we're going to be required to show that this can be done by doing, how do we go about doing that?</p>
+  <p>At the same time that we were kicking this work off, I was attempting to get funding and support together to take the style guide from a pdf format to an online format. And just through a simple conversation; we spent weeks wracking our brains, figuring out, what is this test pilot going to be? At the same time, how are we going to deliver this style guide? Do we do it using WordPress or some other CMS? Where are we going to host it? And then it all started to come together just again, simple conversation, I was like: why aren't we using our platform to host this thing? If we're going to build a set of guidelines about the platform and about the components that ultimately deliver the website, why aren't we using the website to do this?</p>
+  <p>So it was the idea of this is now the one to one reference. Again, it's in browser, it's using the framework, it's using the platform, it's using the CMS, it's using all the tools and components that we're defining; that makes a lot of sense. Hey, by the way, if we build this thing responsive, we've solved for the responsive framework, the responsive components which primarily they already were because they were flexible to such a degree. All of our row and column configurations, we've actually solved for every possible responsive issue that we could run into on the platform because we're actually using the platform to deliver the style guide. That very quickly got a lot of attention.</p>
+</div>
+
+<span class="timestamp">(30:11)</span>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> We had now solved all the problems, we had a means to solve for responsive on the platform and on the website; we had a test pilot, our guinea pig, and I was getting my on-line style guide, so this got a lot of attention and got us moving very rapidly. In fact, we had an executive sponsor at this point, there was a lot of interest, we were being asked, "You mean, if you fix the style guide, or if you release the style guide and it's responsive, we can just flip a switch and then the website would be responsive" and we were like, yeah, we can do that. In fact, we can do it all at the same time if you'll let us, and so for a little while the conversation was, well let's get the style guide out and if it works, then we'll believe you and we'll make the website responsive.</p>
+  <p>And then suddenly around half way through that work-stream, it was, "Maybe you guys are right; this is actually really exciting. Why don't we put the style guide on the back burner and put all the focus, because by that point we'd already solved for all of the things that we needed to solve for, we'd actually proven in a development environment, it wasn't publicly available yet, we hadn't released it, but we were like, "Hey, it's already done, we actually did it, while we've been talking about it for three weeks, we've actually done it." And then they were like, "Whoa, that's crazy. Hold on a second. Why don't we actually just flip the switch and make the site live and then we'll get to that style guide thing that you're talking about, it'll come out next month."</p>
+  <p>But ultimately, it was the style guide creation that solved all the problems, solved from a design and a coding perspective, it solved the political issues that we were discussing because we now had this prototype that we could show was completely responsive, it was flexible, it was scalable, it was again using the components, using the platform; it was an easy sell ultimately and we got so much attention and so much leeway just from that exercise; it just opened the doors for us across the board, across the company.</p>
+  <p>That was when design really took off as less of a production shop for our organisation and more of a thought partner and an innovator and a leader, and then ultimately like you said, we brought part of that strategic play that we came up with was, you were working at <a href="http://www.rga.com/">RGA</a> at the time which was an agency that we were working closely with on a lot of larger efforts and I just saw that as a huge opportunity to do a couple of things; it was one to get you as a subject matter expert from the outside coming in on the inside; not only could we get you to some degree sell the idea for us, if we weren't being heard in a specific conversation, the outside perspective would absolutely get heard, but then it also gave us an opportunity and again, I thanked you before, but I have to thank you again, it gave us the opportunity to really pick your brain to say hey, we've got three or four really big problems: large format data tables, navigation patterns, some different components that we had ideas about but we weren't sure they were the right ideas and just to be able to have some time with someone else from the outside, bouncing some ideas around, and ultimately I think for us what we got out of it, besides that bit of help, was hey, these problems that we're having, they're common problems everywhere.</p>
+  <p>We're not the only ones who are concerned with these things or having problems delivering these new patterns; it just hasn't been done yet, so it was a really great eye-opening event for us and the three or four of us that were working on this, to really not only validate what we were trying to do but also it gave us a little bit more confidence in the work that we were trying to do and why were trying to do it, so it was just a great effort across the board. And to your point about speed, that took us, because of all the work that we had done making these flexible components during the re-platforming effort in 2010, the 2013 responsive effort site-wide retro-fit without re-designing the site and without modifying the desktop experience, took us two months.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Wow!</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> And the second month of that was all testing. The first month was spent writing the code so again it was huge and the benefits of having the style guide lead that project, that effort, was what got us where we got and how fast we were able to get there.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>Thinking about a re-design at a component level is so much easier to design, to deliver, to implement, to execute than thinking about re-designing a 2500 page website</p>
+    </blockauote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And that's I think really the nail in the coffin for it all is you'd already broken your interface down into its component parts, OK, here's our banners, here's the variations of those banners, here's full screen, here's it in the main column, here's it in the sidebar or whatever, all of that stuff, here's data tables and you sort of already had that there, so it just became a matter of OK, now how do we go through and make all of this stuff responsive, and it just is such a crystal clear example of why a style guide matters, why this sort of component based thinking, pattern based design and development thinking is just absolutely beneficial in so many ways. It's hard to quantify but whenever you hear, yeah, we were able to roll out a giant, giant, giant site in two months, it's huge, it's so huge. Awesome!</p>
+</div>
+
+<span class="timestamp">(36:06)</span>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> And what we've learned since then, the other really great benefit to that, and this is something that we're doing right now, I will be the first to admit that the design, the site that we rolled out responsive, the site that we have today, is based on a 2009 design, so it is somewhat old; it's very old at this point.</p>
+  <p>We are in flight with some re-design efforts, we are about to launch a new homepage which will also introduce an entire set of new baseline elements, things that we could modify very simply with CSS primarily, thinking about colour palettes, typography, hex values for this new colour palette, button styles, form styles, pretty basic things but when they cascade across 2500 pages, that's a pretty big facelift.</p>
+  <p>Thinking about a re-design at a component level is so much easier to design, to deliver, to implement, to execute than thinking about re-designing a 2500 page website, and all the variations of content and page design that might be within that website, so it affords you such great opportunity to modify a holistic design, so again, thinking about making minimal changes to a large number of components, those components add up to this great big thing that is our website and going back again to 2010, when we re-platformed, we also did a site re-design at that time, which is the current design, but that took us almost two years to get through; that was a year and a half process.</p>
+  <p>We can do that same process now in a matter of months and we're not dependent on or requiring our business partners to modify their content, modify their page layout, modify their strategy; we're simply at that component level modifying the visual presentation of those components and there's very low level of effort, very low impact to that style of approach and ultimately if we wanted to run that exercise every twelve months, every two years, we could do that and we'd not be put in a position where this thing is going to take us two years to deliver and therefore there's a lot of fear around delivering it, a lot of hesitance to deliver it and a lot of reluctance to even get started, so we've removed that whole dilemma from our future state process, as we continue to re-design, to evolve the web experience, we've got a ton of opportunity baked into the simple fact that we focused on the component set-up rather than page level set-up.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's fantastic!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's like what you're saying, I've talked about this in the past, is by establishing a design system and really baking it into your workflow, you're reducing the need for these giant re-designs, or if you even do undertake a new giant re-design, you don't need to throw the baby out with bathwater. You're still going to have buttons, you're still going to have banners, you're still going to have all these different components, it's just maybe you'll approach them a little differently by being able to roll out a re-design to these components, you're able to get big changes out the door much faster, so that's awesome to hear that you guys are living it.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Yeah, and I think it's something that I hear a lot; I'm sure many of us do. It's that death by a thousand cuts scenario; these little things add up. This is the exact opposite of that. This is how those micro design components, those component level elements can be re-thought, re-designed and all of these small parts add up to this great big thing, so it's the complete opposite of that death by a thousand cuts scenario; this is really all of these separate components, think about them individually, think about them re-designed; they all will add up to basically the re-paint concept becomes a much easier way to introduce an entire new brand or site re-design.</p>
+</div>
+
+<span class="timestamp">(40:33)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Fantastic.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> What is the actual opposite of death by a thousand paper cuts? It's healing by a thousand Band Aids, or something! When you said that I'm like, what is the opposite of death by a thousand…</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> I was trying to do the same thing and I'm just not clever enough to come up with it as I was saying it, but I was thinking it! Yeah, I don't know what that'd be, but it's the complete antithesis to that approach.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right, awesome. Well hey, I think we're just about out of time but seriously, thank you so much for coming on and I guess one last thing; you have this great style guide and it sounds like coming soon maybe, there will be some stuff released out into the wild so that everybody can check it out for themselves, is that true?</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> That is absolutely true. I don't exactly know yet when that is going to be but certainly this year, I'm hoping before the summer in fact, and that's going to be an all-inclusive, so we're thinking about it very similar to <a href="http://www.google.com/design/spec/material-design/introduction.html">Google Material Design docs</a> where it's an enterprise view of not only design for Capital One, the organisation, but the brand style guide, tone of voice and colour palette and iconography, logo, all these things. We're also going to include in that information or that public release…ultimately we've got four different topics that will be the high level topics.</p>
+  <p>One is design, one is brand, one is coding, so our development standards, and the other is accessibility, so that's something that we take very seriously, especially in our group, so really pushing all of these things public facing, there's dozens of arguments why this is the right way to do things.</p>
+  <p>Of course, we can't share everything but the value of sharing as much as we possibly can is huge; it's better for the brand, it's better for the company, it's better for recruitment, it's better for just the simple fact of sharing, I think as designers, as developers, we are always looking for new information, new perspective. This is a way to do that, it's just a good… it's a non self-serving way of sharing the content and the experience that we've got.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome. Well, we're super-excited to see it whenever it comes out. But I think that we're just about out of time so Rob, seriously, thanks so much for coming on the show, it's absolutely fantastic talking to you.</p>
+</div>
+
+<div class="rob-huddleston guest">
+  <p><b>Rob</b> Absolutely, thank you guys, I appreciate having this conversation.</p>
+</div>

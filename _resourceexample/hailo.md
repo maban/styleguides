@@ -1,7 +1,8 @@
 ---
 title: Hailo Web UI
 link: https://hailo-web-ui.hailoweb.com
-tags: 
+image: https_hailo-web-ui.hailoweb.com_.jpg
+tags:
 - frontend
 - patterns
 ---

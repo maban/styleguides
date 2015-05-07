@@ -1,37 +1,27 @@
 <section>
 
     <h1><a href="talks.html">Talks</a></h1>
-    
+
     <p>Conference presentations about style guides</p>
-    
+
     <ul class="resources resource-type-talk">
-        
-        {% assign talk = site.resourcetalk | sort: 'status' %}
-        
-        {% for talk in talk reversed %}
-        <li class="resource {{ talk.status }}">
-            <a href="{{ talk.link }}" class="resource-url">
-                {% if page.type != "home" %}
-                    {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
-                {% elsif talk.status == "recommended"%}
-                    {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
-                {% endif %}
-                <span class="resource-description">
-                    {% if talk.image == null or page.title == "Style Guides" %}
-                        <h2 class="resource-title">{{ talk.title }}</h2>
-                    {% else %}
-                        <h2 class="resource-title hidden">{{ talk.title }}</h2>
-                    {% endif %}
-                    {{ talk.content }}
-                    {% if talk.author %}<p class="resource-author">By <strong>{{ talk.author }}</strong></p>{% endif %}
-                    {% if talk.conference %}<p class="resource-publisher">At <strong>{{ talk.conference }}</strong></p>{% endif %}
-                </span>
-            </a>
-        </li>
+
+        {% assign talk = site.resourcetalk | sort: 'title'  %}
+
+        {% for talk in talk %}
+        {% if talk.status == 'recommended' %}
+        {% include loop-talk.html %}
+        {% endif %}
         {% endfor %}
-        
+
+        {% for talk in talk %}
+        {% if talk.status == null %}
+        {% include loop-talk.html %}
+        {% endif %}
+        {% endfor %}
+
         {% include add.html %}
-        
+
     </ul>
 
 </section>

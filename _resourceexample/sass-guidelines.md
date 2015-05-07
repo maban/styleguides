@@ -1,8 +1,9 @@
 ---
 title: Sass Guidelines
 link: http://sass-guidelin.es/
+image: sass-guidelines.jpg
 author: Hugo Giraudel
-tags: 
+tags:
 - code
 - frontend
 ---

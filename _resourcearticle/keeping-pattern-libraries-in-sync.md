@@ -1,6 +1,6 @@
 ---
 title: Keeping Pattern Libraries in Sync
-link: http://marcelosomers.com/keeping-pattern-libraries-in-sync/
+link: http://marcelosomers.com/keeping-pattern-libraries-in-sync
 author: Marcelo Somers
 site: marcelosomers.com
 ---

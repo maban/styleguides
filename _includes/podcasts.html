@@ -1,33 +1,27 @@
 <section>
 
     <h1><a href="podcasts.html">Podcasts</a></h1>
-    
+
     <p>Episodes from various podcasts where style guides are discussed</p>
-    
+
     <ul class="resources resource-type-podcast">
-        
-        {% assign podcast = site.resourcepodcast | sort: 'status' %}
-        
-        {% for podcast in podcast reversed %}
-        <li class="resource {{ podcast.status }}">
-            <a href="{{ podcast.link }}" class="resource-url">
-                {% if page.type != "home" %}
-                    {% if podcast.image %}<img src="/images/screenshots/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-                {% elsif podcast.status == "recommended" %}
-                    {% if podcast.image %}<img src="/images/screenshots/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-                {% endif %}
-                <span class="resource-description">
-                    <h2 class="resource-title">{{ podcast.title }}</h2>
-                    {{ podcast.content }}
-                    {% if podcast.people %}<p class="resource-author">With <strong>{{ podcast.people }}</strong></p>{% endif %}
-                    {% if podcast.podcast %}<p class="resource-podcast">On <strong>{{ podcast.podcast }}</strong></p>{% endif %}
-                </span>
-            </a>
-        </li>
+
+        {% assign podcast = site.resourcepodcast | sort: 'title' %}
+
+        {% for podcast in podcast %}
+        {% if podcast.status == 'recommended' %}
+        {% include loop-podcast.html %}
+        {% endif %}
         {% endfor %}
-        
+
+        {% for podcast in podcast %}
+        {% if podcast.status == null %}
+        {% include loop-podcast.html %}
+        {% endif %}
+        {% endfor %}
+
         {% include add.html %}
-        
+
     </ul>
 
 </section>
