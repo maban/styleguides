@@ -6,11 +6,7 @@
             {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
         {% endif %}
         <span class="resource-description">
-            {% if talk.image == null or page.title == "Style Guides" %}
-                <h2 class="resource-title">{{ talk.title }}</h2>
-            {% else %}
-                <h2 class="resource-title hidden">{{ talk.title }}</h2>
-            {% endif %}
+            <h2 class="resource-title">{{ talk.title }}</h2>
             {{ talk.content }}
             {% if talk.author %}<p class="resource-author">By <strong>{{ talk.author }}</strong></p>{% endif %}
             {% if talk.conference %}<p class="resource-publisher">At <strong>{{ talk.conference }}</strong></p>{% endif %}
