@@ -1,9 +1,9 @@
 <li class="resource {{ talk.status }}">
     <a href="{{ talk.link }}" class="resource-url">
         {% if page.type != "home" %}
-            {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
+            {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt=""/>{% endif %}
         {% elsif talk.status == "recommended"%}
-            {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt="{{ talk.title }}"/>{% endif %}
+            {% if talk.image %}<img src="/images/screenshots/{{ talk.image }}" alt=""/>{% endif %}
         {% endif %}
         <span class="resource-description">
             <h2 class="resource-title">{{ talk.title }}</h2>
