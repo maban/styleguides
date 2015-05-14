@@ -2,7 +2,7 @@
 
     {% assign podcast = site.podcast | sort: 'number'  %}
 
-    {% for podcast in podcast %}
+    {% for podcast in podcast reversed %}
     <li class="resource {{ podcast.status }}">
         <span class="number">{{ podcast.number }}</span>
         <a href="/podcast{{ podcast.link }}" class="resource-url">

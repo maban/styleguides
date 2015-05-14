@@ -1,0 +1,507 @@
+---
+layout: episode
+section: podcast
+number: 9
+title: Dave Rupert
+image: dave-rupert.jpg
+about: <a href="http://twitter.com/davatron5000">Dave</a> is a Lead Developer at <a href="http://paravelinc.com/">Paravel</a> in Austin, Texas. He co-hosts the <a href="http://shoptalkshow.com/">Shop Talk Show</a> with <a href="https://twitter.com/chriscoyier">Chris Coyier</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/196659584&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Shop Talk Show", url: "http://shoptalkshow.com/", type: "site"},
+    {text: "Responsive Deliverables, by Dave Rupert", url: "http://daverupert.com/2013/04/responsive-deliverables/", type: "article"},
+    {text: "Microsoft, Responsive Web Design Podcast", url: "http://responsivewebdesign.com/podcast/microsoft.html", type: "podcast"},
+    {text: "Microsoft's CSS Grid Framework", url: "https://github.com/winjs/grid", type: "example"},
+    {text: "SMACSS (Scalable and Modular Architecture for CSS)", url: "https://smacss.com/", type: "tool"},
+    {text: "SMACSS State Rules", url: "https://smacss.com/book/type-state", type: "tool"},
+    {text: "BEM (Block, Element, Modifier)", url: "https://en.bem.info/", type: "tool"},
+    {text: "ACSS (Atomic CSS)", url: "http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/", type: "tool"},
+    {text: "Pattern Lab", url: "http://patternlab.io/", type: "tool"},
+    {text: "KSS", url: "http://warpspire.com/kss/", type: "tool"},
+    {text: "Mustache", url: "https://mustache.github.io", type: "tool"},
+    {text: "Lonely Planet's Maintainable Style Guide", url: "http://ianfeather.co.uk/a-maintainable-style-guide/", type: "article"},
+    {text: "Using a Pattern Library as a Design Tool, by Sophie Shepherd", url: "http://sophieshepherd.com/2015/02/pattern-libraries-as-a-design-tool.html", type: "article"},
+    {text: "Bootstrap", url: "http://getbootstrap.com/", type: "example"},
+    {text: "Jekyll", url: "http://jekyllrb.com/", type: "tool"},
+    {text: "Bower", url: "http://bower.io/", type: "tool"},
+    {text: "Handlebars", url: "http://handlebarsjs.com/", type: "tool"},
+
+]
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hello everybody; welcome to another episode off The Style Guides Podcast, a podcast dedicated to all things front-end, style guides, pattern libraries related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we are extremely excited to be talking with the great Uncle Dave Rupert! Dave, how are you?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Good! Thanks for having me.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Thanks for being on the show. Somebody told me you brought a special friend along.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I did. I brought my good friend Mr Soundboard! <i>[Excellent!]</i> <i>[(Boinnnggg)]</i> He's on loan from the <a href="http://shoptalkshow.com/">shoptalkshow.com</a>.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Excellent.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> <i>[Oooohh my!]</i></p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, there's this podcast that you do. Do you want to talk about that for a second, just give everybody a little bit of background on who you are, what you do and where you're coming from?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Sure. Really simply, I am the Lead Developer at <a href="http://paravelinc.com/">Paravel</a>: that's my day job. I work with <a href="http://twitter.com/trentwalton">Trent Walton</a> and <a href="http://twitter.com/raygunray">Reagan Ray</a>, two of my best friends. We've been working together about seven, eight years which is a hundred years on the web time and we have known each other since high school, so pretty great relationships there. It's great to work with two people you know and trust really well, so we're a small little Agency based in Austin, Texas. And I co-host <a href="http://shoptalkshow.com/">Shop Talk Show</a> with <a href="https://twitter.com/chriscoyier">Chris Coyier</a> of <a href="https://css-tricks.com/">CSS Tricks</a> and <a href="http://codepen.io/">CodePen</a> and we're a sound effects podcast that also talks about web design, so that's basically our life. <i>[Jingle]</i>.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>He really pushed us towards the atomic… before it was even called atomic, Brad… but he kind of pushed us towards that atomic thing; this is a thing, it can literally be used anywhere and everywhere on the site.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Excellent. Man, I'm so glad you brought this.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> You guys asked for this. It was in my rider.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm starting to regret it!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It was in your rider next to the green M&amp;Ms!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yep. Which are delicious, by the way! What you guys have done is really amazing.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, at Paravel you guys do client work for a bunch of different types of clients or whole range, and what do you guys actually produce for a lot of your clients? What is your relationship with a lot of them?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Our client base is pretty diverse; it can be very small companies, from very large companies. We are a three person team so what we tend to do really well is graft onto a larger team and that's kind of what it's been, the work we've been involved in for the last, I don't know, three-ish, four-ish years or so, kind of joining on larger, more established teams and helping them with their responsive strategy; just prototyping and, what would we call it, patternisationy sort of things for their websites</p>
+    <p>And we've done a whole lot of work in that regard, most notably we worked on the 2012 <a href="http://www.microsoft.com/en-gb/default.aspx">Microsoft.com</a> redesign which was really cool and that's kind of where you always start with object-oriented programming in your brain; you're like, "yes, CSS classes, objects, yes". But it was on that project that <a href="https://twitter.com/tysonmatanich">Tyson Matanich</a>, who you guys should follow on Twitter; he's great and super-awesome. He really pushed us towards the atomic… before it was even called atomic, Brad… but he kind of pushed us towards that atomic thing; this is a thing, it can literally be used anywhere and everywhere on the site. People are going to use it bad so it has to be super-tolerant of that; how do you build it? So we worked with him on that and it was great. I had a lot of fun, that was good times.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I could probably write a really emotional song about ….(sings) I pushed my code in, now it's mutating… or whatever.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Does that sum it up?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, I think that's fantastic in that it segues quite nice into, well, that relationship first of all is really interesting and I wish we had more time because I think that these small teams of craftspeople latching onto a broader organisation is something that I find really fascinating and really effective, actually. But that's an aside.</p>
+    <p>I think that this notion of this pattern based design and development workflow which translates into something; you wrote a post of the same title called <a href="http://daverupert.com/2013/04/responsive-deliverables/">Responsive Deliverables</a>, what do our deliverables look like in this pattern-based era in this multi-device, this really crazy, diverse web landscape? How do our deliverables change because you're not handing off: here's your site, have a nice day, right? You're trying to deliver to this bigger organisation, or a bigger web team within that organisation, but that's itself a sub-set of a much, much bigger eco-system, so it's up to you to give them the Lego bricks they're going to need in order to bring themselves into the future.</p>
+</div>
+
+<span class="timestamp">(5:57)</span>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, it kind of got into, with responsive and everything, everything is so complex. You're working large companies, they already have one million pages on their website from the SEO era, so we have all this content and all these templates and so I, Dave Rupert, am not able to fix an enterprise website by myself, so what you end up having to deliver is almost a package, a toolkit to build out a whole website, and my idea there, you kind of want to correlate it to designers and get designers on board as well, make that understandable, but designers have been doing this for a long time. You have an identity; that identity gets a typeface and then that identity gets… you make business cards and packages and you wrap vans and stuff like that in this identity and it becomes… the more consistent you are, the stronger the identity is. I think we could all probably agree on that.</p>
+    <p>But it's the same with the web; how consistent your website is across the board is how…does everything have the same look and feel across the board, and we all know when you load up a web page and there's a second class JavaScript injected third party widget thing you're like, hmm, that's not part of the website, so your website is also part of your brand. It's your marketing and it's your app, whatever that is, but it's the interface of how people use your brand.</p>
+    <p>So I took that… <a href="http://en.wikipedia.org/wiki/Saul_Bass">Saul Bass</a>, <a href="http://en.wikipedia.org/wiki/Paul_Rand">Paul Rand</a>-y kind of stuff and then applied that thinking to a page, which is basically just classes; modular CSS plus data objects in the database.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I think that really makes a lot of sense and I think that historical context does very much apply because back to the brand identity stuff, you're designing a logo and you have no idea where it's going to go and in this day and age it's like, we're making websites and we have no idea where it's going to go.</p>
+    <p>I just recently got sent a video of a smart watch; Anna, you'll appreciate this, firing up a website that I helped design. And wouldn't you know it? It actually works quite well and it's on this tiny little two hundred pixel wide thing.</p>
+    <p>And I think that's increasingly what we're up against is we're designing for a future that's unknown; we're designing for an environment that's constantly going to be unknown, so how do we establish systems that anticipate that and that can promote consistency and cohesion across the board. So, you guys successfully did this; you successfully delivered what you call a tiny bootstrap for every client, which I think just really perfectly encapsulates what this whole podcast is really about and the subject to hand.</p>
+    <p>Do you know… because you guys worked on the home page and the main landing pages; do you know what the status is of that system that you handed off to, to Microsoft, what's going on with that in this day and age or did they say, "Oh, that's nice", and threw it in the trash or are they trying to roll that system out to the rest of the legacy site?</p>
+</div>
+
+<span class="timestamp">(10:14)</span>
+
+<aside>
+    <blockquote>
+        <p>Making web pages is just childish, it's easy. But the organisational effort to get people on board, to get people to even own it and modify it; that's awesome and every time I go to Microsoft, another page is responsive or another section, so it's cool to see that working through.</p>
+    </blockquote>
+</aside>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> That system, to my knowledge, is actually working its way through the whole site and it may be one part of Microsoft gets the pieces and they're kind of like, we're going to do our thing to it, and it's from the same DNA but it's different. </p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Mutations?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> It'll mutate as it goes. But that's what's been really interesting for me. If you want to hear more about how that's going, I recommend… can I talk about competing podcasts on this network, is that… If you listen to <a href="http://responsivewebdesign.com/podcast/microsoft.html">the Microsoft episode of the Responsive Web Design Podcast</a>, <a href="https://twitter.com/chrisbalt">Chris Balt</a>, who's the head of MS.com, Microsoft.com, he tells behind the scenes of how it's rolling out and it's been really cool. Just the other day <a href="http://try.buildwinjs.com/">WinJS</a> on their GitHub released <a href="https://github.com/winjs/grid">the grid they used to build Microsoft.com</a>, which <a href="https://twitter.com/trentwalton">Trent Walton</a> and I coded up in my spare bedroom!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Nice!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> But now it's released and it's a full twenty four column grid, way, way more advanced than what we had delivered, so they’re taking it, owning it and running with it, and that's the cool thing that's also very… you're losing control of that creative effort, which is interesting. I could probably write a really emotional song about ….(sings) I pushed my code in, now it's mutating…or whatever.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…he gives you an architecture that you can adapt parts of it if you want or you can adapt everything but it's very cool; it was the best. It really helped in terms of thinking about modular CSS and modular websites and components and all that.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> (sings) My twelve column grid is now twenty four…</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> It's the world's saddest country song! But that's the thing; it's cool that people are adopting it and taking it and proliferating that throughout an organisation such as Microsoft.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent; that is a hundred per cent success story as far as I'm concerned. Obviously that's the living part of the living style guide is it's meant to evolve and shift with the organisation and that's awesome to hear that they're running with it; that's fantastic.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> And kudos to them because that's the hard part. Making web pages is just childish, it's easy. But the organisational effort to get people on board, to get people to even own it and modify it; that's awesome and every time I go to Microsoft, another page is responsive or another section, so it's cool to see that working through.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>People say, blogposts are actually for you to think through something; sometimes that's what people say, which I totally agree with, so how you document actually makes you re-think.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's really great. In your post, Responsive Deliverables you mention right at the end that you use <a href="https://smacss.com/">SMACSS</a>, which is a system by <a href="https://twitter.com/snookca">Jonathan Snook</a>. Could you explain to someone who doesn't know anything about SMACSS how that has helped you with building a responsive deliverable?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yes, I can. SMACSS by Jonathan Snook; it's a book. Books are these collections of words in a long format! It's like a hundred medium blogposts in order. Jonathan, through his work at Yahoo! I think he was on Yahoo! Mail specifically and then he's gone on to modify the book and update it since he works with Shopify and other companies, but he proposes how do you write a very thought-out CSS on a large scale that is going to grow and grow and grow to hundreds of developers and hundreds of everything?</p>
+    <p>It's super-cool and this was the first CSS book I've read since Designing with Web Standards that I was like, "Oh my gosh: this is awesome, this is the best CSS book I've ever read", so I really enjoyed that book, I'd recommend you buy it, it's nine bucks or something; maybe it's eighteen, but it's really, really good, but SMACSS is just scalable, modular architecture for CSS, so it's just his point of view.</p>
+    <p>There's a lot of other architectures like <a href="https://en.bem.info/">BEM</a> and now there's this thing, <a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">Atomic</a> which doesn't have anything related to Brad's Atomic, but it's kind of in the same vein, but there's a lot of new architectures and stuff like that; BEM is kind of old but this was the one that I grocked, that I immediately identified with, and I trust Jonathan to boot, to borrow a Canadian phrase! If you've ever talked with him in person or heard one of his talks, it is just downright…</p>
+</div>
+
+<span class="timestamp">(15:49)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> It's really smart. I went to his workshop which was on SMACSS and it was just fantastic and it got me completely re-thinking how I write CSS.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> If you go to the website <a href="https://smacss.com/book/type-state">smacss.com and read the state rules</a>, I think that was the one where I was like, "wow, he's thought of things", like "is-collapsed", "is-error"; you're using a very to say that this is something that is verby, this is in motion, this moves… <a href="http://daverupert.com/">Daverupert.com</a>, he's like form-error-messed -up-I'll fix this later, and he gives you an architecture that you can adapt parts of it if you want or you can adapt everything but it's very cool; it was the best. It really helped in terms of thinking about modular CSS and modular websites and components and all that.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Building on those states especially, in your pattern libraries that you're delivering to your clients and helping them create, are you articulating all those different states? How are you going about form-input-is-error or whatever and stuff like that, or button-is-processing or all of that stuff? Do you articulate that stuff in your style guides and what tools are you using? And just adding on to that, how are you articulating, and here's what the class is for that?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Usually it's just really verbose documentation. If you have an input, you repeat it five times, for whatever state. Or, I'll write a little paragraph with bullet points and explain each state or something like that, that documents how that goes. But the documentation part's pretty cool. I don't do a great job at that. People who've looked at my code can attest to that, but that's the best part. I feel like when you start doing that, you're starting to say OK, this makes sense. It's like writing a blogpost about every CSS file, but it's like writing a blogpost. People say, blogposts are actually for you to think through something; sometimes that's what people say, which I totally agree with, so how you document actually makes you re-think. I recently had a form thing, it was incomplete, didn't show everything or whatever and I was just like, I'm re-doing this; I'm going to show everything and it's going to be cool! It was fun; it was just like the exercise, the challenge was fun.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And that documentation, the more it becomes ingrained in the workflow, especially if you can roll that into a living style guide is where the real power comes from. Watching <a href="https://twitter.com/dmolsen">Dave Olsen</a> work on the next version of <a href="http://patternlab.io/">PatternLab</a>; he's working on a plug-in architecture and the plug-in that he's latching onto as a prototype is for <a href="http://warpspire.com/kss/">KSS</a>, which is like a CSS documentation, you basically write a giant CSS comment above your code for a particular module, like a SMACSS module or whatever, and then it dynamically generates documentation for it and basically Dave's sucking that into PatternLab to live beside the actual living, breathing module, which I think is just really fascinating and really cool, but I don't know, for me it's about building that into your workflow but then making that visible to other people. I think there's two parts to it; one is doing the damn thing and then the second part is making sure that everyone knows it's there.</p>
+</div>
+
+<span class="timestamp">(20:41)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And then there's also making sure that they maintain it when they add stuff.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, and that's where automatic pattern libraries and automatic documentation and stuff like that, I see that stuff as being increasingly important and helpful. Building on that, you're working with another client on establishing a pattern library; do you want to talk through that whole process because it sounds really, really fascinating, the work that you've been doing as far as taking an existing thing and really rolling up your sleeves and making it a lot more pattern based and consistent, cohesive.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Paravel has been working with a company called <a href="http://www.retailmenot.com/">RetailMeNot</a>, in the UK it might be <a href="http://www.vouchercodes.co.uk/">vouchercodes.co.uk</a>, you might know it, Anna?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, that sounds familiar.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> But we're working with the American version and this is a website that over time has grown really organically and then there's also been acquisitions and things like that, so in its current state; please, no one be upset: every page of the website is different and it's different for a reason; whether it was a different designer or a different developer or different decade or something. The style, the trend, the idea, the person who was like, "Hey, how about we do this", or "Hey, you have to do this" was different. </p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Wait: Dave. Dave, you're telling me that sometimes people make websites that are different and inconsistent?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I'm saying, those inconsistencies can seep in!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's unheard of! I've never heard that…</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> So, the website struggles with this and we have contributed to it. We did a little project and the our director of that time was like, "Yeah… no strings attached, don't worry about anything, just vibe it out, man".</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Blue sky!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, blue sky, that's it. So it was like, "Yeah, blue sky project" and we were like, "Cool". We took advantage of that and then shipped the page. It was totally different than everything else and it was like, gosh, this keeps happening. So we sat around and I think one of the biggest goals needs to be how to make the website look the same and everyone got on board, everyone's still on board with that and working towards that goal. But the how we did that was a bit question and one of the things we wanted from an engineering perspective was to know dependencies: you don't know if you make a change on page A if it cascades over to page B and broke page B. You guys are familiar?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…working in a pattern lab for the first time, an official… I'm starting with components and building a thing up… that was revolutionary; that was super-cool…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah….</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> With breaking pages!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> All too familiar!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> So we needed to make sure everything either was documented or isolated, if that makes sense?</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, did you do a lot of name spacing?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, a lot of name spacing; settled on a name spaced class and going that route for a lot of things, that helps; that insulates you from somebody taking… it prevents people from writing really loose classes like "banner" or something like that, that is just going to get mowed over by somebody else or "header" or "heading".</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Or "box".</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> "Box", yeah, exactly. So you want to give these things name spaces, so we've tried really hard to do that and I can talk more on that later. So, we started with the PatternLab.io pattern lab, which was awesome and I've got to say, I'm sure if people are listening to this, they've already done it, but working in a pattern lab for the first time, an official… I'm starting with components and building a thing up… that was revolutionary; that was super-cool and I want to say thanks Brad and everybody for all the help there.</p>
+</div>
+
+<span class="timestamp">(25:40)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Dave! It's all <a href="https://twitter.com/dmolsen">Dave Olsen</a>! Mostly Dave!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>So, we made a move to put this into the production environment and we're like, let's get all this stuff, all the Pattern Lab and put it in the production environment. That went good until people started committing code to it… which kind of polluted the whole Pattern Lab, because if your Pattern Lab is inconsistent, you have not made a Pattern Lab.</p>
+    </blockquote>
+</aside>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I didn't know. Thanks mostly Dave. Because you didn't know you needed something; that's the feeling I got. I didn't know I needed to work on something on the atomic level. I didn't know I needed to work on something on the molecular level. But it's really changed my thinking and even just how I build things in general, so immediately when I see something it's sliced up; I make CodePens of that one molecule and it's changed my thinking; it's systems, not pages. I think that's a very common phrase, but that idea that you are working on ingredients, not on the whole large thing. So, let me tell you the tale. Can I tell you the tale?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> OK, yeah, please do. Do you have a sound effect that leads into a good tale?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I don't have…let me see, yeah, here you go…. [harp glissando].</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Oooohh!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> So, we build the Pattern Lab up and that was great. But it was very clear it would be hard to integrate this into the existing production system, just because things were different; this uses <a href="https://mustache.github.io/">Mustache</a>, that's not on the server, blah-blah-blah. So we were like, OK. So this is where the quest for the Holy Grail begins. And I call the Holy Grail the thing where your production and your PatternLab and your deploy… dev… everything's in sync and beautiful and everything works and everything's perfect and nothing breaks; everything's always up to date. That's I think what everybody wants and some people are succeeding. <a href="http://ianfeather.co.uk/a-maintainable-style-guide/">Like Lonely Planet has a pretty good…</a></p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> <a href="https://twitter.com/ianfeather">Ian Feather</>.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Ian Feather, yep!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Ian is succeeding. I think <a href="https://twitter.com/sophshepherd">Sophie Shepherd</a> <a href="http://sophieshepherd.com/2015/02/pattern-libraries-as-a-design-tool.html">said she has something that's working too</a>. So it's mostly Ian, some is Sophie. And they have this figured out.</p>
+    <p>So, we made a move to put this into the production environment and we're like, let's get all this stuff, all the Pattern Lab and put it in the production environment. That went good until people started committing code to it and that sounds terrible, but it was kind of immature, and then all this stuff started flooding into it, which kind of polluted the whole Pattern Lab, because if your Pattern Lab is inconsistent, you have not made a Pattern Lab. Does that make sense? </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> If it's different to what's on the site.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, and there's been a bit move to try to do this… we've raised an umbrella called Design Standards which is just that; let's figure out colours, fonts, shapes and figure all that out and just come up with a framework to build the site, so that was good but it was tough because it was kind of like, this is not actually meeting our needs and then it may be very kosher one day but then some commit lands from eight weeks ago and now it's super-different. So it was a lot of effort to maintain.</p>
+    <p><a href="https://twitter.com/craveytrain">Mike Cravey</a> at RetailMeNot has hired <a href="https://twitter.com/elyseholladay">Elyse Holladay</a>, who's super-good at Sass, and they've kind of broken this out into a separate project they calling it… can I leak the title name? I don't know! I'm going to not leak it, but they're working on a project that's I think for internal consumption use, so that people can spin up sites on their own test proto type sites or maybe even their production sites but they're not super-tied into the main production build. So they're working on something to abstract this stuff out but then it'll be as simple as an npm module include to get it back into the system, so I can't super-speak to how well that's going but the quest goes on to find the perfect, how do your styles and your production stay in synch. Style guide production.</p>
+</div>
+
+<span class="timestamp">(30:52)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I feel like that needs a sound effect.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Uuuuummm… <i>[I like donut charts; I think they're super-rad]</i> That's the only one I got!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> OK, so you went from having your pattern library exist outside the production environment and that was, "Oh, OK, this is sort of a duplication of efforts because we need to get it into production."  And then you put it into production, it got polluted just because a bunch of people are touching it, a bunch of people are contributing and things got really inconsistent/hard to manage, I guess?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, and it wasn't ready for prime time at that point. But then things started coming in and so that's OK; we found that out really quick so that's good. So we were like, "Hey now, let's come up with the dream scenario."</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, so what is that dream scenario? Something we ask all of our guests on here: what is that ideal pattern library? What is the perfect world, the perfect workflow, the perfect client situation or whatever that just leads to a really amazing pattern library? What does the pattern library include? How does it work with the team and stuff like that? Do you have any thoughts on…</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I really don't know. I think what Elyse and Mike and the team are working on is really smart, because if your style guide, if your <a href="http://getbootstrap.com/">bootstrap</a> or whatever, is inside an npm module and then maybe you can run it like a <a href="http://jekyllrb.com/">Jekyll</a> or something, but you can run that style guide and visualise it in a standalone kind of app, I think that that's going to make a big difference because then you're pulling in a pristine architecture into a nomansland and I think that's a good thing, and Node is more or less like front-end. It's very server-technical but I feel like it's a very first class system and so if you have a Node module dependency or <a href="http://bower.io/">Bower</a>-y dependency, that is very close to having first party… it's like fake first party; third party impersonating first party. It's a ventriloquistic web design… boom… that's my book. <i>[Oooohh my!]</i></p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think you need an internal evangelist to make sure that everyone is playing by the same rules, that CSS meets a certain standard.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, what you're saying is you're basically creating this language, creating your front-end architecture as a stand-alone thing and then implementing it and making use of it and sucking it in, in a smart way?</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah. Making it consumable, and that's the big thing. It takes work on the production environment and then it takes work on your stand-alone environment to make them be the same; just have the same… the word "heartbeat" is in my brain but maybe that's because we talked about smart watches! You want to make sure that that's a smooth transition and doesn't just crash people, but if it's just Sass files, it should work. When it gets into templates, that's different because what if somebody wrote something in Python and want to have some things in php; what if something's in Ruby. Those all kind of use different templating language. If that's the case, maybe you need something like <a href="http://handlebarsjs.com/">Handlebars</a>, so now you have to use Handlebars or Mustache and then make sure that those systems are using that system and then make sure all your data models are the same. So that's difficult to do.</p>
+</div>
+
+<span class="timestamp">(35:16)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> <a href="http://styleguides.io/podcast/ian-feather/">That was something we were talking with Ian Feather about</a>, was how they had a very Ruby-centric templating language but at the end of the day, they're playing around with Node, they're playing around with all sorts of other technologies and so they're actually going from something that works really well for one production environment and are looking in their next evolution of their system to make that templating layer more agnostic so that it's more portable. I thought that was really fascinating.</p>
+    <p>But it's all for the greater good of having whatever the final products are, the final thing that people were actually interacting with, have that same… I like that word "heartbeat". It feels like a Chevrolet commercial or something! You want your style guide to have that same heartbeat of the production environment, but from what I gather, what you're saying is that it's a little dangerous to have them too closely married, just because it muddies the water a little bit, or what do you think?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>It's like everyone stumbling their way into this sort of thing; even though the idea of modularity and patterns and stuff has been around for a while, it's really only been in the last couple of years that it has become essential for organisations to really adopt this mentality…</p>
+    </blockquote>
+</aside>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> You know, it's tough. It's like in programming, we call it a separation of concerns. You want to make sure those concerns are separated and that you don't build this super-heavy dependency on each other. I think that's been the big thing is separating that out, but it's like you want to separate it but style and things like that do have a marriage to the product; that's what's difficult I think. I'm even now thinking, what if you run an A-B test on the production server and you change something hot pink and wow, it's a major success; the header needs to be hot pink immediately. Now, somebody has to roll that change back up and so now you have to make sure there's an ebb and flow and that's difficult too, I think, on any level. But it's tough. Somebody's going to crack the egg on this and make zero dollars! So I'm very excited for that day when that happens.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And I think what you're hinting at, certainly towards the end of what you were saying, is that it does involve a workflow change; it involves trading the style guide, treating pattern based design and development as a cornerstone of your process, so that if you do run an AB test and the header needs to be hot pink immediately, the first thing isn't, "Oh, let's launch the hot pink header on production."  It's, "OK, our system needs to make a change to accommodate this" and then that final production environment will implement that system, so it's like putting the style guide ahead of anything else in the workflow, I guess, so that the style guide becomes the source of truth, is honest and is up to date.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Yeah, and that has to exist out in front but it also has to, now I'm middle man or woman in Elyse's case, needs to be the relay between those two and I was going to say that I think that's kind of a big thing that RetailMeNot has done but I don't know that everyone has done. It's installed the Style Guide Tsar of sorts to make sure that the code is working, so I think that's good. I think you need an internal evangelist to make sure that everyone is playing by the same rules, that CSS meets a certain standard. I know Elyse has done a lot of work in making sure everything's documented, making sure everything's consistent, making sure there's not a lot of stupid stuff in there that I wrote. So it's been good!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's excellent. And knowing Elyse, she sounds like a perfect person for a job like that; somebody that could really help get a lot of people on board with something that is a new concept; all of this stuff is really new, which is why we're talking about it! It's like everyone stumbling their way into this sort of thing; even though the idea of modularity and patterns and stuff has been around for a while, it's really only been in the last couple of years that it has become essential for organisations to really adopt this mentality, so I do think it's incredibly helpful to have people like Elyse, and people like yourselves that are working with the organisation as coach or champion for this kind of thinking.</p>
+</div>
+
+<span class="timestamp">(40:55)</span>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> You need champions.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Champions!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> You pit your champion against the opponent's champion!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And we'll put the winner on a Wheaties box! That would be Dave Rupert establishing a style guide and you'll be on the front of a Wheaties box and everyone will be so confused! </p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> I'll be vaulting over a web page… I weigh like two hundred and fifty pounds if that's an image for you!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I love it! I'm going to get to work in Photoshop!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Can you give me muscles? I'd appreciate it.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Well I think that that's a good note to end on, I think! But seriously, thank you so much for taking the time to come on the show, and thank you for that <a href="http://daverupert.com/2013/04/responsive-deliverables/">Responsive Deliverables article</a> that you wrote was really pivotal and how I talk about all of this and think about it; this whole… tiny bootstraps for every client is now very much a part of my vocabulary and mentality, so I really appreciate you sharing all of your experiences, especially for a client as big as Microsoft; because you're in that same boat… it's like, "What, this only works for blogs and personal sites." And for you guys to be able to be out there, you and Trent and Reagan sharing your experience, your knowledge and stuff, that's why we're all here and talking about this stuff further, so thanks so much for contributing in that way and obviously your podcast and everything else; I really appreciate it.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Well than you and thanks for having me. Big fan of the podcast and wish you guys the best. This is great to have and if anyone out there solves the Holy Grail, let me know; I'd super appreciate it.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and to add to that, solve it in such a way that just magically works for everyone everywhere all of the time! Because that's what we're finding; it's hard to scale it.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> If it could work in WordPress and Jekyll seamlessly, you're my best friend.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And Drupal.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And Drupal. I'm just putting in Drupal there too!</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> And Adobe CQ. And what is it… Cold Fusion. OK, that's the last one!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> All right, well thanks so much again for being on the show and we'll talk to you soon.</p>
+</div>
+
+<div class="dave-rupert guest">
+    <p><b>Dave</b> Thank you.</p>
+</div>

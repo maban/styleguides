@@ -1,33 +1,27 @@
 <section>
 
     <h1><a href="tools.html">Tools</a></h1>
-    
+
     <p>Things to help you make your own style guide</p>
-    
+
     <ul class="resources resource-type-tool">
-        
-        {% assign tool = site.resourcetool | sort: 'status' %}
-        
-        {% for tool in tool reversed %}
-        <li class="resource {{ tool.status }}">
-            <a href="{{ tool.link }}" class="resource-url">
-                {% if page.type != "home" %}
-                    {% if tool.image %}<img src="/images/screenshots/{{ tool.image }}" alt="{{ tool.image }}"/>{% endif %}
-                {% elsif tool.status == "recommended" %}
-                    {% if tool.image %}<img src="/images/screenshots/{{ tool.image }}" alt="{{ tool.image }}"/>{% endif %}
-                {% endif %}
-                <span class="resource-description">
-                    <h2 class="resource-title">{{ tool.title }}</h2>
-                    {{ tool.content }}
-                    {% if tool.author %}<p class="resource-author">By <strong>{{ tool.author }}</strong></p>{% endif %}
-                    {% if tool.language %}<p class="resource-language">Language/Platform: <strong>{{ tool.language }}</strong></p>{% endif %}
-                </span>
-            </a>
-        </li>
+
+        {% assign tool = site.resourcetool | sort: 'title'  %}
+
+        {% for tool in tool %}
+        {% if tool.status == 'recommended' %}
+        {% include loop-tool.html %}
+        {% endif %}
         {% endfor %}
-        
+
+        {% for tool in tool %}
+        {% if tool.status == null %}
+        {% include loop-tool.html %}
+        {% endif %}
+        {% endfor %}
+
         {% include add.html %}
-        
+
     </ul>
 
 </section>

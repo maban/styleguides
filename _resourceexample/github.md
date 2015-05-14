@@ -1,6 +1,7 @@
 ---
 title: GitHub Styleguide
 link: https://github.com/styleguide
+image: https_github.com_styleguide.jpg
 tags:
 - code
 - patterns

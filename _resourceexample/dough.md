@@ -1,7 +1,8 @@
 ---
 title: Dough by Money Advice Service
 link: http://www.madewithdough.org.uk/corporate_brand_guidelines.pdf
-tags: 
+image: http_www.madewithdough.org.uk_corporate_brand_guidelines.pdf.jpg
+tags:
 - frontend
 - patterns
 ---
