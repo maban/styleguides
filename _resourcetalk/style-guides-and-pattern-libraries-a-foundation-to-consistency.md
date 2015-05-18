@@ -1,7 +1,7 @@
 ---
 title: Style Guides & Pattern Libraries: A Foundation to Consistency
 link: http://vickyteinaki.com/blog/style-guides-pattern-libraries-a-foundation-to-consistency/
-author: Rob Whiting
+author: Vicky Teinaki
 conference: DotYork
 date: 5th May 2015
 ---
