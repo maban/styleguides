@@ -1,0 +1,523 @@
+---
+layout: episode
+section: podcast
+number: 12
+title: Jeremy Keith
+image: jeremy-keith.jpg
+about: <a href="https://twitter.com/adactio">Jeremy</a> is a Shepherd of Unknown Futures at <a href="http://clearleft.com">Clearleft</a>, based in Brighton in the UK. He's the author of <a href="http://html5forwebdesigners.com/">HTML5 for Web Designers</a> and <a href="http://domscripting.com/">DOM Scripting</a>, and he's <a href="http://saltercane.com/">Salter Cane</a>'s bouzouki player.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/207151566&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+  {text: "CSS Systems", url: "http://blog.natbat.net/post/46614243624/css-systems", type: "talk"},
+  {text: "Dan Mall on 'deciding in the browser'", url: "https://the-pastry-box-project.net/dan-mall/2012-september-12", type: "article"},
+  {text: "Style Tiles", url: "http://styletil.es/", type: "example"},
+  {text: "Element Collages", url: "http://danielmall.com/articles/rif-element-collages/", type: "example"},
+  {text: "Visual design explorations, by Paul Lloyd", url: "http://clearleft.com/thinks/visualdesignexplorations/", type: "article"},
+  {text: "CSS Systems, by Andy Hume", url: "http://schedule.sxsw.com/2012/events/event_IAP9410", type: "talk"},
+  {text: "OOCSS", url: "http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/", type: "article"},
+  {text: "SMACSS", url: "https://smacss.com/", type: "article"},
+  {text: "BEM", url: "http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/", type: "talk"},
+  {text: "BBC GEL", url: "http://www.bbc.co.uk/gel", type: "talk"},
+  {text: "Starbucks's Style Guide", url: "http://www.starbucks.com/static/reference/styleguide/", type: "example"},
+  {text: "Heroku's Style Guide", url: "http://purple.herokuapp.com/", type: "example"},
+  {text: "Ask Dr Web", url: "http://alistapart.com/column/doctor-is-in", type: "article"},
+  {text: "GitHub's Style Guide", url: "https://github.com/styleguide", type: "example"},
+  {text: "Salesforce's Style Guide", url: "http://sfdc-styleguide.herokuapp.com/", type: "example"},
+  {text: "Code for America's Style Guide", url: "https://style.codeforamerica.org/", type: "example"}
+
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hello everybody! Welcome to another episode of the Style Guides Podcast, a podcast dedicated to all things pattern library and style guide related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are absolutely delighted to be talking with the infamous Jeremy Keith. Jeremy: how are you?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Hellooo! I'm fine, thank you. How are you, Brad?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…when it comes to the front end, if we do end up doing front end code for the client, then time has taught us that handing over a pattern library or style guide type thing is definitely more valuable than handing over a set of pages, for example.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I'm doing excellent. </p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Good. How are you, Anna?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm good, thanks.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Good, good.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent! We're all doing good. It is a wonderful… well, I don't know how the weather is there but whatever.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's excellent!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Beautiful, it's gorgeous!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> We're on different continents! Jeremy; do you want to kick us off and just give us a little bit of a background? I know you like to have some fun with what you're exact job title is, but could you just give a little overview about who you are and what you do?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Sure. <a href="http://clearleft.com/is/jeremy-keith">I just updated my job title yesterday</a>, as a matter of fact.</p>
+</div>
+
+
+<aside>
+    <blockquote>
+        <p>this idea of a pattern library has definitely been, I'd say, the most important development when it comes to front end deliverables.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> What are you now?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> I was… I'm currently Shepherd of Unknown Futures.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Nice.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, I thought that sounded good. Andy Dennis gave me that one. Before that, I was, I don't know, Commander of the Armies of the Seven Kingdoms, something like that. So generally, I don't take much stock in job titles. I don't find them that useful.</p>
+  <p>But in terms of describing what I do, my stock answer is really glib and I'm like, I make websites. Although these days, there's so much involved in making a website that that doesn't really tell you anything at all.</p>
+  <p>Historically, I guess I've been involved more in the front end side of things; HTML, CSS, JavaScript, all that good stuff, but also I've done web design, I've called myself a web designer at times; a bit of everything really. Generally at <a href="http://clearleft.com">Clearleft</a>, I guess my role is, yes, on the front end development side of things, but more in a kind of strategic over-arching way, as opposed to not necessarily having my hands down in the code, coding stuff for deliverables. Partly that's because I'm just not very fast at doing that stuff, I take way too long to do anything and so it wouldn't be a very good use of my time. The other people at Clearleft are much quicker at doing that, so it's better to have them do that.</p>
+  <p>Also, I get bored so easily I just find myself flitting from thing to thing, as a way I guess of turning that to an advantage, my job is kind of flitting from thing to thing on a daily basis; checking out stuff, letting the other people in the company know about stuff I've stumbled across, feeding that into the work.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Code reviews.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Code reviews, that kind of stuff. We have a Front-end pow-wow every Thursday where we talk through stuff on the front end development side of things, but I honestly don't know what my job is.</p>
+  <p>I'm doing client work as well but I'm not exactly clear what I do. I guess a lot of people would talk about their work in terms of their output, so a UX person might talk about wireframes or visual design; they might talk about Photoshop or Sketch and a front end developer would talk about HTML and CSS but I generally don't have many outputs. It's a lot of talking and yakking and thinking.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, as part of this more strategic over-arching birds-eye view look of what your agency is working on and what the relationship of the clients is, you've had a lot of experience working with style guides and developing pattern libraries for your clients and things like that. How, at a strategic level, have you seen that evolve into what it is that your company offers the clients and how that all fits in?</p>
+</div>
+
+<span class="timestamp">(4:11)</span>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah. On the one level it's purely an implementation detail, it's like whether we hand over a pattern library or whether we're handing over something else. At another level it's kind of fundamental to how you approach thinking about deliverables, how you approach thinking about the interface. Depends how you come at it.</p>
+  <p>For the most part, people don't hire Clearleft for pattern libraries or for any particular deliverable: they're hiring Clearleft for design work. Not necessarily even visual design, UX and more like thinky-thinky stuff, I guess. But when it comes to the front end, if we do end up doing front end code for the client, then time has taught us that handing over a pattern library or style guide type thing is definitely more valuable than handing over a set of pages, for example.</p>
+  <p>So a lot of it's kind of systems thinking, which has been evolving for many, many years at Clearleft. I know Anna's mentioned <a href="https://twitter.com/natbat">Natalie Downe</a>, who used to work at Clearleft and now she's at <a href="http://lanyrd.com/">Lanyrd</a>, bought by <a href="https://www.eventbrite.co.uk/">Eventbrite</a>. She's an amazing front end developer and she started <a href="http://blog.natbat.net/post/46614243624/css-systems">talking and thinking about this very systems-thinking approach to CSS and HTML</a> many years ago and we started putting it into practice in our deliverables; if we were handing over something, how can we hand over a system instead of just handing over a finite set of pages and expecting the client to extract what they need from those pages? How can we give them the extracted bits that they actually need to put together all the pages that we couldn't possibly consider.</p>
+  <p>So a lot of that really started with Natalie. Because Clearleft doesn't ever do a full site build. For example, we don't do back end development at Clearleft, so we do UX, we do visual design and sometimes we do front end: not every project; sometimes. But we'd never do actual build, the actual back end PHP, Ruby, Python, whatever, and so over the years we've had to get very, very good at delivering our deliverables to the client, whether it's design stuff or whether it's front end stuff, because we're never the last people to touch this stuff: there's always somebody after us.</p>
+  <p>That was definitely tricky to do at first, but we've been around for ten years now so we've gotten better and better at doing it and this idea of a pattern library has definitely been, I'd say, the most important development when it comes to front end deliverables. Not entirely sure whether it works, when it comes to visual design and UX and that kind of stuff, but certainly for front end deliverables, the pattern library idea has been really, really strong and it's worked really, really well.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>We'll also give you some pages, but these pages, they're not the deliverable; these pages are just examples of the pattern library in action.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And how has that evolved over the years?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> I'm trying to think back to when we would have first started to do it. I think it would have kind of snuck in the back door. Initially yes, we would have still been delivering pages and we'd kind of throw in this collection of pieces as well: so it'd be more like the pages, the deliverables, but here's also this collection of the pieces cut out into their individual bits. And then over time, that's flipped to the extent where we make it very clear that this pattern library is the deliverable now.</p>
+  <p>We'll also give you some pages, but these pages, they're not the deliverable; these pages are just examples of the pattern library in action, and that switch has been a gradual thing over the years, I think, going from, we deliver pages and oh, here's a style guide to: we deliver a style guide and oh, here's some pages that use this style guide. That second approach is definitely, definitely more valuable, certainly for other developers taking over who have to build this thing and have to actually put it into action, that's definitely more valuable.</p>
+  <p>Now, it can be trickier if it comes to other stakeholders like the boss, the client, the guy who signs the cheques. Maybe they need to see more page-like things; maybe they prefer to have a shiny comp or whatever, and we might have to throw them a bone with something a bit shinier, but in our experience, developers really, really like getting a pattern library as a deliverable.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right. Do you guys sell this idea up-front and again, is there ever… obviously developers and designers to some extent, at least in my experience, are sort of on board with this, they're like: yeah, yeah, we get it, we see the value in it, but again, even at that sales process, whenever you're negotiating the scope of work and what's going to be done and what you're actually on the hook for.</p>
+  <p>Do people ever push back or are they scared or just confused at this concept, or how does that work?</p>
+</div>
+
+<span class="timestamp">(9:13)</span>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Each project's different, so we don't like to have a set process or even a set set of deliverables for every project: it'll change on a project by project basis.</p>
+  <p>But, that said, broadly I think you could characterise most projects that involve some kind of deliverable as falling into one of two categories and the first category is that pattern library category of, we're going to do design work and we're going to hand over this set of components that you then take and you can put together into an infinite variety of pages of patterns and components.</p>
+  <p>But that's not the right solution for every project and broadly speaking, the other kind of project is much more where a prototype is going to be a better deliverable. And they're actually very, very different in how you deliver that stuff, because for a pattern library, we're saying, this is quality code; we've really thought about the HTML here and we've really thought about the CSS and we think this is the best little widget and component and you can just take this and you can drop it into your live site and it's going to be great, and the way you approach prototyping is the complete opposite which is, this is not production code; don't you dare drop this into an actual public website! This happens to be written in HTML and CSS and JavaScript, but it could just as easily have been written in KeyNote or some other tool.</p>
+  <p>What we're providing is a way of demonstrating interaction, of demonstrating visual design, of demonstrating animation, something like that. But we are not saying, this is code for you to use. So in a very, very broad way, when we're doing work that involves front end development, it'll tend to fall into one of those two camps: either this is code that's been delivered to the client for them to use in a live site, or this happens to be code, but the code is only there to illustrate the design and the actual final code needs to be written from scratch in a very different mind-set. So, going back to your question about the initial pitching on projects and discussing deliverables, we tend to get a feel pretty early on of which direction the project would be going, like, oh, this sounds like a job for delivering a pattern library; oh, OK, no, a pattern library is not what they need here, this is about some other kind of problem solving and we need to deliver a working prototype, to demonstrate the design but not to be used in production. So we tend to get an idea pretty early on and then I guess sell them on whichever one we think is the right solution there.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…if you're designing for sign-off, everything's perfect: everything lines up at the top and the bottom, it's exactly the right amount… everything looks beautiful. It's not a real test of the edge cases of content. And unless you then make further mock-ups that are more accurate and reflect the real situation with content and you just hand over this perfect situation to developers, well, everyone's just going to get disappointed.</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And do you tend to work straight in code, or do you come up with mock-ups first and then get them built?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> There's nearly always mock-ups first. I guess the question is, how long you spend refining those mock-ups or how quickly you decide, OK, this is good enough to get going, right? And again, that will depend on the client.</p>
+  <p>On some projects, clients absolutely get it and they're like yeah, yeah, it's fine that we're not deciding in the mock-up.</p>
+  <p>There's that wonderful phrase from <a href="https://twitter.com/danielmall">Dan Mall</a> about <a href="https://the-pastry-box-project.net/dan-mall/2012-september-12">deciding in the browser</a>, which I really like.</p>
+  <p>Backing up a bit, the whole question of mock-ups, or why do mock-ups exist is, I guess, a philosophical question that we've been tackling a long time. I mentioned that we had front-end pow-wows every Thursday. There's also a Design Review, Design Crit that happens once a week. And then inevitably devolves into this discussion of process and workflow and all of this. And it's a question of what's a mock-up for? Why does it exist?</p>
+  <p><i>(Brad and Anna laughing)</i></p>
+  <p>This comes up.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's a crisis!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, this existential… here's my take, is that there's just three reasons a mock-up could exist:</p>
+  <p>One is that it's for buy-in, it's basically for sign-off. You're mocking something up to present it to a decision-maker who then says thumbs up or thumbs down, so that's this decision-making thing, I guess what Dan could be talking about, deciding in the mock-up. That's use number one.</p>
+  <p>Use number two is it's a deliverable for a front end developer, so in other words they're something a visual designer gives to a front end developer to get turned into code, so that's a separate use-case.</p>
+  <p>Now here's problem number one, is that mock-ups made for the first use-case end up getting used for the second. So, if you're designing for sign-off, everything's perfect: everything lines up at the top and the bottom, it's exactly the right amount… everything looks beautiful. It's not a real test of the edge cases of content. And unless you then make further mock-ups that are more accurate and reflect the real situation with content and you just hand over this perfect situation to developers, well, everyone's just going to get disappointed: the developers are going to be frustrated because it's not accurate, the designer's frustrated because, hey, that doesn't look like my mock-up, and the client is frustrated because that doesn't look like what they were presented with.</p>
+  <p>Oh, and then there's a third use of a mock-up, which is for a visual designer to think. They have a tool that they're comfortable with, like Photoshop, Sketch, Illustrator, whatever and it's the fastest way for them to get ideas down is to create a mock-up.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Like element collages?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, or even a full interface; even making a page. But the difference is that the reason for its existence is that third use case and not those first two. So, for a designer to go away and create, here's a page in Photoshop, or here's a page in Sketch, that's absolutely fine, I think, as long as the reason for doing that is to get ideas out. It's not then fine to then present that to a client and say, what do you think? Give us sign-off, and it's not fine to present that to a developer and say: there you go. Now go and build that. They're three very different use cases. The getting the designs out of your head, getting sign-off and a template for build. Those are three different use-cases. And yet what happens is, a single mock-up will end up kind of doing all three.</p>
+</div>
+
+ <span class="timestamp">(15:22)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> You'd better believe it!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> So this is the problem I've found with mock-ups, we've found in general, is this mis-match, I guess, of expectations. And this is why I love Dan's idea of deciding in the browser, so for that first use-case, you're talking about deciding in the mock-up; you show the client to give you sign-off. The decision has been made. Then you move on to use-case number two where you're handing it over to a developer to turn into real code and that's when reality hits and differences crop up; questions come up that you hadn't anticipated, but now it's too late to make the decision to say, oh well, look, that's been agreed, that's been decided, that's what the client signed off on, so I really like Dan's idea of deciding in the browser where you say, yeah, you do stuff in Photoshop or Sketch or whatever you're comfortable with; it's more about that third use case, use whatever tool is comfortable with you. But you don't go to the client and say, approval or not approval, until you've got it in web browsers, until you've got it in code, because that's just so much more accurate to reality. So much more realistic, and makes much more sense to decide in that point, but going back to the original question, would there be mock-ups preceding the mark-up, I guess, the CSS? Yeah, almost always, there's almost always some kind of mock-up. Now, in an extreme case, that mock-up could be literally paper; could be pencil on paper. More often than not, it is usually a tool like Photoshop or Sketch, something. But like I said, there's definitely diminishing returns in polishing that mock-up too much, making it perfect because what's the point? The actual place to do that and make it perfect is in the code, when it's in web browsers, so the right level of fidelity I guess is the big question and that changes from person to person, from project to project, from client to client. I don't think there's a right answer. The right answer is to figure out what's the right level of fidelity for the mock-up for this project, for this client.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yep, and do the designers working at Clearleft, bringing this all back to what this all means for, if indeed it is a project where you're delivering a pattern library, in my experience working with more visual designers, working in static tools, there's this tendency in a lot of us due to the tools themselves just aren't actually as sophisticated as HTML, CSS and JavaScript as far as actually developing more of a pattern-based workflow, so what we'll have is I'll have designers, historically, making bespoke home page designs and then we'll get into an interior page and then that will have its own look and feel, so I guess how does Clearleft's designers work with, how are they aware of this whole pattern library approach, this systems thinking? How do you instil that into your culture and how do they execute it in a pattern-based way, even if they are working in a static tool?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>as you go to create a new document, it asks you what's the width and the height of the document. That's a small thing, but straight away you start to think in terms of well, is it a mobile or a tablet or desktop screen, whereas something like Sketch is an infinite canvas</p>
+    </blockquote>
+</aside>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, it's interesting. I think that the systems approach that came from the front end with people like Natalie thinking this way has definitely infected the visual design part as well: it tends to happen sooner. Even if it's almost retro-active: the designer maybe finds it easier to just go away and just design screens, interfaces, but that's retro-actively…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Use-case three, right?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, use-case three, exactly. But then retro-actively, OK, now I'll extract the patterns and put them together, and that's when they might notice inconsistencies in their own designs; oh, I thought this button was meant to be the same in all five screens but actually it's slightly different here and I'll need to adjust that and make it consistent. Because doing good design, it should be consistent, there should be a logic behind it. Yeah, there's definitely been more systems thinking happening on the visual design side and we've tried things like <a href="http://styletil.es/">Style Tiles</a>, <a href="http://danielmall.com/articles/rif-element-collages/">Element Collages</a>, these kind of things.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> There was <a href="http://clearleft.com/thinks/visualdesignexplorations/">a really good blogpost</a>, I think Paul Lloyd wrote it, about how <a href="https://twitter.com/aizlewood">Jon</a> had been doing style tiles and he used to do them vertically, but now he does them horizontally because they were looking too much like a mock-up.</p>
+</div>
+
+ <span class="timestamp">(19:47)</span>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Right, again, every client's different, every project's different and I was on some project where in showing them a document which is meant to show, here's a bunch of elements collaged together, the client was mistaking it for an actual page, which you could kind of see, it kind of makes sense that that's what our brains would interpret that file as, but as soon as Jon flipped it and made it horizontal rather than vertical, then straight away it was clear: oh no, I'm just looking at a collection of components one after the other, but they don't form a cohesive whole, it's just separate components.</p>
+  <p>So that was really interesting and that's something that Dan, because we got the element collage thing from Dan Mall, and he's taken that back on board himself: oh yeah, that's actually really smart and now he does that too.</p>
+  <p>So again, lots of experimentation, I would say on both the front-end and visual design side, we haven't got everything figured out and we're still figuring this out; there's definitely issues with the tools, some tools seem to lend themselves more than others. Even in small ways like with Photoshop, as soon as you go to create a new document, it asks you what's the width and the height of the document. That's a small thing, but straight away you start to think in terms of well, is it a mobile or a tablet or desktop screen, whereas something like Sketch is an infinite canvas. So it has a slightly different take on it, you can just throw things onto this infinite canvas, so it maybe lends itself a bit more to this componentised element collage or style tile way of thinking.</p>
+  <p>But like I said, the tools don't really matter, it's how you approach it. As for designers thinking the systemic way, I think good design tends to do that anyway because you start with a type system, is usually at the root of everything, and a grid system will come out of that but it's a system; it's systems built on systems, there's rules behind that and so good designs will have rules anyway.</p>
+  <p>I guess the difference is, making those rules clear and bringing them out and showing them. Like sometimes it's retro-active; well, let's slap on some translucent pink columns to show what the grid looks like. Nobody yet has decided to slap on a golden ratio Fibonacci swirl onto their design, so that's good, right?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's very good!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> You know what I mean about the retro-active… oh look, it's a system; it's totally a system here! But you know, we're still figuring this stuff out.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's better that you're pre-emptively getting the designers to think in that way because again, historically, comps have been thrown in my face and I'm like, well, what about this or what if you add this in here, and they're just no system whatsoever and instead of, oh yeah, I guess that should be more consistent it's Brad, you're being difficult!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Why can't you just build it? Why can't you just do what I…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Can't you just make the thing? And it's like well, technically I can but that doesn't mean it's going to be good.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> So, what tends to happen on projects is that there'll be some lead in with visual design and the visual design would probably begin a bit before front end dev, although it's always good to have a front end dev around to just look over your shoulder and check stuff.</p>
+  <p>Then you have a period of both visual design and front end dev happening together, kind of back and forth where, get it into web browsers, look at it and maybe adjust the visual designs, but then there comes a point where it's like, it's not worth going back into Photoshop, Sketch, Illustrator, whatever your tool is, at this point; we just need to be doing this in browsers and there's no point, it's just wasted effort, to reflect those decisions and those changes in the visual design files because those visual design files aren't the deliverable: those are tools to get you to the deliverable, which is the final website.</p>
+  <p>So, it's different from project to project where that point is, the point at which you don't need to go back to the visual design files at this point; let's just sit together and make changes in CSS Web Inspector.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, working with Dan it will fantastic because we'd do everything in the browser and then it'd be like, at this point in time, things are just looking really awkward and so we'd actually just go in and screenshot things and fiddle with things, move them around in Photoshop and then say, how about this? And what we found is that the vast majority of what he was producing was mostly meant for me; it wasn't that sort of client deliverable.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I don't think they thought that much about making it public but boy, did that ever get press: it was like, wow, this huge coup for them, it was great, so I think they're very, very happy they did make it public.</p>
+    </blockquote>
+</aside>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, it's not for sign-off.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That sort of client deliverable sort of thing, yeah, which is great. </p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Exactly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, you've been involved with quite a few of, actually a lot of our guests; you've touched or influenced in some way a lot of the thinking about style guides and pattern libraries and all of this stuff. We had Lincoln on, formerly of Starbucks. Do you want to share that story real quick about how that came to be?</p>
+</div>
+
+ <span class="timestamp">(24:50)</span>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Like I said, at Clearleft I'd been thinking about the system thinking for quite a while and I mentioned Natalie, and when Natalie left we had <a href="https://twitter.com/andyhume">Andy Hume</a> working at Clearleft, a great front end developer. And he was giving a talk at <a href="http://sxsw.co.uk/">South by Southwest</a> a few years ago, about <a href="http://schedule.sxsw.com/2012/events/event_IAP9410">CSS systems</a>; now this wasn't necessarily pattern libraries; things like <a href="http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/">OOCSS</a> and <a href="https://smacss.com/">SMACSS</a> and <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a> and all this stuff, just a way of approaching CSS in a more engineering kind of way, I guess.</p>
+  <p>But he did talk about style guides, the concept of style guides. Specifically he mentioned that the <a href="http://www.bbc.co.uk/gel">BBC had this GEL, this Global Experience Language</a>, which the whole organisation uses. But he pointed out that one of the problems with GEL is that it's in a PDF and it would make much more sense for it to be in HTML, to be in the final medium.</p>
+  <p>It was quite fascinating: when it got to the Q&amp;A, somebody stood up and said, "I'm from the BBC and I'm from the GEL team" and I was kind of thinking, oh shit, Andy's in for it now, but the guy was like, no, you're absolutely right, it makes no sense that it's in a PDF, it should be in HTML. Oh, thank goodness!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>It's not that you're going to take that actual code, you're not going to take their mark-up or their CSS and use it in your own side, but to see how they've approached it and what the thinking was behind it…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> After this great talk, all these people were coming up to chat to Andy about this, and I was hanging out because I wanted to congratulate Andy and say, great job with the talk, and so this guy starts chatting to me, says he's from <a href="http://www.starbucks.com/static/reference/styleguide/">Starbucks</a>; it's Lincoln and we're having a chat and he says, you know we actually have a sort of style guide like the BBC thing except it is actually in HTML and CSS and my first question was, "Is it public?" And he was kind of like, no, he hadn't thought about it, so I was like, "Why don't you make it public?" and that's kind of my default reaction when people get in touch with me or come over and say, hey, we've got a style guide or pattern library or whatever, because I've been blogging about it and talking about it, my first question is, "Is it public, and can you make it public?"</p>
+  <p>And they did, the Starbucks guys made it public and I don't think they thought that much about making it public but boy, did that ever get press: it was like, wow, this huge coup for them, it was great, so I think they're very, very happy they did make it public.</p>
+  <p>And in general I just love to see people sharing things. Style guide, but in general I like when people blog, I like when people say, hey, I solved this problem and here's how I did it; this worked for me, maybe it won't work for you but I'm going to document what worked for me.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>whenever you think about how you actually reach people and get people on board and everyone is always struggling to hire talented folks, it's like, you need to show them the goods, you need to show them what you can do, and I think that these style guides are a great way to show, look, we're working using modern techniques, modern technologies, we can show off how we do things and that becomes a massive recruitment tool</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's kind of how the whole web works.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Exactly. When I was first learning to make websites I was viewing source, I was on mailing lists, I was reading <a href="http://alistapart.com/column/doctor-is-in">Ask Dr Web on zeldman.com</a>; these people were just sharing their knowledge and I want to make sure we keep that and whatever new thing comes along in front end development or visual design or whatever, I like it that our default position should be, let's share this, let's just put it out there. Even if it's something that's clearly just for you; I link to style guides all the time. Just last week there was, let's see, <a href="http://purple.herokuapp.com/">Heroku put one live</a>…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, it's beautiful.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> <a href="https://github.com/styleguide">GitHub</a> updated theirs, they put theirs out there, and I say in the link, this is really only useful for the people at Heroku and GitHub but check out how they're doing it, to see how other people are doing it.</p>
+  <p>It's not that you're going to take that actual code, you're not going to take their mark-up or their CSS and use it in your own side, but to see how they've approached it and what the thinking was behind it and go, oh, I see, and that can influence your own way and what works for you is going to be completely different to what works for Starbucks or MailChimp or Heroku or GitHub, but the fact that you can look at these other examples is fantastic.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yep, and it's not all idealistic, although I'm fully supporting that obviously, but guest after guest, one of the reasons why we even have them on is because their style guides are live so that we could look at them but especially with people like <a href="https://twitter.com/jina">Jina Bolton</a> at <a href="http://sfdc-styleguide.herokuapp.com/">SalesForce</a>, she specifically joined their team because she was in love with their style guide and I get really frustrated, because I talk a lot about sharing and being open and all of that stuff and it's always, oh my boss won't let me or oh, whatever, and it's like, whenever you think about how you actually reach people and get people on board and everyone is always struggling to hire talented folks, it's like, you need to show them the goods, you need to show them what you can do, and I think that these style guides are a great way to show, look, we're working using modern techniques, modern technologies, we can show off how we do things and that becomes a massive recruitment tool, which is awesome.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yep, and my general attitude with a lot of this is, it's easier to ask for forgiveness than for permission.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Totally.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Just go and do it and if you get flack from the boss, even though you're getting all this great, positive press say, oh sorry, do you want me to take it down now? And then you should say no, well now you've done it… that was kind of my attitude with stuff like the <a href="http://clearleft.com/testlab/">Open Device Lab</a>, I basically just threw the doors open and said hey, anyone can use these devices, without stopping to think or check whether that was OK or what's the worst that could happen? It's more like, I'll just do it and see what happens and it's fine; everything's fine.</p>
+</div>
+
+ <span class="timestamp">(30:11)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So, something that I'm quite interested in is, as an agency, how do you, ensure that these style guides are maintained by the client?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think it's really interesting that most of the examples out there are from companies and products rather than agencies: the examples of style guides, a lot of your guests on the show, they've made this internally, they own it, they've put their blood, sweat and tears into it; I'm not so sure whether you can be as invested in something that you get given, something that's handed over to you…</p>
+    </blockquote>
+</aside>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> So, that's a good question. In a way it's begging the question, because I'm not sure that the…well, first of all, let's step back a bit. The terminology here, I'm going to talk specifics about pattern libraries.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh, here we go! We were just talking about this!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Right. What's a style guide? What's a pattern library?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's worth discussing for sure.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> OK, my take is, what we tend to be talking about at Clearleft because as I said, the audience for this deliverable we're building is other developers; it's not decision-makers, it's not designers. It's developers who have to actually put the site live. And for that reason, the best way I think to describe what we're providing is a pattern library; it is literally a library of front end patterns.</p>
+  <p>Now, a pattern library I think can be part of a style guide, and a style guide could contain other things. It could contain tone of voice; it could contain here are the colours, here are the font choices, here are… the classic style guide stuff around where the logo is positioned relative to corners…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Brand style guide.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Right, brand style guides. So I guess a pattern library would be a sub-set, a specific sub-set of style guides, so just having cleared that up, what I'm talking about here is pattern libraries.</p>
+  <p>In the case of Clearleft, an agency handing over a pattern library as a deliverable, I don't think what we hand over is necessarily what should be maintained. In a way, what we're handing over's kind of a one-time thing saying OK, as part of our engagement, we did the design work, we created a pattern library: here you go, we think this is what you need to go on from here.</p>
+  <p>Now, we might highly recommend that that company have their own pattern library, have their own style guide, pattern library and more, but whether they choose to use our deliverable as the starting point for that or not is up to them. It would make sense in a lot of cases that OK, we'll take what Clearleft has given us as a starting point and going forward we'll be maintaining it, we'll be adding to it, we'll be changing it, but it might also be that for to really be owned by an organisation, the organisation kind of has to make it themselves, that it isn't something they've inherited, it's something that comes from within.</p>
+  <p>I think it's really interesting that most of the examples out there are from companies and products rather than agencies: the examples of style guides, a lot of your guests on the show, they've made this internally, they own it, they've put their blood, sweat and tears into it; I'm not so sure whether you can be as invested in something that you get given, something that's handed over to you, so that might be a bit controversial, but the way I see the pattern libraries that Clearleft are building is not necessarily as things in of themselves to be maintained, but maybe only as starting points.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So kind of blueprints for building the site?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, these are deliverables, we think they're superior than to delivering pages; we think they're definitely superior to delivering comps but there's a whole step again I think into having this kind of living, maintained style guide, and I kind of feel that that needs to come from inside the company.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, it absolutely does and I think it's interesting talking to Dan on an earlier episode, Dan Mall, he was talking about his own work and it is, because you don't work for them so you can't change their culture to make this a priority for them; it has to come from within, but I think that the opportunity for people working on a contract or agency relationship, what Dan was saying is he's sort of built it into his contracts now, wherever he is.</p>
+  <p>The idea typically is, what we're handing off is something that should take root and you should develop further and what he's been baking into his contracts has been, I'm going to check in, in a few months and we're going to see how this thing is working out for you. I thought that that's just the freaking smartest crap because one, that's more money and more opportunity for the contractor; it's not just like, oh well, they just threw it in the trash can so shrug your shoulders and move on to the next gig; he's building it in as an opportunity to help them through.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, we try wherever possible to have that built into contracts to say, we hand over a pattern library and in a way, that marks the end of our work together, but we want these extra few days, one in a week's time, another in maybe three weeks' time, another in six weeks' time, these regular intervals, to check back in because that's the only way you'll ever find out: how clear was this library? How good was the documentation that a company did? How self-explanatory were those class names that we thought were so great?</p>
+</div>
+
+ <span class="timestamp">(35:15)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Didn't you guys just go through that with Clearleft or with <a href="https://style.codeforamerica.org/">Code for America</a> with the project?</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> That was an interesting one because that was to do with the audience. As I said, usually the audience as in for the pattern library will be developers, other developers either front end or back end developers who are taking this and implementing it, and it was really interesting with Code for America, so we had Anna working with us, which was great, and in the first round we made sure that the CSS was really robust, putting in a lot of the current thinking about really maintainable, robust CSS, which means there's a trade-off in the HTML where maybe you've got a lot of class names.</p>
+  <p>But if the developers are the ones doing the HTML and CSS that's absolutely fine. Now, as it turned out with Code for America, the developers weren't necessarily the ones doing the HTML, because lots of different people were creating new sites or new pages, copying and pasting this stuff, and while it's perfectly reasonable to expect those people to understand, say, basic HTML, what a paragraph tag is, what an <code>H1</code> is, it's not really fair to expect these people who aren't developers to now have to learn a whole another vocabulary which has these great class names we've come up with, right?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> And so the second phase of work was really interesting where we started to take some of this complexity that we offloaded the HTML and put it back into the CSS, and we made it clear in the second look, we think this CSS is now actually a bit less maintainable, a bit more brittle, it isn't as robust as what we first delivered, but it is the right thing to do for this audience because the people making the pages aren't necessarily developers, so that was really interesting in a kind of every project is different and there's no right answers and there's no one true way of doing this stuff: it was a great experience.</p>
+  <p>It was also frankly great to have a client where we got to re-visit stuff, because so often, you do your work for them and then it goes live or it goes out and then you see all the stuff that you could've done better or could've been fixed but now that it's actually live, you want to iterate. And that is one of the downsides of agency work as opposed to product work, is maybe you miss out on the chance of iteration, of being able to re-visit stuff, so the Code for America project was great for a number of reasons, but one of them was the fact that we had a second round that we got to iterate, re-visit the stuff and check our assumptions and re-visit the things we'd decided in the first round.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That was a real eye-opener; I really enjoyed doing that.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Yeah, it was good; it was good to see how something we thought was fairly fundamental was maybe not necessarily true and so we need to re-visit it, but that's OK; it was all out in the open, it was all clear what the problem was and it was a great project.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I'm not speaking because Anna hasn't talked for a while!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh, sorry!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Awkward pause!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Awkward pause! That's right!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Just sometimes when I do this I think that I'm actually listening to the podcast rather than…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> This is great!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, keep talking!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Are you on a treadmill right now? Just running along.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I've gone so red!</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> That reminds me; apparently there's a story of <a href="http://en.wikipedia.org/wiki/Peter_O%27Toole">Peter O'Toole</a> being at the theatre, he was taking some friends to the theatre and they're sitting in the audience and he goes… oh this next bit is great, this is the bit where I come on. Oh shit!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's excellent! OK, well all right. Looking at the time, I actually think that we need to wrap up anyway, so maybe it is good that we don't continue on, although I'm sure we could talk all day.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I really want to but I also know Jeremy probably needs to eat his dinner.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> You know me; you know once you wind me up and get me going, it's hard to shut me up. I can talk about this stuff all day but yeah, we should probably be merciful upon the ears of the listeners!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Well thank you, dear listeners, for hanging in there! We covered a lot of meaty bits; I feel like it's all right to end on a light-hearted note, I think.</p>
+  <p>But seriously, thank you so much for coming on the show and thank you so much again for your advocacy. It definitely has had a snowball effect; this podcast wouldn't have existed if the Starbucks style guide weren't released and so it is as a testament to the openness and sharing nature of the web that this all compounds on itself and thankfully we have people like you that instigate and prod and get people to open up. So, thank you so much for all of that.</p>
+</div>
+
+<div class="jeremy-keith guest">
+  <p><b>Jeremy</b> Well, thank you guys for doing this podcast for the same reason: getting people to share what they know.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Awesome. Well, that's it for this episode of the Style Guides Podcast. Thanks again for listening and thanks Jeremy for being on and we will see you again. Bye!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
