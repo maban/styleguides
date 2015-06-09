@@ -1,5 +1,5 @@
 ---
-title: Voice, Tone, and Style: The Whys, Wheres, and Hows
+title: Voice, Tone, and Style - The Whys, Wheres, and Hows
 link: https://blog.gathercontent.com/voice-tone-style-whys-wheres-hows
 author: Lauren Pope
 site: Gather Content
