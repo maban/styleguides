@@ -1,6 +1,6 @@
 ---
 title: Frisbee Fodder
-link: http://frisbeefodder.com/
+link: http://frisbeefodder.com/styleguide
 author: Ben Brignell
 type: Web and content Style Guide
 image: frisbee-fodder.jpg
