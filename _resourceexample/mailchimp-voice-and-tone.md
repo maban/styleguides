@@ -5,7 +5,7 @@ author: Mailchimp
 type: Content Style Guide
 status: recommended
 image: mailchimp-voice-and-tone.png
-tags: 
+tags:
 - voiceandtone
 - writing
 - designlanguage
