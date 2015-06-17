@@ -1,0 +1,7 @@
+# Pull gems from RubyGems
+source 'https://rubygems.org'
+
+# Github pages
+# https://github.com/github/pages-gem
+# https://pages.github.com/versions
+gem 'github-pages'

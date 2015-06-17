@@ -4,22 +4,10 @@ description: A collaborative collection of resources for creating Front-End Styl
 baseurl: ""
 permalink: pretty
 
+# Config
+exclude: [README.md, Gemfile, Gemfile.lock, "vendor"]
+gems:
+    - jekyll-redirect-from
+
 # Build settings
 markdown: kramdown
-
-collections:
-    resourcearticle:
-        output: true
-    resourcebook:
-        output: true
-    resourceexample:
-        output: true
-    resourceguide:
-        output: true
-    resourcepodcast:
-        output: true
-    resourcetalk:
-        output: true
-    resourcetool:
-        output: true
-    
