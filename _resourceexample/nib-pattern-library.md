@@ -8,4 +8,4 @@ tags:
  - web
 ---
 
-[Nib Private Health Insurance](https://www.nib.com.au/) pattern library for the web by [@thd)](https://github.com/thd).
+Nib Private Health Insurance pattern library for the web.
