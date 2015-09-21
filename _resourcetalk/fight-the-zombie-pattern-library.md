@@ -7,4 +7,4 @@ date: September 18, 2015
 image: fight-the-zombie-pattern-library.jpg
 ---
 
-An optional short description of the talk goes here
+A look at repeatable processes to implement Pattern Libraries in your product design and development workflow, so you can fight the slow rot of your interface design (and its underlying code) as your product grows and evolves.
