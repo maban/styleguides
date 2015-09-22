@@ -1,5 +1,5 @@
 ---
-title: Style Guide Driven Development: A How To Guide To Improve your Development Workflow
+title: Style Guide Driven Development - A How To Guide To Improve your Development Workflow
 link: http://blog.bitovi.com/style-guide-driven-development/
 author: Adriana De La Cuadra
 site: Bitovi

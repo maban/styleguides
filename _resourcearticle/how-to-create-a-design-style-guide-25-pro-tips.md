@@ -1,5 +1,5 @@
 ---
-title: How to create a design style guide: 25 pro tips
+title: How to create a design style guide - 25 pro tips
 link: http://www.creativebloq.com/design/create-style-guides-1012963
 author: Paul Wyatt
 site: Creative Bloq
