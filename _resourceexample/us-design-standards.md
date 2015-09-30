@@ -2,6 +2,7 @@
 title: U.S. Design Standards
 link: https://playbook.cio.gov/designstandards/
 image: us-design-standards.png
+status: recommended
 tags:
  - frontend
  - patterns
