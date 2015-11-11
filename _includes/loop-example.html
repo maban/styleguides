@@ -1,0 +1,26 @@
+<li class="resource {{ example.status }}" data-tags="{% for tags in example.tags %}{{ tags | downcase }} {% endfor %}">
+    <a href="{{ example.link }}" class="resource-url">
+        {% if page.type != "home" %}
+            {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
+        {% elsif example.status == "recommended" %}
+            {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
+        {% endif %}
+        <span class="resource-description">
+            <h2 class="resource-title">{{ example.title }}</h2>
+
+            {{ example.content }}
+
+            {% if example.author %}<p class="resource-author">{{ example.author }}</p>{% endif %}
+
+            {% if example.site %}<p class="resource-site">{{ example.site }}</p>{% endif %}
+
+            {% if example.tags %}
+                <ul class="resource-tags">
+                    {% for tags in example.tags %}
+                        <li>{{ tags }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </span>
+    </a>
+</li>

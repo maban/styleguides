@@ -1,8 +1,8 @@
 ---
-title: Wordpress Brand
+title: WordPress Brand Guidelines
 link: http://wordpress.org/about/logos/
-author: Wordpress
+image: wordpress.jpg
 type: Brand Guidelines
-tags: 
-- brand
+tags:
+- branding
 ---

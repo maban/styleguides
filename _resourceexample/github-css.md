@@ -1,10 +1,10 @@
 ---
-title: GitHub CSS Styleguide
+title: 'Primer: GitHub CSS Styleguide'
 link: https://github.com/styleguide/css
-author: Github
+image: primer.jpg
 type: CSS Style Guide
-tags: 
+tags:
 - code
 ---
 
-Github's guidelines on writing CSS
+The CSS toolkit and guidelines that power GitHub.

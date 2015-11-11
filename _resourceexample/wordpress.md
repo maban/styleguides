@@ -1,11 +1,10 @@
 ---
-title: Wordpress Coding Standards
-link: https://make.wordpress.org/core/handbook/coding-standards/css/
-author: Wordpress
-type: CSS
-tags: 
+title: WordPress Coding Standards
+link: https://make.wordpress.org/core/handbook/coding-standards/
+image: https_make.wordpress.org_core_handbook_coding-standards_.jpg
+tags:
 - code
 - frontend
 ---
 
-A baseline for contributing CSS to Wordpress Core
+A baseline for contributing CSS, HTML, JavaScript, and PHP to WordPress Core

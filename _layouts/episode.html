@@ -1,0 +1,43 @@
+---
+layout: episode
+---
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body class="template-{{ page.section }} template-episode">
+  {% include header.html %}
+
+  <div class="page-content">
+    <div class="wrapper podcast-episode">
+
+      <h1>Style Guides <span class="fancy">with</span> {{page.title}}</h1>
+
+      {{page.audio}}
+
+      {% include podcast-actions.html %}
+
+      <section class="bio">
+        <h2>About {{page.title}}</h2>
+        <p>{{ page.about }}</p>
+      </section>
+
+      <section class="episode-links">
+          <h2>Links</h2>
+          <ul class="links">
+              {% for item in page.links %}
+              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+              {% endfor %}
+          </ul>
+      </section>
+
+      <section class="transcript">
+        <h2 class="heading">The Transcript</h2>
+        <p class="credit">Transcribed by <a href="http://amddat.com/">Alison</a></p>
+        {{ content }}
+      </section>
+
+    </div>
+  </div>
+
+  {% include footer.html %}

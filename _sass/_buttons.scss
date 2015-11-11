@@ -1,0 +1,40 @@
+.button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: normal;
+    margin: 0.25em;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.template-podcast .page-content .button {
+    background-color: $color-4;
+    color: #fff;
+    border: none;
+    &:hover,
+    &:focus {
+        background-color: $color-4-darken;
+    }
+}
+
+.site-footer .button {
+    border: none;
+}
+
+.site-footer .button-github {
+    float: right
+}
+
+.button.disabled {
+    opacity: 0.5;
+    background-color: #ccc!important;
+    &:hover,
+    &:focus {
+        background-color: #ccc!important;
+    }
+}

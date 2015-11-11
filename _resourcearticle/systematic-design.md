@@ -6,4 +6,4 @@ site: mailchimp.com
 status: recommended
 ---
 
-Federico Holgado of Mailchimp explains how modular design systems from other industries applies to constructing our own interfaces.
+Federico Holgado of Mailchimp explains how modular design systems from other industries apply to constructing our own interfaces.

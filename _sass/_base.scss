@@ -1,3 +1,31 @@
+// Podcasts
+$color-1: #F3B8B3;
+$color-1-darken: #EFAAA4;
+
+// Books
+$color-2: #F1DF80;
+$color-2-darken: #DAC462;
+
+// Articles
+$color-3: #C5E17F;
+$color-3-darken: #B7D176;
+
+// The Podcast
+$color-4: #6CBCCA;
+$color-4-darken: #5595A0;
+
+// Examples
+$color-5: #A6DAD0;
+$color-5-darken: #89C2B6;
+
+// Tools
+$color-6: #B3B2D8;
+$color-6-darken: #9C9BC6;
+
+// Talks
+$color-7: #D7A8D7;
+$color-7-darken: #C28EC2;
+
 /**
  * Reset some basic elements
  */
@@ -38,14 +66,16 @@ ul, ol, dl, figure,
 
 
 /**
- * Images
+ * Media
  */
 img {
     max-width: 100%;
     vertical-align: middle;
 }
 
-
+audio {
+  width: 100%;
+}
 
 /**
  * Figures
@@ -91,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
+    font-weight: normal;
 
     &:visited {
         color: darken($brand-color, 15%);

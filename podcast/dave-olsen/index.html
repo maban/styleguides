@@ -1,0 +1,550 @@
+---
+layout: episode
+section: podcast
+number: 4
+title: Dave Olsen
+image: dave-olsen.jpg
+about: <a href="https://twitter.com/dmolsen">Dave</a> is a programmer and project manager at <a href="http://www.wvu.edu/">West Virginia University</a>. He also helps build <a href="http://patternlab.io/">Pattern Lab</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/190920076&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Pattern Lab", url: "http://patternlab.io/", type: "tool"},
+    {text: "West Virginia University", url: "http://www.wvu.edu/", type: "site"},
+    {text: "Sass", url: "http://sass-lang.com/", type: "tool"},
+    {text: "Ish", url: "http://bradfrost.com/demo/ish/", type: "tool"},
+    {text: "Sparkbox", url: "http://seesparkbox.com/", type: "site"},
+    {text: "Jekyll", url: "http://jekyllrb.com/", type: "site"},
+    {text: "Mustache", url: "https://mustache.github.io/", type: "tool"},
+    {text: "Bower", url: "http://bower.io/", type: "tool"}
+]
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hello everyone and welcome to another edition of the Style Guides Podcast, which is a podcast all about style guides, pattern libraries, brand identity, guidelines and all sorts of things around standardising our design workflow. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we are ultra excited to have developer extraordinaire, Dave Olsen with us. Dave; thanks for joining us.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> thank you very much for having me.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, before we dive into everything and unveil your true identity, why don't you tell us about your day job: where do you work, what are you doing at work and just give everybody an idea where you're coming from?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> So, I'm a developer at <a href="http://www.wvu.edu/">West Virginia University</a> and I guess my role is to help push technology and push processes for our central web unit and so I try to take things from industry and make our jobs better and lives better here at the University.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome. So you're working, not on specific things, but more overall strategy, initiatives and technology?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Well, as is the case in Higher Education, we have to wear many hats but I think the thing I most love is doing that kind of strategy and thinking out where things are going. I do have to every now and then drop in and do real code but thinking about the strategy is the best part.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, always good to keep the knife sharp, that's for sure. So, in addition to your job at West Virginia University, you also developed this tool that I've heard of, called <a href="http://patternlab.io/">Pattern Lab</a>.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, I help contribute to Pattern Lab. I follow the guidance of a wonderful person named Brad Frost who gives me some great direction on what to do and make dreams happen, I think that's my job!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Ahhh, that's nice!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> (laughs) Wear wings! Take dream! That actually is a very accurate depiction of our relationship. Our workflow goes as follows: "Dave, it would be really cool if Pattern Lab could do this." And then an hour later, "it's in dev"!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…rather than doing a static comp and just crossing our fingers that that's all going to work out, we give a true representation to clients about how everything's going to work together…</p>
+    </blockquote>
+</aside>
+
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> (laughs)</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It's amazing!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Well, it used to be like that. Now it's like: four months later, yeah, I'll get back to it!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hey man; life gets in the way. It's actually really staggering to see all the effort you put forth with turning Pattern Lab into a really great and really well polished tool, all in free time. This is all open source project; this is out of the goodness of your heart and I think that it's just absolutely amazing to see a lot of people really latch onto it and use it successfully to create their own pattern libraries and style guides. Actually, let's take a step back and actually introduce… how would you define what Pattern Lab is?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> For me at its core actually Pattern Lab is a tool for designers and developers to communicate with their clients about what they're trying to do with the web and how the web content's actually going to respond for real. So, rather than doing a static comp and just crossing our fingers that that's all going to work out, we give a true representation to clients about how everything's going to work together and so that's my 30,000 foot look at what Pattern Lab is.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Definitely I would say that in my own work as a Pattern Lab user, that's very much been the case; it's helping people understand that yes, of course we're making you a new website, of course we're building a final product, but there's actually a lot of thinking in this underlying system that goes into arriving at that final product and the ideas that we're trying to build things and construct things and design things in a really deliberate way that's built for consistency, re-use and extensibility into the future.</p>
+</div>
+
+<span class="timestamp">(5:02)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Dave, do you get a chance to use Pattern Lab in your own work or in personal projects?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> I am not really able to use Pattern Lab in personal work and I think that's one of the things I've learned about style guides and style guide tools is that they really have to be amazingly tailored to your own environment and your own stack, so Pattern Lab is PHP and it's going to play really nicely with PHP based templating engines and that kind of stuff, so make a workflow go from Pattern Lab to a production system. At West Virginia University we use Ruby on Rails so Radius as our template, so we have a whole other setup to actually do patterns. And that work though, the really nice thing about that, is that work is now influencing Pattern Lab 2.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…we're getting to the point where you can actually install individual patterns, so you can create HTML CSS and use whatever you want, <a href="http://sass-lang.com/">Sass</a>, whatever it is, and have things magically installed from one version to the next; it's going to work with Node; it's going to work with .net; it's going to work with the PHP version.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, so let's talk about that, because Pattern Lab is essentially… it's a PHP static site generator at its core, and PHP is sort of the engine, but really that's neither here nor there. That's how I discuss it. You have a templating engine sitting on top of that core engine and really PHP or the Node port or the .net port is really just how that engine is constructed in stitching things together.</p>
+    <p>But with the new version of Pattern Lab, you sort of blew everything apart and made it really modular so that people working in Node or people working in PHP or people working in really whatever can all leverage the same tools, so do you want to talk about that strategy of how you're trying to make Pattern Lab accessible to people no matter what their environment is?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> So, Pattern Lab currently is this big monolithic thing that you download and you use, so you have the starter patterns which we don't really want people to use, but they're there, and a very simple engine in terms of Mustache and it's just this big, one zip.</p>
+    <p>And what the next version of Pattern Lab is it really starts breaking things apart, so we have a separate viewer at that front-end that anybody can use. They can actually start swapping out front-end, so if you don't like our style of front-end, you don't like the top nav, you can swap that out; start being able to swap out again, rendering engines.</p>
+    <p>Right now we're stuck with Mustache but if you want to use Twig because you really like Drupal, you can do that. You can use Blades if you're on Symphony. That's still PHP specific but again, it's this idea of making things a little more plug-in-play for someone's environment. And then we're getting to the point where you can actually install individual patterns, so you can create HTML CSS and use whatever you want, Sass, whatever it is, and have things magically installed from one version to the next; it's going to work with Node; it's going to work with .net; it's going to work with the PHP version. So, yes, the engine renders it and that's PHP for my edition, but the rest of the bits can actually be done and be used with whomever's implementation.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> How easy is it to separate the style guide itself, the styles for the style guide, from the ones for the actual site you're building?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> It's actually really easy, because what we've done primarily for the style guide is just name spaced all the CSS classes, so, all the things that have that view of a style guide. That's all just name space for our own thing and that's there, and then everything else that you want to do…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, I do that too!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> ...that you want to do is just what you did. So yeah, it's just name space classes.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I add two Xs before all the classes that I'm using in the style guide itself, so that all of the styles are very separate for that.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> We have some strange conventions as well to make it work!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I think it's like sg- so it's sg for style guides so it's like sg…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Because you want it to be something that's not going to be used.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> ….sg-header, sg-nav, sg-footer…</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, so that you don't run into conflicts. But that's the cool thing with Pattern Lab a little bit, and part of this was due to the fact that we wanted to show… there was a tool I made called <a href="http://bradfrost.com/demo/ish/">Ish</a>, that allows people to stretch and preview their responsive things without necessarily re-sizing the entire browser window, so we have this sort of layer outside of Pattern Lab, outside of the style guide, and what this does is, your code, the code that the user, designers and developers, are actually going to launch, is on this separate layer inside an iframe, and then all of Pattern Lab exists on this other layer.</p>
+    <p>And what that does is that prevents you from having these sort of mixing things together and it's like, oh, in order for Pattern Lab to run you need this version of JQuery and stuff like that. It's like, what we really set out right out of the gate, right Dave, is to allow people to write markup, write CSS, write JavaScript really however they want.</p>
+</div>
+
+<span class="timestamp">(10:47)</span>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> There's a little overlap just because we have to deal with the iframe and getting some navigation stuff to work, but for the most part we start to vanilla CSS, we start to vanilla JavaScript, so we don't have to worry about really clashing with whatever somebody's trying to actually put into their patterns, which makes things a little easier. It's not always perfect, but it's pretty close to perfect.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is Ish the thing where you can get the site to change size and there's one option that's something like Disco and just goes crazy and starts shrinking and getting bigger and…</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>we wanted to make sure that all that really good design thinking that's historically happened in some two hundred page pdf actually made it into the final living, breathing style guide</p>
+    </blockquote>
+</aside>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeeess.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Who did that?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yup</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That was me. That was me. Do, Disco… and this is actually really important; on the topic of style guides and pattern libraries, one of the absolute biggest benefits I've found is to be able to demonstrate the responsiveness of the component…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And see it all in one place.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> To be able to… so it does become this nice design development tool, this ability to re-size the viewport, but it's really more, Dave, back to what you were saying about educating people on, this is what we're doing and this is how this is going to react…</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, and it's one of the nice things, we have annotations as well in Pattern Lab to help again, communicate to somebody, this is why the header's going to do this and we go even so far as to say, this annotation's hidden at this break-point, that kind of thing. Again, just to communicate is ultimately the goal.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Do you mean annotations like annotations for the code or for the pattern itself?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> For… it's more granular. They actually associate like with CSS selectors, so you can say, class masthead gets an annotation that explains why we would have a masthead in the website and what point it changes, that kind of thing.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And is that brought through into…</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> More describing elements of a page or elements that are within a pattern, as opposed to anything specific to that; as opposed to the pattern itself, I guess.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, what it does is it tries to get, and part of the rationale for that, was really trying to make that deliverable in …for me, whenever Dave and I started working together on Pattern Lab, we were essentially responsible for delivering front-end code production-ready front-end code to the client, and then they would integrate that into a back-end system, and so as part of that delivery, we wanted to make sure that all that really good design thinking that's historically happened in some two hundred page pdf actually made it into the final living, breathing style guide so that we could talk about things like, oh, or this image gallery, if you're on a touch-enabled device you'll be able to swipe through and here's how that's accomplished, and the annotations in Pattern Lab actually give you a place to do it, and Dave did such… how did you actually make that happen, 'cos it's something like… it's just like a little bit of JSON or something where you basically just describe what the element is and then give the annotation a title and a description, right?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, and then just essentially uses again, the class, like a quasi-CSS selector, it attaches a number to it. It's really not amazingly difficult. It's also a little quirky because it wants to insert divs and stuff that in some tags that don't support it, so it's amazingly simple in that way but yeah, it's a really straightforward selector, title, description and you're done.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's hot. So for WVU's Rails version of your Pattern Library, how are you handing annotation in that same sort of communication that you're talking about?</p>
+</div>
+
+<span class="timestamp">(15:07)</span>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> So for our patterns, I think we have a slightly different audience than we do with Pattern Lab. Pattern Lab is born out of that communication with TechCrunch and Entertainment Weekly, and so that talking to a client was really specific. Our patterns are more about sharing with our designers across campus, so we have a distributed model of having designers who are in individual colleges, and the designers are net necessarily… some of them are ahead of us, but some of them aren't necessarily up to speed, so what we do with our patterns is really just making CSS and markup easily available to them to include in their own designs and they get to handle how they talk to a client, so that's where our patterns are is, take this chunk of markup and styles, incorporate it into a theme and they go figure it out with their client how they're going to explain things.</p>
+    <p>So it's not a one-to-one. But it is a good way of thinking about how patterns could be re-used and how we enforce brand. That's kind of a key thing for us as a central department is, how do we make sure everyone's on point in terms of brand and fonts and all that kind of good stuff.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's fascinating. So let's actually talk about that, just because you're at this University, you have loads of different schools and initiatives and competing priorities and all of this stuff, and whenever you're talking about establishing brand guidelines and standard and pattern libraries, how do you simultaneously enforce that brand, enforce that consistency, but still give people the wiggle-room they need for specific goals or specific initiatives?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> I think people don't need terribly much wriggle-room, as long as you gave them the tools to do it the right way. I think that's what we've found over the last four or five years; the more tools we give, the more people are likely to go in and as long as they can fit their title in, they're actually pretty happy. Variation has lessened, I guess, over the last few years.</p>
+
+    <p>Importantly though, we're going to be doing a new brand roll-out, so that's where patterns adding in this enforced new typography and being able to version patterns comes in amazingly handy, so now we can basically say, update to Version 1.2 and now you have the whole new brand and everyone's happy and they just keep moving on, keep chugging along, doing their own projects. So that's I guess how we're doing stuff.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Does the web designer tool influence, say, print design because if the Universities in America are anything the Universities here, a lot of money is spent on things like prospectuses and just print material, and you either get a situation where it's the print design that leads all the branding and the website kind of has to fit towards that, but more and more I'm seeing it the opposite.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> I would say we're probably still print to a degree leading the design for the most part.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> The brand design?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> The brand design, and the brand element and the discussion regarding brand. It's pretty fascinating being quite in the middle of it now. It's not that bad, it's just making both our external partner in the brand aware of various issues and various, quite frankly, opportunities with web fonts. "Hey, you guys chose font A for the print materials for this kind of heading; we can actually do that online. Do you want us to do that online?"</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Ah yeah, that's awesome!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> That kind of thing. Not that web fonts are perfect, but it is a way of again us standardising to a degree.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Sure, in helping educate those other people to consider how that stuff is going to affect the web.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah. So, we have a print style guide and we're now currently working on the web version of that, and for me the most important thing is not just; hey, there's this dead tree document that you can go look at and hopefully figure it out, but with patterns, we can finally say, not only can you go refer to something, you can actually use this, and you just turn it on and you have everything you need and so we're happy, they're happy, namespacing, it makes everything amazingly simple.</p>
+</div>
+
+<span class="timestamp">(20:04)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, patterns have really opened quite a door here at the University, especially for branding purposes.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So do you get quite a few of the different schools having their own websites, like microsites, and wanting to use… say they want to grab the logo or something, and rather than then Googling it, they've actually got it there that they can use?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Exactly, yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> The right version.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b>The right version and the right links, so let's say I think our big concerns currently tend to be a header and a footer; it's pretty simple.</p>
+    <p>We wanted to move into the realm of offering much more dynamic things like slide-shows to make their lives easier, because everything's political here, so we're going to have a slide-show!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, like any university!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah! But we want people to do that well in an accessible format, that kind of thing, but just in terms of headers and footers, at the University let's say we decide… there's some new social media outlet that we have to put on every web page because it's the hot new thing: with a pattern you could just be like, OK, we added it centrally and everybody just goes ahead with our updates, their own themes, and everybody's good to go and it's pretty sexy actually!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, how do you keep that in sync, because, say you changed the footer in the style guide, do you have to contact everyone and say "you need to update your footer", or is there something more dynamic?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> There's nothing more dynamic, we don't want to accidentally if somebody did something weird, we don't want to break a whole bunch… we don't want to surprise them. Luckily we already have a really good set of communication with the developers who would actually be doing it, and they're very responsible people, so they take care of it.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So you don't have it so it's automagically updated, there's like a communication layer that happens in order to deploy and update to a pattern?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yes, so we'll make a change to the pattern and then they would have to go out and actually update, in the same sense you have a dependency update for MPM and MPOWR, you would update it, so that makes life easier.</p>
+    <p>And that's the other thing is, we don't have this monolithic CMS and we don't have one monolithic set of templates so we've given a lot of people freedom in that way. That's where patterns come in really handy. We don't have to enforce one look.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> What is the CMS?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> The CMS is a home-grown CMS called… we have two: We have Slate, and we have CleanSlate, so CleanSlate's the next version I guess; it's Rails 3 and going to be on Rails 4 soon, so it's all in-house, we have it completely set up to… we have a workflow really set up for designers and for theming.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…a lot of it is this conversation that just keeps cropping up across the board: it's how do we integrate this stuff with all of our different clients' environments because there's just so many different back-end technologies and dependencies and versions…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And is that an in-house CMS?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome. So there's no Rails version of Pattern Lab coming soon? (laughs)</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> No. No Rails version of Pattern Lab coming soon; sorry.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's OK.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> But that goes down to dependencies, right?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Sure, sure. But again, from the sounds of it, the way that you're de-coupling the front end, like if you wanted to make that Ruby version of Pattern Lab or use the front end that we've developed for it, you'd be able to just rip that in there because that's all pretty static.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Exactly, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And then just plug in whatever engine you wanted to use.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, and if you wanted to use what we call starter kits, which is all the base patterns, you can do that, or develop your own that anybody could use on any language, yeah. It's kind of neat. That was an idea out of <a href="http://seesparkbox.com/">Sparkbox</a>, they kind of told us to separate the two. It was a really good point, so we did that.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and we went over to the people at Sparkbox over in Dayton, Ohio who do some really great responsive work and they were showing how they were using a pattern based workflow and they were really interested in the whole… a lot of it is this conversation that just keeps cropping up across the board: it's how do we integrate this stuff with all of our different clients' environments because there's just so many different back-end technologies and dependencies and versions and all of that, and it's like, how can Dave architect this pattern library tool to be malleable enough to just be able to easily be ported into whatever back-end environment people happen to be in using, and that was a pretty big challenge! They just put the challenge on the table and I think that you've been doing a great job at getting the next version of Pattern Lab ready for that.</p>
+</div>
+
+<span class="timestamp">(25:12)</span>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Well, I think the other thing is learning to accept the fact that if you want something that's going to be the end product is a Rails environment, you're pretty much going to have to write your core Pattern Lab for Rails, because you've got to get that final rendering engine. But we can make the bits interchangeable enough that we as a community can at least share bits to make lives easier.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right. So this is even a conversation; you really just need a bridge in order to create and maintain your style guide. You need some form of bridge and whether that's the actual back-end technology, but it's really about the templating language, because for example, if I have my <a href="http://jekyllrb.com/">Jekyll</a> site and that's using <a href="https://mustache.github.io/">Mustache</a> type conventions and I could name my variables certain names and swap in dynamic data, and Pattern Lab's also using Mustache, that creates that bridge; Mustache becomes the bridge and I can hypothetically export patterns from my style guide to my production environment.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, exactly. The template is the key to the whole thing.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, at <abbr title="West Virginia University">WVU</abbr>, you have these patterns and you have, it sounds like, these little micro-bundles of dependencies all managed through <a href="http://bower.io/">Bower</a>, how do you, in addition to the actual interface patterns, do you have code standards and other things like that and where do those live and how do people know to follow certain conventions?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> So, we do have loosely a brand centre right now which offers I think a kind of tone and voice and a certain set of guidelines, but I don't think we've gotten to the point where… I guess we've sort of started to get to the point where we're saying, here's naming conventions for Sass and we're all going to try and standardise on Gulp. I can't say that we've really wrapped our arms round that problem quite yet.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…we don't really want to just say "just". We don’t want to tell people, you can just go use Git and you can just go… everybody's at a different point in what they can do and what their jobs really allow them to learn…</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Hmm, so it's something where you have some biases, I guess, and you try to encourage that but there's no central place to manage that stuff yet?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> No. And it very much becomes politics. This is, how much do you think you can enforce and not get complaints up the food chain that then come down my side of the food chain?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right!  Fair enough!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> So we definitely encourage things and I think there are people who do do it well, but we haven't got to the point where it's like, this is the way to do it. A lot of that comes down to, I think, to the word "just", which you hate!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> And we have the same thing here. We don't want to really just… we don't really want to just say "just". We don’t want to tell people, you can just go use Git and you can just go… everybody's at a different point in what they can do and what their jobs really allow them to learn, so you try to let them be at least a little bit comfortable and if they want to move up and progress, we standardise things a little bit more for Sass but if you're just going to play in vanilla CSS, you can pretty much do what you want.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Right, so it sounds like your brand standards, your coding standards and even your pattern library to a degree are a little more suggestive or like, hey, here's a smart default you can use; we're not going to rule with an iron fist and make sure that, if you're not following the standards exactly how we wrote them you're going to be dragged through the quad!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>There's not that extra step of getting approvals for a design comp and then having to come back and go, "Yeah, so I know we showed X in the design comp but it really came out kind of Y".</p>
+    </blockquote>
+</aside>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> And the flip side of that is, if we did do coding standards, we can to a degree, with continuous integration, but I also don't want to be in the position to review you and tell you… oh you did deviate from our standards and now I have to pay attention to that, so it's more work for me to a degree too. That's the reality. So yeah, we're not going to rule with an iron fist. Again, the more tools you give somebody, the more likely they're just going to use those tools and default and just go with the flow. So we'd rather not be so prescriptive as much as, here's an actual thing to go use and do and then they're going.</p>
+</div>
+
+<span class="timestamp">(30:16)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> What's the workflow like, so when you get a new design for something, do you work straight into the style guide, or do you set up your own production environment?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I guess you could maybe do it with Photoshop or you could have comp layers or a base set that you started from. But having markup in CSS that you can really easily fiddle with and add to your project in and out, again makes things really fast and really easy, as opposed to trying to do it all in Photoshop.</p>
+    </blockquote>
+</aside>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> We all do local development; we have a tool called Hammer which…</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Oh yeah; love Hammer!</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Different Hammer actually.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Oh?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> It's kind of a common name. It might do a similar thing. So, we use a tool in-house Hammer, which is based on our CMS, so it has all the same kind of tags that you could use in the CMS and it does something very similar to Pattern Lab where it has the JSON or the external, so you don't have a whole database but you have this ability to set up mock data and so you can start designing in the browser.</p>
+    <p>Again, you can start importing all the patterns and that's a way for people to develop locally, have something they know's going to work in the final CMS but be able to preview it to whoever they need to preview it to and so again, the more tools we can give to people, the more they seem to flow and use what we want them to use. It's very much a process whereby it's in the browser and we're trying to think of all the best practices that we can.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So you guys are really pushing, it sounds like even at that design level, you guys are trying to work in the browser more and more, just to paint a more realistic picture of how the CMS is structured, how data is structured and obviously show things in a responsive way?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, it just speeds everything up. There's not that extra step of getting approvals for a design comp and then having to come back and go, There's not that extra step of getting approvals for a design comp and then having to come back and go, "Yeah, so I know we showed X in the design comp but it really came out kind of Y".</p>
+    <p>People get amazingly hung up on colours. Or spacing. That wasn't the exact spacing in the comp. There's more important things to worry about here, people! So the more we can get that, the reality in front of the client at the beginning, the better; it just reduces complaints later on.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, so it speeds things up and helps set people's expectations a little better it sounds?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah. Well yeah, but here's the other beauty, I think, of doing stuff in the browser, and especially when you start thinking about what patterns let you do. I guess you could maybe do it with Photoshop or you could have comp layers or a base set that you started from. But having markup in CSS that you can really easily fiddle with and add to your project in and out, again makes things really fast and really easy, as opposed to trying to do it all in Photoshop. If that made any sense.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, absolutely. So OK, I think we have to wrap up here, so the last question: it's a doozy of one, especially as somebody who's running an increasingly popular tool that does exactly this. What is your perfect… how would you define that perfect end goal Pattern Lab has done or what is the perfect style guide?  What's that perfect set-up, that perfect environment and how would you like to realise that?</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> I think the perfect set-up is one in which… I think it's probably one of two, honestly!  It's basically, can we have a modular system so anybody can go in and create a module and plug it in and so we don't have to edit core all the time, and I feel it's what we're doing right now. I feel like I don’t want to touch anything core, so they can do what they want and to make a system that has a dependency manager, so people can easily version and swap bits and pieces out, like I'm going to add this pattern and I'm going to update this pattern, I'm going to swap in this pattern edge and something that's just amazingly modular and that is almost automagical is what I'm sort of looking for. That'd be the perfect thing.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah. I think I haven't really… I'm excited to start taking more of a closer look into Pattern Lab 2, but the concept of just breaking everything apart so that people can drop in the tools they feel comfortable with sounds like absolutely I think a really good idea and I'm sure that you're more considerate than I ever would be doing the same thing, so I'm really excited to see that.</p>
+    <p>You seem to steer away from rabbit holes that might be dangerous and work in a way that allows people to use the tool and build the tool however they see fit and just given that the first generation of Pattern Lab we've seen out in the wild and what people have shown me, I'm really excited that you're taking it to a new level and that allows people to again, just drop in the tools they're already comfortable with to create a system.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Yeah, that's the whole idea.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It's awesome!  Well, thank you so much for not just being on the show, but seriously, thank you from the bottom of my heart!  You really have taken this, it's all been in your own time and I feel so bad whenever I see people go, hey Dave, when's the next version of Pattern Lab coming out?  When is the next version coming out? It's like, Dave, you've got a life, you have a family, you have a full time job, and again I just want to say I really appreciate all your efforts and all your smarts and for turning this goofy idea of Pattern Lab into real, working software that's making a lot of people happy.</p>
+</div>
+
+<div class="dave-olsen guest">
+    <p><b>Dave</b> Well, thank you, and I'm hopeful that the next version hopefully gets done soon, but it changes even more how people do stuff.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah. Awesome. Well thanks very much for your time, thanks for being on and talking shop and I think that that concludes the episode and thanks everybody for tuning in and we'll have more style guide goodness for you on the next one, so thanks again.</p>
+</div>

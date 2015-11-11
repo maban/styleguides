@@ -1,9 +1,10 @@
 ---
 title: Google Material Design
 link: http://www.google.com/design/spec/material-design/introduction.html
+image: http_www.google.com_design_spec_material-design_introduction.html.jpg
 author: Google
 type: Design Language
-tags: 
+tags:
 - designlanguage
 - patterns
 ---

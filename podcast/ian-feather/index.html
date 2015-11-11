@@ -1,0 +1,395 @@
+---
+layout: episode
+section: podcast
+number: 6
+title: Ian Feather
+image: ian-feather.jpg
+about: <a href="https://twitter.com/ianfeather">Ian</a> is a Senior Software Engineer at <a href="http://www.schibsted.com/">Schibsted</a>, and before that he was <a href="http://www.lonelyplanet.com/">Lonely Planet</a>'s Tech Lead.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/193159727&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+links: [
+{text: "Lonely Planet's Style Guide", url: "http://rizzo.lonelyplanet.com/styleguide/design-elements/colours", type: "example"},
+{text: "A Maintainable Style Guide", url: "http://ianfeather.co.uk/a-maintainable-style-guide/", type: "article"},
+{text: "Rizzo", url: "https://github.com/lonelyplanet/rizzo", type: "tool"},
+{text: "What we would change about Rizzo", url: "http://www.ianfeather.co.uk/what-we-would-change-about-rizzo", type: "article"},
+{text: "SiteEffect", url: "http://siteeffect.io/", type: "tool"},
+{text: "Pattern Lab", url: "http://patternlab.io/", type: "tool"}
+]
+
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> All right, all right! Welcome to another edition of the Style Guide Podcast. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we are extremely thrilled to have Ian Feather of Lonely Planet with us. Ian; how are you?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I'm good, thanks for having me.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Thanks for coming on the show. We’re absolutely just really, really excited to have you on. You've been doing some amazing work with <a href="http://rizzo.lonelyplanet.com/styleguide/design-elements/colours">your company's style guide</a> and we really want to dive into all the great stuff you've been doing to make what you're even calling <a href="http://ianfeather.co.uk/a-maintainable-style-guide/">a maintainable style guide</a>. So, before we dive into that though, do you want to just sort of back up and let us know where you're working, what your role is there and what you're up to?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…really the main driving force behind it was first to be able to share things and build pages faster and I think we've accomplished that.</p>
+    </blockquote>
+</aside>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yes, sure. I work at <a href="http://www.lonelyplanet.com/">Lonely Planet</a> and we have offices in London, Melbourne and Nashville and I'm the client side tech lead there which means I kind of take credit for everyone else's work as much as possible! And essentially I oversee some of the major decisions that take place and a lot of my work is spent looking at our developer workflow and figuring out where the bottlenecks are and trying to make that better, which is kind of where the style guide came from in the first place.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, you are sitting above… you have this bird's eye view of the entire development workflow and in that role you realised that a style guide would help unify efforts and stuff? Could you talk a little bit more about that?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, absolutely. So, we have a lot of similar pages which share a lot of the same components, and historically we have never done a good job of sharing them, so we'd been working on a re-build for about three years and we wanted to make sure we have a single place for these components which we can then share across multiple places. And the style guide came out of the back of that because once we had a single place for these components, we could visualise them somewhere else. But really the main driving force behind it was first to be able to share things and build pages faster and I think we've accomplished that.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I've made two style guides before this one at Lonely Planet, both of which went out of date very rapidly and were never used ever again. This one doesn't go out of date and it means we don't need to actually maintain it.</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's amazing. Looking at your style guide, it definitely looks like you've accomplished something; it's really rich and robust and really covers a lot of different aspects. So I guess yours is very… we'll say UI based and JavaScript based. What are the other disciplines that make use of the style guide? Do UI designers, UX designers, visual designers, business partners; do those people touch this or make use of it or is it mostly just a developer resource?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> It started out as a developer resource. My goal was that designers would be able to make changes within it and distribute those across the sites, and that happened to some extent, so we have some designers who are quite happy to use <a href="http://en.wikipedia.org/wiki/Git_%28software%29">Git</a> and commit small visual changes such as changing paddings on buttons, margins, that kind of thing; maybe working with the type. And that's really useful because it means that we can concentrate on large problems and let those things take care of themselves, so it does work in that respect. UX don't really have too much of an impact on it because it doesn't really come into that too much. But it is definitely used by product managers to discuss how things should look; the state of things, the progress of things and we also use it with our external partners, so we have an India website, a Chinese website, a couple of other websites and they not all integrate with <a href="https://github.com/lonelyplanet/rizzo">Rizzo</a> India does, but they all look at it as a next step for them to integrate with it. So it's used as a sort of communication tool, I guess.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> What I think is really interesting about your style guide is, you call it a living style guide and I guess maybe could you talk a little bit about what makes it living?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Sure. I guess what makes it living is that it doesn't go out of date! I guess… I don't know. I've made two style guides before this one at Lonely Planet, both of which went out of date very rapidly and were never used ever again. This one doesn't go out of date and it means we don't need to actually maintain it. We don't have to have a team working on it to keep it up to date; it just stays mirroring the production environment… </p>
+</div>
+
+<span class="timestamp">(5:23)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And how does it achieve that?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> It achieves it by… we abstracted out all the components and the dependencies to these components into a shared component library called <a href="https://github.com/lonelyplanet/rizzo">Rizzo</a> and each application then talks to this component list to retrieve its components, which means that the applications are just made up of datasets really and data depictions of what the final thing might look like, and then because we have that relationship, we can just add an extra application which in our case is the style guide and that application, rather than calling maybe a left nav and some cards and some text, it calls every single component multiple, multiple times and renders them into a different view. And we put that style guide application inside Rizzo but it could be anywhere else; it's just for convenience that we have it in the same place as the components. That's kind of how it stays in tune.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, you've essentially written this library and then wrote in an API for it and basically the production environment eats that API and basically sucks in all the necessary components.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah. And so does the style guide.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And I guess it also keeps the design very separate from the content?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, absolutely. That's a really useful tool certainly and I think that's the main benefit for our designers that they can actually make these changes within the style guide and know that that's how it will look everywhere; they don’t have to go into each application and look at it as a whole page. It can just be a unit.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's fantastic. So, building upon that, one of the things I get a lot whenever I start talking about building atoms and molecules and organisms, these components, what you guys call components, and you have a design team and a lot of people are confused by the fact… they don't know how this workflow looks, because obviously the data you put inside your card component very much influences how it's designed, how it's constructed.</p>
+    <p>So, how does that workflow look like at Lonely Planet? Are you designing these components in the abstract and then sort of sucking them in to the environment to see how they look and go back and forth? How does that design process look to actually build and design these components?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…mostly designers will come up with rough representations of where things might live, how things might lay out, without going into too much detail because there's no longer really a need to do that work up front and we can just tweak it in the browser afterwards.</p>
+    </blockquote>
+</aside>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> That's a good question. I don't know if I have a really great answer for it! I'm not sure we have a particular workflow that we stick to. It's an interesting one. Our workflow would be that we still use Sketch or Photoshop mocks; well, the designers will use that. We'll quickly get something into the style guide afterwards, because that's the fastest way for us to get something into the browser. We're a very small team, so I sit next to our lead designer and we can work back and forth in the style guide sometimes.</p>
+    <p>But in terms of how we combine components to make large components, I think because we've established this kind of componentisation mechanism, the designers potentially have this new way of thinking about how to build up the page, which makes it easier for us because we already know these things exist in code and hopefully makes it easier for them because they don't have to re-invent the wheel each time.</p>
+    <p>So I think it helps as a whole to think things, the atoms, molecules, organisms, but in terms of how our workflow specifically deals with that, I don't think we've come up with a perfect solution or anything.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, in Sketch or Photoshop, are the designers building full comps, full layouts or are they more focused on the individual components?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Right now I would say that we have the majority of the components are fully fledged in code and now mostly designers will come up with rough representations of where things might live, how things might lay out, without going into too much detail because there's no longer really a need to do that work up front and we can just tweak it in the browser afterwards.</p>
+</div>
+
+<span class="timestamp">(10:13)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So you're using these static tools as a way to establish a quick layout, a quick look and feel, a quick solution, and then you roll that into it sounds like the style guide first, and then iterate on it within the browser?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, and I think that's a matter of convenience. I think that our designers, the fastest way for them to lay out things is currently Sketch or Photoshop, because that's where they feel the most comfortable. Likely that will change; hopefully that will change and we can create tools perhaps within Rizzo or using third party tools which can make it even easier for them to do that in the browser but at the moment, that's where we are.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> You talked a little bit about a perfect solution. What do you see as being a perfect solution, because it sounds like to me you've already got it?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I don't think so, no! That's a good question. I wrote a little article about <a href="http://www.ianfeather.co.uk/what-we-would-change-about-rizzo/">what we would change about Rizzo</a> recently, which addressed a couple of these things.</p>
+    <p>Yeah, it's an interesting one. They were mostly from a technical perspective, there are things that we would change, such as we would use agnostic templating language so we could use Rizzo in lots of different applications. At the moment it's kind of tightly coupled to Ruby but we then have to write little adaptors or little passes which can make it work across different stacks but there are a few things we would do differently in that respect.</p>
+    <p>And the big one I would say is how we go about pushing style updates out across our whole suite of apps. At the moment when we push something to Rizzo, It's deployed and it's accessible by all the apps and they have to then pull in those changes, which usually happens fairly quickly, because each application is being worked on constantly and deployed quite often, so usually things stay up to date pretty fast, but it still can become a chore because we have these other applications which may not be used so often and we would then have to go round and update each of them and deploy them individually and manually and I think a next step would be to somehow automate that, which isn't too hard in a simple manner, that idea of having something which maybe on post deploy, deploys them all.</p>
+    <p>But to do it in a very safe way with visual regression testing or some kind of mechanism to ensure that you're not just hot pushing crazy changes out. That's the part that I think is interesting and it will be interesting to see how that proceeds from here. I know that <a href="https://www.gov.uk/">GOV.UK</a> do that and they're very smart and presumably have a great solution, so I'm interested to see how they do it.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That is fascinating. It's the, we'll say, next level stuff that is just incredible to hear. It sounds like your culture already has fully bought into this idea of style guide; it sounds like it's baked right there in the front of your process and as a result, you're just able to iterate and try to streamline things and update the technology.</p>
+    <p>It's also really interesting to hear that you were talking about moving towards a more agnostic templating language and that's something I've been struggling with as well, because on one hand everyone's trying to accomplish what you've already accomplished, which is building this really solid bridge between the style guide and the production environment, but at the same time our UIs are going to more places and maybe aren't just the same code base over and over again, so it sounds like you're trying to take a step back and create a style guide, create a component library that's maybe not just for your website; is that safe to say or am I off there?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…device testing is something that we want to level up on and make more of a first class citizen. And style guides are a perfect place to do that.</p>
+    </blockquote>
+</aside>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I don't think you're off. That is the ideal. I don't think that we would move it to other platforms at the moment; it would just be the web. But it would certainly be the web in different stacks; whether it be Node, whether it be Ruby, whatever it may be. So at the moment we have… I called this thing a component API but I think that kind of misled in some ways, because an API you tend to think of being over the network by HTTP and that would be kind of somewhat simpler in some senses because then you don't have to worry about what technology stack you're on, and that's how we integrate Rizzo with our old Java apps.</p>
+    <p>But that brings with it a whole suite of further problems like caching and things like that. But had we done Rizzo again, I think we would approach this as a primary concern, how we do fit it into multiple places. I think cross-platform's amazing. Stuff that the <a href="http://sfdc-styleguide.herokuapp.com/">salesforce team have worked on</a> with moving things between iOS and Android and the web is really impressive, but we don't currently have that connection. We do have a native app team but we don't work closely enough with them to yet bridge that gap.</p>
+</div>
+
+<span class="timestamp">(15:48)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Interesting. And <a href="http://styleguides.io/podcast/jina-bolton/">when we were talking to Jina</a>, there are some similarities; things like the swatches and things like that, some things that can be ported over nicely, but then other things that require their own unique considerations for the platform but even just having some things on Ruby, some things on Node and there's tons of organisations that are the same way, where it's some things or a microsite or one part of the flow or a checkout or whatever might be sitting on a different text stack than another part but again, from a user standpoint, and that's the whole appeal of these style guides is that your users see you as one brand, as one entity; they don't care that this is running Node or this team's in Nashville versus London or whatever. They see you as one unit and that's what's been the driving force, so I think it's really interesting that you brought that up about how do you create the actual library that could be deployed out to whatever text stacks you might be playing around with.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, and I think to add to that, part of our user base is the developers for the style guide and if they're building it on a stack which we don't really easily support, it's much more likely that they will then veer away from the styles that we have because it just becomes too difficult or perhaps they make different changes and then that finally affects the end user because things stop becoming consistent, so it kind of all loops back into itself I think.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Do you do any device testing with the style guide to help with your <abbr title="Quality Assurance">QA</abbr>?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Well, no! I mean we do in a very ad hoc way. We don't have <abbr title="Quality Assurance">QA</abbr> teams at Lonely Planet; we practise continuous delivery, so we have a feedback loop which works in production but device testing is something that we want to level up on and make more of a first class citizen. And style guides are a perfect place to do that.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> I'd reckon that being able to really hone in on a specific component and see whether it's performance or it's just the layout's broken or something; that for me in my own workflow has been awesome to just be able to get in there and fire it up on sixteen different devices and say, OK, well this is the thing that's causing the issues. But I think what's so cool about how you guys have set this up is because it is again this bridge sort of thing; it's an abstract representation and whatever you put into production it's going to be totally different. It literally is all the same thing so that device testing could be more true, so I think that should be interesting, I hope, for you as you get into that a little bit more.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I think the only principle behind Rizzo is that it's the single source of truth for a component, and so once you have that, all these other avenues become available to you, like using visual regression testing on a component in a style guide you know is going to be the same as a component on the website and the same with device testing for a component. It's cool.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I think it's definitely helped with recruitment because we have had people apply who've known about Rizzo, who've known about the style guide, and that's been a really nice thing…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is there a tool that you use for visual regression testing?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I've used a few and to differing degrees of success. There is a tool called SiteEffect. <a href="http://siteeffect.io/">SiteEffect.io</a>, which is still in development but which is really exciting I think for visual regression.</p>
+</div>
+
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is that browser based?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> It's browser based, yeah, but it doesn't do diffing in the same way that the current ones do with .png diffing. It's really clever but it's still in development, but I did get a little sneak preview and I was very impressed.</p>
+</div>
+
+<span class="timestamp">(20:02)</span>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I want to give that a go! Sounds good.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, definitely.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I just do it by eye, which probably isn't very good!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, I want to hear actually a little bit more; you're talking about obviously the benefits to your development workflow are huge. Have you found it to be really important as far as moving the business forward and do those business people really understand and appreciate what you all have set up, and then also sort of looping back to those other, is it locales or other things that maybe aren't wired into Rizzo but make use of it as a reference? Is it like taking a step back and away from the technology stack and development workflow; how have you seen since you set this up, organisationally, what successes have you seen? What sort of gains have you seen and do people really appreciate it?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> That's a good question! Do people appreciate it? I think so! I hope so!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> We do!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…if these third party companies put a significant amount of energy and money into updating their site to look like ours and we then change the design altogether, that's not a brilliant experience for either of us, so if they can link directly into Rizzo, we no longer have that problem because they're always going to be in sync.</p>
+    </blockquote>
+</aside>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, it sometimes gets to the point where you do hear Rizzo being mentioned in multiple places round the office which is kind of cool, so I think it has become a communications tool.</p>
+    <p>Sometimes I worry what I've created! Because everyone just suddenly goes, "oh yeah, Rizzo will sort that out, don't worry about that; Rizzo can fix that." And I have no idea what they're talking about!</p>
+    <p>I think in one respect… so how's it helped the business? I think it's helped the website mature which ultimately helps the business. I think it's definitely helped with recruitment because we have had people apply who've known about Rizzo, who've known about the style guide, and that's been a really nice thing and because we are trying to grow teams in America, recruitment has kind of been a big deal for us. I can't think of… there are no empirical sort of ways for me saying that this has been successful but I think broadly people would agree that it has been beneficial for us.</p>
+    <p>In terms of these partner sites that we have, time will tell on that. I think it will be a great thing if they can integrate it; it's certainly a challenge because we don't have localisation on Lonely Planet, so we partner with third party companies to provide different language support. It's basically different sites but they use Lonely Planet's brand and image and that's a reflection of Lonely Planet and some of these sites are pretty bad, it's fair to say, which has an impact on the brand.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> But you are providing them a language, so you're not leaving them totally to their own devices; this style guide that you've created becomes a way for them to at least get close; they're not going to be a hundred per cent there but I've seen it happen millions of times whenever you don't have a reference, a design system like this already in place, then it just is totally different!</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> That's definitely true. Before this, they were further away for sure. The problem is that our design iterates quite fast and if these third party companies put a significant amount of energy and money into updating their site to look like ours and we then change the design altogether, that's not a brilliant experience for either of us, so if they can link directly into Rizzo, we no longer have that problem because they're always going to be in sync.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> So, along those lines, you have three offices, you have again, more third parties floating around out there. How do you communicate these changes to keep everyone in synch? You were saying that you're sitting next to designers in your own office, but are there other people that need updated whenever changes get made? Is it having access to the repository or is there a newsletter, you send an email out, hey, just <abbr title="For Your Information">FYI</abbr> we've updated this hex value or whatever?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> No, we don't really worry about it because they'll get it automatically anyway. Unless we've pushed a breaking change which does happen, we will then have to inform all the apps, you're going to have to update this, because there are certain things to do with perhaps the scaffolding of the page which we can't turn into a component and those things will break, so then of course we have to go through the whole rigmarole of updating all the other apps, and that can be a pain.</p>
+    <p>But we don't have a mechanism where we have to go and inform people. And I think that's partially why Rizzo was born in a sense that we don't have the manpower to do that either; we're a small team. I think we've averaged, since the time I've been there, three front-end developers has probably been the average amount we've had, so we would never have had time to go back and update all the apps once we make one change, one place. So Rizzo is the facilitator for that and mean that we didn't really have to.</p>
+</div>
+
+<span class="timestamp">(25:56)</span>
+
+
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Was it quite an investment of time to set up in the first place?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> It wasn't so bad, actually. We introduced this thing called Dev Days which is every other Friday, developers can work on whatever they like as long as it in some way benefits Lonely Planet, and in the first two or three I built the frameworks for Rizzo and then the other two developers at the time used it.</p>
+    <p>I got a bit excited about it and started building features on top of it and on top of it and it just happened really organically and it got to the tipping point, which didn't take very long, where it was much faster to build a component directly into Rizzo than it was to build it into another application. Then we were sold, basically; then it was OK.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And it's Open Source, isn't it?</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> It's Open Source in the sense that anyone can go and look at it and dig into it. It's not Open Source in the sense you can just plug it into your site; it won't work like that. I think that… I have toyed with the idea of trying to make that but it's a bit too opinionated and it really does depend on your environment and the structure of your project and your organisation. I think it's a bit of a leap too far.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah. That's what we've been hearing a lot.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, with <a href="http://patternlab.io/">Pattern Lab</a> we've been really struggling with that, just because there's just so many different back-end environments and set-ups and workflows and all of that, and to ask a very agnostic tool, or like you're even saying, if you were to create this as a project for other people to use, you'd really have to roll up your sleeves and get in there and hack it away in order to get it to work with your environment. But coming back to a lot of those things, what you were saying about moving to a more agnostic templating language, just even doing some stuff like that I think can maybe go a long way to make it a little more portable.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, absolutely. And hopefully some other people figure this problem out as well. I guess… </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> No, you do it!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, yeah; you do it! You put this little thing together every Friday, so just freaking do it!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I was aware that the asset sizes had spiralled a little bit out of control and we weren't just really aware how big they were, so I wrote a few scripts to scrape the assets from the different applications and then create these stats.</p>
+    </blockquote>
+</aside>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> I hear of about all these companies who've taken something from Rizzo and built their own version and there must be some… if we can reap those back in, there must be some way of finding common patterns between them which can help us figure this out. But I think it's really specific.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> We're almost out of time, but there's a couple really cool little… I don't want to say Easter Eggs, but these really cool features within Rizzo: one <a href="http://rizzo.lonelyplanet.com/styleguide/design-elements/colours">in your colour palette</a> you have this nice little find the closest colour, so it look like you could just enter in a hex value and it will filter out and give you the closest colour that's in the style guide; that's freaking amazing!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Cool!</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah, that's really cool. I didn't do that!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It's amazing!</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> That's one of our developers at work; Remy. He did that on one of the Dev Days, and that's a really cool feature. Really nice.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And then there's this other thing up towards the top, this <a href="http://rizzo.lonelyplanet.com/performance/css-analysis">performance monitoring</a>, and I know that this isn't necessarily directly related to the style guide; well, it sort of is, but it's also living under one roof. Could you talk about that real quick… performance, and it looks like you have charts and graphs and all sorts of good stuff.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Yeah. It was something I've been wanting to do for a while. We took performance very seriously at the start of the project and for so many organisational reasons, it became less of a priority as it continued, and I was aware that the asset sizes had spiralled a little bit out of control and we weren't just really aware how big they were, so I wrote a few scripts to scrape the assets from the different applications and then create these stats and these sizes and because we have developers working and living essentially in Rizzo, that was their area of work; it made sense to just add that into Rizzo, and so we trialled over time the size of the different JavaScripts and CSS stuff, and it would be nice to make that bigger and cover things like images and stuff. But that again is something that will happen I guess on Dev Days organically whenever we have time.</p>
+</div>
+
+<span class="timestamp">(30:49)</span>
+
+
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's freaking awesome. Yeah, just making that stuff visual; the visual nature of it is what's really striking to me. Red for this is going in the wrong direction; green for going in the right direction. And that stuff matters with something as invisible as performance; you really need to hit people over the head with it and visualise it in order for people to treat it as a priority, so that is just so cool.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Thanks mate. Thank you! I like that section.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Well OK, I think unfortunately we're out of time. We could probably talk literally all day about this and I want to, but for the sake of time, I think we'll have to wrap up. But seriously, thank you so much for coming on the show… </p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Yeah, thank you.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> It's just… my jaw's been on the floor ever since this first came across my screen and so it's really cool that one: you guys made it, and two: it's out there for the world to see. So thank you for putting that out there for all of us to benefit from.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And your blog posts as well have been really, really interesting.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, oh Jeez, keep that up! That's really, really cool.</p>
+</div>
+
+<div class="ian-feather guest">
+    <p><b>Ian</b> Thank you.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Cool. Well, thank you so much; really appreciate you being on the show and thanks everybody for tuning in. We'll have a new episode of the Style Guide Podcast for you later on. Thanks for listening.</p>
+</div>

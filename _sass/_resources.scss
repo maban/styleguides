@@ -1,0 +1,516 @@
+.resources {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.resource {
+    margin: 0 0 20px 0;
+    font-size: 15px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.3);
+    transition: 0.2s;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: inherit;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+    p {
+        font-size: 15px;
+        font-weight: lighter;
+    }
+}
+
+.resource-tags {
+    margin: 0;
+    li {
+        display: inline-block;
+        padding: 5px 7px;
+        border-radius: 3px;
+        background: #E0E0E0;
+        font-size: 11px;
+        font-weight: normal;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    li:before {
+        content: "#";
+        padding-right: 0.25em;
+        color: #A0A0A0;
+    }
+}
+
+.resource-description {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.resource-description > *:last-child {
+    margin-bottom: 0;
+}
+
+.resource-url {
+    display: block;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.resource-title {
+    margin-bottom: 5px;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.resource-author,
+.resource-publisher,
+.resource-language {
+    margin: 0;
+}
+
+.resource-type-article .resource-url,
+.resource-type-book .resource-url,
+.resource-type-example .resource-url,
+.resource-type-talk .resource-url,
+.resource-type-tool .resource-url,
+.resource-type-podcast .resource-url,
+.resource-type-guide .resource-url,
+.resource-type-tool .resource-add {
+    padding-top: 35px;
+    border-radius: 3px;
+    background-size: 21px;
+    background-position: 98% 8px;
+    background-repeat: no-repeat;
+}
+
+
+.resource-type-article .resource-url {
+    background-color: $color-3;
+    background-image: url("/images/icons/article/article.png");
+    background-image: url("/images/icons/article/article.svg");
+    background-size: 23px;
+    background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: $color-3-darken;
+    }
+}
+
+.resource-type-book .resource-url {
+    background-color: $color-2;
+    background-image: url("/images/icons/book/book.png");
+    background-image: url("/images/icons/book/book.svg");
+    background-size: 17px;
+    background-position: 98% 6px;
+    &:hover,
+    &:focus {
+        background-color: $color-2-darken;
+    }
+}
+
+.resource-type-example .resource-url {
+    background-color: $color-5;
+    background-image: url("/images/icons/website/website.png");
+    background-image: url("/images/icons/website/website.svg");
+    background-size: 34px;
+    background-position: 98% 1px;
+    &:hover,
+    &:focus {
+        background-color: $color-5-darken;
+    }
+}
+
+.resource-type-talk .resource-url {
+    background-color: $color-7;
+    background-image: url("/images/icons/presentation/presentation.png");
+    background-image: url("/images/icons/presentation/presentation.svg");
+    background-size: 29px;
+    background-position: 98% 4px;
+    &:hover,
+    &:focus {
+        background-color: $color-7-darken;
+    }
+}
+
+.resource-type-tool .resource-url {
+    background-color: $color-6;
+    background-image: url("/images/icons/wrench/wrench.png");
+    background-image: url("/images/icons/wrench/wrench.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: $color-6-darken;
+    }
+}
+
+.resource-type-podcast .resource-url {
+    background-color: $color-1;
+    background-image: url("/images/icons/podcast/podcast.png");
+    background-image: url("/images/icons/podcast/podcast.svg");
+    background-size: 22px;
+    background-position: 98% 7px;
+    &:hover,
+    &:focus {
+        background-color: $color-1-darken;
+    }
+}
+
+.resources .resource-add {
+    //opacity: 0.55;
+    max-width: 250px;
+    padding-top: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    &:hover,
+    &:focus {
+        //opacity: 1;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.resource-add .resource-url {
+    padding-top: 0;
+}
+
+.resource-add .resource-title {
+    background-image: url("/images/icons/add/add.png");
+    background-image: url("/images/icons/add/add.svg");
+    background-image: url("/images/icons/add/add.svg");
+    background-size: 22px;
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    padding: 10px 0 10px 32px;
+}
+
+.recommended:before {
+    content: "★";
+    position: absolute;
+    top: -1px;
+    left: 18px;
+    font-size: 13px;
+    background-color: #FAF97B;
+    padding: 3px 6px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.4),
+    0px 1px 0px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 600px) {
+    .resources {
+        float: left;
+        clear: both;
+        width: 100%;
+    }
+
+    // Set 2-column config
+
+    .resource {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+    }
+
+    .resource:nth-child(odd) {
+        clear: left;
+    }
+
+    .resource:nth-child(even) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .resource {
+        float: left;
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    // Undo 2-column config
+
+    .resource:nth-child(odd) {
+        clear: none;
+    }
+
+    .resource:nth-child(even) {
+        margin-right: 2%;
+    }
+
+    // Set 3-column config
+
+    .resource:nth-child(3n+1) {
+        clear: left;
+    }
+
+    .resource:nth-child(3n+3) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .resource {
+        float: left;
+        width: 23%;
+        margin-right: 2.6666%;
+    }
+
+    // Undo 2-column config
+
+    .resource:nth-child(even) {
+        margin-right: 2.6666%;
+    }
+
+    // Undo 3-column config
+
+    .resource:nth-child(3n+1) {
+        clear: none;
+    }
+
+    .resource:nth-child(3n+3) {
+        margin-right: 2.6666%;
+    }
+
+    // Set 4-column config
+
+    .resource:nth-child(4n+1) {
+        clear: left;
+    }
+
+    .resource:nth-child(4n+4) {
+        margin-right: 0;
+    }
+}
+
+.resources.episodes {
+    float: none;
+    clear: both;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.resources.episodes .resource {
+    float: left;
+    width: 100%;
+    margin-right: 0;
+    clear: both;
+    background-color: #fff;
+    &:hover,
+    &:focus {
+    }
+}
+
+
+.resources.episodes .number {
+    position: absolute;
+    top: -1px;
+    left: 10px;
+
+    font-size: 14px;
+    background-color: $color-4;
+    padding: 3px 6px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8), 0px 1px 0px rgba(0, 0, 0, 0.3);
+    width: 14px;
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+    pointer-events: none;
+    @media (min-width: 600px) {
+        left: auto;
+        right: 18px;
+        font-size: 19px;
+        width: 20px;
+    }
+}
+
+.resources.episodes .resource:hover .number,
+.resources.episodes .resource:focus .number {
+    background-color: $color-4-darken;
+}
+
+.resources.episodes img {
+    float: left;
+    width: 120px;
+    @media (min-width: 600px) {
+    width: 150px;
+    }
+}
+
+.resources.episodes .resource-description {
+    width: auto;
+    padding-left: 135px;
+    padding-top: 10px;
+    @media (min-width: 600px) {
+        padding-top: 20px;
+        padding-left: 170px;
+        min-height: 120px;
+    }
+    p {
+        @media (min-width: 600px) {
+        font-size: 16px;
+
+        }
+        &:last-child {
+            margin-bottom:0;
+        }
+    }
+}
+
+.resources.episodes .resource-title {
+
+    @media (min-width: 600px) {
+    font-size: 26px;
+    margin-bottom: 12px;
+    }
+    line-height: 24px;
+}
+
+/*.resources.episodes .resource {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+    clear: none;
+}
+
+.resources.episodes .resource:nth-child(odd) {
+    clear: left;
+}
+
+.resources.episodes .resource:nth-child(even) {
+    margin-right: 0;
+}
+
+.resources.episodes .resource-summary {
+    display: none;
+}
+
+@media (min-width: 500px) {
+
+    .resources.episodes .resource {
+        float: left;
+        width: 32%;
+        margin-right: 2%;
+    }
+
+    // Undo 2-column config
+
+    .resources.episodes .resource:nth-child(odd) {
+        clear: none;
+    }
+
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2%;
+    }
+
+    // Set 3-column config
+
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: left;
+    }
+
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 800px) {
+
+    .resources.episodes .resource {
+        float: left;
+        width: 23%;
+        margin-right: 2.6666%;
+    }
+
+    // Undo 2-column config
+
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2.6666%;
+    }
+
+    // Undo 3-column config
+
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: none;
+    }
+
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 2.6666%;
+    }
+
+    // Set 4-column config
+
+    .resources.episodes .resource:nth-child(4n+1) {
+        clear: left;
+    }
+
+    .resources.episodes .resource:nth-child(4n+4) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .resources.episodes .resource {
+        float: left;
+        width: 18%;
+        margin-right: 2.5%;
+    }
+
+    // Undo 2-column config
+
+    .resources.episodes .resource:nth-child(even) {
+        margin-right: 2.5%;
+    }
+
+    // Undo 3-column config
+
+    .resources.episodes .resource:nth-child(3n+1) {
+        clear: none;
+    }
+
+    .resources.episodes .resource:nth-child(3n+3) {
+        margin-right: 2.5%;
+    }
+
+    // Undo 4-column config
+
+    .resources.episodes .resource:nth-child(4n+1) {
+        clear: none;
+    }
+
+    .resources.episodes .resource:nth-child(4n+4) {
+        margin-right: 2.5%;
+    }
+
+    // Set 5-column config
+
+    .resources.episodes .resource:nth-child(5n+1) {
+        clear: left;
+    }
+
+    .resources.episodes .resource:nth-child(5n+5) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .resources.episodes .resource-summary {
+        display: block;
+    }
+}*/

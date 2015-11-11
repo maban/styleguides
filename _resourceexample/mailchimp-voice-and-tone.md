@@ -4,7 +4,8 @@ link: http://voiceandtone.com/
 author: Mailchimp
 type: Content Style Guide
 status: recommended
-tags: 
+image: mailchimp-voice-and-tone.png
+tags:
 - voiceandtone
 - writing
 - designlanguage

@@ -1,6 +1,8 @@
 ---
 title: Salesforce
-link: http://sfdc-styleguide.herokuapp.com/
+link: https://www.lightningdesignsystem.com
+image: salesforce.jpg
+status: recommended
 tags:
 - designlanguage
 - frontend

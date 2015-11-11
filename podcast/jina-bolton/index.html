@@ -1,0 +1,379 @@
+---
+layout: episode
+section: podcast
+number: 1
+title: Jina Bolton
+image: jina-bolton.jpg
+about: <a href="http://twitter.com/jina">Jina</a> is a designer, developer, and artist living in San Francisco. She works at <a href="http://salesforce.com/">Salesforce</a> as a Senior Product Designer with the <a href="http://twitter.com/SalesforceUX">Salesforce UX</a> team. Before that, she worked at companies including <a href="http://apple.com/">Apple</a>, <a href="http://engineyard.com/">Engine Yard</a>, and <a href="http://crushlovely.com/">Crush + Lovely</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/187178949&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+links: [
+    {text: "Salesforce's Style Guide", url: "http://sfdc-styleguide.herokuapp.com/", type: "example"},
+    {text: "Theo", url: "https://github.com/salesforce-ux/theo", type: "tool"},
+    {text: "Writing an Interface Style Guide by Jina on A List Apart", url: "http://alistapart.com/article/writingainterfacestyleguide", type: "article"},
+    {text: Living Design System on Medium, url: "https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7", type: "article"},
+    {text: "Sass", url: "http://sass-lang.com/", type: "tool"},
+    {text: "Middleman", url: "https://middlemanapp.com/", type: "tool"},
+    {text: "Front-end Maintainability with Sass and Style Guides", url: "https://blog.engineyard.com/2011/front-end-maintainability-with-sass-and-style-guides", type: "article"}
+]
+
+---
+
+<div class="brad-frost host">
+    <p><b>Brad</b> All right; welcome to the very first edition of the Style Guides Podcast. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> And today we are pleased to have Jina Bolton with us. Jina; how are you?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> I'm doing great. How are you?</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Fantastic. So, I think we're going to just really jump right into it, so Jina, you've been working with a load of brands, a load of different… you have a wealth of experience about creating these style guides. Could you give us just sort of an overall sort of background on where you're at, what you're working on and what your trajectory has been?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Sure. Just in terms of style guides, you mean?</p>
+</div>
+
+<aside><blockquote><p>…when I saw it I thought it was beautiful and it's why I wanted to join this team.</aside>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, I guess… well you know, I guess where are you working now?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> OK. I'm currently working at <a href="http://salesforce.com/">Salesforce</a> on the Product UX Team and one of our big projects is <a href="http://sfdc-styleguide.herokuapp.com/">the Style Guide</a>. I'm pretty excited! So, to give a little bit of background I guess I started with a full brand guidelines when I was working in an agency and those were done with PDFs, and I guess over the years kind of started moving more towards online and then at some point realising that it's even better doing it within the application itself versus having… I remember when I was at <a href="http://www.apple.com/">Apple</a> I actually had it running on a WordPress install… (laughs) that didn't work out so well but just lately I've been focused on designing systems and working with UI libraries and style guides, especially for the team I'm on right now it's a really large design team; we have a lot of different products and different features and you know, lots of different things to think about and so what we're doing is extremely crucial.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, absolutely. So, going back a way, so you've been working with style guides now for what, you know, five, six years?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> I want to say around 2004 or so, so about ten.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Oh wow!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Whoa!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Awesome! That's fantastic. And it started off with sort of the more traditional brand style guides. So, do you want to actually talk about the differences because <a href="http://alistapart.com/article/writingainterfacestyleguide">you've written about this</a> which I think is phenomenal, sort of the differences between the different types of style guides, right? So you're saying that whenever you started off in the agency world working with these brand style guides, but where in your mind is that sort of differentiation between… what's a brand style guide versus what's a code style guide versus front-end style guide; is there a difference to you or how do you talk about that?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…it's sort of become like this umbrella term for general documentation but I definitely feel like there are differences between component or UI libraries versus code documentation versus branding guidelines.</p>
+    </blockquote>
+</aside>
+
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, for sure. So, starting out it was brand. We actually did also have a section for documenting the CSS but that was in PDF format; we'd go line by line in CSS and explain what we were doing, but mainly it was more about, here's the colour palette, here's the typography, and here are the different grid options like for top level pages, secondary pages and so on.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> And was that based off print brand guidelines?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, exactly. And so I guess I think the term Style Guide, as far as I'm aware, was mostly originating from writing style guides and it sort of got adopted by agencies for brands as well and now everyone's working on applications and so <span id="quote-1">it's sort of become like this umbrella term for general documentation but I definitely feel like there are differences between component or UI libraries versus code documentation versus branding guidelines</span>. Some people tried to blend it all into one über-doc, whereas some people keep them separate, and so actually what we're working on right now I'm sort of separating these different things and then maybe giving a shared navigation but allowing each thing to be very focused. I'm pretty excited about the direction we're heading in.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's great. Do you want to talk a little bit more about that? So, you're at Salesforce and you guys have a style guide currently, right? And so you're talking about the next generation. What are your plans for that, is it to sort of split it up a little bit or…?</p>
+</div>
+
+<span class="timestamp">(5:08)</span>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, so the style guide is actually, <span id="quote-2">when I saw it I thought it was beautiful and it's why I wanted to join this team</span> and it does a lot of great stuff. It's got our colours, it's got swatches, shows our icon fonts and our SPG fonts; shows our components and it kind of compiles them into little examples, you can sort of see all the components, how they work together, for different screens and it does a lot of things but since that was built, we've improved a lot of our thinking around our system and our tools.</p>
+
+  <p>One of them <a href="https://medium.com/salesforce-ux/living-design-system-3ab1f2280ef7">we wrote about fairly recently on Medium</a>, our Living Design System is what we're calling it, and it's basically… we have to also think about Android, iPhone, Windows and all these different platforms and we need to build a design system that's agnostic to all these different ways that design can be consumed, so we created this tool called <a href="https://github.com/salesforce-ux/theo">Theo</a>, which basically is… we keep our design properties in one file with colours, fonts, all that stuff, and then we actually generate Sass, Less, Stylus JSON, XML, all the different formats needed for all these different platforms that we're on and so every time we update like maybe we have an accessibility change we need to make, like a colour isn't contrasted enough, we make that change in one space or one spot and it propagates to all those different platforms.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Wow, that is ambitious! That is really ambitious!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, but it's working really well for us and it's awesome because it means the developers, we don't need to track down every single developer to make a colour change; we can just make it at our end and then when they do  a pull or a build they just bring that in.</p>
+</div>
+
+<aside><blockquote><p>…I was generating the CSS variables in class-names for each swatch of that same file and so any time a new colour is added, provided the person contributing does it there, the new swatch will just automatically show up in the style guide.</p></blockquote></aside>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is Theo something that other people can use or is it just…</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, we've open sourced it. We have a GitHub repo and some people have already started exploring… even contributing to the code-base, which is awesome. So we'll be doing a lot more writing and oracles on that, we're pretty excited about it, especially for our space, you know, we're an enterprise space so it's just we kind of have to build this system like this.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's great. I think that sort of building on that, as far as you guys are concerned and this is something I hear come up a lot and especially with your experience; how far down the style guide rabbit hole do you go? And how do you enforce it? How do you… are you rolling with an iron fist and it sort of seems like you guys are all in on this sort of unified language and there's really not a lot of deviation, and that's something I hear from quite a few people actually, they'd say, we're sort of scared, we don't want to be handcuffed by this language and we still want to be able to do our own thing. In your experience, have you found that sort of thinking to be justified or is it something somewhere in between? I don't know.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, so to answer the first part, how we get people on board with us. Some designers still work within red line specs; some work in the browser. When it comes to delivering a design, we have a workplace where we tell our designers and our developers to not think in hard coded values, but to think in the named values which you could think of them as like Sass variables; we've also used the word tokens. Right now we're calling them, like the actual system that we're building is our design properties, so instead of a hex of 444 for touch, you wouldn't spec that; you would spec the named colour tags, and if we ever change that tag's colour, the specs are still going to be up to date, and so we always make sure anything that we're delivering is using the names versus the actual output value.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Very interesting. So, everything is a variable in other words?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, everything that needs to be re-usable and it's not just about re-usability, but it's also if we decide we want to change the background colour, that also affects, you know, now you've got to make sure your text colour that's on that background colour still as accessible, so it just kind of helps keep everything more centralised and we don't have as many bugs to fix if we are all on board on this system. It's definitely been a new process for a lot of our new designers and even some designers that have been here for a while, so it's definitely an ongoing iterative process, but I feel like it's getting better and better with each release, it has me really excited, and it's awesome to see, I check out what's going on and any issues or bugs that come up and if something's hard-coded you can just be like, well, don't use a hard-coded value and then you'll be fine! </p>
+
+     <p>And then in terms of being able to still feel like it's your design and exploring, we definitely don't want to be dictators. Nobody wants to have a design totally dictated and you're just pushing things around or whatever, so we still encourage exploration and coded typing and wire-framing and we still do a lot of that. It's just when it comes to final delivery then we just need to make sure, do we need to create new values for design properties or do we need to adjust one that we already have. We're part of that process towards the end that makes sure that we're still using this system.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> So, do you have one person in charge or is it everyone's responsibility to keep it up to date?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> It's sort of a team, so I'm on a team and I don't want to say "in charge"; it's more of a collaboration. We definitely want to work with other designers so it's still their design but it's not like this dictator thing; it's more like a collaborative effort.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> But say you guys, your team isn't working… you guys are sort of over-seeing the overall sort of system, but sort of working with each individual team so as you can make sure that all that thinking and stuff makes it into the final language?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yep.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> OK, that's awesome; that's really cool.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, it's fun!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> At other places you've worked and people you've worked with, has that been the case? Do you see that as like an organisational necessity in order to have this sort of the night's watch of the style guide?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> I like putting it that way! That's nice! You know, I've worked at a lot of smaller companies and when you're on a much smaller design team, I fully recognise it's hard to have people that are just full time dedicated on this; like when I was at <a href="https://do.com/">DO.com</a> which was the previous start-up that was owned by Salesforce that I was at before I moved over to this team, we only had three designers and so it was really just something like I would try to just take the time to do, so any time any code was going to go live, we always made sure I would look over the pull request and try to make sure it's still following the system.</p>
+
+  <p>It's kind of a lot of work for one person to do, so it's awesome if you can get a team to do it and I think it's worth investing in a team, especially if you're working on either something large scale and maybe even if you have various projects, I actually, when I was in Memphis recently for <a href="http://www.creativeworks.co/">Creative Works</a>, I stopped by this design agency, <a href="http://archermalmo.com/">Archer>Malmo</a> and talked with their designers and developers about it; they were looking at trying to build some system for all their various clients, maybe each client's website is different; they still wanted to use some of the same patterns and systems and so I think it could be applied to a lot of different things.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Is it something you've had to sell to companies, or is it just something that you've kind of done in the background?</p>
+</div>
+
+<aside><blockquote><p>Putting it off to the end or treating it as a separate thing is just asking for it to just sort of die on the vine or just become outdated and obsolete.</p></blockquote></aside>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> So, in the past I would try to sell it to my manager, my team, and sometimes people look at it as sort of busy-work and sort of de-prioritise it, and I especially think it's a problem if you're trying to do it all at one go, maybe at the end of a release versus iteratively during working towards a release. When I was at <a href="https://www.engineyard.com/">Engine Yard</a> though, I had the opportunity to work on this as my first project with them and that was the first time I wrote about living style guides, and it was the first time I had tried it; it was my first project just to get to know the app, was to re-factor the code-base and creating a living style guide, so I didn't have to sell anyone on that. That was awesome!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's fantastic, yeah.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> But I think the key thing that I always try to harp on is it's definitely important to never wait 'til the end; just do it as part of your process and it'll make things way more manageable and it'll make it more realistic.</p>
+</div>
+
+<span class="timestamp">(15:03)</a></span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, absolutely. That's been my experience as well is putting it off to the end or treating it as a separate thing is just asking for it to just sort of die on the vine or just become outdated and obsolete, so..</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> I've been using the term Zombie Style Guide!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome! So you're really involved in a lot of Sass development and stuff like that and into the naming and you sound like you have some interesting things going on as far as how you're creating a maintainable code base so that all of your Sass stuff is up to date in both the production environment wee as the style guide. Do you want to talk a little bit about code-specific style guides and what values are you looking for, what have you found useful, what has have developers that you've been working with, what do they find useful?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Sure. So, I worked on the <a href="http://sass-lang.com/">Sass website</a> and it was the first time working on a website that I knew I was going to be open-sourcing, which is really from my personal experience was a very new experience for me and I learned a lot from it! But yeah, I was concerned with maintainability over time, I think people contributing to the site design and code-base, which I totally encourage people to do.</p>
+
+  <p>I was worried about the style guide getting out of sync and I didn't want that to happen, so actually what I… some of the things I did on the Sass website ended up being pretty similar to what we ended up doing for the design system I was talking about that we're doing at Salesforce, but the Sass website's built on <a href="https://middlemanapp.com/">Middleman</a> so the technology I used to do this was… so Middleman allows you to have a folder for JSON or YAML file and then you can use that data within the rest of your site and so what I had done was I had a YAML file with all my colours and type sizes and things like that and so the markup and the style guide would generate off of that and then if you're working within a Ruby code base, you can actually change the extension of your Sass file so you can actually inject Ruby in your Sass file, which is probably not a totally kosher thing to do, but it works! And so what I was doing was I was generating the CSS variables in class-names for each swatch of that same file and so any time a new colour is added, provided the person contributing does it there, the new swatch will just automatically show up in the style guide.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> That's so clever!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> It's pretty cool.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah…</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, I thought it was pretty neat, but now you have Sass maps and all this stuff that's out now, so I kind of want to go back and see if I can re-factor it to be a little cleaner, but it's working for now!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome, yeah, and I think that that's sort of little things like that just go a long way to making sure that the style guide is as up to date as possible and that all the nooks and crannies and stuff are taken care of because in my experience, it's easy to, OK, here are the brand colours, here are the interface colours we're using, but then we'll deviate from those and there'll be one or two that just aren't accounted for, so that's a really clever technique. That's really cool!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Thank you!</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Do you have any tips on variable names for things like colours? Because you mentioned about the colours changing. I fell into the trap of using the colour name as the variable…</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yes, I've seen a lot of debate on whether colours should be named by their colour or named for what they're used for, and I actually prefer to do both and so for clarity I have all my colours named so I know what they are because I don't have every hex value memorised! Maybe you do: I don't!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Amateur!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> (laughs) So I have them all named, so I know what the colours are, but then I have names that are semantically named, like maybe it's <i>colour-text</i> or <i>colour-text-link</i> and then <i>colour-background</i>, <i>colour-background-input</i> or whatever, and I always use broad to specific because then when you have them all stacked up, you can easily scan them and so… and then you might even have a colour name used in more than one place, and that's OK, so I might have two colour-text variables that point to the same colour variable but I think that's OK because then it means maybe if you need to change one, but not the other, you don't have to do this crazy new factor, you can just change it in one spot, so maybe have a file for all my header styles; I might have things that are specific to the header but they would just point back to the global style.</p>
+</div>
+
+<span class="timestamp">(20:35)</span>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, that's really clever. I think that sort of multi-tiered level of variables does come in handy so that you're able to sort of be literal but then also sort of apply it to context and ebb and flow depending on where you need it, that's really cool.</p>
+</div>
+
+<aside><blockquote><p>I think the biggest benefit out of all is the fact that we're not just documenting, we are building a tool and a system and it's been making our design changes happen a lot faster</p></blockquote></aside>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> And of course for really, really simple sites, that might be too much abstraction, but for really complex sites, I think it's super-handy.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah. So, speaking of really complex sites and coming back to the organisational challenges and opportunities, we sort of jumped right in here, which is awesome, and that's obviously what we're here to do, but just taking a step back in your really long time dealing with these style guides and stuff, what have you seen to be the biggest benefits for an organisation and also some of the challenges that this type of thinking, this type of technique, really brings to the organisation?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> For our particular use case, there's a ton of benefits. I would say the documentation keeps this nice because if we have new designers joining the team, which happens very frequently, it's a lot easier to get up to speed, but I think the biggest benefit out of all is the fact that we're not just documenting, we are building a tool and a system and it's been making our design changes happen a lot faster, which is really amazing for us and I feel like the overall quality is getting better and better, so I guess for me it's, I'm even less interested in the guide aspect of the style guide right now; I'm interested in the system, so to me that's the hugest benefit of all.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I guess it's seeing it less as documentation and more as a tool.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Yeah, exactly.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, and I think that's where that real, that word "living", what you talk about living style guides versus here's a style guide. It's like, "that's nice, I might throw this in the trash can"!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> (laughs)</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> But a living style guide is more a tool, it's more useful, so that's awesome. And as far as the organisation, so, naturally of course, designers and developers are on board with this, they're the ones actually making use of it; how is the rest of the organisation reacting to it? How are business owners or product owners or I don't know exactly what the organisation calls them, but the Suits and the managers and the sort of higher-ups; do they understand and appreciate this? Do you have to talk to them and have conversations or convince them of anything?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> So, I'm not often in conversations with the "Suits" (laughs) right now but I can definitely see that they value it, especially when you just see the product getting better and better and better, of course they care about that. And it's also really like an added bonus, it's really cool for recruiting because when we're putting this stuff out there, people see that.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> They got you!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, they got you!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Exactly! They got me because of it, so they definitely see value in it; the two, like any specifics, I don't really have an answer for that.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Sure, but I guess again, very often the sort of non-designer, non-technical people, in my experience are often the ones that are saying, whoa, but we're different; we need to be purple, whereas the rest of the site is, the application is totally not purple, but you sort of have somebody that's not a designer developer sort of weighing in and saying, "no, I'm a special snowflake: give me my own unique execution". Have you ever come across that or am I alone in that?</p>
+</div>
+
+<span class="timestamp">(25:02)</span>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Not in this particular job, but I definitely have had things like that happen in past, yes.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Well that's great to hear that the organisation is on board with it. So, coming back to the Theo thing; what I'm really curious about: do you have… you have iOS, you have Android, you have your web property, you have all this stuff in synch, all sharing the same design language. Do you ever run into instances wherever iOS and Android have conflicting patterns or… the web and iOS and I don't know…</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Part of the generation of these files that Theo does is, like for Android, transparencies are going to use an eight digit hex but for the web, you'd probably use RGBA, and other things like values that maybe for Android are using DP or SP or maybe points for iOS or whatever it is that uses… and then maybe you're using REMs for the web, it does that conversion as well.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> Wow!</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> And then because it's part of the build process, when we make a change, it's not going to immediately change on that engineering team's until they pull it in and go build their app, so it's not like they're going to be working and all of a sudden, something switches from red to green and they'd be like, what just happened? It would be part of when they're ready to pull it in, then they would bring it in.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> OK, so this is more for sort of global styles that are shared, things like colour, typography and stuff, but I guess more on a component by component level; maybe those things aren't shared as much? Is that what I'm getting from…</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Currently, yeah, so the Android team is going to build a component very differently from the way a web team would. So the Theo system is really just a glossary of design values.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That's awesome.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Of design properties, and then we're building other tools for the web; right now I'm working as well on a CSS/UI framework thing, but obviously that wouldn't really be used on the native teams, so we're kind of building multiple sets of tools and some will consume others but I feel good about separating all these things into little packageable tools.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> Yeah, so that actually leads quite nicely into I guess what will be our last question is, what is your end goal? What is that ideal set-up for you? What is in your opinion the perfect style guide, the perfect work-flow and organisational set-up?</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> World domination! Yeah, so I guess it's kind of the direction we're heading right now is, especially for what we need, I would think would be the end goals. Having the glossary of all the different design values that can be consumed by whatever platform or whether you're native or web, and then having design principles outlined for colour, typography and all that stuff; that's like more of a traditional style guide, and then having the component library which can be used for really anything that you're trying to do on our platform. And these could be totally separate code bases but sharing the same navigation. I really like how Android design guidelines share the same navigation as the developer guidelines, but they're very different entities. So that's kind of the direction that we're going in right now.</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> That is awesome, I think that's a great thing to shoot for and that's really awesome that not only do you have a style guide already that you are working on the sort of next generation, so, really excited to see where that ends up and also again kudos to you guys, back to it being a recruitment tool. I think it's just a great tool to see out in the wild; for me to be able to dive into Salesforce's style guide; and I've combed through it many times just going…what are they calling this thing again? I think it's so cool that you guys are really putting it all out there, putting them out in the open and iterating on it, writing about it and I just want to say thank you for that!</p>
+</div>
+
+<div class="jina-bolton guest">
+       <p><b>Jina</b> Awesome! We'll keep doing what we're doing.</p>
+</div>
+
+<div class="anna-debenham host">
+    <p><b>Anna</b> I like the little toggle thing as well, the brightness toggle. That's really cool!</p>
+</div>
+
+<div class="brad-frost host">
+    <p><b>Brad</b> OK. Well hey, Jina, thank you so much for coming on this, thank you for being our first guest; I hope that it wasn't too crazy for you. But thank you, really appreciate you taking the time and yeah, thanks.</p>
+</div>
+
+<div class="jina-bolton guest">
+     <p><b>Jina</b> Thank you; this is awesome. I'm excited for more episodes.</p>
+</div>

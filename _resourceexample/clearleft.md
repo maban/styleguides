@@ -1,7 +1,8 @@
 ---
 title: Clearleft
 link: http://clearleft.com/styleguide/
-tags: 
+image: http_clearleft.com_styleguide_.jpg
+tags:
 - frontend
 - patterns
 ---
