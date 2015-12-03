@@ -1,5 +1,5 @@
 ---
-title: From Pages to Patterns: An Exercise for Everyone
+title: "From Pages to Patterns: An Exercise for Everyone"
 link: http://alistapart.com/article/from-pages-to-patterns-an-exercise-for-everyone
 author: Charlotte Jackson
 site: A List Apart
