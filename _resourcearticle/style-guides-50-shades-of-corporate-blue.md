@@ -1,5 +1,5 @@
 ---
-title: Style Guides: 50 Shades of Corporate Blue
+title: Style Guides - 50 Shades of Corporate Blue
 link: http://madebymike.com.au/writing/style-guides-50-shades-of-corporate-blue/
 author: Mike Riethmuller
 site: Mike Riethmuller's site
