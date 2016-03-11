@@ -1,5 +1,5 @@
 ---
-title: Sweat the Small Stuff : The importance of page-level content and your style guide
+title: Sweat the Small Stuff. The importance of page-level content and your style guide
 link: http://uxmag.com/articles/sweat-the-small-stuff
 author: Time Barrow
 site: UX Magazine
