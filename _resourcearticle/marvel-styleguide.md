@@ -1,7 +1,7 @@
 ---
 title: "The Marvel Styleguide"
 link: "http://blog.marvelapp.com/the-marvel-styleguide/"
-author: "Colm	Tuite"
+author: "Colm Tuite"
 site: "Marvel App Blog"
 ---
 
