@@ -1,6 +1,6 @@
 ---
 title: Fractal
-link: https://github.com/frctl/fractal
+link: http://fractal.build
 language: JavaScript
 author: Mark Perkins
 image: fractal.png
