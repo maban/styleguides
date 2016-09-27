@@ -1,7 +1,7 @@
 ---
 title: University of Edinburgh Brand Guidelines
 link: http://www.ed.ac.uk/communications-marketing/resources/university-brand
-image: ed.jpg
+image: ed.png
 type: Brand Guidelines
 tags:
 - branding

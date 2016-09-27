@@ -1,7 +1,7 @@
 ---
 title: Auth0
 link: https://github.com/auth0/styleguide
-image: https://cdn.auth0.com/blog/design-process/styleguide.png
+image: https_cdn.auth0.com_blog_design-process_styleguide.png
 tags:
  - code
  - patterns
