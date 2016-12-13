@@ -1,7 +1,7 @@
 ---
 title: UXcellence Style Guide
 link: https://uxcellence.com/styleguide/
-image: uxcellence.png 
+image: https://uxcellence.com/img/style-guide.png 
 tags:
 - branding
 - designlanguage
