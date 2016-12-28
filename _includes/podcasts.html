@@ -4,18 +4,28 @@
 
     <p>Episodes from various podcasts where style guides are discussed</p>
 
+    <div class="filters">
+      <h2>Filters</h2>
+      {% assign section = site.resourcepodcast | sort: 'title'  %}
+      {% include tags.html %}
+      <div>
+        <button data-filter="resource-type-podcast" data-reset="true">Reset All Filters</button>
+        {% for tag in unique_tags %}
+          <button data-filter="resource-type-podcast" data-filter-tag="{{tag | downcase}}">{{tag}}</button>
+        {% endfor %}
+      </div>
+    </div>
+
     <ul class="resources resource-type-podcast">
 
-        {% assign podcast = site.resourcepodcast | sort: 'title' %}
-
-        {% for podcast in podcast %}
-        {% if podcast.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-podcast.html %}
         {% endif %}
         {% endfor %}
 
-        {% for podcast in podcast %}
-        {% if podcast.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-podcast.html %}
         {% endif %}
         {% endfor %}

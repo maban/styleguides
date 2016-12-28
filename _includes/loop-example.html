@@ -1,22 +1,22 @@
-<li class="resource {{ example.status }}" data-tags="{% for tags in example.tags %}{{ tags | downcase }} {% endfor %}">
-    <a href="{{ example.link }}" class="resource-url">
+<li class="resource {{ item.status }}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+    <a href="{{ item.link }}" class="resource-url">
         {% if page.type != "home" %}
-            {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
-        {% elsif example.status == "recommended" %}
-            {% if example.image %}<img src="/images/screenshots/{{ example.image }}" alt="{{ example.title }}"/>{% endif %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.title }}"/>{% endif %}
+        {% elsif item.status == "recommended" %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.title }}"/>{% endif %}
         {% endif %}
         <span class="resource-description">
-            <h2 class="resource-title">{{ example.title }}</h2>
+            <h2 class="resource-title">{{ item.title }}</h2>
 
-            {{ example.content }}
+            {{ item.content }}
 
-            {% if example.author %}<p class="resource-author">{{ example.author }}</p>{% endif %}
+            {% if item.author %}<p class="resource-author">{{ item.author }}</p>{% endif %}
 
-            {% if example.site %}<p class="resource-site">{{ example.site }}</p>{% endif %}
+            {% if item.site %}<p class="resource-site">{{ item.site }}</p>{% endif %}
 
-            {% if example.tags %}
+            {% if item.tags %}
                 <ul class="resource-tags">
-                    {% for tags in example.tags %}
+                    {% for tags in item.tags %}
                         <li>{{ tags }}</li>
                     {% endfor %}
                 </ul>

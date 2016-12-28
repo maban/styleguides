@@ -4,24 +4,34 @@
 
     <p>Books written about style guides</p>
 
+    <div class="filters">
+      <h2>Filters</h2>
+      {% assign section = site.resourcebook | sort: 'title'  %}
+      {% include tags.html %}
+      <div>
+        <button data-filter="resource-type-book" data-reset="true">Reset All Filters</button>
+        {% for tag in unique_tags %}
+          <button data-filter="resource-type-book" data-filter-tag="{{tag | downcase}}">{{tag}}</button>
+        {% endfor %}
+      </div>
+    </div>
+
     <ul class="resources resource-type-book">
 
-        {% assign book = site.resourcebook | sort: 'title'  %}
-
-        {% for book in book %}
-        {% if book.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-book.html %}
         {% endif %}
         {% endfor %}
 
-        {% for book in book %}
-        {% if book.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-book.html %}
         {% endif %}
         {% endfor %}
 
         {% include add.html %}
-        
+
     </ul>
 
 </section>

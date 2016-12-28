@@ -1,15 +1,20 @@
-<li class="resource {{ podcast.status }}">
-    <a href="{{ podcast.link }}" class="resource-url">
+<li class="resource {{ item.status }}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+    <a href="{{ item.link }}" class="resource-url">
         {% if page.type != "home" %}
-            {% if podcast.image %}<img src="/images/screenshots/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-        {% elsif podcast.status == "recommended" %}
-            {% if podcast.image %}<img src="/images/screenshots/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
+        {% elsif item.status == "recommended" %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
         {% endif %}
         <span class="resource-description">
-            <h2 class="resource-title">{{ podcast.title }}</h2>
-            {{ podcast.content }}
-            {% if podcast.people %}<p class="resource-author">With <strong>{{ podcast.people }}</strong></p>{% endif %}
-            {% if podcast.podcast %}<p class="resource-podcast">On <strong>{{ podcast.podcast }}</strong></p>{% endif %}
+            <h2 class="resource-title">{{ item.title }}</h2>
+            {{ item.content }}
+            {% if item.people %}<p class="resource-author">With <strong>{{ item.people }}</strong></p>{% endif %}
+            {% if item.item %}<p class="resource-item">On <strong>{{ item.item }}</strong></p>{% endif %}
+            <ul class="resource-tags">
+                {% for tags in item.tags %}
+                    <li>{{ tags }}</li>
+                {% endfor %}
+            </ul>
         </span>
     </a>
 </li>
