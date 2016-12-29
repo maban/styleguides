@@ -4,17 +4,8 @@
 
     <p>Things to help you make your own style guide</p>
 
-    <div class="filters">
-      <h2>Filters</h2>
       {% assign section = site.resourcetool | sort: 'title'  %}
       {% include tags.html %}
-      <div>
-        <button data-filter="resource-type-tool" data-reset="true">Reset All Filters</button>
-        {% for tag in unique_tags %}
-          <button data-filter="resource-type-tool" data-filter-tag="{{tag | downcase}}">{{tag}}</button>
-        {% endfor %}
-      </div>
-    </div>
 
     <ul class="resources resource-type-tool">
 

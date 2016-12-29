@@ -1,4 +1,4 @@
-<li itemscope itemtype="http://schema.org/item" class="resource {{ item.status }}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+<li itemscope itemtype="http://schema.org/item" class="resource {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
     <a href="{{ item.link }}" itemprop="url" class="resource-url">
         {% if page.type != "home" %}
             {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.title }}"/>{% endif %}

@@ -1,4 +1,4 @@
-<li class="resource {{ item.status }}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+<li class="resource {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
     <a href="{{ item.link }}" class="resource-url">
         {% if page.type != "home" %}
             {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt=""/>{% endif %}

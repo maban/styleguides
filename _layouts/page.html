@@ -13,46 +13,29 @@
 
     {% include footer.html %}
 
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+
     <script>
-      document.addEventListener('click', function (e) {
-        var button = e.target;
 
-        if (button.getAttribute('data-reset') === 'true') {
-          // Reset the filters
-          var filter = button.getAttribute('data-filter');
-          resetFilter(filter);
-        } else {
-          // Filter the tag
-          var filter = button.getAttribute('data-filter');
-          var tag    = button.getAttribute('data-filter-tag');
-          filterTag(filter, tag);
-        }
+    $(".tags :checkbox").click(function() {
+       $(".resource").hide();
+       $(".tags :checkbox:checked").each(function() {
+           $("." + $(this).val()).show();
+           $(".tags .show-all:checkbox").prop('checked', false);
+       });
+    });
+
+    $(".tags .show-all:checkbox").click(function() {
+      $(".resource").show();
+      $(".tags :checkbox").each(function() {
+          $(this).prop('checked', false);
+          $(".tags .show-all:checkbox").prop('checked', true);
       });
+    });
 
-      // Filter tag
-      function filterTag (filter, tag) {
-        var items = document.querySelectorAll('.' + filter + ' > li');
-
-        for (var i = 0; i < items.length; i++) {
-          var itemTags = items[i].getAttribute('data-tags');
-
-          // Catch case with no tags
-          if (itemTags != null) {
-            if (itemTags.indexOf(tag) < 0) {
-              items[i].setAttribute('data-toggle', 'off');
-            }
-          }
-        }
-      }
-
-      // Reset filters
-      function resetFilter (filter) {
-        var items = document.querySelectorAll('.' + filter + ' > li');
-
-        for (var i = 0; i < items.length; i++) {
-          items[i].setAttribute('data-toggle', 'on');
-        }
-      }
     </script>
   </body>
 </html>
