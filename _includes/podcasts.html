@@ -4,18 +4,19 @@
 
     <p>Episodes from various podcasts where style guides are discussed</p>
 
+      {% assign section = site.resourcepodcast | sort: 'title'  %}
+      {% include tags.html %}
+
     <ul class="resources resource-type-podcast">
 
-        {% assign podcast = site.resourcepodcast | sort: 'title' %}
-
-        {% for podcast in podcast %}
-        {% if podcast.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-podcast.html %}
         {% endif %}
         {% endfor %}
 
-        {% for podcast in podcast %}
-        {% if podcast.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-podcast.html %}
         {% endif %}
         {% endfor %}

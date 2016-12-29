@@ -1,15 +1,20 @@
-<li class="resource {{ article.status }}">
-    <a href="{{ article.link }}" class="resource-url">
+<li class="resource {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+    <a href="{{ item.link }}" class="resource-url">
         {% if page.type != "home" %}
-            {% if article.image %}<img src="/images/screenshots/{{ article.image }}" alt="{{ article.image }}"/>{% endif %}
-        {% elsif article.status == "recommended" %}
-            {% if article.image %}<img src="/images/screenshots/{{ article.image }}" alt="{{ article.image }}"/>{% endif %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
+        {% elsif item.status == "recommended" %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
         {% endif %}
         <span class="resource-description">
-            <h2 class="resource-title">{{ article.title }}</h2>
-            {{ article.content }}
-            {% if article.author %}<p class="resource-author">By <strong>{{ article.author }}</strong></p>{% endif %}
-            {% if article.publisher %}<p class="resource-publisher">Published on <strong>{{ article.site }}</strong></p>{% endif %}
+            <h2 class="resource-title">{{ item.title }}</h2>
+            {{ item.content }}
+            {% if item.author %}<p class="resource-author">By <strong>{{ item.author }}</strong></p>{% endif %}
+            {% if item.publisher %}<p class="resource-publisher">Published on <strong>{{ item.site }}</strong></p>{% endif %}
+            <ul class="resource-tags">
+                {% for tags in item.tags %}
+                    <li>{{ tags }}</li>
+                {% endfor %}
+            </ul>
         </span>
     </a>
 </li>

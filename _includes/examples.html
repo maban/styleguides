@@ -3,36 +3,19 @@
 
     <p>Real life pattern libraries, code standards documents and content style guides</p>
 
-    <div class="filters">
-        <h2>Filters</h2>
-
-        <div>
-            <button data-filter="resource-type-example" data-reset="true">Reset All Filters</button>
-        </div>
-
-        <button data-filter="resource-type-example" data-filter-tag="backend">Backend</button>
-        <button data-filter="resource-type-example" data-filter-tag="branding">Branding</button>
-        <button data-filter="resource-type-example" data-filter-tag="code">Code</button>
-        <button data-filter="resource-type-example" data-filter-tag="designlanguage">Design Language</button>
-        <button data-filter="resource-type-example" data-filter-tag="frontend">Frontend</button>
-        <button data-filter="resource-type-example" data-filter-tag="jekyll">Jekyll</button>
-        <button data-filter="resource-type-example" data-filter-tag="patterns">Patterns</button>
-        <button data-filter="resource-type-example" data-filter-tag="voiceandtone">Voice And Tone</button>
-        <button data-filter="resource-type-example" data-filter-tag="writing">Writing</button>
-    </div>
+    {% assign section = site.resourceexample | sort: 'title'  %}
+    {% include tags.html %}
 
     <ul class="resources resource-type-example">
 
-        {% assign example = site.resourceexample | sort: 'title'  %}
-
-        {% for example in example %}
-        {% if example.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-example.html %}
         {% endif %}
         {% endfor %}
 
-        {% for example in example %}
-        {% if example.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-example.html %}
         {% endif %}
         {% endfor %}

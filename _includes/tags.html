@@ -1,0 +1,34 @@
+<!-- via https://talk.jekyllrb.com/t/get-all-tags-uniques-in-multiple-collection-pages-without-a-plugin/1221/3 -->
+<!-- Create empty arrays -->
+{% assign tags = '' | split: ',' %}
+{% assign unique_tags = '' | split: ',' %}
+<!-- Map and flatten -->
+{% assign article_tags =  section | map: 'tags' | join: ',' | join: ',' | split: ',' %}
+<!-- Push to tags -->
+{% for tag in article_tags '%}
+{% assign tags = tags | push: tag %}
+{% endfor %}
+<!-- Uniq -->
+{% assign tags = tags | sort %}
+{% for tag in tags %}
+  <!-- If not equal to previous then it must be unique as sorted -->
+  {% unless tag == previous %}
+    <!-- Push to unique_tags -->
+  {% assign unique_tags = unique_tags | push: tag %}
+  {% endunless %}
+  {% assign previous = tag %}
+{% endfor %}
+<div class="tags">
+  <ul class="tag">
+    <li class="tag__item">
+      <input class="tag__item__checkbox show-all" type="checkbox" value="show-all" checked id="show-all"/>
+      <label class="tag__item__label" for="show-all">Show All</label>
+    </li>
+    {% for tag in unique_tags %}
+    <li class="tag__item">
+      <input class="tag__item__checkbox" type="checkbox" value="{{tag | downcase}}" id="{{tag | downcase}}" />
+      <label class="tag__item__label" for="{{tag | downcase}}">{{tag}}</label>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

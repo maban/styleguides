@@ -1,15 +1,22 @@
-<li class="resource {{ tool.status }}">
-    <a href="{{ tool.link }}" class="resource-url">
+<li class="resource {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+    <a href="{{ item.link }}" class="resource-url">
         {% if page.type != "home" %}
-            {% if tool.image %}<img src="/images/screenshots/{{ tool.image }}" alt="{{ tool.image }}"/>{% endif %}
-        {% elsif tool.status == "recommended" %}
-            {% if tool.image %}<img src="/images/screenshots/{{ tool.image }}" alt="{{ tool.image }}"/>{% endif %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
+        {% elsif item.status == "recommended" %}
+            {% if item.image %}<img src="/images/screenshots/{{ item.image }}" alt="{{ item.image }}"/>{% endif %}
         {% endif %}
         <span class="resource-description">
-            <h2 class="resource-title">{{ tool.title }}</h2>
-            {{ tool.content }}
-            {% if tool.author %}<p class="resource-author">By <strong>{{ tool.author }}</strong></p>{% endif %}
-            {% if tool.language %}<p class="resource-language">Language/Platform: <strong>{{ tool.language }}</strong></p>{% endif %}
+            <h2 class="resource-title">{{ item.title }}</h2>
+            {{ item.content }}
+            {% if item.author %}<p class="resource-author">By <strong>{{ item.author }}</strong></p>{% endif %}
+            {% if item.language %}<p class="resource-language">Language/Platform: <strong>{{ item.language }}</strong></p>{% endif %}
+            {% if item.languages %}
+            <ul class="resource-tags">
+                {% for tags in item.tags %}
+                    <li>{{ tags }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
         </span>
     </a>
 </li>

@@ -4,18 +4,19 @@
 
     <p>Conference presentations about style guides</p>
 
+      {% assign section = site.resourcetalk | sort: 'title'  %}
+      {% include tags.html %}
+
     <ul class="resources resource-type-talk">
 
-        {% assign talk = site.resourcetalk | sort: 'title'  %}
-
-        {% for talk in talk %}
-        {% if talk.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-talk.html %}
         {% endif %}
         {% endfor %}
 
-        {% for talk in talk %}
-        {% if talk.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-talk.html %}
         {% endif %}
         {% endfor %}

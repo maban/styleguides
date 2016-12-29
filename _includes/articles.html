@@ -4,18 +4,19 @@
 
     <p>Things people have written about style guides</p>
 
+    {% assign section = site.resourcearticle | sort: 'title'  %}
+    {% include tags.html %}
+
     <ul class="resources resource-type-article">
 
-        {% assign article = site.resourcearticle | sort: 'title'  %}
-
-        {% for article in article %}
-        {% if article.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-article.html %}
         {% endif %}
         {% endfor %}
 
-        {% for article in article %}
-        {% if article.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-article.html %}
         {% endif %}
         {% endfor %}

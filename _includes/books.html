@@ -4,24 +4,25 @@
 
     <p>Books written about style guides</p>
 
+    {% assign section = site.resourcebook | sort: 'title'  %}
+    {% include tags.html %}
+
     <ul class="resources resource-type-book">
 
-        {% assign book = site.resourcebook | sort: 'title'  %}
-
-        {% for book in book %}
-        {% if book.status == 'recommended' %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
         {% include loop-book.html %}
         {% endif %}
         {% endfor %}
 
-        {% for book in book %}
-        {% if book.status == null %}
+        {% for item in section %}
+        {% if item.status == null %}
         {% include loop-book.html %}
         {% endif %}
         {% endfor %}
 
         {% include add.html %}
-        
+
     </ul>
 
 </section>

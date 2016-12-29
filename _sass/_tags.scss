@@ -1,0 +1,44 @@
+// ----------------------------------------------
+// Filter by tags
+
+[data-toggle='on'] {
+    display:block;
+}
+
+[data-toggle='off'] {
+    display:none;
+}
+
+.tags {
+  margin: 0;
+}
+
+.tag {
+  margin: 0 0 2em 0;
+}
+
+.tag__item {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  margin: 0 0 0.5em 0;
+}
+
+.tag__item__label {
+  padding: 0.25em 0.5em;
+  border-radius: 0.1em;
+  background-color: #888;
+  color: #fff;
+}
+
+.tag__item__checkbox {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  &:checked + .tag__item__label {
+    background-color: #424242;
+  }
+}
