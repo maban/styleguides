@@ -24,6 +24,12 @@ section + section {
     font-size: 0.85em;
 }
 
+#total-resource-count {
+  font-size: 1.5em;
+  display: block;
+  min-height: 1.5em;
+}
+
 .hidden {
     /* technique via http://webaim.org/techniques/css/invisiblecontent/ */
     position: absolute;
@@ -80,19 +86,21 @@ section + section {
   height: 50px;
   width: 50px;
   display: flex;
-  background-color: #ccc;
+  background-color: #424242;
   border-radius: 100%;
   position: absolute;
   text-align: center;
   align-items: center;
   box-shadow: 0px 2px 3px rgba(0,0,0,0.5);
-
+  position: fixed;
+bottom: 0.5em;
+right: 0.5em;
   font-size: 1.5em;
-  @media (min-width: 550px) {
-    position: fixed;
+  @media (min-width: 800px) {
+    bottom: 1em;
+    right: 1em;
   }
-  top: 3em;
-  right: 1em;
+
   &:after {
     content: "+";
     display: block;
@@ -132,5 +140,16 @@ section + section {
   }
   .template-talks & {
     background-color: $color-7-darken;
+  }
+}
+
+
+.list--inline {
+  margin: 1em auto 0;
+  text-align: center;
+  .list__item {
+    display: inline-block;
+    padding: 0 1em;
+    list-style: none;
   }
 }

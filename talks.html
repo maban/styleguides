@@ -8,7 +8,7 @@ description: Conference presentations about style guides.
 
 <section>
 
-  <h1 class="title">{{site.talk-title}}</h1>
+  <h1 class="title">{{site.talk-title}} ({{site.resourcetalk | size}})</h1>
   <p class="lede">{{site.talk-description}}</p>
 
   {% assign section = site.resourcetalk | sort: 'title'  %}

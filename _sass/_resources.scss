@@ -1,7 +1,7 @@
 .resources {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 2em 0 0 0;
 }
 
 .resource {
@@ -91,6 +91,29 @@
     .episode__image {
       width: 100%;
     }
+  }
+}
+
+.people {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.5em 0;
+  flex-wrap: wrap;
+}
+
+.people .person {
+  padding: 0;
+  list-style: none;
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  .person__avatar {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ededed;
+    min-height: inherit;
   }
 }
 
