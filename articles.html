@@ -3,6 +3,18 @@ layout: page
 title: Articles
 section: articles
 type: article
+description: Things people have written about style guides.
 ---
 
-{% include articles.html %}
+<section>
+
+  <h1 class="title">{{page.title}}</h1>
+
+  <p>{{page.description}}</p>
+
+  {% assign section = site.resourcearticle | sort: 'title'  %}
+  {% include tags.html %}
+  {% include loop-resources.html %}
+  {% include add.html %}
+
+</section>

@@ -3,6 +3,18 @@ layout: page
 title: Books
 section: books
 type: book
+description: Books written about style guides.
 ---
 
-{% include books.html %}
+<section>
+
+  <h1 class="title">{{page.title}}</h1>
+
+  <p>{{page.description}}</p>
+
+  {% assign section = site.resourcebook | sort: 'title'  %}
+  {% include tags.html %}
+  {% include loop-resources.html %}
+  {% include add.html %}
+
+</section>

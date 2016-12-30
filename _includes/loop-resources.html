@@ -1,0 +1,12 @@
+<ul class="resources resource-type-{{page.type}}">
+  {% for item in section %}
+  {% if item.status == 'recommended' %}
+  {% include loop-resource.html %}
+  {% endif %}
+  {% endfor %}
+  {% for item in section %}
+  {% if item.status == null %}
+  {% include loop-resource.html %}
+  {% endif %}
+  {% endfor %}
+</ul>
