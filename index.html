@@ -9,7 +9,7 @@ type: home
 {% assign section = site.resourcearticle | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-article.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>
@@ -20,7 +20,7 @@ type: home
 {% assign section = site.resourcebook | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-book.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>
@@ -31,7 +31,7 @@ type: home
 {% assign section = site.resourcepodcast | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-podcast.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>
@@ -42,7 +42,7 @@ type: home
 {% assign section = site.resourcetalk | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-talk.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>
@@ -53,7 +53,7 @@ type: home
 {% assign section = site.resourcetool | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-tool.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>
@@ -64,7 +64,7 @@ type: home
 {% assign section = site.resourceexample | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
-{% include loop-example.html %}
+{% include loop-resource.html %}
 {% endif %}
 {% endfor %}
 </ul>

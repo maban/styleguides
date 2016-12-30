@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="94px" viewBox="0 0 59 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>podcast</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.154381793">
+        <g id="podcast" fill="#000000">
+            <path d="M29.206,62.703 C37.844,62.703 44.849,55.701 44.849,47.061 L44.849,15.642 C44.848,7.005 37.843,0 29.206,0 C20.566,0 13.564,7.005 13.564,15.642 L13.564,47.061 C13.563,55.701 20.565,62.703 29.206,62.703 Z" id="Shape"></path>
+            <path d="M52.14,40.702 L52.14,47.082 C52.14,59.73 41.853,70.017 29.205,70.017 C16.557,70.017 6.27,59.73 6.27,47.082 L6.27,40.702 L0,40.702 L0,47.082 C0,62.127 11.435,74.547 26.07,76.117 L26.07,87.729 L8.821,87.729 L8.821,94 L49.591,94 L49.591,87.729 L32.341,87.729 L32.341,76.117 C46.976,74.548 58.411,62.128 58.411,47.082 L58.411,40.702 L52.14,40.702 L52.14,40.702 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

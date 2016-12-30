@@ -1,18 +1,18 @@
-<ul class="resources episodes">
+<ol class="resources episodes">
 
     {% assign podcast = site.podcast | sort: 'number'  %}
 
     {% for podcast in podcast reversed %}
     <li class="resource {{ podcast.status }}">
-        <span class="number">{{ podcast.number }}</span>
-        <a href="/podcast{{ podcast.link }}" class="resource-url">
-            {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-            <span class="resource-description">
-                <h2 class="resource-title">{{ podcast.title }}</h2>
-                <div class="resource-summary">{{ podcast.content }}</div>
-            </span>
-        </a>
+      <span class="resource__image">
+        {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
+      </span>
+      <span class="resource__description">
+        <span class="resource__number">{{ podcast.number }}</span>
+        <h2 class="resource__title"><a href="/podcast{{ podcast.link }}" class="resource__url">{{ podcast.title }}</a></h2>
+        <div class="resource__summary">{{ podcast.content }}</div>
+      </span>
     </li>
     {% endfor %}
 
-</ul>
+</ol>
