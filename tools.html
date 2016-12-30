@@ -8,9 +8,8 @@ description: Things to help you make your own style guide.
 
 <section>
 
-  <h1 class="title">{{page.title}}</h1>
-
-  <p>{{page.description}}</p>
+  <h1 class="title">{{site.tool-title}}</h1>
+  <p class="lede">{{site.tool-description}}</p>
 
   {% assign section = site.resourcetool | sort: 'title'  %}
   {% include tags.html %}

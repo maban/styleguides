@@ -8,9 +8,8 @@ description: Books written about style guides.
 
 <section>
 
-  <h1 class="title">{{page.title}}</h1>
-
-  <p>{{page.description}}</p>
+  <h1 class="title">{{site.book-title}}</h1>
+  <p class="lede">{{site.book-description}}</p>
 
   {% assign section = site.resourcebook | sort: 'title'  %}
   {% include tags.html %}
