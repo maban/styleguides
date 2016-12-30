@@ -5,10 +5,8 @@ type: home
 ---
 
 <section>
-
-<h1 class="title"><a href="articles">Articles</a></h1>
+<h1 class="title"><a href="articles">{{site.article-title}}</a></h1>
 <p class="lede">{{site.article-description}}</p>
-
 <ul class="resources resource-type-article">
 {% assign section = site.resourcearticle | sort: 'title'  %}
 {% for item in section %}
@@ -21,7 +19,8 @@ type: home
 </section>
 
 <section>
-<h1 class="title"><a href="books">Books</a></h1>
+<h1 class="title"><a href="books">{{site.book-title}}</a></h1>
+<p class="lede">{{site.book-description}}</p>
 <ul class="resources resource-type-book">
 {% assign section = site.resourcebook | sort: 'title'  %}
 {% for item in section %}
@@ -34,7 +33,8 @@ type: home
 </section>
 
 <section>
-<h1 class="title"><a href="podcasts">Podcasts</a></h1>
+<h1 class="title"><a href="podcasts">{{site.podcast-title}}</a></h1>
+<p class="lede">{{site.podcast-description}}</p>
 <ul class="resources resource-type-podcast">
 {% assign section = site.resourcepodcast | sort: 'title'  %}
 {% for item in section %}
@@ -47,7 +47,8 @@ type: home
 </section>
 
 <section>
-<h1 class="title"><a href="talks">Talks</a></h1>
+<h1 class="title"><a href="talks">{{site.talk-title}}</a></h1>
+<p class="lede">{{site.talk-description}}</p>
 <ul class="resources resource-type-talk">
 {% assign section = site.resourcetalk | sort: 'title'  %}
 {% for item in section %}
@@ -60,7 +61,8 @@ type: home
 </section>
 
 <section>
-<h1 class="title"><a href="tools">Tools</a></h1>
+<h1 class="title"><a href="tools">{{site.tool-title}}</a></h1>
+<p class="lede">{{site.tool-description}}</p>
 <ul class="resources resource-type-tool">
 {% assign section = site.resourcetool | sort: 'title'  %}
 {% for item in section %}
@@ -73,7 +75,8 @@ type: home
 </section>
 
 <section>
-<h1 class="title"><a href="examples">Examples</a></h1>
+<h1 class="title"><a href="examples">{{site.example-title}}</a></h1>
+<p class="lede">{{site.example-description}}</p>
 <ul class="resources resource-type-example">
 {% assign section = site.resourceexample | sort: 'title'  %}
 {% for item in section %}
