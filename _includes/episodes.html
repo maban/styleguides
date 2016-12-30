@@ -5,7 +5,9 @@
     {% for podcast in podcast reversed %}
     <li class="resource {{ podcast.status }}">
       <span class="resource__image">
-        {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
+        {% if podcast.image %}<img class="lazy-load" data-src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>
+        <noscript><img src="lazy.jpg" /></noscript>
+        {% endif %}
       </span>
       <span class="resource__description">
         <span class="resource__number">{{ podcast.number }}</span>

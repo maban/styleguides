@@ -47,14 +47,17 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "lazy-load",
         "buttons",
         "tags",
         "icons",
         "layout",
         "main",
         "nav-sections",
+        "people",
         "podcast",
         "resources",
+        "episodes",
         "syntax-highlighting",
         "pattern-lib"
 ;
