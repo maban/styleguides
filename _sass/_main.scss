@@ -6,6 +6,20 @@ abbr {
     border-bottom: 1px dotted #888;
 }
 
+section + section {
+  margin-top: 2em;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2em;
+  border-top: 2px solid #ccc;
+  }
+}
+
 .small {
     font-size: 0.85em;
 }
@@ -59,6 +73,7 @@ abbr {
 .title {
   margin: 0;
   font-size: 1.8em;
+  text-align: center;
 }
 
 .link-add {

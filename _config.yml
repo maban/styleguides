@@ -3,6 +3,24 @@ title: Website Style Guide Resources
 description: A collaborative collection of resources for creating Front-End Style Guides and Pattern Libraries
 baseurl: ""
 
+article-title: "Articles"
+article-description: "Things people have written about style guides."
+
+book-title: "Books"
+book-description: "Books written about style guides."
+
+example-title: "Examples"
+example-description: "Real life pattern libraries, code standards documents and content style guides."
+
+podcast-title: "Podcasts"
+podcast-description: "Episodes from various podcasts where style guides are discussed."
+
+talk-title: "Talks"
+talk-description: "Conference presentations about style guides."
+
+tool-title: "Tools"
+tool-description: "Things to help you make your own style guide."
+
 # Build settings
 markdown: kramdown
 
@@ -12,8 +30,6 @@ collections:
     resourcebook:
         output: true
     resourceexample:
-        output: true
-    resourceguide:
         output: true
     resourcepodcast:
         output: true

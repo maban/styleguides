@@ -65,6 +65,35 @@
   }
 }
 
+.episodes--mini {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+}
+
+.episodes--mini .episode {
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  .episode__image {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ededed;
+    min-height: inherit;
+  }
+  @media (min-width: 500px) {
+    display: block;
+    .episode__description {
+      width: 100%;
+    }
+    .episode__image {
+      width: 100%;
+    }
+  }
+}
+
 .resource.recommended:after {
   content: "★";
   position: absolute;
