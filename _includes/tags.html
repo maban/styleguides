@@ -6,17 +6,20 @@
 {% assign article_tags =  section | map: 'tags' | join: ',' | join: ',' | split: ',' %}
 <!-- Push to tags -->
 {% for tag in article_tags '%}
-{% assign tags = tags | push: tag %}
+  {% capture tmp_tag %}{{ tag | downcase }}|{{ tag }}{% endcapture %}
+  {% assign tags = tags | push: tmp_tag %}
 {% endfor %}
 <!-- Uniq -->
 {% assign tags = tags | sort %}
 {% for tag in tags %}
+  {% assign tag_items = tag | split: "|" %}
   <!-- If not equal to previous then it must be unique as sorted -->
-  {% unless tag == previous %}
+  {% unless tag_items[0] == previous %}
     <!-- Push to unique_tags -->
-  {% assign unique_tags = unique_tags | push: tag %}
+    {% assign unique_tags = unique_tags | push: tag_items[1] %}
   {% endunless %}
-  {% assign previous = tag %}
+
+  {% assign previous = tag_items[0] %}
 {% endfor %}
 <div class="tags">
   <ul class="tag">
