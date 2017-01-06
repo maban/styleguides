@@ -13,9 +13,9 @@
 {% assign tags = tags | sort %}
 {% for tag in tags %}
   {% assign tag_items = tag | split: "|" %}
-  <!-- If not equal to previous then it must be unique as sorted -->
+  {% comment %} <!-- If not equal to previous then it must be unique as sorted --> {% endcomment %}
   {% unless tag_items[0] == previous %}
-    <!-- Push to unique_tags -->
+    {% comment %} <!-- Push to unique_tags --> {% endcomment %}
     {% assign unique_tags = unique_tags | push: tag_items[1] %}
   {% endunless %}
 
