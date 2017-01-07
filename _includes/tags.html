@@ -3,23 +3,21 @@
 {% assign tags = '' | split: ',' %}
 {% assign unique_tags = '' | split: ',' %}
 <!-- Map and flatten -->
-{% assign article_tags =  section | map: 'tags' | join: ',' | join: ',' | split: ',' %}
+{% assign article_tags =  section | map: 'tags' | join: ',' | join: ',' | upcase | split: ','   %}
 <!-- Push to tags -->
-{% for tag in article_tags '%}
-  {% capture tmp_tag %}{{ tag | downcase }}|{{ tag }}{% endcapture %}
-  {% assign tags = tags | push: tmp_tag %}
+{% for tag in article_tags %}
+  {% assign tags = tags | push: tag %}
 {% endfor %}
 <!-- Uniq -->
 {% assign tags = tags | sort %}
 {% for tag in tags %}
-  {% assign tag_items = tag | split: "|" %}
   {% comment %} <!-- If not equal to previous then it must be unique as sorted --> {% endcomment %}
-  {% unless tag_items[0] == previous %}
+  {% unless tag == previous %}
     {% comment %} <!-- Push to unique_tags --> {% endcomment %}
-    {% assign unique_tags = unique_tags | push: tag_items[1] %}
+    {% assign unique_tags = unique_tags | push: tag %}
   {% endunless %}
 
-  {% assign previous = tag_items[0] %}
+  {% assign previous = tag %}
 {% endfor %}
 <div class="tags">
   <ul class="tag">
