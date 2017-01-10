@@ -1,5 +1,5 @@
 ---
-title: "Phila.gov Patterns"
+title: "City of Philadelphia Pattern Portfolio"
 link: "http://cityofphiladelphia.github.io/patterns/"
 ---
 
