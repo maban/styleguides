@@ -75,4 +75,12 @@
       color: #000;
     }
   }
+  // Based on https://ghinda.net/article/mimic-native-focus-css/
+  &:focus + .tag__item__label {
+    outline: 2px auto Highlight;
+
+    @media (-webkit-min-device-pixel-ratio: 0) {
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+  }
 }
