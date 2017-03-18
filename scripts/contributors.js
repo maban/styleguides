@@ -12,8 +12,10 @@ window.onload = function() {
           avatar = contributors[i].avatar_url,
           url = contributors[i].html_url,
           contributions = contributors[i].contributions;
-      html += '<li class="person"><a class="person__url" href="'+ url +'"><img src="' + avatar + '" alt="" width="50" class="person__avatar" title="' + username + '"/></a></li>';
+      html += '<li class="person"><a class="person__url" href="'+ url +'"><img data-src="' + avatar + '" alt="" width="50" class="lazy-load person__avatar" title="' + username + '"/></a></li>';
     }
     injectContributors.innerHTML = html;
+    // Update lazyLoad after inserting the elements
+    oLazyLoad.update();
   }
 }
