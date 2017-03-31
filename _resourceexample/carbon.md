@@ -2,6 +2,7 @@
 title: Carbon Design System
 link: http://carbondesignsystem.com/
 author: IBM
+status: recommended
 image: carbon.png
 tags:
 - frontend
