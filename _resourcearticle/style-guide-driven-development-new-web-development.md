@@ -1,5 +1,5 @@
 ---
-title: Style-Guide-Driven Development&#58; the new web development
+title: Style-Guide-Driven Development - the new web development
 link: https://www.previousnext.com.au/blog/style-guide-driven-development-new-web-development
 author: John Albin Wilkins
 site: http://john.albin.net/

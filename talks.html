@@ -3,6 +3,17 @@ layout: page
 title: Talks
 section: talks
 type: talk
+description: Conference presentations about style guides.
 ---
 
-{% include talks.html %}
+<section>
+
+  <h1 class="title">{{site.talk-title}} ({{site.resourcetalk | size}})</h1>
+  <p class="lede">{{site.talk-description}}</p>
+
+  {% assign section = site.resourcetalk | sort: 'title'  %}
+  {% include tags.html %}
+  {% include loop-resources.html %}
+  {% include add.html %}
+
+</section>

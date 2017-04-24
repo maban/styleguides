@@ -1,0 +1,373 @@
+---
+layout: episode
+section: podcast
+number: 11
+title: Nathan Curtis
+image: nathan-curtis.jpg
+about: <a href="https://twitter.com/nathanacurtis/">Nathan</a> is a founder at <a href="http://eightshapes.com/">EightShapes</a>, a User Experience design firm in Washington DC. He's also an Arsenal supporter.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/204850834&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+  {text: "Material Design", url: "http://www.google.com/design/spec/material-design/introduction.html", type: "example"},
+  {text: "Yahoo! pattern library", url: "https://developer.yahoo.com/ypatterns/", type: "example"},
+  {text: "Implementing a Pattern Library in the Real World: A Yahoo! Case Study", url: "http://boxesandarrows.com/implementing-a-pattern-library-in-the-real-world-a-yahoo-case-study/", type: "article"}
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hey everybody. Welcome to another episode of The Style Guides Podcast, a podcast that is dedicated to all things style guide and pattern library related. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we're super excited to talk with Nathan Curtis. Nathan, how are ya?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>sometimes we work with organisations that have over a hundred designers and so to make sure it's hitting the nail on the head, we'll do user research and we'll test things like this and we'll learn things like, on the colour page of a style guide: show me the damn values, is what the designers say.</p>
+  </blockquote>
+</aside>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> I'm good. How are you guys?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, great. Sorry!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Anna's had a long week, I think.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I had a long week!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, Nathan, do you just want to kick off telling us a little bit about yourself? Where you're working and what you do, what you specialise in?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Sure. My name's Nathan Curtis. I have been with <a href="http://eightshapes.com/">EightShapes</a>, we're a user experience design firm in Washington DC I started with my partner, <a href="https://twitter.com/brownorama">Dan Brown</a>, about nine years ago now, and we have a lot of clients across the country; big technology companies and small organisations and we tend to find ourselves in environments where style guides, libraries, design systems, have a strong role to play in the production of sometimes designs at large scale. So, we have a competency we've built up within our design firm to do that and help our clients really understand what libraries are and ultimately build and sustain them themselves.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's excellent. So, how would you define style guide?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Well, that's interesting because I think style guide's a potentially dangerously dated term, depending on what people expect out of that term. Circa 2002, everyone would say, it's a PDF, it's about fifty to a hundred pages long and it covers your visual language of colour and type and photography and iconography and all those core attributes of a design language.</p>
+  <p>It's certainly grown today. A lot of our work over the last five years or so is delivering all of our work in code: we tend to codify those styles into the architecture code that we build responsive sites with and so style guide now means some sort of reference to understand all of the piece as parts, not just the visual language, but also sometimes all the core elements, the bigger chunkier components, all the page types, the layout engine, the grid system and sometimes, it starts to overlap with other things, which is where it gets even more dangerous.</p>
+  <p>Style guide to a lot of people means content style guide. Editorial tone and voice and punctuation lists and word lists and so on, and so part of demystifying design libraries and style guides is helping people describe all the pieces or parts of what they're really expecting from it and making sure that they can communicate that to their audience because everybody's style guide seems to be a bit different.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>don't concentrate so much on the words that don't matter. Instead, spend the time building the visual stories or the code and picture pairings or even the demonstrators or the generators</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> What do yours include?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> What do ours include?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yes.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Sometimes some re-mix of those things plus lots of other stuff. It could be that a style guide ends up including a lot of coding style and practices. You could think of the accessibility approaches or even whether a development team uses double spaces or tab stops in their code, which is a big argument among developers at the beginning of projects.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> No!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Of course not! The other things it often tends to bleed into beyond the content style is also all the tools and the toolkits and how you use them. Some folks will embed things like icon libraries or photo swatches or some sort of pattern library they use with their own design tool for wire-framing or comps and those make their way as a consequential downloads piece of the style guide, because when designers come and they want to get started with some sort of visual system or some sort of library, the downloads link is actually in the user research we've done on style guides, one of the things they always look for: downloads globally and downloads in each of the key sections like a colour page.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That’s excellent. That's really insightful. You say that you guys have done user research with style guides?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Oh, we geek out on this stuff. </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Some of our clients, we've had a long relationship with Cisco: we learned a lot of how to set these things up from Sun, bless their….rest in peace…with them, but we've had engagements that tend to last years and it's not full time; sometimes we're just consulting over time to help them curate their library, but we also want to assess whether or not it's working, because if it's just three people working together, you look across your cube and you ask them, does it have what they need? But sometimes we work with organisations that have over a hundred designers and so to make sure it's hitting the nail on the head, we'll do user research and we'll test things like this and we'll learn things like, on the colour page of a style guide: show me the damn values, is what the designers say. Tell me what the hex code is or the RGB value or what the range of tints I'm allowed to use, or the colour contrast combinations that I'm allowed to employ. Or honestly, we'll create a big grid and it has big Xs on all the colour contrast combinations you're not supposed to do, and that actually shows people in a visual way, because lots of these people self-proclaim, "I'm a visual learner", not surprisingly.</p>
+ </div>
+
+<span class="timestamp">(5:39)</span>
+
+<aside>
+  <blockquote>
+    <p>…with a lot of these companies and when you start to place these kinds of assets behind those kinds of constraints, many teams either take an outrageously long time to get access to them, or they never get access to them. …if you use a lot of vendors, it's got to be accessible outside the firewall</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yep!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> They'll see the big X on the moderate grey on the slightly moderate grey background and they'll be like, OK, I can't be that subtle with my greys. When you do accessibility testing, you realise that so many combinations of those colours aren't good. But the user research also showed us other interesting things too, like designers don't want to fricking read the stuff at the top of the colour page. They don't care that you're going to explain to them that your colour palette is bold, vibrant and highly saturated, because that is indistinguishable from probably half of the other style guides that are out there in the industry. They just want to get to the meat of it and so a couple of the sensitising things that I've learned over time is, don't concentrate so much on the words that don't matter. Instead, spend the time building the visual stories or the code and picture pairings or even the demonstrators or the generators, like another client of ours had a set of colours within this annual report that they were creating and it was about eight different sections, they each got a colour, but then they all used these different data visualisation components and so what did we do? We created essentially a demonstrator where you clicked each of the different sections and you saw the colour applied. It's really easy; it's just swapping a CSS value in terms of how we built it, but at the same time it was really powerful for people that didn't work on that section to come and see how the colour was used, and then be able to make good judgments about how to apply colour on their part of the site too.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Wow, that's incredible! Holy smokes!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>they're using as a testament to what their belief system is and also an indicator of the quality of their organisation; they're essentially using it as a recruiting tool.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Is that live anywhere?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> If you get access to their network: sure. But no, most of the stuff…that's a whole different conversation because most of the style guides we create are password protected and the instinct for companies is to put them on our network, and it's got to be internal, it's got to be accessible to our dev team and so on, but they miss opportunities with that. First off, I'm a vendor or a partner, if you want to call it that, with a lot of these companies and when you start to place these kinds of assets behind those kinds of constraints, many teams either take an outrageously long time to get access to them, or they never get access to them. And what this style guide is, is a way for them to understand how you work and how to make good decisions in your design process if you use a lot of vendors, it's got to be accessible outside the firewall.</p>
+  <p>The other thing that I learned is that with Sun, in the late 2000s, they had a component library where if you went to sun.com/webdesign, everybody in the world sees it. It's a complete inventory of every bit of HTML and CSS that anybody that gets on their train to produce stuff would use and they just shared it with everybody, and the reason was, we don't want to spend all of our time, which means all of our money, getting people access to something silly that they can look in our source code and derive anyway.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> And so that has, I think, been coupled with some of the more recent activity I've seen, not just with style guides like you guys create but also companies like IBM, Material Design is an obvious example, but all of these companies that are now using it not as something they need to hide and not sure, but they're using as a testament to what their belief system is and also an indicator of the quality of their organisation; they're essentially using it as a recruiting tool.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, and Jina Bolton, we interviewed her and she said that she actually joined Sales Force after seeing their style guide. I'm sure that wasn't the only reason but it was a good enough reason.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>you're not just building some artefact: it's not a deliverable. What you're building is almost a way of life of your team</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right! Whatever you have, one of the best SASS people in the world join your team because they dig your style guide: that's pretty good. And I'd say I love what you're saying about just how that visibility impacts; one, it just cuts down on the bureaucracy of having to go through a bunch of tech crap just to get something that's pretty benign in the grand scheme of things but also I see it as by putting it out there in the wild, it sort of holds your feet under the fire to be like: look, this thing needs to be true, this thing needs to be accurate. It can't be some dead-weight thing that's rotting off in the corner somewhere.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Keeps you honest.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, exactly, and really makes people accountable for maintaining this thing in the long run.</p>
+ </div>
+
+<span class="timestamp">(10:02)</span>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> There is without question that it puts a lot more pressure on folks to recognise the investment and that's a real challenge. As a vendor, we're trying to sell our services so we can help the clients that we work with, but one of the toughest things that I find to help convince them is, you're not just building some artefact: it's not a deliverable. What you're building is almost a way of life of your team and that can be scary to them because then they say, oh, OK, so this is a three year investment; how much do I need to spend per month or quarter to keep this thing alive and the answer is, it's not zero and so let's talk about the things that are important to you that you need to invest in or that you're most willing to invest in.</p>
+  <p>The other thing is that it starts to provoke questions of change because like deliverables, they're never really done; they just stop getting worked on and so when you make it obvious to them that OK, you might have a big launch you're driving towards; you might have a bevy of different products that are going to utilise it that are all trying to synch their launches around this particular point in time, but as these products do their work, you're going to learn more and more products are going to crop up and over the subsequent quarters or years, this thing is going to get applied in different ways.</p>
+  <p>One of the challenges we found with a client we've worked with for about five years now is, we created a design system in 2012 and we said, "You should probably make this sucker responsive as a web-based experience." They didn't and then they realised in 2013 that they needed to and that corresponded to an internal re-branding of the company. And then, oh wait, we built one, and then they re-branded the company again in 2014 and then they had two concurrent design systems at play: they actually have two different code repositories and now there's a question of, are you going to use A, or are you going to use B?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh Jeez!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> But there's also a historical precedent that we're now talking with them about is, when does C happen, because based on the rate you've got now, it's going to happen in three to six months. And are you going to have a D? And so now it's at another level of magnitude where we're talking about how resilient does this library need to be? How resilient does the code need to be, to be able to handle that change? Fortunately, these folks have been investing for years but that's still a scary proposition for the team that's just starting out and thinking about, should we build a library on our own and how resilient to change will this need to be over time?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Wow! That's pretty serious sounding stuff as far as larger organisations going through. And that is establishing these systems can help facilitate those giant re-designs?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Oh, there's no doubt.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Done properly, I suppose.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> But other teams temper their expectations, I would say the team we worked with last fall, they didn't want that: they had a hundred designers, each moving a hundred miles an hour, creating native apps and creating all sorts of different web based experiences, sites and applications and so on. What they needed was just honestly a style guide. They needed what they called a library site, because they wanted to integrate concerns of content and code and other things sort of on the periphery, but the sucker at its core is just a documentation of the visual language and for them, it was good enough. For me, I was seeing this opportunity to build all these sophisticated things, but for them they were like, this is just what we need and I've talked to them since and they're like, I just shared how to use colour and type and iconography with Team Thirteen; they got it, they're going to use it: big win. Thanks for the value.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Was there any apprehension about it being restrictive at all?</p>
+</div>
+
+
+<aside>
+  <blockquote>
+    <p>…the way that the library was communicating itself and expressing its ability to change, it fostered that perception of openness and evolution that made it a lot more palatable to new product owners</p>
+  </blockquote>
+</aside>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> You mean, is it perceived as a governing constraint that limits innovation kind of thing?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. </p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Oh yeah. This team that I'm talking about that achieved just a visual language style guide last fall, they have a big sign in one of their offices spaces. It says, "disrupt". And ironically, I was the consultant sitting underneath these bright lights of the sign saying "disrupt" saying, "I'm the standards guy coming in to help govern you." So it changes the conversation because there were members of that organisation that were, let's say, immune to the term governance. They wanted to almost eradicate it from their organisation.</p>
+  <p>I could see why, because they were at a period of rapid growth, but they needed something to bring people together: how do they do that? And so it becomes a delicate conversation between them. People change job titles; people think about their roles differently and how they're going to collaborate and project out central things to everybody else, but this team, like <a href="http://www.google.com/design/spec/material-design/introduction.html">Material Design</a>, I have the opportunity through that project to talk with <a href="https://twitter.com/jonwiley">John Wiley</a> from Google and the first thing out of his mouth was, "This thing can't really happen that pervasively and that strongly without having top-down support for it." And so while you can say governance is a bad word, or standards is a bad word, there's still an organisation I worked with and within Google, a strong directive from the top of, we need to find a way to establish that directing North Star of what we're doing and follow that. It might not go deep and create all the grids for you and make all the components you have to use, but we at least have to agree on the yellow, blue and green that we're going to use in our colour palette, right, guys?</p>
+ </div>
+
+<span class="timestamp">(15:31)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and I do, and this is certainly true to a lot of the guests that we've spoken with: there is this spectrum between the just some basic rules of the road; here's what colours you use, here's what colours you avoid, don't stretch the logo, basic 101 level stuff, that's more like suggestions, best practices, but then on the other end of the spectrum is, this style guide is our moment of truth: this is the source of truth and everything goes through here and if you're not doing it this way, then it's just not going to make it onto the site or whatever. And I think that there is a lot of room for, and I'm sure it depends on the organisation how loose or how tightly you want to manage that stuff, I guess, over time.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> I think you're absolutely right and on the far end, or the latter end of the spectrum that you described where the governance is fairly, the folks on that end that are the most successful are the ones that take the mindset of being a facilitator, prepared for change, rather than a Director that expects to be static or expects that what they've already done is good enough.</p>
+  <p>Sun worked in part because they had a lever of awesome and deep comprehensive component library that if you're a new team that you want to build a product or section of the site, you had eighty to ninety per cent of what you needed. But they also built into the process a central point of contact who was basically the Code Overlord. We called him the Overlord at times as a joke, but…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That won't go to his head!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Yeah, right. If you met him, you would laugh! But at the same time, he was also very fast, he was very responsive and through the way that the library was communicating itself and expressing its ability to change, it fostered that perception of openness and evolution that made it a lot more palatable to new product owners to come in and say, "Oh, I see this library but oh wow, look at all the updates that they continue to churn out. I can get on that train because that train's going to continue to support me. It's vibrant and evolving."</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So, how would you recommend people handle exceptions? Say you're working with a company and they've got a style guide but they want to do something a bit crazy: they want to have a microsite which has completely different styles. Would you create them a second style guide or would you make it part of the same style guide?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I said, that's all very well structured content; and each of those findings, you can kind of tag with articles in your style guide. Wow, here's three colour findings; here's two form-based findings. And so imagine that. Now you've got this production shop producing user research reports.</p>
+  </blockquote>
+</aside>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> It depends. I think that more often than not, as a library and of these design libraries, it's harder to handle an increasing number of exceptions and document all of them.</p>
+  <p>Really, the style guide is an essence documentation of all the decisions that you've made, but in effect there's another team making a bunch of other decisions that you can neither control or honestly, most of the time, keep up with. And so what I do in the case of wild exceptions is figure out a way of try and consult with and to help them understand what is more malleable, more flexible versus what is more strict, and try and keep them, if necessary, closer to the core as you can.</p>
+  <p>The other thing that sometimes exceptions provide you is an opportunity. Those exceptions sometimes can provide you an opportunity to get them to invest in expanding your thing. So, if you want to use this design system, but it doesn't give you thirty per cent of what you need, will you pay for it? And do you anticipate continuing to pay for a little bit of the maintenance? Great; let's talk about that.</p>
+  <p>The other thing is, they sometimes become the exceptions that you highlight on your own site of what not to do. So like I said, with a lot of the style guides I've created, the most effective ones are ones filled with pictures and examples and those examples on Material Design site are clearly red and green, which is very simple to understand. Do this: don't do that. But there are also things that are a little bit, gosh, what's the half way colour between red and green? I don't know, but they're somewhere in the middle. The orange and yellow examples of what you could probably do but you need to think about and so, helping people understand not just what parts of the style guide they can use, but how strict and flexible each of those pieces are is an important part.</p>
+ </div>
+
+<span class="timestamp">(20:18)</span>
+
+<aside>
+  <blockquote>
+    <p>Suddenly these two things happening at an enterprise level, user research and essentially design libraries or design standards are now communicating through a single channel to where designers can look and see, now I see where those choices around colour have substantive evidence on why I should do it; it's not some arbitrary choice of some standardista that isn't even on a design project and just using a colour wheel: there's a lot of rigour that's gone into this and so connecting those two pieces</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I actually just wrote a blog post on the topic because of which patterns are the ones that need to be followed to a T? There's really not a lot of wiggle room with them and to borrow a phrase that I've grown to love working with Josh Clark: he calls it "Doing Business". There's Doing Business typography and there's Doing Business patterns. They sort of more utilitarian aspects of an interface. If you're an e-commerce shop, you're going to have your check-out form, your account update stuff: those are all very utility driven things and so as a result, maybe those components that comprise that experience are a little more rigid when it comes to maintaining a style guide for them. But then there's these whole areas that might be full of all sorts of editorial content and stuff that's getting swapped out: here's the spring sale and here's Christmas. More blank slate, do anything you want sort of things, so it's about building that flexibility into the system instead of just the whole thing, you need to follow this or you're fired! It's not like a black and white sort of thing, you know what I mean? It's just knowing where you have that flexibility and so it sounds like the way that you're communicating that is through these examples and the language around a pattern, is that true?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> I think so. It's funny; "or you're fired" quote reminds me of, it may be many standards police's dream for that to happen, but that's the nightmare that everybody else fears! There's really no consequence like that, that ends up really happening except if you go to the VP and you start a fight!</p>
+  <p>But I think there's certainly a range and in times I've seen that the more a team centrally maintains some of those global components; think of it as the wrapper of the site. The header, the footer, the main menu-ing or primary navigation and the way the grid system works. A lot of times with a web-based experience that is more statically published content, that is non-negotiable; you're going to have to have a much more central notion of how the information architecture's manifested and that's often fear the navigation like that.</p>
+  <p>But on the flip side, a lot of these things are just all re-mixed in the content space, and that's OK. So, certainly the degree of adherence is something that you also embed; I remember in the <a href="https://developer.yahoo.com/ypatterns/">Yahoo! pattern library</a> in the mid to late 2000s, they had a blogpost I think or <a href="http://boxesandarrows.com/implementing-a-pattern-library-in-the-real-world-a-yahoo-case-study/">a post on boxes and arrows that talked about their maturity scale</a> and so that's another thing that some teams use and it's always debatable what the levels of that scale are, but is this thing being piloted? Is it a working example? Is it a best practice? Is it the Yahoo! way in their case.</p>
+  <p>And there are certain quantifiable things that you can do that you might not even need to expose to your makers using your system of, has it been through user research? How many products is it being used on? How old is it? Have we really proven it? That's one thing that people will do a lot is to try and ascribe some sort of authority to them.</p>
+  <p>One other really interesting thing I saw a team do. I came up with the idea because I saw this large organisation with a hundred plus designers who had this user research practice that was serving all of these different design teams with five researchers that were conducting three to five research events a week, kitting all of their different products, and so when you have something at that scale, I saw an opportunity to say, you guys are producing user research reports; those reports tend to have some of executive summary that also lists findings on that cover page, a one-sheeter that sensitises to what happened in that. I said, that's all very well structured content; and each of those findings, you can kind of tag with articles in your style guide. Wow, here's three colour findings; here's two form-based findings. And so imagine that. Now you've got this production shop producing user research reports. What if that was a second tab on the colour page, where the first tab is just guidelines or what have you, and then you could connect these research reports because it's managed content basically: upload a report, type in the findings, tag 'em with labels. Suddenly these two things happening at an enterprise level, user research and essentially design libraries or design standards are now communicating through a single channel to where designers can look and see, now I see where those choices around colour have substantive evidence on why I should do it; it's not some arbitrary choice of some standardista that isn't even on a design project and just using a colour wheel: there's a lot of rigour that's gone into this and so connecting those two pieces and having that evidence ended up being a very powerful, unanticipated win when we launched that library site.</p>
+ </div>
+
+<span class="timestamp">(25:33)</span>
+
+<aside>
+  <blockquote>
+    <p>the most successful libraries I've seen conflate a lot of the different concerns or legs of the stool, so to speak, of what impacts design. You've got content concerns and IA or structure concerns and visual concerns and behavioural and code concerns</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fascinating. I think the most fascinating part about that is it just shows how, whenever you create this watering-hole for the organisation, it gives you a platform that you can iterate upon and build upon and actually the more eyeballs you have on it, the more useful it becomes and the more knowledge you can share under that roof, right?</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Yeah. There's no question and I love that metaphor: watering-hole, because the most successful libraries I've seen conflate a lot of the different concerns or legs of the stool, so to speak, of what impacts design. You've got content concerns and IA or structure concerns and visual concerns and behavioural and code concerns. Oftentimes, if you can get all of those different parts of the story into a single picture where you see the component and the code right next to it to cut and paste it from, but also some of the other commentary from those different perspectives, it ends up creating a blended story, but it's also really hard to author and get those different influences into a single story like that; it takes work, it takes time, it takes maybe a facilitator of a library, you could call them a librarian, having conversations with all those people and being fairly fluidly involved.</p>
+  <p>One of the organisations I worked with ended up ascribing authority in a larger org for each of those legs of the stool where they had somebody from an enterprise-wide level was the person that everybody went to, to ask questions of and give authority to the visual choices: the colour and the type and so on. Another person, behaviours and interactions: that person happened to be a design leader in their native space where animation and gestures and transitions played a key part in how the thing worked.</p>
+  <p>And so for larger orgs, sometimes ascribing authority, even temporarily, like there's a term of service maybe, to a smaller set of individuals tending to be leaders in the org can help centralise that, but also still give the impression that there's representation within the projects and products that are being built, and it's not some separate thing where decisions are being made without the context of what's emerging in their eco-system. Does that make sense?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I think that makes total sense and I think that if those people who are in that role, they're already in a leadership role, and so if you were to hire a new visual designer, well you'd want that new designer to talk to the creative director and she's going to show her the ropes, you know what I mean, and all of that, so of course that makes sense to just scale that person's knowledge and throw it on the pile, throw it onto the style guide and make sure that that person, that creative director, her vision and all of those ideals and values and all that stuff make it into the global language.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> It also, I think, helps with the legitimacy ascribed to that enterprise central design library function, because some of those leaders, they don't have to be designated leaders of visual design or something like that, but there is representation across a range of different dimensions, different product lines, different design disciplines, and by spreading that around, effectively the function of the library becomes a facilitating one, not an owning one; the authority rests with the people, so to speak.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right, and that's going to do nothing but encourage collaboration and get people, like you were just saying, exposed to those other disciplines' thinking so that even if you are a developer, you're thinking about the accessibility and usability in visual and content decisions around, say, a carousel or something like that.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Exactly. But carousels: every library has to have 'em, every product owner wants 'em, and they are the worst performing component in the world.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> You don't have to tell me!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> We find every client it's like, OK, we're starting to build up this library, we're building our own code, we're essentially going through our list, we have a big queue, a bit like a spring backlog of all the different items that go in the library, all the different articles we want to write or code snippets we want to create; carousel always finds its way down the list when we do our prioritisation and then it makes its way up the list based on the demand of whatever products are using it. So, we do our best to evangelise the negative impacts of carousels, but it doesn't always work.</p>
+ </div>
+
+<span class="timestamp">(30:22)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Should I use…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> A style guide wouldn't be complete without one!</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Exactly!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Exactly! It's like, something's missing here: what could it be?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> A carousel full of QR codes!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh no, that's my nightmare! Oh, Jeez! Well, hey, Nathan, I think that we're just about out of time but this has been just tremendously insightful. I think that your perspective is one that's really unique; it sounds like you've had a wealth of experience working with all sorts of different organisations and so you having that bird's eye view of what those common patterns across different style guides and stuff have been really, really helpful. So, thanks for sharing that.</p>
+</div>
+
+<div class="nathan-curtis guest">
+  <p><b>Nathan</b> Oh, it's been my pleasure.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent. All right. Well, thanks everybody for listening in. See you again. Thanks.</p>
+</div>

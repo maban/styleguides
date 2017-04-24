@@ -4,14 +4,137 @@ section: home
 type: home
 ---
 
-{% include articles.html %}
+<section>
+<h1 class="title"><span id="total-resource-count"></span> Website Style Guide Resources</h1>
+<ul class="list--inline">
+  <li class="list__item"><a href="https://github.com/maban/styleguides">GitHub repo</a></li>
+  <li class="list__item"><a href="https://twitter.com/styleguidesio">Twitter updates</a></li>
+  <li class="list__item"><a href="/contributors">Contributors</a></li>
+</ul>
+</section>
 
-{% include books.html %}
+<section>
+<h1 class="title"><a href="examples">{{site.example-title}}</a></h1>
+<p class="lede">{{site.example-description}}</p>
+<ul class="resources resource-type-example">
+{% assign section = site.resourceexample | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/examples" class="link-view-more">See all {{site.resourceexample | size}} examples…</a>
+</section>
 
-{% include podcasts.html %}
+<section>
+<h1 class="title"><a href="articles">{{site.article-title}}</a></h1>
+<p class="lede">{{site.article-description}}</p>
+<ul class="resources resource-type-article">
+{% assign section = site.resourcearticle | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/articles" class="link-view-more">See all {{site.resourcearticle | size}} articles…</a>
+</section>
 
-{% include talks.html %}
+<section>
+<h1 class="title"><a href="books">{{site.book-title}}</a></h1>
+<p class="lede">{{site.book-description}}</p>
+<ul class="resources resource-type-book">
+{% assign section = site.resourcebook | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/books" class="link-view-more">See all {{site.resourcebook | size}} books…</a>
+</section>
 
-{% include tools.html %}
+<section>
+<h1 class="title"><a href="podcasts">{{site.podcast-title}}</a></h1>
+<p class="lede">{{site.podcast-description}}</p>
+<ul class="resources resource-type-podcast">
+{% assign section = site.resourcepodcast | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/podcasts" class="link-view-more">See all {{site.resourcepodcast | size}} podcasts…</a>
+</section>
 
-{% include examples.html %}
+<section>
+<h1 class="title"><a href="talks">{{site.talk-title}}</a></h1>
+<p class="lede">{{site.talk-description}}</p>
+<ul class="resources resource-type-talk">
+{% assign section = site.resourcetalk | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/talks" class="link-view-more">See all {{site.resourcetalk | size}} talks…</a>
+</section>
+
+<section>
+<h1 class="title"><a href="tools">{{site.tool-title}}</a></h1>
+<p class="lede">{{site.tool-description}}</p>
+<ul class="resources resource-type-tool">
+{% assign section = site.resourcetool | sort: 'title'  %}
+{% for item in section %}
+{% if item.status == 'recommended' %}
+{% include loop-resource.html %}
+{% endif %}
+{% endfor %}
+</ul>
+<a href="/tools" class="link-view-more">See all {{site.resourcetool | size}} tools…</a>
+</section>
+
+<section>
+  <h1 class="title">Contributors</h1>
+  <p class="lede">Resources on this site have been added by the following contributers:</p>
+  <ul id="people" class="people"></ul>
+  <p class="lede"><a class="button" href="https://github.com/maban/styleguides/graphs/contributors">View on GitHub</a></p>
+  <script src="/scripts/contributors.js"></script>
+</section>
+
+{% include add.html %}
+
+<script>
+
+var el = document.getElementById("total-resource-count");
+
+function fadeIn(el) {
+  el.style.opacity = 0;
+
+
+  var tick = function() {
+    el.style.opacity = +el.style.opacity + 0.01;
+
+
+    if (+el.style.opacity < 1) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16)
+    }
+  };
+
+  tick();
+}
+
+fadeIn(el);
+
+var total = Number('{{site.resourcearticle | size}}') +
+            Number('{{site.resourcebook | size}}') +
+            Number('{{site.resourcepodcast | size}}') +
+            Number('{{site.resourcetalk | size}}') +
+            Number('{{site.resourcetool | size}}') +
+            Number('{{site.resourceexample | size}}');
+document.getElementById('total-resource-count').innerHTML = total;
+
+</script>

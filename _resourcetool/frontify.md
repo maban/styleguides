@@ -1,10 +1,9 @@
 ---
-title: Frontify
+title: Frontify Style Guide
 link: https://frontify.com/styleguide
 author: Josip Budzaki
-language: N/A
-image: frontify-style-guide.png
+language: Online Editor
+image: frontify-style-guide.gif
 ---
 
-Visually specify colors, typo, dimensions and more. 
-With one click you get a beautiful style guide, automatically generated from your specifications.
+Create your style guide with the Frontify Style Guide editor. Use existing templates or start from scratch by choosing from over 20 smart blocks (like colors, media, typography, UI elements, & more) - No coding required. =)

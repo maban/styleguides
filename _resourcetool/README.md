@@ -2,16 +2,16 @@
 
 To add a tool:
 
-1. [create a new file within the _resourcetool folder](https://github.com/maban/styleguides/new/gh-pages/_resourcetool) (the same one as this README). 
+1. [create a new file within the _resourcetool folder](https://github.com/maban/styleguides/new/gh-pages/_resourcetool) (the same one as this README).
 2. Give it a name that's the same as the tool, with words separated by hyphens, with .md at the end.
 3. Paste the following templating code into it:
 
 ```
 ---
-title: Title of tool
-link: A static link to the site or GitHub repo
-author: The creator's name
-language: The language/s used other than HTML and CSS (e.g. PHP, Jekyll, Sass) and platform if relevant (e.g. Wordpress)
+title: "Title of tool"
+link: "A static link to the site or GitHub repo"
+author: "The creator's name"
+language: "The language/s used other than HTML and CSS (e.g. PHP, Jekyll, Sass) and platform if relevant (e.g. Wordpress)"
 ---
 
 An optional short description of the tool goes here
@@ -27,10 +27,10 @@ Here's an example of a tool I've added to the _resourcetool folder:
 
 ```
 ---
-title: Barebones
-link: http://barebones.paulrobertlloyd.com/
-author: Paul Robert Lloyd
-language: PHP
+title: "Barebones"
+link: "http://barebones.paulrobertlloyd.com/"
+author: "Paul Robert Lloyd"
+language: "PHP, HTML"
 ---
 
 An initial directory setup, style guide and pattern primer

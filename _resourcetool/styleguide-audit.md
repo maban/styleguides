@@ -1,5 +1,5 @@
 ---
-title: An overview of Pattern Library Generators
+title: Style Guide Auditing Tool
 link: https://github.com/straker/css-style-guide-audit
 author: Steven Lambert
 language: CSS, JavaScript
