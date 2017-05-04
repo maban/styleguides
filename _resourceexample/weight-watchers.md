@@ -1,7 +1,7 @@
 ---
 title: Weight Watchers
 link: https://www.wwstyleguide.com/
-image: weight-watchers.png
+image: weightwatchers.jpg
 tags:
 - patterns
 - frontend
