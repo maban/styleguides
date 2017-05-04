@@ -1,6 +1,6 @@
 ---
 title: Mass.gov style guide
-link: https://www.wwstyleguide.com/
+link: https://medium.com/massdigital/mass-gov-style-guide-e677ec4c0c57
 tags:
 - voiceandtone
 - writing
