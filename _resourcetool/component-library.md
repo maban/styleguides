@@ -5,4 +5,4 @@ author: Dima Snisarenko
 language: node
 ---
 
-An easy way to create HTML styleguide for existing project.
+An easy way to create HTML styleguide for existing web project.
