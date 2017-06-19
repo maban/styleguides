@@ -14,22 +14,28 @@ description: Episodes from various podcasts where style guides are discussed.
 
   {% include podcast-actions.html %}
 
+  {% assign podcast = site.podcast | sort: 'number'  %}
+
+  <h2 class="title">Season 2</h2>
   <ol class="resources episodes episodes--mini">
-
-      {% assign podcast = site.podcast | sort: 'number'  %}
-
-      {% for podcast in podcast reversed %}
-      <li class="{{ podcast.status }} episode">
-        <a href="/podcast{{ podcast.link }}" class="episode__url">
-          <span class="episode__image">
-            {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.title }}" title="{{ podcast.title }}"/>{% endif %}
-          </span>
-        </a>
-      </li>
-      {% endfor %}
-
+    {% for podcast in podcast reversed %}
+      {% if podcast.season == 2 %}
+        {% include episode-mini.html %}
+      {% endif %}
+    {% endfor %}
   </ol>
+
+  <h2 class="title">Season 1</h2>
+  <ol class="resources episodes episodes--mini">
+    {% for podcast in podcast reversed %}
+      {% if podcast.season == 1 %}
+        {% include episode-mini.html %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+
   <a href="/podcast" class="link-view-more">See more…</a>
+
 </section>
 
 <section>
