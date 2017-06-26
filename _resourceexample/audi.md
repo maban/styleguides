@@ -1,6 +1,6 @@
 ---
 title: "Audi Brand Appearance"
-link: "http://www.audi.com/"
+link: "http://www.audi.com/ci"
 image: "audi.png"
 tags:
  - branding
