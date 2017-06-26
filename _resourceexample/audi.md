@@ -1,5 +1,5 @@
 ---
-title: "Audi"
+title: "Audi Brand Appearance"
 link: "http://www.audi.com/"
 image: "audi.png"
 tags:
