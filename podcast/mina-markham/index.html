@@ -32,7 +32,7 @@ links: [
   <p><b>Anna</b> Whoo!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Hey!</p>
 </div>
 
@@ -40,7 +40,7 @@ links: [
   <p><b>Brad</b> Hey! Thanks so much for coming on.</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Thank you for asking me, this is great.</p>
 </div>
 
@@ -48,7 +48,7 @@ links: [
   <p><b>Brad</b> So, to sort of set the stage a little bit, we are dusting off this podcast to talk about where Design Systems and Pattern Libraries and Style Guides have evolved to since the first time we started chatting to different people and you just have a wealth of experience and knowledge, you've been doing a bunch of great work on the topic of Design Systems, including a giant… giant, <a href="https://medium.com/git-out-the-vote/pantsuit-the-hillary-clinton-ui-pattern-library-238e9bf06b54">highly visible Design System for the Hillary Clinton campaign</a>, so we're just thrilled to have you on to talk about that but you're also at <a href="https://slack.com/">Slack</a> now, correct?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yes I am; I've been there about three months now.</p>
 </div>
 
@@ -56,7 +56,7 @@ links: [
   <p><b>Brad</b> Congratulations!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Thank you.</p>
 </div>
 
@@ -64,7 +64,7 @@ links: [
   <p><b>Anna</b> And you're their Front End Developer, is that right?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, I was there working on the Marketing team, doing some similar work to what I was doing for the Clinton campaign, so yeah, it's been great.</p>
 </div>
 
@@ -78,7 +78,7 @@ links: [
     </blockquote>
 </aside>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Very hot!</p>
 </div>
 
@@ -94,7 +94,7 @@ links: [
   <p><b>Brad</b> Yeah! You had this huge opportunity to create a Design System called Pantsuit for the Clinton campaign, so do you want to talk about the genesis of all that and how that all came to be, why did you decide to create a Design System? Did you think of that at the offset or right out of the gate or did that come later? Or I'd love to hear just what's the beginning of all that? How did that happen?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Sure, OK. So, to set the scene a little bit, I was the first engineer that was hired on the tech team. I was actually the fourth one in the office because I had to move from Austin where I was living to Brooklyn so it took me a while to get there.</p>
   <p>By the time I was in the office, we had our Director of Front End, <a href="https://twitter.com/">Kyle Rush</a> there; three Front End Engineers and a few Back End Engineers as well and around maybe the second week of me being in the office, he approached me, he being Kyle… we need this Bootstrap or like this Pattern Library; I think you might be a good person to do that, do you think it's something you can take on?</p>
   <p>And I immediately said yes, because I actually had been thinking about that in my head as well, trying to figure out how to broach the topic and how to bring up, I want to do this thing because I think it would be beneficial for us, but luckily it was already on his mind and it was something he really wanted to do so I was lucky in the sense that I didn't need to try to get any buy-in because it was already there. So, I was kind of prepared in my head to try to convince people and I kinda got this gift of, we need to do it; please do it. I'm like, that's exactly what I wanted to do, this is great!</p>
@@ -104,7 +104,7 @@ links: [
   <p><b>Brad</b> That's perfect! And I guess, what were the underlying reasons? It sounded like there was already consensus but what were some of the things you were anticipating having to deal with in building this thing?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Sure. Mainly, I had no way of knowing what the velocity would be like at the time because I'd never done anything like this before but I knew enough to know that we were going to be hiring a lot of people very quickly, we were going to be moving very quickly and it seemed to me that we needed some kind of system or some kind of guide in place so that people could build apps and web pages that were all very individually consistent and on-brand.</p>
   <p>Also, at the time I was hired, the site that we had was… the first version of the site was kinda very inconsistent in a bunch of places and so me just looking at it and going from pages, I was seeing the visual inconsistencies on it and I wanted to figure out a way to address it and solve it so I started doing it officially after I was given the OK to do this project but in my head, I was doing a visual UI inventory: OK, we have ten different kinds of buttons, we have all different kinds of blues, all these different icons and so I was seeing all of this differentiation between elements and wanting to figure out how can we fix this.</p>
 </div>
@@ -115,7 +115,7 @@ links: [
   <p><b>Anna</b> So you didn't start out with a blank slate, is that right?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> No… yeah, the first version of Pantsuit… I built two separate versions in my time there. The first one was based on the site as it existed when the campaign launched and the goal of the first version of it was a complete re-write of the underlying code for maintainability, for modularity and for being able to build things and iterate quickly, but I couldn't change anything visually; it was one of the key points was that I couldn't do any visual changes because we wanted a one-to-one UI parity for the sake of A-B testing, so my first goal was to re-write everything while changing nothing. And that took a lot of… it's a little frustrating on my end, mainly because the reason I wanted to do it was to fix the inconsistencies and then I was told I couldn't do it, because everything had to be exactly the way it already was so then we could then start testing things, iterating and making improvements but the very first thing I had to do which is, don't change anything, just make the code easier to work with.</p>
 </div>
 
@@ -129,7 +129,7 @@ links: [
   <p><b>Anna</b> Were you not just tempted to tweak a bit of line height here and there…</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> I think I snuck in some changes here and there! Mainly they were concerned with anything that would potentially skew our first few tests; they wanted the first test to be just testing them, make sure the code base was fine and didn't have any detrimental effects to the site so I think I snuck in a few things here and there; maybe I got rid of a couple of unnecessary blue colours or something but for the most part, I was very much like one-to-one nothing changed.</p>
 </div>
 
@@ -139,7 +139,7 @@ links: [
   <p>So, how did you end up between… the first version was based on the existing UI. How did that second version come to be? Did they finally go, OK, we need to do an overhaul? How did that all go down?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Well, there was an effort to completely re-design all of <a href="https://www.hillaryclinton.com/">hillaryclinton.com</a> properties and applications so in conjunction with completely re-doing the visual look of the site we re-built everything code-wise, visually-wise: everything was re-done.</p>
   <p>In that process, a new version of Pantsuit, it was obviously needed because it needed to match what the re-design was going to be and so I took that moment to basically re-write Pantsuit again entirely. It kind of changed some of the architecture for things that I was noticing weren't quite working the way I thought they would or from feedback I got from the other engineers about how they were using it so I took the opportunity and when I had to visually change Pantsuit to match the re-design to also change the architecture as well.</p>
 </div>
@@ -150,7 +150,7 @@ links: [
 
 <span class="timestamp">(9:17)</span>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> We had… there was the one repo and so basically while everything was in development, I had the master branch that everyone was using that code and pointing to build sites as we were continuing to develop the new project but yeah, we had… I just used a different branch to write my code that way and as the team who was doing the re-design, for one, we worked off… let me back up!</p>
   <p>Pantsuit itself was a completely different separate project in repo from all the other sites that were consuming it so what I did was I would build things, the fundamental foundational stuff inside of the Pantsuit project, the repo itself; import that… I would import that into the re-design product that the entire team was working on and as I would build the actual web pages, the interfaces, I would either, if I started building it inside the project itself, I would then copy that and port it over to the Pantsuit repo, commit it, add it… bump the version and we would then re-import that new version and the re-designed site repo, so it was a lot like a circular kind of process where sometimes I would iterate on the UI inside the Pantsuit project itself, if I was working directly inside of the particular components or if I was working in a larger interface and was making tweaks to the larger interface that I thought should be ported back into the library, I would then move from the product to the system, so it felt at the time, it was kind of like more of a fluid design in the browser type situation, because after I got the fundamental stuff, I did separate inside of the Pantsuit project itself but after that, all the iterations tended to be in the browser, having indirect conversations with our web designer and building things on the fly and then porting them back over into the system.</p>
 </div>
@@ -165,7 +165,7 @@ links: [
     </blockquote>
 </aside>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, that's right.</p>
 </div>
 
@@ -174,7 +174,7 @@ links: [
   <p>So, do I have this right? Sometimes you felt that something like that might be better initiated within Pantsuit, within the system itself but then other times if you're riffing with the actual team or whatever, it's like, let's just do this and then you'll extract the general pattern after the fact, is that…?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, that sound about right. When I built the second version, initially I built everything, the foundational stuff like the CSS architecture and the organisational structure, I built all of that separate in its own Pantsuit repo and then as the designer was iterating on the website, because that's the project that Pantsuit was built for and was the main one consuming it, as he would iterate on the UI for the site, either he and I would sit down, decide OK, do we think that this would be beneficial outside of this context and if it was, I would then port it back over into the Pantsuit library.</p>
   <p>If it wasn't, then it just stayed inside the website, the main website project itself, as an additional CSS file. So it was a lot of… first it was me and our Design Lead deciding if we could foresee a use case for any particular component outside of the context he designed it in and if we could, I would go back and port it.</p>
   <p>After the site became live and more people started using the Pantsuit system, I would start having weekly sessions with not just me and our Lead, Victor, but also the other designers and engineers who were using Pantsuit and designing with it and say, have you guys been working on anything that you think should be in the library and if they have, then they and I would talk about it and figure out the best way to get that into the library itself.</p>
@@ -186,7 +186,7 @@ links: [
 
 <span class="timestamp">(14:57)</span>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, that's a good way to put it. The way I would describe my job to other people was that I was like the translator between engineering and design. </p>
 </div>
 
@@ -196,7 +196,7 @@ links: [
   <p><b>Brad</b> That's awesome!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> And so people tended to come to me to figure out anything to do with the visual, the UI, decide to figure out the best place for it sometimes, the best approach on how they should create it, how it should be implemented, so I kind of became this hybrid straddling a couple of the worlds.</p>
 </div>
 
@@ -204,7 +204,7 @@ links: [
   <p><b>Anna</b> That sounds fantastic. And how did you decide whether a component should go into Pantsuit or not and did you ever have to push back and say no, actually I don't think this is going to be used elsewhere?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> I don't think I ever had to push back. We were kinda conservative in the sense of what we put into Pantsuit; we really kept the Library itself pretty light because we didn't want the extra CSS… because when you consumed Pantsuit, you got the entire Library, there wasn't any modular aspects so you couldn't pick and choose which components it was just because of the way our build process works so for that reason, I kept the library pretty intentionally light because I didn’t want a lot of extra CSS being served to people who didn't need it.</p>
   <p>So, it was kind of rare that something got added to the Library after the first initial couple of iterations of it. I think one instance of something being added was, we added a pagination that was being used for… I built it for the blog and I think we had some other project that needed to have cut to paginate some different pages so I thought, OK, since I already have this thing built, I'll just stick it inside Pantsuit and you guys are already consuming Pantsuit so that way you can go ahead and get it for free.</p>
   <p>So yeah, I pretty intentionally didn't add a lot of things to the Library because I didn't see the benefit of adding on a lot of extra code for what might end up being two projects who would need this particular component so I guess the answer to the question is, I really tried to see, was there more than a couple of use cases that we see this being used for? If we only think of one or two then maybe we should do it just one-off in each individual project and be done with it.</p>
@@ -221,7 +221,7 @@ links: [
     </blockquote>
 </aside>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Sure; I built Pantsuit, when I say hillaryclinton.com, what I meant was, all of the content-driven pages, that was the first consumer of the site, so it was the Home Page, the Biographies, Issues pages, the Blog, State specific pages; anything that had a lot of heavy content that was the first product that consumed it and then we had other separate projects that were like the Donations platform, the Events platform, Sign-up platform; these one-off special projects like the roulette game we had where it was a side by side comparison of where Hillary and Trump were doing in any particular year so we had those one-off type fun projects; they were all under the umbrella of hillaryclinton.com but they were all separate products that were run by separate teams within the Tech team itself and they all in some form used Pantsuit as a foundation.</p>
 </div>
 
@@ -232,7 +232,7 @@ links: [
   <p>How was the discovery of Pantsuit across the whole campaign? Where did that stuff live or did people just know about it? How did you market it, I guess?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> How did I market it? It's cool, it's fine.</p>
   <p>For one, I built a documentation site that I felt was pretty comprehensive so that people knew what it was and how to use it and then whenever I made updates to the Library, whenever I bumped the version or add new components, I created this automated Slack hook that would ping our main tech channel to let people know, hey, there's an update to Pantsuit; you can look at the code here, you can look at the docs here, so every time something new happened, people were made aware and the onus was still on them to either upgrade their version of Pantsuit in their project or whatever but I made the marketing of it after the initial reveal where I just told people about it, that it was a thing that existed, every time an update happened, I made that kind of an automated thing so that people just like, oh hey, look the Pantsuit Bot told me there's a new version of Pantsuit…</p>
 </div>
@@ -241,7 +241,7 @@ links: [
   <p><b>Anna</b> A Pantsuit Bot!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah!</p>
 </div>
 
@@ -249,7 +249,7 @@ links: [
   <p><b>Anna</b> I'm going to steal that idea!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> But also, all of our new projects started from this boilerplate that one of our Front End Architects made and that automatically just included Pantsuit so people already had it when they started their project; if they used a boilerplate that was brought in for them, so after the first big reveal, everything happened automatically; people just had it and they knew where to go look for information on how to use it.</p>
 </div>
 
@@ -258,7 +258,7 @@ links: [
   <p>Taking them… was that boilerplate a little further along than just, here's a bunch of components you could use but here's them actually starting to get stitched together? Or was it something more like in the back end side of things?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> It was kind of a blank slate; it literally just included the dependency for Pantsuit; it didn't include any components per se, but the document…</p>
 </div>
 
@@ -266,7 +266,7 @@ links: [
   <p><b>Brad</b> Like, here's the header and footer: it's just like a white page? OK.</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> It was just a white page but the documentation I actually did put a bunch of different template examples, like, here's a fully formed header, so people could've gone for the docs and saw various templates of a sticky header versus a normal header or a footer and just taken the code from there but the boilerplate itself didn't do that.</p>
 </div>
 
@@ -275,7 +275,7 @@ links: [
   <p>This is something that comes up a lot in my own work is, when does documentation get written? Where does it get written? Who' the audience for it and stuff like that? Could you talk about that because that's something that I feel like just blows up a lot of organisations, it's like, oh, documentation is boring and…. yeah….</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> OK, I think I'm kinda weird because I love documentation!</p>
 </div>
 
@@ -283,7 +283,7 @@ links: [
   <p><b>Brad</b> Yay!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> I like writing it but I guess I'm in the minority in that sense but I used KSS-Node</p>
 </div>
 
@@ -291,7 +291,7 @@ links: [
   <p><b>Anna</b> Mmmm….</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> And I included that inside the Pantsuit repo, that along with <a href="http://assemble.io/">Assemble</a>, this templating static site generator, templating language, used those too in conjunction to build out documentation or just the documentation site/the Style Guide, so with <a href="https://github.com/kss-node/kss-node">KSS Node</a>, the actual documentation took place inside the component files themselves in comments, so I would use a bunch of silent comments to document the code right above the component in its own Sass file.</p>
 </div>
 
@@ -301,7 +301,7 @@ links: [
 
 <span class="timestamp">(25:01)</span>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> I feel like some people and some engineers who were using Pantsuit would've just went straight to the code itself and saw and looked at the documentation there because all of the docs, it was literally inside the code base so you didn't actually have to go to the site to read the document if you didn't want to.</p>
   <p>So in that sense I put every piece of code I documented inside of its own component file but for some of the larger pages that were talking about our CSS coding standards or things like that, inside of the Pantsuit repo itself, they didn't just include the code for the framework but also included all of the pages for documentation, so, using the site generator from Assemble, I created individual HTML files where I put all of the more content-heavy documentation like how to use our colour palettes, guidelines, things like that.</p>
   <p>So, those two things combined, KSS Node helped with documenting the components themselves but the larger overall documentation was handled by… actually Handlebars files for Assemble and the snippets to actually show the living examples of the components, those were individual HTML files that I put inside this folder in the Pantsuit repo called Snippets, and I would link to that HTML file in the CSS, KSS-node comments so KSS-node has this really great ability, if you tell it what HTML file to look for a code example, it'll render it inside on the page itself, so that was how I handled that part. The only down-side to that is meant that I had to go to a separate place to update the mark-up if I needed to but that wasn't that big of a deal.</p>
@@ -313,7 +313,7 @@ links: [
   <p>But then there are these other really important pieces of documentation, things like colour guidelines or basic UX best practices and stuff like that, that should be more accessible to non-developers and stuff and that was always my weirdness with KSS and stuff, but now I think that it sounds like you hit a sweet spot, where you're able to do the technical documentation in a place where it makes sense to do the technical documentation but then do the other stuff somewhere else but it all lives side by side a bit.</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, that was a lesson I learned from the first version because the first version of Pantsuit, I tried to do all the docs in KSS and it just, I hit a really weird spot trying to document all the colour variables because I wanted to actually show the colours rendered on the screen and I ended up writing this huge comment because I was writing the mark-up in the comment itself.</p>
 </div>
 
@@ -321,7 +321,7 @@ links: [
   <p><b>Anna</b> Mmm, I've been there!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> It got really weird and wasn't particularly maintainable so for the second version when I was able to not just re-do the Library, but re-do everything, I talked to our main Front End Architect and I asked him to build me this build system that would allow me to render this type/site??? but also to render the KSS-node comments as well and he came up with using that in conjunction with using the Assemble site generator to solve this problem for me.</p>
 </div>
 
@@ -331,7 +331,7 @@ links: [
   <p><b>Anna</b> You talked a little earlier about A-B Testing. Did Pantsuit help at all with that?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> We didn't really test Pantsuit itself per se. I don't think that it helped in the sense of…</p>
 </div>
 
@@ -339,7 +339,7 @@ links: [
   <p><b>Anna</b> More like components, you know?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Testing components, things like that; people did that on their own particular products so Pantsuit helped when they needed to build something quickly for a new test or whatever, but I don't think… Pantsuit itself, we didn't test it and it didn't really give a good… what's the word I'm looking for? It didn't really give a good guideline to who you should test components; I guess that's the best way to put it. If I actually had it my way, we would've done more regression testing on Pantsuit but given the timeframe we had, the resources, that didn't pan out so much but one of my dreams was to do visual regression tests not just on the site but also on the Pantsuit product itself, because I needed to know if I inadvertently broke something!</p>
 </div>
 
@@ -353,7 +353,7 @@ links: [
   <p><b>Anna</b> Yeah! I love visual regression testing for that.</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yep.</p>
 </div>
 
@@ -369,7 +369,7 @@ links: [
   <p><b>Brad</b> So, I guess for the uninitiated, and I count myself as someone who has an opaque, high level knowledge of that; what you're talking about is, if you were to make a change to any given component, you'd be able to run it through build process and it would spit out a visual screen-shot of, here's the present and here's what we just changed in onion layer, lay them side by side and be like, hey, here's exactly what changed whenever you made the padding on this button three times as big or something?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah, something like that. <a href="https://twitter.com/micahgodbolt">Micah Godbolt</a>, I know he does a lot of talks about this, but ideally what I wanted was, either some kind of overlay for a diff of what's changed, if anything changed, or maybe a gif to show before and after, but it would only spit that out for something that did change.</p>
   <p>So, if I changed the colour of a button and the only diff it shows me was that button change then I'd be like, OK, fine, that's exactly what I wanted. But if it spits out a bunch of other stuff that also changed that I didn't intend to change, I'd be like, OK, wait: something went horribly wrong; let me go back and figure out what I did.</p>
   <p>In the absence of being able to do that automatically, I did that manually and I had to be very careful, just because… I guess I take it back: I didn't have to be that careful because Pantsuit was versioned and every project was using a particular version of Pantsuit so it wasn't like if I committed a mistake and pushed it up live, it would automatically break everything, because it wouldn't; people actually had to opt into the change I'd made so in that case, it was safeguarded from immediately breaking anything, but unless I was pretty diligent about tracking every instance of something, there was the potential that something could break and that's why I wanted the visual regression test to give me a safe… make me feel a little bit better about making these widespread changes. I didn't do it very often but that would've made me feel a bit more confident if I had that additional layer to check.</p>
@@ -383,7 +383,7 @@ links: [
   <p><b>Anna</b> Like an npm module?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> It was both, depending on what product you were talking about. There were three different ways that people would consume Pantsuit: there was the manual way, which they would just take the source code and include the Sass files into their own project.</p>
   <p>Only one product did that and it was the donations platform and they did it because that was the best way to keep the codebase down. There was the… we had compiled versions of the CSS, just compile CSS and versioned numbers up on our CDN and some people pointed to those compiled files and that was mainly done by any back end applications that didn't have a front end build process associated with it but still needed to have a UI layer attached to it, so there was that way to consume it and in that case, people would just change their source code to link to a different version of the CSS file.</p>
   <p>The main way people did it was through npm modules and if they wanted to bump up the version of Pantsuit, they would change the number in their package at JSON then the new version would be bundled up into their larger CSS file in that way.</p>
@@ -395,7 +395,7 @@ links: [
   <p><b>Brad</b> That's awesome; that's another thing where it sounds like you hit a sweet spot for different audiences, so it sounds like the… I'm just a back end developer, I just need to crank this out really quick and I need a UI that's all… you have that crude but effective way of getting Pantsuit into their projects, but for the more sophisticated ones that have dedicated front end resources, they're still able to use it but in maybe a more sophisticated way. That's really cool because again, that's stuff that people struggle with and it's just some things seem really blunt and other things seem too involved, so it's sorta cool that you were able to set it up where it's like, oh yeah, you can do it this easy way or you could do the advanced mode or whatever as well.</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah and those last, those two other versions, the compiled CSS and doing it manually, those were both added later, based on the feedback I got from several different people because the very first way you could consume Pantsuit, the only way to do it was through the npm module, that was how it started out and as I started hearing more from my people who were trying to use it but couldn't get it to work in their project, I realised that we needed to have the compiled CSS version of theirs to handle that particular use case.</p>
   <p>One of our back end engineers who didn't have a front end resource but needed to build this thing and wanted it to look good and wanted it to be on-brand but didn't have the capacity to do that and so, clearly we'd need a different way to consume this project so I got a lot, talking to a lot of the different engineers to see how they wanted to use this thing really helped me to iterate on the workflows and the way that I was presenting the project, I guess.</p>
 </div>
@@ -404,7 +404,7 @@ links: [
   <p><b>Brad</b> Yeah, you're going to them, you're working with the way that they're comfortable working rather than imposing some foreign, external sort of thing that they might be uncomfortable or unfamiliar with so I think that that's awesome and obviously it helps to talk to people to learn that stuff!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Yeah! Strangely enough, talking to people is a good idea!</p>
 </div>
 
@@ -413,7 +413,7 @@ links: [
   <p>With respect to Design Systems and having come off what sounds like this tremendous opportunity to build and iterate over a system, now that you're in a new role at a new place, what are you most excited about to sink your teeth into at Slack?</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> I really am interested in seeing Design Systems on a larger scale, enterprise-level scale because building Pantsuit was an amazing experience but it was kind of a unique experience: it was building it, for one building it on my own which was a strange learning curve for me but also working with a large team of people to figure out how to best make this system work in various different situations that I couldn't even begin to think of.</p>
   <p>Pantsuit was for hillaryclinton.com but it was still very much… most of it was still very much, it was a very content-driven… it wasn't a lot like web application stuff inside of Pantsuit, I guess is the best way to put it; it was very much like web pages, maybe a single page app but not a lot of really intense product like web app, so I wanted to be able to figure how to apply what I know about Design Systems and Pattern Libraries to an actual web application that doesn't just have a web app but also iOS apps and Android apps; I want to be able to figure out how to make… how this works in a larger cross-platform product which other people have figured this out, like <a href="https://www.lightningdesignsystem.com/">Salesforce</a> was a great example of figuring out how to do this, but being able to… I kind of want to figure out how I would like to approach something like that.</p>
 </div>
@@ -424,7 +424,7 @@ links: [
   <p><b>Anna</b> I have so many more questions to ask you but we're running out of time!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> OK!</p>
 </div>
 
@@ -432,7 +432,7 @@ links: [
   <p><b>Anna</b> It was really great having you on the show and I hope we can get you back maybe in a year's time and then you can tell us how you've figured out how to do all this stuff around these different mediums and the app and phones, because I want to find out that too!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Well yep, hopefully!</p>
 </div>
 
@@ -445,6 +445,6 @@ links: [
   <p><b>Anna</b> Bye!</p>
 </div>
 
-<div class="mina-markham host">
+<div class="mina-markham guest">
   <p><b>Mina</b> Bye!</p>
 </div>
