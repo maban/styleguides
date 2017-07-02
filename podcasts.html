@@ -43,6 +43,10 @@ description: Episodes from various podcasts where style guides are discussed.
   <h1 class="title">{{site.podcast-title}} ({{site.resourcepodcast | size}})</h1>
   <p class="lede">{{site.podcast-description}}</p>
 
+  <p class="lede">Through the magic of Huffduffer, you can subscribe to our curated list of style guide related podcasts in your favourite podcast app.</p>
+
+  {% include external-podcast-actions.html %}
+
   {% assign section = site.resourcepodcast | sort: 'title'  %}
   {% include tags.html %}
   {% include loop-resources.html %}
