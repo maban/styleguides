@@ -1,0 +1,437 @@
+---
+layout: episode
+section: podcast
+number: 16
+season: 2
+title: Micah Godbolt
+image: micah-godbolt.jpg
+published: 9th of July 2017
+about: Micah is a Senior Design Developer at <a href="https://twitter.com/Microsoft">Microsoft</a>. He created <a href="https://twitter.com/SassBites">@SassBites</a>, and wrote <a href="http://fea.pub">Frontend Architecture for Design Systems</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/332359745&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Frontend Architecture for Design Systems", url: "http://fea.pub", type: "book"},
+    {text: "React", url: "https://facebook.github.io/react/", type: "tool"},
+    {text: "TypeScript", url: "https://www.typescriptlang.org/", type: "tool"},
+    {text: "Fabric React", url: "https://dev.office.com/fabric", type: "example"},
+    {text: "The $300 Million Button", url: "https://articles.uie.com/three_hund_million_button/", type: "article"},
+    {text: "Glamour", url: "https://github.com/threepointone/glamor", type: "tool"},
+    {text: "Lightning Design System", url: "http://lightningdesignsystem.com/", type: "example"},
+    {text: "PhantomJS", url: "http://phantomjs.org/", type: "tool"},
+    {text: "CasperJS", url: "http://casperjs.org/", type: "tool"},
+    {text: "Headless Chrome", url: "https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md", type: "tool"},
+    {text: "Selenium WebDriver", url: "http://www.seleniumhq.org/projects/webdriver/", type: "tool"},
+    {text: "BrowserStack", url: "https://www.browserstack.com/", type: "tool"},
+    {text: "Travis CI", url: "https://travis-ci.org/", type: "tool"},
+    {text: "Jenkins", url: "https://jenkins.io/", type: "tool"},
+    {text: "CSS Dev Conf", url: "http://2017.cssdevconf.com/", type: "talk"}
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hey everybody, welcome to another episode of The Style Guides Podcast. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are really, really lucky to have with us Micah Godbolt. Micah, how are you?</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> I am good; I'm ready for this, let's do it!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yes, excellent, well let's just dive right in, I mean I guess for the uninitiated to the Micah Godbolt universe, what's your story, where do you fit in the Design System realm of things? What's your role, what are you working on as it pertains to Design Systems?</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Sure. I'm currently a Senior Design Developer at Microsoft which is basically a front end developer, they just don't really have that title. But it's pretty apt for what we do, we really do development but we do development specifically to get our design into our applications, so right now my major focus is on Fabric React, which is a Design System that's used within Office, Office 365 and really a lot of the applications now at Microsoft. It's a Design System that started within one drive in SharePoint but has grown and started to become adopted within a lot of the Office products and actually products across Microsoft in general, so, truly great to be able to write a rack controller that actually gets used by, I don't know the millions, I mean it's probably a large number of people.</p>
+  <p>So that's been really exciting, I've been doing that for the last nine months or so and diving head first into <a href="https://facebook.github.io/react/">React</a> and <a href="https://www.typescriptlang.org/">TypeScript</a> which for me was actually a first for both of those.  Prior to that, I was doing a lot of Design System work at <a href="https://www.redhat.com/en">Red Hat</a>, building out large systems for them, writing a book on Design Systems called <a href="http://fea.pub">Front End Architecture for Design Systems on O'Reilly Press</a>, doing podcasts, doing speaking, doing lean-in meet-up for a couple of years just getting really, really busy, so right now it's kinda nice just to sit down and focus and be able to do this project at Microsoft.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great, so it sounds like you know nothing about Design Systems, that's great!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Nothing at all! I have no experience and I shouldn't be here!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…I think that the power is that as you keep doing more work and more work and more work, we keep coming down to this realisation that so many things in our Design System are buttons, are literally buttons.</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent! Yes! No, that's fantastic. Your book is quite wonderful so I'd definitely encourage everyone to pick that up. So, I think a big thing of, as we're diving into this, as we're dusting off this podcast is really seeing how the landscape over the last couple of years as it relates to Design Systems and stuff has really evolved. I think we all understand, OK, this makes sense, it makes sense to set aside these best practices; it makes sense to try to architect things in a way that you're not constantly re-inventing the wheel or that this product would be able to benefit from the thinking of stuff that was born of another product. And also get a sense of how that actually happens: what does that look like? What tools, what technologies we reach for in order to make that stuff happen and I know that at Microsoft you seem to be doing a lot about, a lot of work within React, <a href="https://dev.office.com/fabric">Fabric React</a>, so do you want to talk about React in general but also specific what Fabric React is and how that's helping and how you're architecting things in a way that allows you to make things at scale?</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Sure. Kind of going back to what you're originally talking about, how we've come a long way in the last three years, going from what even is a Design System and why would we ever need one and I think a lot of us are kind of at this Version 2 of our Design System thinking. Three years ago, when I sat down with Red Hat, we'd just launched our site and we were looking to try and kind of bolster the Design System of it and try and create something a little more re-usable.</p>
+  <p>I was starting to prototype the ideas and get a few things together and one of the managers I was working with asked me, so, how many times have you done this? How many of these have they built? And I'm sure a lot of people would have the same response of, yeah, this is the first time I've ever done this! Because websites, especially when you're working on a large scale website, you usually do one a year-ish, kind of thing; you don't really get a chance to do lots of websites over and over again so yeah, that was the first time I'd gotten to even try and build one.</p>
+  <p>So this is V2, this is my second opportunity to take what I've learned and start building things and I think just a couple of things come to mind with that respect.  One of them is the… it's kind of going back to that <a href="https://articles.uie.com/three_hund_million_button/">Million Dollar Button thing</a>, I'm trying to remember where I heard it but somebody'd written an article or a talk or something about the Million Dollar Button or the Five Million Dollar Button or whatever the case is.</p>
+</div>
+
+<span class="timestamp">(5:30)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think that's Jared Spool.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…we had a command bar that used to just be this monolithic, everything in the kitchen sink, all the functionality built into it, and now I'm breaking it down into all these tiny little pieces…</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, yeah.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Oh, OK; nice. I must track that down again. But as soon as I saw that I was like, what?</p>
+  <p>And then within nine months I'm working on this project; the amount of work I have put into our button and the amount of times it's been re-factored and the amount of times it's been updated with new technologies and so on and so forth, but I think that the power is that as you keep doing more work and more work and more work, we keep coming down to this realisation that so many things in our Design System are buttons, are literally buttons.</p>
+  <p>If you look at a drop-down menu and all of the items in a drop-down menu, those are buttons; those might be buttons displayed in different ways, with different styles and functionality wrapped round it but in the end they need all that core functionality any button could need, so we're kind of getting to this point where we're almost looking at anything you click on really needs to be, go down to that button.</p>
+  <p>No one should be writing an anchor tag or a button tag or anything that's not just using the button component itself, so that whole concept of how could you spend that much time and effort on a button? It's because everything you click on is literally a button and there's no reason to use something different because eventually you're going to come to a point where, oh, I wish our other button that we made over here had the functionality that our normal button has. Why can't we add an icon on the left hand side? Why can't we have a drop-down menu on the right hand side? Why can't we do this, do this, do this like our other button does?</p>
+  <p>And you realise that if every clickable object can basically be a descendent or parent, whatever way you want to go, of that actual button, it means that everything has a ton of power and flexibility to it and kind of going from there, as we start building more things and as this button becomes more powerful, we've just started introducing, we're using <a href="https://github.com/threepointone/glamor">Glamor</a> for our style links and it's a hot topic right now of moving CSS in a JavaScript.</p>
+  <p>The main reason that we've done it is that typically, if you have a button that you want to have, say you want it three different colours; you want a red, a green and a black or something like that. You need to enumerate those in your CSS and attach a class to it or whatever you're going to use for that and so then you say, oh, a green one, and you pass the green class through; the blue one, pass the blue class through. Now you want a purple button, you have to go in the CSS, you need to add purple button and make that a class name and so on and so forth down the list, so as you need more of these colours, how do you support those without going in the CSS and doing that? Or someone has to write CSS that overwrites those styles.</p>
+  <p>And this is obviously a big problem when you've got a button that needs to be used just about anywhere: hey, I want to use a button in this instance but the styles don't match, or the padding's not correct, or whatever the case is, now I need to write some styles to overwrite it. And what Glamor allows you to do is basically make… in the end, you're still the style tag with a selector and some CSS attributes; properties and attributes, but the way that tag is created is actually at run-time for us now, so every time a button is created, we pass in all the properties of, I want the colour on hover to be green, and you can actually pass that through as a property, so when that button gets rendered, it now has the hover colour of green.</p>
+  <p>Now there's some over-ride of more specific selector, not as a… oh, now we have different variants in our CSS and we're using a green hover variant; these are values that can be mixed down into the button every time you use it and this is hugely powerful because building this new command bar; we had a command bar that used to just be this monolithic, everything in the kitchen sink, all the functionality built into it, and now I'm breaking it down into all these tiny little pieces and one of those is obviously a button because it's a bunch of buttons, there's some overflow menus and those kind of things, and now in the contract, in the API I have for this command bar, I can literally say that for every item you have on a command bar, you can pass in a set of styles, you can pass in a set of icon colours and background colours and hover colours and all these things that now get mixed down into that button, all the way down at the bottom of that stack so that you can have, oh, I need my icon to be the first one green, the second one red and the third one purple and you can do all of that without a single CSS selector, without having to worry about specificity, without worrying about adding extra bloat to a CSS, or any of that and that's really an amazing place to be: we're able to now start leveraging the flexibility and the power of these really focused and really capable components as you start building larger things with them and seeing that level of flexibility has been really amazing because we're trying to build one command bar that can be used in Microsoft Word, that can be used in Outlook, that can be used in OneDrive and SharePoint, that can be used anywhere, and we don't want to have to add all these, well, here's the OneDrive version, you could pass a class for that, and here's the SharePoint version, you can do a class for that.</p>
+  <p>We're trying to make something that's powerful enough that you can pass in whatever you need for whatever styling and so you can override the button and use a different render function for that.</p>
+  <p>It's really kinda neat that, it's kind of moving onto Design Systems as a set of styles but also Design System as a set of functionality, because when it comes down to it, Fabric still has styles and it has, this is our visual language that we use within our product, but we try and make that visual language something that doesn't get in the way if you need it to look completely different, and I think maybe that's the Style or Design System 2.0 as you start wrapping up functionality around all these components as well, making them really capable.</p>
+</div>
+
+<span class="timestamp">(12:08)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> CSS in JavaScript still feels kind of icky to me!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> It's kind of crazy and I completely agree and hopefully we'll get to a point where we don't need to do that.</p>
+  <p>The best thing would be if we could actually compile Sass on the fly and pass the variables in to that Sass file before it gets rendered; that's basically what we're looking to do but right now, the way that works, it's in the build step, that Sass file. Before, without CSS and JavaScript, the Sass file actually gets converted into CSS and then stored as a string that then eventually gets passed to the component, so right now, that's all happening on build time rather than at run time, so as soon as we're able to at run time make those changes, it's going to be a whole lot easier, whether that's a better support with CSS variables or, gosh, just being able to compile Sass in the browser, I don't know what it's going to take, but I think the point and the value of what we're doing is showing, this is what we want to do and we want to be able to say, hey, render this button but here is the values that we want to go into that CSS; we want to do that and we've found a solution for it, it takes JavaScript and hopefully, eventually, we won't have to do that and it'll be something that will be supported within better tooling, within better browser support, within better something but we're blazing the trails as to where we want to get and hopefully a road will come after us.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I feel a bit like, I don't know if either of you watch <a href="https://en.wikipedia.org/wiki/Father_Ted">Father Ted</a>? I'm guessing not!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…Fabric started as just a set of CSS and HTML that showed how a button was supposed to look, or how a drop-down was supposed to look but then when we got feedback towards, hey, what happens when you click on it?…</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> No, sorry!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I feel like, so, Mrs Doyle, she loves making tea for people she works for and she's shown this machine that makes tea and she's just looking really sceptical through the whole demonstration of this machine just making tea and the person who's trying to sell it to her is saying, it's going to take all the misery out of making tea and she just goes, "<a href="https://www.youtube.com/watch?v=PI0MRyUFIXU">Maybe I like the misery</a>"! I think that's me, I think that's me with CSS; I love writing CSS and I don't want anything to take that away from me!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> I mean, the thing about it is, you're not not writing CSS; the end product is still CSS, we're not talking about inline styles, we're not talking about not creating CSS properties and solving things with CSS. It really comes down to how the CSS get into the browser and what processes can you effect on it before it gets in the browser, and so when you start looking at CSS in JavaScript, you're basically looking like a big JSON object that pretty much looks like CSS except you're using commas instead of semi-colons and you've got quotes around your values.</p>
+  <p>Otherwise it looks like CSS: you've got background colour is, whatever your background colour and you have font size is whatever your font size is, so you're still doing all these things, it's just where do they get stored and right now we're doing it in JavaScript because we want to be able to, at run-time, be able to process that JavaScript and do things to the JavaScript before it actually prints to the page, and that's for us the power of it.</p>
+  <p>Beyond that, you're still creating CSS in the browser and the CSS has to work like CSS does, so I don't think we're taking away the pain of CSS; if you like the pain, it's still there!.</p>
+</div>
+
+<span class="timestamp">(15:58)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I do like the pain!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> We're changing the place that you write it and in a way, at least at this point, we're replacing Sass variables with JavaScript variable; we're replacing Sass mixins with a JavaScript function, so it's really the same kind of building process for your styles, it's just in a different language, but the end result is still the same.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, here's a question for you, and this is something that I run into with my own client work and stuff, wherever I go into these organisations and this particular product or this particular slice of a product is running React and they're talking about all this cool stuff that you're talking about; they're excited about maybe or maybe not writing the CSS in the JavaScript or whatever, but the basic gist is to your earlier point of, we're not just saying, oh hey, here's what a button looks like; we're quite literally standardising a lot of the functionality of this stuff, so that people don't have to each individual engineer or whatever that's reaching for that button has to re-write all of this behavioural stuff or whatever, so I get that, that that's really attractive to build that in. What about other parts of the organisation that maybe aren't running React or maybe can't or won't or there's legacy systems or there's whatever, or is there just like an organisational-wide initiative where it's like, yep, this is the implementation-specific stuff we're going on; this is how we write things now and get on board or whatever.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Because in my own work, what ends up happening is, I see these clients and they commit to these things that in order to get that sort of standard button style or card style or certain behaviours or whatever, you have to subscribe to a specific library, whether that's React or Angular or JQuery or however they wrote it…</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> I write my Angular tools.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I was listing out the things I want to get done and a big one right at the top was visual regression testing because a lot of it is we have, especially in a federated system, you want to make sure that when someone chucks some code in and re-factors some CSS or CSS in JavaScript or whatever the case is, that your component continues to look the same regardless of those changes</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, as organisations get bigger and bigger and there's a bunch of different products, there's a bunch of different technologies in use; suddenly you're in this position where it's like, in order to get that button style, I have to subscribe to this iceberg of tech dependencies and stuff that have no real bearing on rendering that…styling that button. So, could you speak to that? I'd love to hear how you're all thinking about, as you, it sounds like, are doing very specific work using very specific technologies, you're also talking about how this is starting to get ported to different products and stuff like that, which is awesome, so, culturally and organisationally, how are you all talking about that, planning for that?</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yeah, there's a ton to impact there, you could probably do a full podcast just trying to dive into all the pieces there. A little bit of history of Microsoft is that there's been a couple of attempts to try and to this, to unify the tech stack; you know, the pieces that we're building, so we're not in these silos all over the place and there have been a few attempts with some home-brewed applications and whatnot because right now, it's a mix of some knock-out over here and some Angular over here whatnot and really we found ourselves within the last year or two of everyone is starting to want to move over to React, so for us, as far as organisationally, for us it's worked out really well because there's been so much movement towards React, where so many different organisations that have independently gone: hey, this would work really well for what we're doing and we really want to get on board and then as soon as they find out, hey, there's also this library of controls that we can use, they've wanted to do it even more.</p>
+  <p>And kind of going back to the original question of why would you do it versus why tie into this tech stack and get dependent upon the tech stack, it really comes down to, again, this kinda like Design Systems 2.0 that a Design System is starting to be way more than just how a button looks, because we kinda started in this… Fabric started as just a set of CSS and HTML that showed how a button was supposed to look, or how a drop-down was supposed to look but then when we got feedback towards, hey, what happens when you click on it? I need to see what happens when you click on a drop-down and to see the drop-down; we need to… part of the visual language is, how things open and close and whatnot, so we needed to see that.</p>
+</div>
+
+<span class="timestamp">(21:18)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Sure</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> And so we went about writing some JavaScript to show how that worked and writing some more JavaScript to show how that worked and now here's a people-picker where you tack names in and it shows a list of people; all right, write some JavaScript to show how that worked and we're just writing prototype JavaScript to demonstrate how all these things work and we write more and more and more and more and we were like, oh, this is getting kinda big; let's start writing some helpers and some extra things and eventually start writing our JavaScript framework to make this whole thing work and some bad things came out of that; for one, because the JavaScript they wrote was really just for presentation, really only intended it to show how its components work but then people wanted to just take our mark-up and our JavaScript and now put that in their application and so now we're like, they're asking us to support that and we're like, well, that was really just for prototyping!</p>
+  <p>So it's one of those… are you going to show the interactions of a component inside of your Style Guide, and if you are, there's going to be quite a bit of JavaScript that's required to do that.</p>
+  <p>So as soon as you start going down that path you're like, well, are we going to be writing this whole framework ourselves or should we maybe choose a framework and have that part of our Design System?</p>
+  <p>I know you don't have to go that path, if you look at <a href="http://lightningdesignsystem.com/">Lightning Design System</a>, they very specifically, when you go to their page and you look at components, there's no interactivity to it; if you see a set of tabs it's like, hey, that's nice, those tabs and mark-up. You click on the tabs: nothing happens. You click on the drop-down: nothing happens. Because what they are specifically trying to do is say, this is how it looks. They might have a couple of… here's five different panels of it; here's the closed state, here's the open state, here's the selecting state, so on and so forth, to demonstrate each of those. But they're not writing the interactivity for someone to go in there and play with it and that's a very intentional decision and I've even brought it up a couple of times internally of, hey, should we do this? Take our styles and our markup out and give a peer presentation of it?</p>
+  <p>And it really comes down to what's the value of it for our team? For us, there's so much work that's gone into making that button do what the button does inside of React that we really would rather just people use that React component and for us to have to maintain both of those and support a team trying to use Angular to do the same thing, it really comes down to we're a product team and our product uses React and for us to fund something that's not directly going into our product, it's not going to happen because we're a product team and that's what we do.</p>
+  <p>So there's some external forces that kind of made that happen but it's definitely, it takes some real intention to keep those two things separate and there's certainly that question of well, why keep it separated? As an organisation, do we need to support all of these multiple languages because so much of the work that we're doing is really, it's the animations, how things open and close, how you interact, how you tab through things, how arrow keys work inside of a list: there's so much stuff there that is part of our experience that people just get for free when they use the React component that you'd have to completely rebuild in any other language or framework, so when you start looking at a Design System as more than just how something looks but how also something works, then you need to have an opinion about how it's written and sure, you can do it in just pure JavaScript but…</p>
+</div>
+
+<span class="timestamp">(25:17)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Or… yeah, yeah, exactly. I think that your point about, we're on a specific product team doing specific work for a specific product, I think is important to underscore; I think that as a Design System team, again in my own work, working with these over-arching teams, they're teams that are the ones that are helping shepherd and govern and make these decisions about, cool; we actually have a couple of products that are using Angular, we have a couple of products that are using React, we recognise that the views coming down the pipes or whatever next, or then they're like whatever's going on next year, two years or five years from now but at the end of the day, the users don't care about any of that; they want things to look and to your point, behave the same. So that does require a lot of intention to set that up to simultaneously scale but also be able to help specific teams to specific work faster.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Exactly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So I think that it's an interesting… it's an interesting conundrum and I think it really ends up being more of a cultural communication thing than it is any sort of specific tech… there's no solve for that.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yeah, it comes down to the team, the team structure and really the charter. What is the business use-case for the work that you're doing? And if the business says, hey, we want a Design System that is going to meet the needs of Angular and React and KnockOut and X-Y-Z, you're like, all right, what's the staffing requirement to do that? Great, let's get the staff to do it. Now, what's it going to take to make all that work and let's make sure that each product align about this behaviour and those types of things so there's a ton of work that goes into that and the question just comes down to, is that the business charter? We're willing to put money into making this happen and for us, we're using React so that is the direction that we're going with it and if the charter changes in the future and hey, we want to support Multiple, we're like: all right, we need more staff in, because really it comes down to at this point it's a very small team, it's really just two or three of us that are really focused on it primarily and then past that it's very much a federated project where we've got all these other different products that are using Fabric that are contributing pull requests and bug fixes and lots of issues that are using the product and able to contribute back to it.</p>
+  <p>So it has been a great exercise in how do you create a Design System within a federated approach where you don't have this large core team to push it and you kinda have to be a little bit more of a cheerleader and maybe a sheep wrangler or something to try to figure out, how can we set things up so that anyone can contribute and be successful and add to the system in whatever small spare time they might have inside of their product, so yeah, it's been an incredible experience to say the least.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Something I'm really keen to talk to you about is about visual regression testing. I've heard that you do it and I'm keen to find out how you go about doing it, what you've learned, what your recommendations are for whether people do it in their own projects.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Sure. We're actually close to doing it! </p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I think Headless Chrome is going to make a huge impact within a year or so, once people start writing for it and it gets mature enough, because once you can do that, then you've got solid, current, modern browser to do all your visual regression testing</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I think everyone's close to doing it!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> We have a couple of hurdles. One of the things I came on nine months ago, I saw we didn't have any visual regression testing; I had a bit whiteboard behind me and I was listing out the things I want to get done and a big one right at the top was visual regression testing because a lot of it is we have, especially in a federated system, you want to make sure that when someone chucks some code in and re-factors some CSS or CSS in JavaScript or whatever the case is, that your component continues to look the same regardless of those changes and we didn't have that at all, so we went about writing it and the challenge… I'll kind of jump to this.</p>
+  <p>Visual regression testing is not as mature and complete as I really want it to be and I'm afraid it's losing a little bit of steam; I really hope the steam picks up again. Just because there's a lot of technical hurdles to get over and there's a couple of open source environmental issues that are hampering it as well, so there's two approaches for visual regression testing. One is with real browsers and one is with headless fake browsers and the way that you typically do it, really the majority of visual regression testing suites are built right now are using <a href="http://phantomjs.org/">PhantomJS</a> and often using <a href="http://casperjs.org/">Casper</a> which is a set of JavaScript bindings to basically control the headless browser. And there's a lot of great tools written in it; I've used it a bunch. We used it at Red Hat really successfully and that's actually what we've built within Fabric right now that just hasn't gone live yet.</p>
+  <p>One of the challenges is it's open source software and it's had a little bit of a rocky life and then CasperJS looks like it was dead on the vine at one point, and then it got resurrected, the ghost came back up!</p>
+</div>
+
+<span class="timestamp">(31:14)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> In a friendly way!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> In a friendly way, thank you! So that was great, hey, Casper is on board again and PhantomJS is at 2.0 and it's a little bit more modern, so we're doing good and then <a href="https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md">Headless Chrome</a> came out four or five weeks, six… a couple of months ago and within a day or, I think seriously within the same day it came out, one of the head maintainers of PhantomJS said, all right, that's it: I, we, whatever, are calling it quits with Headless Chrome coming out that pretty much makes the work we're doing defunct and we really think you should go use that instead!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Mad!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Great!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> But, the concept, I guess implementation aside, I guess…</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Implementation aside.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Could you speak a little bit to the philosophy of what this does and what that means, if you're building a Design System and you're building components within that Design System, why should people who are building Design Systems be thinking about this as they're building a card of components or as they're building a header.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> I painted a really horrible picture of this!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> You're like, by the way, it's all dead and nothing matters!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yeah, it's all dead! Because the other approach, I think Headless Chrome is going to make a huge impact within a year or so, once people start writing for it and it gets mature enough, because once you can do that, then you've got solid, current, modern browser to do all your visual regression testing, and at least for Headless.</p>
+  <p>The other approach is also you can do it using <a href="http://www.seleniumhq.org/projects/webdriver/">Selenium WebDriver</a> which is the same thing that <a href="https://www.browserstack.com/">BrowserStack</a> uses, the same thing that <a href="https://saucelabs.com/">Sauce Labs</a> uses and that's a great tool because basically you're telling… you're basically remote-controlling a browser and getting screenshots in it and it's a great tool; I've used it personally a couple of times, it's just mostly a workflow question because it requires getting Java installed at your dev machine which can sometimes be a little bad, so for us it's mostly just trying to get over that technical hurdle of workflow, but it can be done.</p>
+  <p>So to back up real quick, what visual regression testing does is…in unit testing, what you do is you have a function that adds two numbers together and you want to make sure that function always adds two numbers together property, so in unit testing you say, adding two number function when I pass in two and three, it should always equal five and if for some reason that function returns seven or three or a banana, then something's wrong and my unit test fails, so that's unit testing with functions.</p>
+  <p>It's basically the same idea with visual regression testing, but instead of a function returning a numerical value or whatever that return is, the function is going and taking a screenshot, an actual png screenshot of your component and then comparing it, instead of to my result should equal four, it is, my result should equal the last picture I took, so if you have a button that’s blue with a white border and every time you take a picture of it, it should be blue with a white border. If one day you take a picture of it and it's green with a purple border, when you compare it to the old one it should go, hey, these two images are different and literally you're going through and comparing pixels, like pixel 00 in the top left, what's the value of it? OK, let's compare the two; it's literally going through and looking at all the pixels and seeing if they compare.</p>
+  <p>And it's a great tool to use because if a padding changes accidentally because you thought you did something right but you actually screwed something up, the two images are going to be different and it'll go, hey, there's a problem here. And when you have a large system with lots of variations, say you've got a button that's got five different variants and several different states and hover states and click states and split buttons with, what happens when you click and then focus and you're like… arghh, so many different variations!</p>
+  <p>Literally having to go in and every time you make a tweak to the button and go through every single state, OK, what was the focus state on this again and having to go back to red lines and check, it's basically a manual red line checker because the red lines are now all of these baseline images that you captured and you're able to just check, say there's a hundred of them, especially with buttons, you could have a hundred of these things, and to quickly go through...</p>
+</div>
+
+<span class="timestamp">(35:55)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And the problem that you were mentioning before around browsers, if you've got a team of people and they're all running these reference checks and checking that the screenshots match up, the tool that does it, it will often find differences between the browsers that they're using.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> That's exactly one of the problems.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Or what system they're using and so there's this whole debate around do you check in the reference screenshots into your repo? I personally don't; I ask everyone to take their own reference screenshots and compare them against a production branch.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yeah, you can…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Wait: why is that controversial? Sorry?</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> If you have a Mac or a PC, fonts render different, or different fonts are installed.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Or if you're using something like an older headless browser, it might not have web fonts, it might not support it.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh, I see.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> So you have different versions of browsers; the challenge there is to get a consistent test environment, which either a headless browser like PhantomJS, that's why that's so popular is that when you <code>npm install</code>, it literally installs this browser for you, so that you can lock in what version of browser people are using. The other approach to this is that all of the testing happens in your build process so in <a href="https://travis-ci.org/">Travis CI</a> or your <a href="https://jenkins.io/">Jenkins</a> instance or something like that.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's another controversial point, whether you get builds to fail…</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Oh, definitely fail!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Well, I don't include it in build processes because it takes a long time if you've got a lot of components but also it's often I want them to fail, I want it to come up and show me what the changes are but I don't necessarily want it to fail because it might be a change I want.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That sounds so negative. That sounds negative, it's like if a test fails because something's different, I guess the way I see it as someone who's… hypothetically if I were to build this into my workflow I'd want to see what's changing and to make sure that stuff is kosher, not necessarily, oh, it's different: I just did the cards padding and now all these screenshots are throwing, I guess you don't call them errors, but if you say it fails then it's like, well yeah, of course it's different; I just made a change. It's all really interesting; I think where to put that, where to build it into your workflow and stuff like that sounds like making that a bottleneck seems pretty extreme, I guess.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> The idea there is, if you are checking baselines into the Git repo, the reason that you have something fail is because baselines don't match what the new styles are, so say you're asked to increase the padding on the button, of course, that test is going to fail.</p>
+  <p>But then the process after that should be, it's just like if you change a function like a JavaScript computational function, like now my add-in function does return banana, you need to actually go and update your test to say, I'm expecting banana to return so when I make that change to the function, I also need to update my test, so the idea there is that if you change the button and now the button fails, you need to include the new baseline along with your pull request because then the next person has the new baseline and your new CSS so that it doesn't fail for them.</p>
+  <p>So yeah, if you are going to be including in baselines in the Git repo, that means that any time you add padding to a button, you also need to, in your pull request, which is actually kind of a neat thing is, hey, I've got a pull request that's adding padding to a button, you can see the CSS…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh yeah, and including the screenshots, it's really useful.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yes, so, your pull request will actually include that screenshot as well, so you're like, that's what the new baseline looks like and when that code gets merged in, it gets the new CSS, it gets the new baseline and the next version that will run the tests, if they don't make any changes, should run and pass. And of course you have to get past some of the challenges of differences from one person's machine to the next; that's kind of the problem we've ran into now is, even PhantomJS from one browser to the next we're having, for some reason, errors and so one approach to that, the solution is that all of the testing and all of the baseline creation gets done in one place, so we're trying to get Travis to do that…</p>
+</div>
+
+<span class="timestamp">(40:34)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, we do that with production.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Yeah, and the only problem is, Travis doesn't have file storage so you literally have to, in your build step, push those files somewhere else and that's basically where we're at right now is just getting that set up for it to push the files somewhere else that we can get to them so we can pull them down, so if there is an error and a new file gets…you've got more padding on your button, you can go get that baseline and update it. This wasn't a problem when we were doing Jenkins previously because Jenkins was its own… we had an instance of it with its own file storage so we could just pull the file directly from that.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Maybe we should ask you about it in a couple of years' time, see how you're getting on with it?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, there we go!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> I'm really hoping to have this Chrome as a solution there once the UK is mature enough…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I didn't know about that, it sounds good.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that's really cool.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> It should hopefully do exactly what PhantomJS does which PhantomJS was basically just a WebKit browser implemented in JavaScript so now that we're moving to having a Chrome version of that, hopefully that'll fill that gap and we'll find some even better tooling. It just might take a little bit of time. The other approach is obviously going a Selenium route, using to make sure your build stuff… as long as it builds stuff will build the artefacts… I've had talks on it, it takes forty five minutes to explain!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It sounds like you…</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> There's a lot to it!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, well that's awesome.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> But when it's set up, it's a beautiful thing!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, well certainly. I think we could probably talk about this all day. I also think that there's a little thing called visual regression testing we should… it sounds like that's a good topic for a talk where you could actually see slides and examples; we're talking about this in the abstract… imagine the colour purple… but anyways, just looking at the clock here, as much as I'd love to keep geeking it out here, we gotta wrap up but seriously, thank you so much for your time, it sounds like you're just neck deep in this whole notion of Design Systems 2.0, the sort of next level Design Systems, going beyond OK, yeah, yeah, yeah, we understand consistency is important and how does that translate out, so I'm really looking forward to seeing where you and the rest of your team at Microsoft take this stuff and keep…you're pretty active in the community, so keep that up, keep sharing what you can and…</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Definitely will.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, awesome. Well, thanks so much for being on the show and we appreciate the time. Thanks.</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Hey, thank you guys and if I've one last plug I can possibly give is that I will be at <a href="http://2017.cssdevconf.com/">CSS Dev Conf</a> this year which is going to be in New Orleans again in October, certainly check that up, but I'll be giving a talk there specifically on React and Design Systems and then we'll also be giving a workshop on Design Systems, so if you're curious about how to build a Design System out, I don't think I'm going to dive fully into React, it's going to be a lot more in kind of the core essentials, but how to take a design, break it down into smaller pieces, how to use the tools for documentation, for visual regression testing and all those types of things, check that out, CSS Dev Conf and I think there's still some spots open and that's our workshop as well. </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Nice!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Awesome!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent! Well yeah, so with that, check that out and we will see you next time. Thank you!</p>
+</div>
+
+<div class="micah-godbolt guest">
+  <p><b>Micah</b> Hey, thanks so much for having me on! Bye.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
