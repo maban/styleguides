@@ -1,0 +1,320 @@
+---
+layout: episode
+section: podcast
+number: 17
+season: 2
+title: Josh Clark
+image: josh-clark.jpg
+published: 16th of July 2017
+about: <a href="https://twitter.com/bigmediumjosh">Josh</a> is a designer and founder of <a href="https://bigmedium.com/">Big Medium</a>. He's the author of <a href="https://abookapart.com/products/designing-for-touch">Designing for Touch</a>, and the creator of <a href="http://www.coolrunning.com/engine/2/2_3/181.shtml">Couch to 5K</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/333448028&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+  {text: "GOV.UK Style Guide", url: "https://www.gov.uk/service-manual/design", type: "example"},
+  {text: "18F Style Guide", url: "https://18f.gsa.gov/styleguide/", type: "example"},
+  {text: "Salesforce Lightning Design System", url: "https://www.lightningdesignsystem.com/", type: "example"},
+  {text: "Design Systems on Slack", url: "https://designsystems.herokuapp.com/", type: "tool"},
+  {text: "Material Design", url: "https://material.io/guidelines/", type: "example"},
+  {text: "Bootstrap", url: "https://getbootstrap.com/", type: "tool"},
+  {text: "Foundation", url: "http://foundation.zurb.com/", type: "tool"},
+  {text: "Unity Deisgn System, ExxonMobil", url: "https://bigmedium.com/projects/unity-design-system-exxonmobil.html", type: "article"}
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hello everyone and welcome to another episode of The Style Guides Podcast. I am Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are delighted to have Mr Josh Clark with us. Josh, thanks for being on the show.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Thanks for having me, I'm such a big drooling fan of you two!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…I think that one of the real considerations here is, who is this Pattern Library or Design System for?</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And I of you! So anyway. We're really excited to have you on the show and for the uninitiated, do you want to just sort of give everybody an idea of who you are and what your work revolves around as it pertains to Design Systems?</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Sure. I run a design studio called <a href="https://bigmedium.com/">Big Medium</a> and Brad, you and I have worked on a bunch of projects but my role in doing these projects, whether it's for the web or for mobile apps or connected devices, is simply to look out for the overall product from a user experience point of view and interaction design but also really making sure that the thing is meeting the goals that it's set out to do, so there's some design strategy to it, to make sure that there's real consensus for why we're building what we're building, what it needs to do and to make sure that each stage of the result is supporting those goals and the things that it needs to do both for the company, the patron of the project, as well as for the people who will use it, and I think that stuff that you guys have been talking about and working on with Design Systems is super relevant to that.</p>
+  <p>The interesting thing about that is, of course, the patron and the customer are often one and the same in that case, you're designing something for the people who are also using it.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and I think that that sort of high level thinking of taking a step back and going OK, culturally, organisationally, here's why we need to be paying attention to this thing, here are the problems we're trying to solve.</p>
+  <p>I'd wager a bet that a lot of Pattern Library, Style Guide, Design System initiatives don't really take that stuff into enough account; it's oftentimes I think born of the practitioners themselves: front end developers or design team or something that are really jazzed up about this stuff they're like, oh yeah, this makes a lot of sense, but in our own work we've seen plenty of a graveyard of Pattern Libraries, of failed Pattern Libraries and so could you talk about why is that and why is this really huge sort of political, organisational, cultural sort of part of an initiative like this, why that's so important for a Design System's success.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…I think especially the larger the Design System and the larger the audience for it, the more that you really have to be disciplined about thinking of it as a product and bringing to bear all of the good design and development practices and UX research practices that you would bring to any large system.</p>
+  </blockquote>
+</aside>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Well, I think it's a great question. I think that one of the real considerations here is, who is this Pattern Library or Design System for? In a sense I've got a Pattern Library and a Design System for my own site but I hold it in my head because I'm the one who uses it, who created it and consumed it; there's no other audience for it except for me and so I'm content to hold it in my head in a sort of a system of files and references that is, the organisation of which is only understandable to me, right?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> And I think that, as you start to scale that up to more and more people that effectively, most design projects and development projects wind up with a Pattern Library of some kind: here's the parts of the stuff that we used to make the thing. I think that a lot of times you need to refine those Pattern Libraries to meet the needs of a broader and broader audience, the more people that you want it to touch and I think a lot of times, a lot of Pattern Libraries stop at the small team level and say hey, we made some stuff, maybe you guys will find it useful but implicit in using it is the adoption of a whole lot of new standards or tools or even design patterns and it just doesn't make it easy enough to adopt or it uses a technology that we would have to bend over backwards to use and to incorporate into your own project.</p>
+  <p>And so I think that a lot of it is really being clear about what you want this Pattern Library or Design System to do for the larger organisation, assuming you are designing it for a big organisation, and making sure that it fits the specific workflow of people who are already there.</p>
+  <p>I think there's often a hope that I've seen when you're creating, trying to launch something like this into an organisation, a Design System or a Pattern Library that you're going to really effect change with it and I think that in some small ways you can make change in an organisation with these but I think even more it's really about trying to corral consensus about the best way that an organisation does things and in a way it means that you're really not so much trying to be a leader but a documenter and to sort of say, here's the way that we solve problems at this organisation; in a sense, that's often the most boring stuff, it's here's the stuff that we find ourselves designing over and over again: here's the best way we've found, just do it this way so you can work on better problems but if you're going to do that and approach it with that kind of level of humility and service where you're really just trying to capture the best work of others in a sense, you really have to make it also be as digestible as possible so that different production teams in an organisation can quickly adopt it and make sense of it.</p>
+</div>
+
+<span class="timestamp">(6:20)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I guess it's also important to think about the language that they use: I'm just thinking about places like <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">GDS</a> or <a href="https://18f.gsa.gov/styleguide/">18F</a> where their language is very specific to government, whereas other places like <a href="https://www.lightningdesignsystem.com/">Lightning Design System</a>, it's very specific to their product and then you might get someone who's making a Style Guide just for their own site and it's going to be very specific to them and thinking about the people who are going to be using that Pattern Library as well.</p>
+  <p>I don't know if you're part of, there's a <a href="https://designsystems.herokuapp.com/">Design System Slack channel</a> and someone was sending a link round, they wanted people to user test their Design System and I thought, wow, that's quite niche, to do some user testing on a Design System, as opposed to user testing on the actual site but actually it makes a lot of sense because the Design System that they're building, it's for government and the types of people who would be using it, it's a broad range of people, so it's important to make sure that people can use it well and it prevents it becoming part of the graveyard of Pattern Libraries that you were talking about! Making sure that people can use it, that's just as important as building it because otherwise if they don't use it, then it's dead in the water.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> I think it's a great point, Anna. I think especially the larger the Design System and the larger the audience for it, the more that you really have to be disciplined about thinking of it as a product and bringing to bear all of the good design and development practices and UX research practices that you would bring to any large system.</p>
+  <p>And in fact, a marketing effort to that too, which I think goes really to that language stuff that you're talking about is, how do you share and communicate the utility of this in language that people will be excited about, but also just in terms of the benefits that it will offer people, that this is, I think particularly for very distributed groups like government groups which are huge, vast, where you have very little leverage, it's like there's not a case where you must use this: you have to really make it so that people want to use it. How do you make the best thing to do, the best practice also be the easiest or even the most fun thing to use, the most productive thing, the one that you're like, why wouldn't I use this?</p>
+  <p>And so again, it sort of comes down to this sense of humility and service for this where you're not being, this is the coolest thing to use which will have some appeal to people; or this is the newest thing, but really it's this is the thing that will simply let you do your job faster, easier and maybe with hopefully a sprinkling of fun too.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I think that's awesome and we were working on a project where the rallying cry throughout was, it had to be better than Bootstrap, because again, this giant, giant organisation and it is like a voluntary effort to, in the case of this organisation, to opt into this thing so it's like, you're competing against <a href="https://material.io/guidelines/">Material Design</a>, you're competing against <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a> because that's what historically these engineers that didn't really have a whole lot of front end experience, they would just reach for that stuff because, well, it's there, it's documented, it's whatever, so it's like, how do you take in your own system… what's the point, why don't we just all use Bootstrap? It's like well, because a government or large organisation or enterprise has very specific problems they're trying to address; very specific audiences they're building things for. How you think about data tables and data density and stuff like that will matter depending on who those data tables are going to be put in front of so I do think that that sort of spirit of really addressing and getting at the crux of what the organisation's struggling with and how could we create something that can help alleviate the struggle is great and Josh, we've thankfully had the opportunity to work with each other on these things but could you talk about some of those tactics and ways that we get at. as you're going down the Design Systems road, how do you ride out of the gate, make sure that you're getting at, solving the problems that people are actually feeling versus again, just like blindly going, oh, we need a Pattern Library, let's throw it up. Oh, we need code snippets, let's throw that up. Sure.</p>
+</div>
+
+<span class="timestamp">(11:20)</span>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, I think one of the core things for any project and the bigger the project the more important it is, is to really try to get consensus about wait; why are we building this? And what you'll find is, particularly if you have a lot of people involved in it and when you're talking about a big Design System, like the Fortune 10 project that you're talking about, Brad, when you're talking about a big organisation and a full Design System, you're talking about many different disciplines having to be on the same page; you've got a Marketing Department, you've got Developers, you've got Designers, you've got the product owners of all the different products, all of these concerns and disciplines and while they might agree on the list of say, ten or fifteen goals that they would like to see this Design System achieve, what you'll find when you dig into it is, they may not agree on what's most important among those goals</p>
+  <p>So I think one of the things that is really important for us is just to get a real sense of, what do you want to accomplish with this product, really, like any product and then really get everyone into a room to sit down and agree, you know what? This is a rough priority of the things that are most important so it will always be able to focus on this.</p>
+  <p>Usually around Design Systems, the big levers here are around budget and time and UX quality and consistency, so it's development efficiency, in other words, it's how much the stuff will cost and it's having a good quality assurance in a sense, a good quality level to the products that will come out and a lot of different goals within.</p>
+  <p>I think one thing though that you'll find is that there's some little sneaky goals that will get in there, that are often specific to a specific person or group's agenda, that it will be my secret agenda is that I want to get everyone to use… you mentioned Bootstrap, let's make this thing a Bootstrap thing and impose a technology or a way of thinking and as I mentioned earlier, my experience has been that these systems are not great at imposing new technologies on large groups, partly it's because there may be legacy technologies already there, so actually adopting this example of Bootstrap-driven system would actually prevent adoption of the system because it's like, wow, we'd have to re-build the whole thing from scratch. </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right, so it fails, it's like: cool, you could build the coolest thing in the world, React, whatever, progressive web app, whatever, but you're running some old crusty Java stack or I don't know what's old and crusty but yeah, it's like that I do see that so often and as we sort of float around to these different organisations it's like, you're creating something that's good but it's good in the abstract, it doesn't float, as soon as you throw it in there because nobody could use it. Or the reasons why you're building the thing in the first place are because your buttons are all over the place and it's like, how does building something in such a specific way, how is that going to help that crusty old site level up? It just doesn't and it's very frustrating.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, and I think that frameworks are often awesome for an individual project where you've chosen the framework specifically for a job to be done but of course the problem with frameworks is exactly their advantage which is that it forces you to do things a certain way and while that can be good and can streamline projects, it also can be very constraining or may not wear well over time; the whole thing about all of these frameworks or technologies is that they have a shelf-life and now jQuery had a great run but you can kind of see people starting to move into a new level of elegance and structure of the way that these things… maybe a better way to say it is like a more holistic kind of fuller, robust system than the one-off pieces that jQuery suggested.</p>
+</div>
+
+<span class="timestamp">(15:55)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh, is jQuery not cool any more?</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> It seems not, it seems not!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I wouldn't say it's a hard sell of having to say, here's a pattern library or a design system but just kind of saying, here's how you use one and here's how you can do it to make your own work better to make changes faster, to know how to build new pages or even full applications without having to hire outside designers to help you to do it because we're going to try to build and anticipate those needs that you can do that yourself. So, a real sort of teach a man to fish situation, but also, here's your tackle kit.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Awww….</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Sorry Anna…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I thought we were all moving to vanilla JS anyway.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> But I feel like yeah, that sort of specific library I think really paved the way for a lot of the things that we're now seeing in JavaScript in the vanilla sense, I guess, which is great but the more monolithic or Josh's more kind word which is holistic, you have to… it's a dependency; you are depending in order to achieve a certain UI, you're depending on specific technologies to power that and Josh, in our own work, we've found back to that graveyard of Pattern Libraries is that tends to be one of those most frustrating things: I want the new button styles or the thing that doesn't feel like 2003 but in order to do that, I need to adopt this giant iceberg of a text stack and so it becomes a non-starter and so people get creative and hack away at it and make their own versions and then make the Angular version of it and make the React version of it and then it just ends up a mess.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> And you know, I think that in a sense it's somewhat inevitable I think, for that to happen downstream, to have different versions of a Design System. So, if you think of a Design System like Material, there's all kinds of implementations of Material; Material was not designed for anything originally other than for Android and yet it exists in a whole lot of different ways and forms that have extended beyond it.</p>
+  <p>So, I think that there's always a case where there's going to be a sense, a developer Pattern Library: here's the project code that we're going to use to actually make this happen and then upstream from that, there's a little bit of kind of a more implementation-neutral Pattern Library and Design System which frankly, I think that HTML, CSS and very light JavaScript are the best way to demonstrate that. When you look at the longevity of HTML; sure, it's developed, we're on, I understand, the fifth version of HTML…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> As we will be forever!</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> But it's been constructed now to be very backward compatible and it's just so robust, it lasts. What other kind of technology mark-up or language has had the kind of success that HTML has had and I think it's never say never, but it feels like it's got at least another twenty five years in it. So the idea that, if we're going to make lasting design and interaction recommendations, my sense is, let's make those in the rendered HTML and that that becomes the thing that evolves rather than having to be chucked out every time there's a new framework or underlying technology that comes around. But you're still going to need to implement that rendered HTML, so, however you decide to do it and hopefully those developer libraries get shared, just as… I'm sort of saying developer; it's really an implementer library that I'm talking about…</p>
+</div>
+
+<span class="timestamp">(19:44)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And that's why we've landed on this, ended up writing a little bit about it but it's like this notion of a tech agnostic Design System means that you are, you're talking about this design philosophy, these design decisions in the abstract; it's like, how does Material Design get implemented? That's beside the point right now, at that high level; we're talking about good design practices, we're talking about typography or talking about colour: those are abstract things that don't rely on React or don't rely on Android code or whatever, we're just talking about that stuff in the abstract and then those get implemented in various forms, in a React library, in an Angular library, in a WordPress theme and a Drupal theme, in an Android Project, iOS project, whatever, and then from their specific apps, that sort of third tier can feed from that technology specific thing, that text-specific implementation of the Design System and so organisationally, that becomes a thing, a process that needs manage whereas if a card gets updated or if you have a card pattern and then suddenly you need a dismissible version of that card, something that has a little X button in the top right corner, you could plug that into the canonical HTML CSS Design System and then feed those implementation-specific versions of it and you could write it in the React way, you could write it in the Angular way, you could write it in the jQuery way or whatever and then that will ultimately make its way out into those apps.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah. I think when we designed the <a href="https://bigmedium.com/projects/unity-design-system-exxonmobil.html">Unity Design System for ExxonMobil</a> I think that one of the things that at first seemed really daunting but I think in the end turned out to be a favour to us and to the system was the fact that it was going out to thousands of developers who didn't have a single technology; it was really up to each developer on each project to choose their own technology, which is a messy technology stack, but what it meant was, we couldn't actually go in and say here, use this one and then in the end we were just sort of saying, here's what you should strive for to make as the rendered HTML; this is the standard both in terms of interaction and solutions but also, this is the way it should look and feel and it's not as convenient in a sense, for developers just to be like, great, here's my… Angular mark-up, but it also sort of says, here's a fully rendered example, no matter what technology you use: you decide this is what to develop it to.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…so much of this sort of presentation of Design Systems really has to be done with real humility and to not let yourself as the creator or manager of the Design System put too much of your own ego into it…</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And in a Style Guide or something, you'd see that in the form of tabs, so it's like if you're on the accordion component and you're like, cool, I need to implement an accordion, you could see the raw HTML version of it, you could see the Angular code that you would copy and paste, you could see the React code or whatever; that's at least hypothetically how you could set that up in a way that's like, here's the sort of canonical UI pattern, UI component, here's the guidelines for when to reach for it, when not to reach for it and all that other stuff, but then say, cool: pick your poison, if you're working in a React environment, here's the way to do that.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Are you still having to make an effort to sell Pattern Libraries to clients? Is that something that they ask for, is it something you have to convince them that they need? Because certainly two years ago, it was a lot of the questions around Design Systems were, how do you sell this to the client and I feel like now maybe we don't have to do that so much.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> You know, it's such a great question. I think there has been an evolution. I would still say that there's a case where people don't necessarily realise that they need one but we'll give one to them anyway and here what I'm really thinking about is in the process of doing, say, a big website re-design, the deliverable ought to be the pages, sure: here's the website, that's ultimately what they're interested in, but if you're building it with good, current pattern-driven best practices, you should give them the Pattern Library and the implicit guidelines that go with it, so in other words I would say that as what I am hearing a lot from clients, whether they're asking for Design System or not is, please help us get out of this horrible spiral of building a website, sitting on it unchanging for three or four years and then until we just can't stand it any more and we blow it up and we build a whole new one and the cycle repeats.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…be really discerning about what you share and how you do it and what you do with images and what you do with text, just so that you can make it, again, feel like you're helping people rather than giving them a new chore to learn something</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And, are many of your clients, do they already have one? Have you gone in and have they had one that hasn't worked and you've gone in and made one that has?</p>
+</div>
+
+<span class="timestamp">(25:07)</span>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, not so much in a formal way. I think that for this type of client that I'm talking about that has a website and where the website isn't necessarily their core business; this could just be, we've got a couple of developers on staff who help us do the maintenance but say it's a marketing site or it's an e-commerce site but the company isn't really a commerce company, like, we just make the products, so particularly for these companies where the website is certainly the main view of your company but it's not their core competence, for those folks often they don't have a proper Design Library; they have whatever they inherited from the previous vendor and I think one of the things that I try to do with client engagements is not just to deliver the work but to help to up the organisations game.</p>
+  <p>I think that all three of us are educators and we like to share and help people be better at what they do and I think that that's something that really animates the work and the projects that I do, is to be how can we make your team even better at what they're doing and so part of the thing is, I wouldn't say it's a hard sell of having to say, here's a pattern library or a design system but just kind of saying, here's how you use one and here's how you can do it to make your own work better to make changes faster, to know how to build new pages or even full applications without having to hire outside designers to help you to do it because we're going to try to build and anticipate those needs that you can do that yourself. So, a real sort of teach a man to fish situation, but also, here's your tackle kit.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I guess it's a lot easier now there's so many other examples out there as well and so many case studies. Certainly there weren't a few years ago and now there's just so many you can just point to and say well, it's worked out really well for these people.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, that's right, that's right. Again, I think when it's something that it's accepted really easily when you're saying, we're just going to collect this set of solutions that you've already got in hand or that we're developing with you and just want to make it really easy to access those so that you can assemble them yourself in new ways.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, for sure. I'd love to touch with you, just because I know literally how much documentation you've written, whenever we show our work to other clients and stuff, as we're going through… here's what a fully fleshed out Design System looks like from design principles to high level UX guidelines, to low level components and guidelines around those low level components, to tool kits, to resources both internal and external and all that stuff.</p>
+  <p>A lot of work, a lot of thinking and stuff that all goes into that and of course it's also packaged up and delivered to people in the form of a Style Guide. I'd love to hear, again, back to this notion of… oh yeah, Anna and I talked a bit earlier about the evolution of terms of Pattern Library and Style Guide and Design System and stuff and I think this evolution from a simple Pattern Library as in, here's a list of the UI components that make up the new website or whatever, into this more holistic view of here's how things get done here. I'd love to hear from you just how you think that stuff really aids these efforts, aids in adoption and aids in scaling good UX practices and visual practices and good thinking across an organisation.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, wow, well… I think every component has its own story in a sense, of what it's role is and in particular, how it can be adapted or adopted to do new tasks. I think that there are some types of components like a header navigations that, wow, has to do a lot of heavy lifting and be responsive in all these ways and the menu has to change up and do this and shift around in all these different screen sizes, really complex machinery and when you're trying to build a generic re-usable component that could do things for different applications, being really clear about saying what's OK and what's not and telling the story of what this thing can be used for and particularly what it shouldn't be used for. When to consider another component and here are the family of components that you might consider as an alternative.</p>
+</div>
+
+<span class="timestamp">(30:15)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, like tabs versus accordion: it's like, which one do you reach for in a given situation?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…design is becoming more complex and the disciplines that go into design is becoming more complex and as we add more and more interaction channels, more kinds of interactions, I think that it's all going to have to be folded into and adopted into this overall Design System…</p>
+  </blockquote>
+</aside>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, that's right. What is the super-power of this thing and what's the super-villain it's good at fighting? I don't know, something-something. Superhero something-something. The superheroes are popular now, right? I heard a rumour!</p>
+  <p>But I think Anna's question early on about language or observation that language is really important is really a part of it and I think that it is again, so much of this sort of presentation of Design Systems really has to be done with real humility and to not let yourself as the creator or manager of the Design System put too much of your own ego into it and that means not writing too much, not over-documenting either.</p>
+  <p>What's the right amount of documentation for the audience? I think that it's fair to say that a lot of developers who are there to grab up some code and figure out how something works don't want to read a novella about that component; so, what are some of the shortcuts?</p>
+  <p>I think that often when we're working on these, we have a design principle of just enough documentation and it's just like, how can we express how this thing works, what some of the rules and guidelines are, what some of its cool, non-obvious flexibilities are in terms of just by adding these couple of class names, you can get these effects. How can you do that not just with words but also through quick images and do this, don't do that kinds of shorthand, so there's a real… what's the Mark Twain line… I didn't have time to write you a short note so I'm writing you a long one. Taking that time to be really discerning about what you share and how you do it and what you do with images and what you do with text, just so that you can make it, again, feel like you're helping people rather than giving them a new chore to learn something.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, yeah. That's awesome. I'd love to hear, because I always am blown away because some of the work that we do day to day and what you talk about on stage at conferences and you talk a lot about Internet of Things and machine learning and all these sort of new technologies; you're always living in the future on stage! And then whenever we work together it's like you're doing a bunch of things that aren't about what you're talking about. Me, I just get up on stage and I regurgitate what I'm living through in my client work which makes it easier, but as I think about this stuff more and the whole notion of having Style Guides, putting this low level, this boring stuff as you wonderfully call it, this stuff aside and creating a home base, a hub for all this thinking.</p>
+  <p>As these new technologies emerge like Voice UI's become a thing that's more like Internet of Things start happening more and more, how do you see today's efforts at Design Systems and us putting in place all these things, all these different organisations putting this stuff in place, how do you see that stuff evolving as these new technologies become more and more popular and adopted?</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Yeah, it's a great question. I think one thing that I'll mention is that you're right that I do have a focus on designing for what's next and how do we prepare organisations and products for what appear to be emerging technologies that are likely to be really important in the next year or two and I do think that a really important thing about Design Systems and Pattern Libraries is being kind to your future self; it's creating this documentation, this sort of stuff that, so for the next project, my colleague or me, I'll have all of this stuff at hand and so I think part of that is also trying to be future-friendly which, Brad, that's a term that you came up with several years ago that I think is great, which is to think about not just what's the next project but how might this be used and I think that it takes less and less imagination now to see that things like speech and in particular, but also some artificial intelligence aspects are going to be coming into these things, that our interactions are going to go well beyond keyboard and mouse, as we've already seen with touch-screens although we still for some reason, still very focused on the keyboard and mouse experience as designers, which I don't think is a great thing, but I think that a lot of this is, I'm pleased to see more and more focus on accessibility for designers as a default, learning that, oh, if I create an accessible website, it still can be visually creative, it doesn't have to be boring, which I think is an association of this stuff, or it doesn't have to be limiting and I think that one of the cool things about embracing accessibility is that it tends to also embrace future and emerging technologies. In a way, these speech interfaces: hello! If we'd designed for the visually impaired for the last several years, you'd already have your speech interface. It's like good mark-up, good accessible mark-up designs for the future and so I think that in a sense, just having good standards sets you up for these emerging web technologies because again, they all just come from HTML, this incredibly durable, amazing mark-up</p>
+</div>
+
+<span class="timestamp">(36:17)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> But I think also that it's also the case that we're going to have to start developing some new UX practices for how to anticipate speech, that it's a very low-resolution interface; how do we create some new speech patterns that prompt and offer suggestions for what it is that you can do in ways that you would just read a menu quickly off of a screen. What are the emerging patterns that sort of suggestion and anticipation that we need to have there. Those are essentially new patterns that we haven't had to deal with on the keyboard and mouse web but that we will have to develop for others but I think that those will sit alongside other solutions.</p>
+  <p>I guess I'll say, what we're seeing right now, I think that some people who are very big enthusiasts of bots and chatbots will suggest, oh, this is the end of the web as we know it or the end of apps as we know it and I think really what we're seeing instead of one thing replacing another is just an explosion of new interfaces and what that means is that we'll have an explosion of design best practices for each of these new channels and what that means is that we have to get a lot better at documenting all of them and that's what Pattern Libraries and Design Systems are great at is, how do we share what your colleague has discovered to be the best thing, the best way to solve a problem, that you can just grab that up and solve your own new problem.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, yeah, I think that that makes a ton of sense and I think also it underscores the evolution of thinking about these things as like just a component library; it's like, here's some UI components to this sort of over-arching Style Guide that contains all the thinking that goes into doing design at an organisation.</p>
+  <p>I could totally see a company's Style Guide living right alongside the components in the guidelines section you have Voice UI, you have AI considerations, you have all this other stuff, it's all in the same family, It's not necessarily something entirely different; it's still how design is manifested at an organisation so I feel like these Style Guides do serve as this future-friendly foundation that you will grow with and evolve with as technology continues to evolve so it's not just about components or it's not just about specific technologies, it's like, hey, we're setting this thing up as the hub from now on!</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> It's interesting; I think that people began associating the pattern library as the system and realised, oh wait, we can add more if we pull in that the brand people have done with the brand guide and bring in all of their things around colour and the notion of the brand. Oh, and over here we've got all the copywriters who've put together their voice and tone guidelines and you get the visual pieces of the Design System and so it's adding what you see, the typical Style Guide layout with that left column of aspects of the Design System that you can click on to learn more about, that left column is growing and it's going to continue to grow because design is becoming more complex and the disciplines that go into design is becoming more complex and as we add more and more interaction channels, more kinds of interactions, I think that it's all going to have to be folded into and adopted into this overall Design System and it doesn't mean that everybody has to become an expert in each one of those left-column menu options but it does mean that the whole story is becoming a bit longer and more convoluted and it helps if all the disciplines share their knowledge with the rest of us.</p>
+</div>
+
+<span class="timestamp">(40:16)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, it sort of helps create this, I think, birds-eye perspective that even if you're not diving into those links, there's an awareness, I guess of it, that might open up opportunities where it's like, oh, what about this thing that's a JSON to what I'm doing, or whatever, it provides that aerial view, I guess, that could open up a lot of opportunities and cross-pollination and all that good stuff but that's… well said: great, wonderful! I'm pleased with that answer!</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> That is my goal, that is my goal. I mean, I think that broadly, what is emerging with all of this Design System work is just how many disciplines and kinds of brains and kinds of creativity go into creating large and complex design solutions and the way that I think of Design System work writ large is that it is a container of institutional knowledge; it is a collection of solved problems and an example of the best of what a company does when it comes to design and the more that you can use that to build a real platform for that kind of communication, and I know I keep saying this word, humility, but I just think it's so important for the people who are designing these systems not to impose too much of themselves into it but to really work their hardest to make it a reflection of the design values and brand values and development workflows of the organisation because that is the way that you're going to get people to be really enthusiastic about it and to adopt it.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So, it was really great to have you on the show, Josh, and thanks so much for sharing all of your knowledge and Brad as well, because I know you've worked together.</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> It's been a real treat to be here; did I mention I'm just completely such big fans of you two.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Awww…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Awww…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Awww…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Love this!  No, but yes, seriously, thank you, thanks so much for being on here and again, I'll say, I think this sort of, especially the organisational stuff, a lot of the non-tech parts of a Design System are so incredibly important and again, I've always just been in awe at how you're able to wrangle a bunch of disparate groups or diffuse a bunch of tense people or arguing people; and you'd have to see it in order to get it: people just at each other's throats around a meeting room… this is how it needs to be done… no, this is how it needs to be done and Josh is just like, yes, so I think the spirit of what you're all going for is this…and you're all right and if we approach it this way, then they're all like, oh yeah, that makes perfect sense. I'm like, wow, what a skill! That's so cool!</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Well, that sounds pretty good. I'd like to meet that guy!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It is incredible but again, I do think it speaks to the spirit of Design Systems, like you're saying, it's just like a bunch of different opinions, a bunch of different things; how do we extract the spirit of how design and development gets down, so yeah, great. Thank you so much for being on the show and thank you so much for all of your freaking contributions to the industry; I'll say that I'm also really excited that now that you have a new shiny website at <a href="https://bigmedium.com/">bigmedium.com</a>, you've been writing a lot more and stuff like that, including about some of the stuff, projects that we've had a chance to work on, but I love reading your site and everything that you're sharing, so, keep it up!</p>
+</div>
+
+<div class="josh-clark guest">
+  <p><b>Josh</b> Well, thanks so much, I'm glad you're reading and thanks so much for all that you two do! I'm glad to know that Brad can read!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Finally! It took me a while, but anyways. All right, cool, well thanks so much and thanks everybody for listening and until next time, see you later!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
