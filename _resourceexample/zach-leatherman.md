@@ -1,5 +1,5 @@
 ---
-title: Zach Leatheran
+title: Zach Leatherman
 link: https://www.zachleat.com/web/style-guide/
 image: zach-leatherman.jpg
 tags:
