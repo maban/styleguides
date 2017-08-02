@@ -9,7 +9,7 @@ published: 31st of July 2017
 about: <a href="https://www.sushiandrobots.com/">Jina</a> is a consultant who worked on <a href="https://www.lightningdesignsystem.com/">Salesforce's Lightning Design System</a>. She's the organizer of <a href="https://twitter.com/clarity_conf">Clarity Conference</a>, founder of the <a href="https://twitter.com/sf_dsc">SF Design Systems Coalition</a>, and the creator and moderator of <a href="http://designsystems.herokuapp.com/">The Design Systems Slack</a>. She also maintains the design and website for <a href="http://sass-lang.com/">Sass</a>.
 audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/335517239&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 links: [
-    {text: "Salesforce's Lightning Design System", url: "http://lightningdesignsystem.com/", type: "example"},
+    {text: "Salesforce's Lightning Design System", url: "https://www.lightningdesignsystem.com/", type: "example"},
     {text: "BEM (Block, Element, Modifier)", url: "http://getbem.com/", type: "tool"},
     {text: "Sass Deprecate", url: "https://github.com/salesforce-ux/sass-deprecate", type: "tool"},
     {text: "Material Design", url: "https://material.io/", type: "example"},
@@ -55,7 +55,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 
 <aside>
   <blockquote>
-    <p>…And so at the start, we had the Salesforce One Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing…</p>
+    <p>…And so at the start, we had the Salesforce1 Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing…</p>
   </blockquote>
 </aside>
 
@@ -68,11 +68,11 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah… let me go way back… so, I switched over to the core team at Salesforce because I saw the Salesforce One Mobile Style Guide and this team that we have now kinda has evolved many, many times so when I started it was a cross-functional team of visual designers, interaction designers and front end developers and before we called ourselves the Design Systems Team it was called the Salesforce Cloud, because we have all these clouds; I guess now we have Commerce Cloud, Sales Cloud, Service Cloud, Marketing Cloud so Salesforce Cloud was kinda considered the core all-umbrella cloud.</p>
+  <p><b>Jina</b> Yeah… let me go way back… so, I switched over to the core team at Salesforce because I saw the Salesforce1 Mobile Style Guide and this team that we have now kinda has evolved many, many times so when I started it was a cross-functional team of visual designers, interaction designers and front end developers and before we called ourselves the Design Systems Team it was called the Salesforce Cloud, because we have all these clouds; I guess now we have Commerce Cloud, Sales Cloud, Service Cloud, Marketing Cloud so Salesforce Cloud was kinda considered the core all-umbrella cloud.</p>
 
   <p>But that was kind of a confusing name and so we re-branded our team to be the Systems Team and then after a while, Design Systems to be a little bit more obvious about what we do.</p>
 
-  <p>And so at the start, we had the Salesforce One Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing and I think there were a lot of reasons for that but one of the things that we worked on, which is what I kinda consider the early genesis of the Lightning Design System were Design Tokens and so we had the Style Guide that nobody was using but we also had the beginnings of what Design Tokens were and that was fully embraced and adopted by our engineers and designers and so we were building that system out and it worked pretty well; people were definitely referencing the tokens in their Sketch files, developers were using tokens in their CSS and then at some point down the road, realised tokens are only going to get you so far and so the idea was, we were going to make a CSS framework and that framework initially was just going to be used by the UX Team for rapid prototyping and using that as a living spec.</p>
+  <p>And so at the start, we had the Salesforce1 Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing and I think there were a lot of reasons for that but one of the things that we worked on, which is what I kinda consider the early genesis of the Lightning Design System were Design Tokens and so we had the Style Guide that nobody was using but we also had the beginnings of what Design Tokens were and that was fully embraced and adopted by our engineers and designers and so we were building that system out and it worked pretty well; people were definitely referencing the tokens in their Sketch files, developers were using tokens in their CSS and then at some point down the road, realised tokens are only going to get you so far and so the idea was, we were going to make a CSS framework and that framework initially was just going to be used by the UX Team for rapid prototyping and using that as a living spec.</p>
 
   <span class="timestamp">(5:14)</span>
 
@@ -94,7 +94,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah, and oh man, the times that we've had to completely change things around. The first version of it wasn't prefaced with <code>slds-</code> and in all the classes and then we realised people were combining it with old CSS and there were clashes happening, so we had to go… luckily at this point I think we were still in Alpha phase so we could say, hey, sorry, you've got to change your syntax and then we were using the <a href="http://getbem.com/">BEM</a>s and tags and there's all these things that you just find out along the way and you realise, oh, maybe we should have known that at the beginning, so we actually had to deprecate that syntax and introduce a new BEM syntax because it turns out, our production code uses XML and double-dashes cannot be commented. So, just all sorts of little fun, quirky things like that have come up along the way and it's been interesting and definitely educations.</p>
+  <p><b>Jina</b> Yeah, and oh man, the times that we've had to completely change things around. The first version of it wasn't prefaced with <code>slds-</code> and in all the classes and then we realised people were combining it with old CSS and there were clashes happening, so we had to go… luckily at this point I think we were still in Alpha phase so we could say, hey, sorry, you've got to change your syntax and then we were using the <a href="http://getbem.com/">BEM</a> syntax and there's all these things that you just find out along the way and you realise, oh, maybe we should have known that at the beginning, so we actually had to deprecate that syntax and introduce a new BEM syntax because it turns out, our production code uses XML and double-dashes cannot be commented. So, just all sorts of little fun, quirky things like that have come up along the way and it's been interesting and definitely educational.</p>
 </div>
 
 <div class="anna-debenham host">
@@ -120,7 +120,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="brad-frost host">
-  <p><b>Brad</b> I'd love to pick at that a little bit, just because that seems to be a common thread around a lot of different companies are running all these different text stacks. In your guys' case it's like you have third party developers and other people; things that are out of your control to a degree and so it's like, how did you set up your architecture?</p>
+  <p><b>Brad</b> I'd love to pick at that a little bit, just because that seems to be a common thread around a lot of different companies are running all these different tech stacks. In your guys' case it's like you have third party developers and other people; things that are out of your control to a degree and so it's like, how did you set up your architecture?</p>
 
   <p>Tokens obviously are a big part of that but just how did you set things up so that people that are running Java or Node or PHP or whatever would be able to reach for your components and go, I can use this! Because so many places I see, it's like they tie the components to a specific technology: I want those tabs but oh, that means I have to use React. Well, I guess I can't use that now. So, how did you all approach that architecturally and from a marketing standpoint, even? How are you thinking about that stuff?</p>
 </div>
@@ -130,9 +130,9 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 
   <p>We started with JSON and then we moved to YAML because we found it to be a lot more designer-friendly and at its simplest, it's name and value pairs but you can, depending on how you set it up, you can add in all sorts of other tags, like we can tag an additional comment to describe how it's used or we can flag a Token as deprecated. We can even define which CSS properties are allowed for that Token. So you can add in all sorts of other things to it that you can use for automation and tooling but at its simplest, it's name and value pairs. And then that repo is using Node and so we basically run a command and then it'll generate all the Tokens needed for Sass, Less, Stylus, XML, JSON, Lightning and so on. And then the build process automatically puts that set of Sass variables into our Design System CSS and so it's always going to grab the latest, so that's how we do it on our side of things and then we consume that in our CSS framework as Sass variables.</p>
 
-  <p>The way we deliver it to our engineers is we basically compile… we take the compiled CSS and we retain the Sass variables as is, except we change the format of them to match the Lightning format and that way, things are still tokenised but they're not getting all the mix-ins and functions and stuff that Sass has, so that's how they get it and Brennan and staff on my team, they will basically put that directly into Core and work very closely with.</p>
+  <p>The way we deliver it to our engineers is we basically compile… we take the compiled CSS and we retain the Sass variables as is, except we change the format of them to match the Lightning format and that way, things are still tokenised but they're not getting all the mix-ins and functions and stuff that Sass has, so that's how they get it and Brandon and Stef on my team, they will basically put that directly into Core and work very closely with—</p>
 
-  <p>We have a sister-team on that side of things called the Styling Team and they make sure that we're not introducing any bugs. They run a whole bunch of tests on it and sometimes have to corral other devs to fix things if they've done things that over-ride or stump on things and so on. So that's how they consume it and then when you use our Open Source CSS framework you can either use the Sass files or you can just used the compiled CSS and then we also offer a couple of other formats for other platforms or older platform Visual Force and like I said, Lightning and then we also have those as packages, like NPM packages or our packages, so it kinda depends on… basically, you choose your own adventure!</p>
+  <p>We have a sister-team on that side of things called the Styling Team and they make sure that we're not introducing any bugs. They run a whole bunch of tests on it and sometimes have to corral other devs to fix things if they've done things that over-ride or stomp on things and so on. So that's how they consume it and then when you use our Open Source CSS framework you can either use the Sass files or you can just used the compiled CSS and then we also offer a couple of other formats for other platforms, our older platform VisualForce and like I said, Lightning and then we also have those as packages, like NPM packages, Bower packages, so it kinda depends on… basically, you choose your own adventure!</p>
 </div>
 
 <span class="timestamp">(15:32)</span>
@@ -142,7 +142,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> And sometimes people might even have to have different things in their compiled CSS depending on their platform so we'll try to automate all that as much as possible. For example, we can't really use Normalize as is on the Visual Force platform because they do a lot of things that it would actually conflict with, so we give them a very special format of the CSS to the Visual Force for that one.</p>
+  <p><b>Jina</b> And sometimes people might even have to have different things in their compiled CSS depending on their platform so we'll try to automate all that as much as possible. For example, we can't really use Normalize as is on the VisualForce platform because they do a lot of things that it would actually conflict with, so we give them a very special format of the CSS to the VisualForce for that one.</p>
 </div>
 
 <div class="brad-frost host">
@@ -170,7 +170,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 <div class="jina-anne guest">
   <p><b>Jina</b> Yeah, so that's actually, for the Lightning Platform, we're always just putting our stuff in there so if you're using the Lightning Platform, you're just getting those changes for free; you just have to make sure your component mark-up is correct. For all the other people, we use semver and we try to keep tabs on usually about three releases at once, usually it's the current release that's out right now, the next release and then whatever release was out prior because we don't want to leave people behind, so we're usually keeping aware of three really.</p>
 
-  <p>Sometimes there might be more than one in the future that we're thinking about, depending on whatever's coming and we have a deprecation strategy in place; we use <a href="https://github.com/salesforce-ux/sass-deprecate">Sass Deprecate</a> which is our Open Source mixin that you can use; it's a little tool that Brennan created.</p>
+  <p>Sometimes there might be more than one in the future that we're thinking about, depending on whatever's coming and we have a deprecation strategy in place; we use <a href="https://github.com/salesforce-ux/sass-deprecate">Sass Deprecate</a> which is our Open Source mixin that you can use; it's a little tool that Brandon created.</p>
 </div>
 
 <div class="anna-debenham host">
@@ -178,7 +178,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah, so it's a really cool idea Brennan came up with where you wrap your deprecated code in this mix-in and you tell it through passing of a variable what version it deprecates in, or what version you want it to go away and then basically once you hit that version, it no longer compiles that code that's wrapped in the mixin so it won't be in your output and so… I'm trying to remember how long… I think it's almost two years minimum that we can deprecate things, so we can't remove something next version; it'll be in there for a while but that's because we have this huge promise to our customers that we won't break… </p>
+  <p><b>Jina</b> Yeah, so it's a really cool idea Brandon came up with where you wrap your deprecated code in this mixin and you tell it through passing of a variable what version it deprecates in, or what version you want it to go away and then basically once you hit that version, it no longer compiles that code that's wrapped in the mixin so it won't be in your output and so… I'm trying to remember how long… I think it's almost two years minimum that we can deprecate things, so we can't remove something next version; it'll be in there for a while but that's because we have this huge promise to our customers that we won't break… </p>
 </div>
 
 <div class="brad-frost host">
@@ -230,7 +230,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah, we do not have any JavaScript in our Open Source Design System and that is because once you introduce that, it is really difficult to stay agnostic; you basically introduce opinion into the stack. However, internally, and the section might be Open Source as well; we do have a React version of our Design System that some of our smaller product teams use and then Lightning components come with all that baked in so if a developer at Salesforce is using a Lightning component, they don't have to worry about building that because somebody's already built that into the component.</p>
+  <p><b>Jina</b> Yeah, we do not have any JavaScript in our Open Source Design System and that is because once you introduce that, it is really difficult to stay agnostic; you basically introduce opinion into the stack. However, internally, and this actually might be Open Sourced as well; we do have a React version of our Design System that some of our smaller product teams use and then Lightning components come with all that baked in so if a developer at Salesforce is using a Lightning component, they don't have to worry about building that because somebody's already built that into the component.</p>
 
   <p>In terms of how we tell people what the expectation is, we right now have been doing that through our docs; saying this class gets removed, this one gets added, add these attributes, remove this and so on: it's all through documentation. But I think we're looking again at possibly re-introducing that into the docs but can't confirm that's actually going to happen; it's being explored right now because it's hard to show… it's easier to show than it is to tell and it's been something that we've never loved about the Design System code-base. We want to be able to have JavaScript… </p>
 </div>
@@ -276,7 +276,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 <span class="timestamp">(30:08)</span>
 
 <div class="brad-frost host">
-  <p><b>Brad</b> Is everybody on the team… does everybody geek out about that stuff or do some people or are they like, man, everything's an abstraction? I could sort of see myself being like… and just in my own coding stuff, I'll do two-layer sort of Sass variables or whatever; it's not quite Tokens but you've getting to a level of abstraction… at what point do you feel detached or is that all just… it just makes so much logical sense that it's you get over to the metal staff, I guess?</p>
+  <p><b>Brad</b> Is everybody on the team… does everybody geek out about that stuff or do some people or are they like, man, everything's an abstraction? I could sort of see myself being like… and just in my own coding stuff, I'll do two-layer sort of Sass variables or whatever; it's not quite Tokens but you've getting to a level of abstraction… at what point do you feel detached or is that all just… it just makes so much logical sense that it's you get over to the mental stuff, I guess?</p>
 </div>
 
 <div class="jina-anne guest">
@@ -322,7 +322,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> I used to be anti-CSS pre-processors because I didn't think I needed them! Now I'm like the Sass fangirl also!</p>
+  <p><b>Jina</b> I used to be anti-CSS pre-processors because I didn't think I needed them! Now I'm like the Sass fangirl, so…</p>
 </div>
 
 <div class="brad-frost host">
@@ -356,7 +356,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah, so it can detect, these are <code>slds</code> classes and if you are over-writing any of those classes, it'll give you an F and you have to… </p>
+  <p><b>Jina</b> Yeah, so it can detect, these are <code>slds</code> classes and if you are overriding any of those classes, it'll give you an F and you have to… </p>
 </div>
 
 <div class="brad-frost host">
@@ -450,7 +450,7 @@ Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-l
 </div>
 
 <div class="jina-anne guest">
-  <p><b>Jina</b> Yeah. Clarity is a Design Systems conference that I started last year. In fact, Brad spoke at it last year and it's at the Alamo Drafthouse in The Mission in San Francisco, so it's kind of fun and quirky. I like to mix it up because when I first announced it, I got some people that were really a whole conference around Design Systems.</p>
+  <p><b>Jina</b> Yeah. Clarity is a Design Systems conference that I started last year. In fact, Brad spoke at it last year and it's at the Alamo Drafthouse in The Mission in San Francisco, so it's kind of fun and quirky. I like to mix it up because when I first announced it, I got some people that were like, really, a whole conference around Design Systems?</p>
 </div>
 
 <span class="timestamp">(45:16)</span>
