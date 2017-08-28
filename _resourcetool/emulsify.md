@@ -1,7 +1,7 @@
 ---
 title: Emulsify
 link: http://emulsify.info/
-image: foundation.png
+image: emulsify.png
 author: Four Kitchens
 language: PHP, Drupal
 ---
