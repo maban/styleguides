@@ -7,5 +7,5 @@ tags:
  - patterns
  - designlanguage
  - ui
- components
+ - components
 ---
