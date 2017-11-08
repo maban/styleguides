@@ -1,5 +1,5 @@
 ---
-title: Creating a Design System: The Step-by-Step Guide
+title: "Creating a Design System: The Step-by-Step Guide"
 link: https://www.uxpin.com/create-design-system-guide
 language: JavaScript, CSS, HTML
 author: UXPin
