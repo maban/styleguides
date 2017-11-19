@@ -1,0 +1,403 @@
+---
+layout: episode
+section: podcast
+number: 20
+season: 2
+title: Maya Benari
+image: maya-benari.jpg
+published: 20th of November 2017
+about: Maya Benari is a designer and frontend developer at <a href="https://18f.gsa.gov/">18F</a>, working on the <a href="https://playbook.cio.gov/designstandards/">Draft U.S. Web Design Standards</a>. Before that, she was a Code for America fellow partnered with the City of San Antonio.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/358055288&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "U.S. Web Design Standards", url: "https://standards.usa.gov/", type: "example"},
+    {text: "Date Picker discussion", url: "https://trello.com/c/NMCtYvPF/280-date-picker", type: "article"},
+    {text: "analytics.usa.gov", url: "https://analytics.usa.gov/", type: "article"},
+    {text: "Interface Inventory", url: "http://bradfrost.com/blog/post/interface-inventory/", type: "article"},
+    {text: "Salesforce's Lightning Design System", url: "https://www.lightningdesignsystem.com/", type: "example"},
+    {text: "Material Design", url: "https://material.io/", type: "example"},
+    {text: "18F public Slack", url: "https://chat.18f.gov/", type: "tool"},
+    {text: "US Web Design Standards Jekyll theme", url: "https://github.com/18F/uswds-jekyll", type: "tool"},
+    {text: "US Web Design Standards Drupal theme", url: "https://www.drupal.org/project/uswds", type: "tool"},
+    {text: "US Web Design Standards Wordpress theme", url: "https://github.com/kyle-jennings/Benjamin", type: "tool"},
+    {text: "US Web Design Standards Implementations", url: "https://standards.usa.gov/getting-started/implementations/", type: "article"},
+    {text: "Federalist", url: "https://federalist.18f.gov/", type: "tool"},
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hi everybody; welcome to another episode of the Style Guides Podcast, a podcast dedicated to all things design systems, style guides, pattern libraries and all that good stuff. My name is Brad Frost!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we're absolutely thrilled to have with us Maya Benari.  Maya, how are you?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> I'm doing very well, thanks so much, I'm happy to be here. </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, it's taken a little bit of wrangling to get all of our schedules in line but I'm glad we're finally having a chance to chat.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Me too; I'm excited for this conversation, see what comes up.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, absolutely. Well, so I guess maybe the best place to start is to just sort of tell us a bit about your background and where you're at and what you've been up to these last couple of years and how you got into this whole sort of design system world.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure. So, my background is as a web designer and I started just making websites for non-profits, Mom and Pop shops and different design studios and things like that and the work with the non-profits was really exciting to me and I kept thinking about, oh, how can I do technology for good and from that I did a Fellowship at a <a href="https://www.codeforamerica.org/">Code for America</a> using technology to help improve cities, governments and from that I thought to myself, why not expand this to the Federal and <a href="https://18f.gsa.gov/">18F</a> was a new organisation that was forming a new office in the General Services Administration, so I applied for that and got into that role as a front end designer and have been there for the last two and a half years and from my time there have been working on a wide array of projects that touch a lot of people in the public to things that are more internal, as well as this little thing you may have heard called <a href="https://standards.usa.gov/">The US Web Design Standards</a>.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's awesome. And I'm just wondering, what is 18F, what's their scope? What do they do, what don't they do?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…we asked ourselves this question: could we create a set of tools and resources to help transform and drive Government websites forward and really see if we could help make something that could make a difference and improve the experience for the public as well as developers and designers within Government…</p>
+    </blockquote>
+</aside>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure, so 18F is an office inside of the General Services Administration and we're sort of like a technology shop inside the Government that other agencies can hire to help build, buy or understand how to use different aspects of technology and websites and web apps so we're trying to bring a lot of modern best practice data-informed design and development into the Government.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. I think, what a fantastic resource to have available to everybody, I think a lot of organisations, you're seeing in the private sector for sure, are starting to get the hint that, oh yeah, we need to invest in this, in technology in a much bigger way; historically, external agencies played that role but I think what we're seeing is, and I think 18F is a testament to that, this sort of investment in technology, so getting those people a lot closer to the organisation itself.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, exactly, and a lot closer to the root of the problem as well, rather than coming from outside.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, well, speaking of the root of the problem, so you talked about how you've been working over these last couple of years to establish these US Web Design Standards. What was that born of? Where did this whole initiative come from, to create a design system for the US Government?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure. So, as many people might think of Government websites, it's not typically thought of as the best experiences right now in terms of usability</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> What?!! That's crazy!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah! Who would've thought? But I mean there's a tremendous amount of Government digital services out there that touch millions and millions of people from having to try to get your benefits after you're in the Armed Services, or trying to apply to be a US citizen in the Immigration Office so it really touches a lot of people and I think collectively a group with 18F and the US Digital Service, US Digital Services thought that we could be doing better, even within ourselves and how we work on projects as well, so we asked ourselves this question: could we create a set of tools and resources to help transform and drive Government websites forward and really see if we could help make something that could make a difference and improve the experience for the public as well as developers and designers within Government, so we started working together on this initiative to do that.</p>
+</div>
+
+<span class="timestamp">(5:33)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Was that the starting point of 18F or did you have something before?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> No, that wasn't the starting point of 18F as an organisation. It kind of started from another kind of Fellowship programme that was inside the Government and the people there decided that they wanted to continue working on these projects and so 18F was established to kind of be a bit more long-term as well instead of just coming in and out.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that's great. So would you say that this whole notion of a tool-kit or something is a matter of scaling yourselves a little bit just because the organisation you're working within is just so massive in 18F so far as my understanding of it is, it's a little…not that many people, so there's only so many of you and there's so much ground to cover, you had to scale yourself in your brains. Is that a fair assessment or is that how you were thinking about that or is that off the mark?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> No, that's definitely fair. I think a lot of it is also like not wanting to try to recreate the wheel every time we have to work on a new project: a lot of it is going from one project to another to making sure there's some kind of consistency in how things are, how things work and just hopefully just trying to make things easier for people and make this process happen a bit faster for actually creating these websites and services so people can focus their time and energy on more vital problems.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Something that I loved was seeing a Trello board where you were talking about, I think you had different components that you were working on. <a href="https://trello.com/c/NMCtYvPF/280-date-picker">One of them was a date picker</a> and you were looking at other examples on other sites of what they were doing and I remember you found the GOV.UK date picker and you were talking about the pros and cons of that and you'd taken some of their research as well and it's so awesome that there are two Governments that are kind of sharing resources and trying to make things better for everyone. It was such a nice example.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, it's been amazing and they're very supportive of us. We are big fans of them. There are other Governments from Canada to Turkey who are reaching out to us to try to get involved so it's like this whole kind of global community of trying to move public digital services forward for our respective Governments, so it's really fun, really exciting.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's so encouraging.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, yeah and I think just even taking a step back from that, obviously Governments are such minefields and there's a lot of red tape to move through but really at the end of the day, these UIs are text, images, form fields, data tables; it's again like the ingredients of all of our UIs are finite; you could wrap your hands around them. So it's like…and so much of the stuff, like a date picker, like form validation and stuff like…either is settled science or should be settled science so I love how you said it's like let's just extract that, those best practices or caught up by those best practices so that the team can focus on maybe lopping off five different form fields from a flow or something like that rather than going, oh, how are we going to handle validating this email address or something.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, right, that's exactly right and by doing that, it saves a lot of time so you don't have to think of how should this require label sit next to it? Is this something that we've already tested and made sure that it's the best and most usable pattern so you don't have to worry about thinking that through again.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right. So, I'd love to hear from you, OK, so there's this idea of let's make a tool-kit, let's go down this path and you've written this great article that describes this story of the design system and not to totally re-hash it here, but it looks like you talked to lots of users in the creation of this and what I'd love to hear from and this is something that I've seen in my own work with design systems is that users for a design system, they're sort of multiple sets of users: there's the end user, there's the actual, in your case, the citizens on the other end of the screen that are actually using the UIs in order to get something done, but then there's the users that are the people like us, the designers and the developers that will ultimately be ingesting a design system and making use of that. Can you talk about how at the beginning in this process, who were you talking to and what were you talking about and how did those conversations shape what tools you were going to put in the tool-kit?</p>
+</div>
+
+<span class="timestamp">(11:00)</span>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure. So, I think in the beginning of the project, one of the first things that we did is that we all just decided to meet together with other designers and developers from other agencies in Washington DC and from there we did a few workshops including what patterns and components do we all need? What do we all use to make our websites, our services?</p>
+  <p>And from that we just started writing on Post-its and throwing things on walls and seeing from that what kind of patterns started to emerge, where do the commonalities align and we used that to help inform what we were actually going to start to build and through that also, from my perspective as a front end developer, I was very curious about what should the coding standards be for this and how do you please everybody and the thing is, you really can't, so it's this territory of wanting to just create reasonable and understandable ideas or decisions for when you make things because on the one hand, if you're too prescriptive, you can turn a lot of people off, but if you're too loose then what's the point of it anyway.</p>
+  <p>But anyhow, so after we started to come up with some patterns of what we actually wanted to build, our team looked at the top ten top level dot-gov domains using <a href="https://analytics.usa.gov/">analytics.usa.gov</a> and just what are the most visited Government sites and through that,  did an <a href="http://bradfrost.com/blog/post/interface-inventory/">interface inventory</a> of what we also saw in common there.</p>
+  <p>So, from that we combined that side with the in person workshop to kind of determine what our first limited set of components be and we had, at the beginning of this, our understanding was that we had three months to put out an MVP of not just what the system is but the website for the system, so everything altogether, so it was definitely a tall order and I think that time-frame also created a limitation that maybe helped us distil what were the most important elements and patterns and things that we needed to just build something and we knew that we could always continue and expand from there but it really helped us figure out what were the things we wanted to make sure we had or things that maybe weren't as necessary.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…the outside communications part is something that we're continuously learning from and trying different things. I think from the onset of this project, on one hand, everything that we do at 18F is open from Day One; this wasn't on a private repository, it was public from the first line of code.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's such a nice process that you could all get together and do that and just stick things on Post-it notes and decide how you wanted to go about building it. I know you do quite a lot of work around testing each component before you publish it. Could you talk a little bit about that, because I know you do browser testing and accessibility testing. How do you go from building a component to making sure that it meets all of your standards?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure. So from the very beginning of this process, we had UX designers and researchers, visual designers and then front end people, so for this process we went a little bit step by step and we had the UX designers come up with patterns and wireframes as well as usability and some accessibility guidelines and from that, and they did that also using a lot of third party research like Nielsen Norman Group and a lot of… because it was three months, we didn't really have so much time to actually test each component and each piece with users but from there, that got passed on to the visual designer who made sure that it adhered to whatever the brand and the visual aesthetic that we had as well as things like contrast and making sure the colours are accessible and then from there it would get passed on to the front end people or people like me to make sure that I'm starting from very semantic HTML and then layering things on as I go.</p>
+  <p>And then we also at 18F have an accessibility expert and at the time we just went through with him and his hundred point checklist of making sure each pattern was accessible, but we also rely on a lot of tools and accessibility checks to kind of just give us a first pass to make sure that things are automated that we can check we know and then test things individually for that as well.</p>
+</div>
+
+<span class="timestamp">(15:43)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I love that it's…I was going to say, I love that it's ingrained all the way through the process that it's from the UX designers right down to the developers that you're all thinking about this sort of thing.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, and then I think though…and then in the use of these patterns when other agencies are using it on their products, that's when they can get into the nitty-gritty of, oh, how is this testing with users and then hopefully bring that knowledge back to us so we can continuously improve how we're doing this.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I definitely want to talk more about that sort of feedback in a bit but just from the…so it sounds like from the get-go, you had this three month window to really get something stood up and I love how you were saying about how that constraint really forced you to focus on what the most high impact patterns and stuff would be and just saying, OK, what's the Venn diagram of…what's in the tool-kit and what are the top Government sites, what are they actually consuming and that creates a nice little…here's what our meat and potatoes patterns could be in that if we got those in the tool-kit then boom; you've solved eighty per cent of the pain or something like that. And I think that's really important. I think just in my own work, I think a lot of people see, I talk to loads and loads of different designers, developers, organisations and they'll look at something like <a href="https://www.lightningdesignsystem.com/">Salesforce's Lightning Design System</a> or they'll look at something like <a href="https://material.io/">Material Design</a> and go, my God, this is so comprehensive and this is so…so well done and so thorough and thoughtful and whatever and I think that intimidates a lot of people, that prevents them from ever getting started, so I think it's great to hear from you that three months is enough to stand something up and knowing that it's going to be an evolution or process.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah. It ended up going an extra month, so it ended up being four months but you know…</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…the marketing of it doesn't end with just very public declarations and stories, that's one piece of it but I really think that part of the marketing is something you do on an individual level…</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's still tiny, that's still tiny, especially in the Government world, four months is, you could have a couple of conversations I feel like; I don't know, maybe I've been working with big organisations too long but some things can really move at a glacial pace. So, cool. So, you started stubbing out these patterns, you started building them out, you were also building a home for these patterns so a style guide that would wrangle them and present them to users. What, throughout that process, how were you communicating with the outside world or the potential users of the system and stuff like, hey, this is happening, this is going on; you should be informed of this and you should be getting excited about this thing existing. I found that tends to be something where it's like if you're just doing work in isolation, or whatever, and then going hey, surprise, here's a thing! Did you do anything communication-wise to just increase the visibility of this work?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah. That's a great question and I think the outside communications part is something that we're continuously learning from and trying different things. I think from the onset of this project, on one hand, everything that we do at 18F is open from Day One; this wasn't on a private repository, it was public from the first line of code.</p>
+  <p>But throughout the process, we did engage with those partner agencies like I mentioned before, from the Department of Education and <a href="https://www.usa.gov/">usa.gov</a> so we had a set of partners through this process so if we would come up with patterns, we would post this an issue on GitHub and draw the attention to collect feedback from but I will say that when we launched, there are 30,000 people working in Government technology that work for the Government, so there was a lot of people that maybe didn't know about this or felt left out, so we definitely heard this response, after when we initially launched and since then I think we've been thinking about how do we engage more people and make sure that folks feel heard throughout this process and can give back so I think since then, we've opened a <a href="https://chat.18f.gov/">public Slack channel that people can join and just talk to us about anything around the standards</a>; we've done more emailing to Government specified list serves that we just learned about after launching this wealth of information that gets sent through those very specific Government list serves.</p>
+  <p>And yeah, and then through that, it's still an ongoing process. We like to blog about our work and we've been doing these Q&amp;A interviews since then around people using the standards to really showcase the folks using that and share that story with everybody, so that's how it's been going and how it's evolved and I'm sure it will continue to evolve.</p>
+</div>
+
+<span class="timestamp">(22:00)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. I think that those stories, those success stories are a real shot in the arm for the system to say hey, look, this exists and this is useful, this is helping real people and it can help you too, so that sort of…design systems and marketing, we don't like to think of ourselves as web designers and developers unless you work at a marketing agency, we don't tend to think of ourselves as marketers, but these initiatives require all of the things that go into marketing a brand new product; here's what this thing is, here's why it'll make your life easier and oh by the way, here's other people that have used it and testimonials from them and stuff; it is very strange to find ourselves in those shoes but that's what's required in order to get something like this to take root, especially if you're dealing with 3,000 people, oh my God, it's crazy.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…other groups have made their own design system based off our design system, so it's a very kind of meta thing but it's really exciting to see where they're taking it and then pull some of that back in and see what we can learn from how they're doing things to help move it forward together.</p>
+  </blockquote>
+</aside>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, and I'll also say that the marketing of it doesn't end with just very public declarations and stories, that's one piece of it but I really think that part of the marketing is something you do on an individual level and I had the opportunity, throughout my time here, to work with folks that have been in Government for many more years than me and maybe have different ways of doing things and it was really a learning experience for me to figure out how do I even position these standards and sometimes the way isn't by going straight at it; it's about focusing on the problems and then saying, here are these cool things that can help us do that a lot quicker but it's like a give and take of trying to figure out how to do that because a lot of people will be a little bit resistant to you coming in with something completely new and it's like how do you break that down and just allow the communication to happen and make sure you're on the same page of getting to the same goal.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, aligning it with their pain is I think a great way, it's like here's what's painful to you and oh by the way, here's how this thing  might be able to help you.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, and sometimes you have to also just break it down a little bit so it's not like you have to use this whole thing but maybe you want to use some of these colours or styles and fold that into your process rather than having to completely transform how you're doing things, so it really depends on each situation but I think being open-minded and flexible has definitely been helpful.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So, how do people typically consume the patterns? Do you serve an npm package or something or do they generally pick and choose which patterns they want?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, I mean, there's a huge array of ways that people consume this: we do have an npm package so you can do it that way.  You can simply just download the CSS files if you like and just add that onto your site if you don't use Sass or anything like that.  You can consume it just by copying some hex codes and putting that into your website that you're using just to get some visual design feel into what you're already using and at 18F, a lot of us really use <a href="https://jekyllrb.com/">Jekyll</a> a lot which is a static site generator.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh, I love Jekyll.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Because the amount of…yeah, the amount of prototyping that we have to do, it's a really great tool so we actually have a <a href="https://github.com/18F/uswds-jekyll">US Web Design Standards Jekyll theme</a> that's been really, really useful for a lot of us and then folks outside of Government have been making <a href="https://www.drupal.org/project/uswds">Drupal themes</a> and <a href="https://github.com/kyle-jennings/Benjamin">WordPress themes</a> and that's something that they've kind of taken the initiative to do on their own and have really kind of went with it and it's been really, really great to see. Also, other groups have made their own design system based off our design system, so it's a very kind of meta thing but it's really exciting to see where they're taking it and then pull some of that back in and see what we can learn from how they're doing things to help move it forward together.</p>
+</div>
+
+<span class="timestamp">(25:41)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. I think that you're touching on something that's super, super relevant and especially the bigger the organisation, especially the more technology that's in play, it can't be…oh, in order to consume the design system you have to use npm or you have use Jekyll or you have to use Sass or you have to use this technology or the other and probably one of the biggest pitfalls I see with organisations establishing design systems is that they hitch their wagon to one technology, like right now, React is huge and so a lot of people are going, oh yeah, we're going to build our design system and we're going to build it with React and that's great, but what about the 98% of your software that isn't using React? Now in order to get these button styles, you have to re-platform your entire thing which creates this big barrier to entry, so I love hearing…was that very deliberate on your part to just go, here's as far as we're going to take people or we're going to put out some HTML, some CSS and then some of the tools that we were using to build them but this is meant to be interpreted in whatever way people need to interpret it?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, I think that happened from also the initial thing of having the big time-crunch of really having to focus on what was important and that was, yeah, the HTML and the core HTML and the CSS and that was one reason with it but also we can't… we don't have the resources to create and maintain all of these different use cases; we would rather stay focused on what our greatest benefit is to others and allow them to take it where they need to take it but at the same time, I think we're very aware of what are the systems and platforms that people are using and how can we help this be a leverage to magnify or spread faster through the standards so we even have this product that's created inside of 18F called <a href="https://federalist.18f.gov/">Federalist</a> which is like a static site generator thing but it uses Jekyll which is static site generator but you just click a button basically and you can have a website with a URL and Government, it might sound like a small thing, I think that's pretty easy, but in Government it's like a big deal because there's a lot of security involved so just to have that very easily, it's very important and we have themes, like the Jekyll theme can be plugged into that and then people can leverage that so it's like the big kind of web of also trying to be aware of what can we…where are the greatest benefits that we can leverage. </p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…we have today over 120 projects in the Government that have used this, probably  more that we don't know about, that's just ones that we know about and that's touching around I think 60 million end users, the public users, from just the last quarter…</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. That's so cool. So it's like you've taken the agony of all of that sort of process like getting a domain set up, so you can spin this up a lot quicker than you used to be able to and then you're going to have the design system patterns baked into that; is that…did I hear that right?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, oh, that's awesome. Super, super cool. So, this thing's now been live for how long? How long has…or what version's it at now and stuff like, we've been mostly talking about this first three months but where's it at now and who's using it and how have you been managing, you mentioned this earlier, the feedback from the people on the ground that are actually consuming this and getting that sort of feedback and those thoughts back into the system and how are you managing the ongoing evolution of the system?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure, so to answer your first question, it's been…we just I guess celebrated our two year anniversary at the end of September I think, September, October…</p>
+</div>
+
+<span class="timestamp">(30:01)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yay!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Of when we launched. Yay! So yeah, we're eating a lot of cake to celebrate that.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Ahhh! What type of cake?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> I don't know, just American flag cake! And so we're excited about that. We're at version 1.4.1; we launched officially in a version 1.0 earlier this year so it was actually pre-1.0 for a while which kind of allowed us to move a little quicker for that time so that's where we're at with that and we have today over 120 projects in the Government that have used this, probably  more that we don't know about, that's just ones that we know about and that's touching around I think 60 million end users, the public users, from just the last quarter, if you just count how many using Google Analytics, how many users it actually touches, it's around 60 million from the last quarter.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Wow!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> So yeah, a few people, you know!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic, oh man, that's so cool. And so all these different agencies are visiting it, they're consuming the system. What happens, what does the process look like if they either pull it in and they're like, this pattern gets me 90% of the way there, 95% of the way there but I also need it to do this, or if they encounter a bug or something or it's like, oh I've noticed that…I used this pattern and then you click on the label and it doesn't focus the field or something like that. I'm sure you have that stuff covered, but let's just, as a hypothetical: how do people who are actually using the system, how do they know to get back in touch with you and how do those solutions, extensions or whatever make their way back into the system? How are you managing that process?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Sure, so there are like a few ways to communicate with us and to report those kinds of things. <a href="https://18f.gsa.gov/contact/">We have an email</a> that people can just send us to let us know certain things; we… a whole repo, <a href="https://github.com/18F">repositories in GitHub</a> so a lot of times we like folks to open issues when they find bugs and have requests and things like that so we have a very extensive list of issues; we just went under 200… we're working on culling them, culling them down a little bit but we have around 200 issues to kind of sort through and then lastly, we also have that sort of <a href="https://chat.18f.gov/">Slack</a> route that we created so people can just chat about different things or different ideas with us as well and then actually the real lastly is that we started doing these calls with Feds once a month where we kind of have somebody chat about what they're working on with the Standards or their experiences with it so we can all just kind of get together once a month and hear out what everybody is up to.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I started sweating when you said 200 issues! Oh!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah! It was…this week it was 250 and we have sort of a new effort around the Standards recently and we're working through them, so closing some old issues and trying to fix ones that have been hanging out for a while.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I heard that number, I was like, oh, that's no big deal! You're reaching 60 million people, I'd say 200 issues is pretty dang good!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> When you put it like that!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome; I ask that question with a very specific aim in mind just because another one of the pitfalls that we see is you can create all these tools and stuff and people can use those tools but if there isn't that feedback loop, if there aren't channels and accessible channels for people to share back then it becomes a very one-way street and so I think that that's really awesome to hear a regular monthly meeting you were saying, I think, is really cool to be like, oh this is a time everyone knows that we're going to get together and talk about that stuff. I'm starting to find that in my own work that it's really setting that stuff up early is a great way to get that instilled in the culture, I guess. Cool. Well, so what's next for the system? What's, beyond squashing bugs, I guess?</p>
+</div>
+
+<span class="timestamp">(35:00)</span>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, it's funny, our sprint actually these next two weeks it's called Sprint Bug Squash, that's sort of like the name for it.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh, there you go!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> So, beyond Sprint Bug Squash, we are hoping to really take another look at the Standards, after two years of being out there and trying to understand what will it take to make it a more mature, stable and robust system and platform and there's a lot of new things happening in the Design Systems lands and I think that things around perhaps utility classes that maybe we didn't leverage as much as we could have is something that we might be dipping our toes into in the future but yeah, we have a new effort to kind of look at things very holistically and decide what comes next, so I would just say, stay tuned: some good things are going to be happening.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great, yeah, those utility classes are real nice. At a system level I think they really provide a lot of value to be able to go, I need this but then I just need to tweak it a little bit and it's like to have a systems way of doing that rather than feeling like you're hacking the crap out of everything is really helpful. Very cool.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So, I think we're just about up to our time limit but I've got one more question for you and it's based on what you were just saying: how do you measure the success of the Design System? How do you know that you're doing the right thing?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> I mean, that's a very good question, maybe even philosophical a little bit but I think that some of the results it's sort of two-fold. We want to ensure that we are creating better products or facilitating the creation of better products for the American public and that's got to be done in a way through the people using it and so I think that's the other part of the fold; it's like, are we successful? Are people using it? How many projects are picking this up? What is their experience of using this? And I think that's the reason why this system is still here, it's because it's definitely helped a lot of folks do their job so I think that just continuing to help people do their jobs and make their jobs and their lives easier and speed up development and whatnot and make sure that we have a lot more high quality, accessible code being produced is a measure of success, if you will.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, you're saying it's bugs around things like accessibility; you can measure that stuff, you can say, this many people floated up these accessibility bugs and as the system matures maybe you see less of those?</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Yeah, and there's different ways of automating some checks on websites and making sure those come down but also that more holistically it's more accessible for anybody using it, would be a great thing to do.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh man, that's so cool, I think that that's fantastic. Wow, what a project! I can't…reading your posts and stuff and I heard you talk at Clarity about this stuff and the whole time I was sort of shaking my head at the magnitude of this and after talking to you further about it, I'm still shaking my head at the absolute magnitude of this initiative but I think that it sounds like you've just really executed this thing brilliantly and it's standing on solid ground and so I guess all that's to say is, congratulations to you and your team.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Thank you so much, it's been definitely a great project to be a part of and I'm really grateful I got to go on this ride and we had an innumerable amount of people that have been so helpful and owe a lot of credit to along the way, so very grateful for them as well.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent. And thank you again for sharing and for all the 18F team and stuff to continue sharing these findings and sharing the actual Standards themselves and all that sort of Open Source work; I just think it's very much in the spirit of the web and like you were saying earlier, Governments helping Governments and people helping people and designers helping designers do better work and help more people, so thanks for that too.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Awesome, thanks so much.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> You set a very high bar and I love learning from…I love reading all the things that you put up and picking through a code as well and kind of think, oh, that's how you do it!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Thank you. And we're learning from all of you as well, so keep it up.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, yes, in the spirit of sharing. Love it. So, Maya, thank you so much for sharing your experience with us and let's keep it going. Looking forward to seeing what's next and thanks for being on the show.</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Awesome. Thank you so much.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> All right everyone, thanks for listening and we'll see you next time.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Bye!</p>
+</div>
+
+<div class="maya-benari guest">
+  <p><b>Maya</b> Bye!</p>
+</div>
