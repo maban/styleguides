@@ -1,0 +1,11 @@
+---
+title: "Storybook"
+link: "https://github.com/storybooks/storybook/"
+author: "Norbert de Langen"
+language: "Node.js, JavaScript, React, Vue, Angular, Polymer"
+image: https://storybook.js.org/2c663defce0e8f4d0c256e911f74b727.gif
+---
+
+Storybook is a UI development environment for your UI components. With it, you can visualize different states of your UI components and develop them interactively.
+
+Storybook runs outside of your app. So you can develop UI components in isolation without worrying about app specific dependencies and requirements.
