@@ -1,7 +1,7 @@
 ---
 title: Apple OS X Human Interface Guidelines
 link: https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html
-image: https_developer.apple.com_library_mac_documentation_UserExperience_Conceptual_OSXHIGuidelines_index.html.jpg
+image: https_developer.apple.com_OSXHIGuidelines.jpg
 author: Apple
 type: Design Language
 tags:
