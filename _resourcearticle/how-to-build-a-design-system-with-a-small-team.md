@@ -5,4 +5,4 @@ author: "Naema Baskanderi"
 site: "Medium"
 ---
 
-Useful round-up of resource on building Design Systems for smaller teams.
+Useful round-up of resources on building Design Systems for smaller teams.
