@@ -2,7 +2,13 @@
 title: "Komponent"
 link: "http://komponent.io"
 author: "Ouvrages & Etamin Studio"
-language: "Ruby, Rails, Slim, Haml"
+language: "Ruby, Rails, Slim, Haml, Erb"
+tags:
+ - Ruby
+ - Rails
+ - Slim
+ - Haml
+ - Erb
 image: komponent.png
 ---
 
