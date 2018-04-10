@@ -1,7 +1,7 @@
 ---
 title: "Style Dictionary"
 link: "https://amzn.github.io/style-dictionary/"
-author: "Danny Banks, Charles Dorner"
+author: "Amazon"
 language: "Javascript"
 ---
 
