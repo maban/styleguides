@@ -1,9 +1,9 @@
 ---
-title: "patternplate"
-link: "https://github.com/sinnerschrader/patternplate/"
-author: "Mario Nebl"
-language: "Node.js, JavaScript, React, Less"
+title: Patternplate
+link: https://patternplate.github.io/
+language: HTML, CSS, Javascript
+author: SinnerSchrader
 image: patternplate.png
 ---
 
-patternplate is a platform designed to help you create and maintain component libraries.
+Patternplate connects Design and Engineering to establish a real Source of Truth for your team.
