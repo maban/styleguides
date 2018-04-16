@@ -1,7 +1,7 @@
 ---
 title: Nib Pattern Library
 link: https://github.com/nib-pattern-library/nib-pattern-library
-image: nib-pattern-library.jpg
+image: nib_pattern_library.png
 tags:
  - branding
  - frontend

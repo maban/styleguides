@@ -1,0 +1,421 @@
+---
+layout: episode
+section: podcast
+number: 13
+season: 2
+title: Anna and Brad
+image: anna-brad.jpg
+published: 19th of June 2017
+about: <a href="http://bradfrost.com/">Brad Frost</a> is a web designer, speaker, consultant, musician, and artist located in beautiful Pittsburgh, PA., and <a href="http://maban.co.uk">Anna Debenham</a> is a web developer at cyber-security startup, <a href="https://snyk.io/">Snyk</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/328869964&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Fractal", url: "https://github.com/frctl/fractal", type: "tool"},
+    {text: "KSS", url: "http://warpspire.com/kss/", type: "tool"},
+    {text: "Rizzo", url: "https://github.com/lonelyplanet/rizzo", type: "tool"},
+    {text: "Bootstrap", url: "https://getbootstrap.com/", type: "tool"},
+    {text: "Material Design", url: "http://material.io/", type: "tool"},
+    {text: "Materialize", url: "http://materializecss.com/", type: "tool"},
+    {text: "Front-end Style Guides", url: "http://maban.co.uk/projects/front-end-style-guides/", type: "book"},
+    {text: "Alicia Sedlock: The Landscape of Front-end Testing", url: "https://speakerdeck.com/aliciasedlock/the-landscape-of-front-end-testing", type: "talk"},
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hey everybody, welcome to the Style Guides Podcast. We are back. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And this is a podcast dedicated to all things Style Guides, Design Systems, Pattern Libraries and more. We're actually going to unpack some of those terms a little bit in this episode. To give a little background about this podcast, we had set this thing up a while ago. How long ago was it?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Two years!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Two years ago. So, two years ago we wanted to talk to some people that have successfully implemented Style Guides, Pattern Libraries into their workflows, into their organisations and by doing that, I feel like we learned a whole bunch and things have really taken off and exploded and evolved over the last couple of years and so that's why we're dusting this off and I think there's a big opportunity to talk to more people and even some of the same people to see how these things have evolved in their own worlds and in organisations and stuff like that. So, since we last did this, Anna, we haven't really…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> …spoken to each other!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's so sad to say that but it's true. I guess we've just been busy.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> We just got so sick of each other's voices!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> (laughs) That's it! Years to just be away… but no, life and work and all sorts of stuff. So, what have you been up to since we last talked and how, in the world of Style Guides and Design Systems and all of that stuff, how have you evolved in your own thinking about this stuff?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I got a jobby-job.</p>
+</div>
+
+-<div class="brad-frost host">
+  <p><b>Brad</b> A jobby-job? Congratulations!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> A jobby-job: a real job. For eight years I was freelance, since I left school I'd been freelancing and I decided that I wanted to work for one company and evolve their product because as a freelancer, you go into a company, you do the work and then you leave and you never really know if what you've implemented, if it's had any long-term effects. So, I wanted to do something long-term and I wanted to do it on something that was in some way important so the start-up I work for is called <a href="https://snyk.io">Snyk</a> and it's a security start-up. We build a dev tool that means developers who use open source packages can check them for vulnerabilities and it's really nice because I feel like it's a very challenging product to build and design for but it's doing a lot of good in that we're helping stop the bad guys, basically. So that's what I'm doing. We started off, when I joined, I built a Style Guide for the stuff I was working on because I'm the only Front End Dev so I built a Style Guide with <a href="http://warpspire.com/kss/">KSS</a> because we were using Node and I'm not that experienced in Node so I didn't know how to build it in Node so I build it with KSS which is just CSS Comments, so that was really easy to put together, but we outgrew it quite quickly. As soon as we hired more developers it was really, really difficult to keep that in sync, because it wasn't living and I knew that would happen up to a certain point but it happened a lot sooner than I was ready for! So we're now slowly transitioning to using a <a href="https://github.com/frctl/fractal">Fractal</a>-based living design system, so all of the components, they use an API; the design system is an npm module that we load in and we keep that in sync with the app and it's gone down really well with the team. I'm kind of frustrated about how slow it's taking us to move over and it's a struggle to have two systems at once but the end is in sight and I'm just really excited about it, really.</p>
+</div>
+
+<span class="timestamp">(4:57)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. So, with this new approach you have what sounds like a managed process by which to update the Style Guide, the home for all of your components, but also that same feed is feeding… that same API or that same package or whatever is feeding the live application as well?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, and it actually means that it gives a lot more freedom to the other devs to build out components because they're not constantly relying on me to write the HTML; they just write the JSON and it's all there.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So they're able to… we talked to <a href="http://styleguides.io/podcast/ian-feather/">Ian Feather</a> the last season. Do we call it season? I don't know. Ian Feather, who was then at The Lonely Planet, they had sort of <a href="https://github.com/lonelyplanet/rizzo">built an API</a> and so that means that in order to use some of these components, the people that are consuming it really just had to write JSON and say, OK, I want my title to be this, I want my link to be this, I want my description to be this, I want this image path to be this, but they don't have to touch any of the HTML so is that how you're set up then?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, and it's great because it means that the HTML is always in sync; no one has to write it, don't have to worry about it being formatted wrong; we can really build the components to be accessible as well because they're a standard template. It's been going really well but again, it's difficult having two systems at once.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, but that's temporary, right?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. So, what have you been up to?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Ha! A whole lotta everything, it always seems that way. I've been… what I do is I guess sort of a combination of front end development but also increasingly a lot of consulting work with organisations. One big milestone is I hired someone!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…we had to be really intentional with how we were writing things, so it wasn't just about I had to write code that was up to snuff. We had to quite literally articulate and document and deliver every single line of code…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> (sharp intake of breath!)</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah and that someone happens to be my brother, who up until two years ago was a meteorologist so he was a weather guy but now he's a front end developer and I'm actually really happy with how that all turned out because as it turns out, there's a ton of stuff to do, so some of our client work we made a whole design system from the ground up for a Fortune 10 company, a giant organisation that has a lotta, lotta people around and they have eleven thousand developers.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh wow!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and almost none of them are front end people and so basically this organisation, they would… basically the way that the culture was or the company set-up was there'd be a developer and then a business person and the business person would go: OK, cool, we need to do this and the developer would do it and from a UI standpoint, they'd just reach for anything they could get their hands on so it was like, oh, OK, we're building a portal; let me hunt around the organisation's five hundred plus internal apps and look for a portal, copy and paste that and rip out the content and add their own, or more sophisticated people would reach for things like <a href="https://getbootstrap.com/">Bootstrap</a> or <a href="http://material.io/">Material Design</a>, whatever… I should say <a href="http://materializecss.com/">Materialize</a> which is the HTML/CSS version.</p>
+
+  <p>So anyway, UI design and front end stuff was such an afterthought, as you might expect, five hundred different apps across the organisation are just totally disparate and crufty and gross. So we came in; I worked with <a href="http://danmall.me/">Dan Mall</a> and <a href="https://bigmedium.com/">Josh Clark</a> and then my brother, <a href="https://twitter.com/frostyweather">Ian</a>, and myself built everything out and that was a really great project because we were delivering this thing to a client, we had to be really intentional with how we were writing things, so it wasn't just about I had to write code that was up to snuff. We had to quite literally articulate and document and deliver every single line of code: here's this is the way it is, here's why CSS's architect did it this way, here's what happens in this situation versus this situation.</p>
+
+  <p>When we write… if a button is living inside of a header, where do those styles get written if we have to position that button? Does it live in the buttons Sass partial or does it live in the headers Sass partial? How do we write that stuff? So that whole process was great and I think coming out the other end of it, for one is the first code base that I didn't just want to totally destroy after we were done. Or at least go, I would have done this way differently. I actually felt upon completion, yeah, this is solid. So that was really cool and it was especially cool working with my brother because now I feel like for other projects, we're able to write essentially the exact same way now.</p>
+</div>
+
+<span class="timestamp">(10:52)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I can't tell where my code begins or his code ends and stuff which is cool and that's part of this whole notion of having a Style Guide: having conventions, having standards.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Brad, did you… did you do your homework?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Did I do my homework?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Did you watch <a href="https://en.wikipedia.org/wiki/Pacific_Rim_(film)">Pacific Rim?</a></p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> No, I didn't watch Pacific Rim.</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>For some clients it's like this is their fifth or sixth stab at trying to spin up some form of Pattern Library…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Aaargh! I was going to make a Pacific Rim joke but you wouldn't get it!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's way over my head; I'm sorry, I won't fail you.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I was going to say, you and your brother have, is it Rift compatibility?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> (laughs) You're right: it's totally over my head, I don't know! I put it on my To Do list. I will watch it, just for you, just to get that reference. So, in addition to doing that, that's more hands-on work, I do, like I was saying, a lot of different consulting so I've been in working with different companies of all sorts of shapes and sizes at various stages along their design system journey.</p>
+
+  <p>For some clients it's like this is their fifth or sixth stab at trying to spin up some form of Pattern Library or whatever and historically, they've all just fallen on their face and they're trying to figure out why and they have some suspicions but as I've gone in and worked with these companies, I'm starting to realise the actual code and the patterns and how they're designed and how they look, I'm not saying that that stuff is easy or doesn't matter: it certainly does, but what I've found the most challenging parts to be are establishing the culture of thinking about this in a certain way but also including things like underpinning philosophy, solid design principles where all that stuff stands on, high level guidelines but also things like contributing; also things like, here's exactly how to take an application that isn't using the design system at all to ten per cent, twenty per cent, fifty per cent, ultimately a hundred per cent: what does that process look like and let's actually define that stuff and formalise it and codify all these good practices and best practices and processes and include that right alongside the components and all the in-the-weed stuff, so that for me I think has been the biggest revelation and I think what would be really great to talk about is talk about how a lot of the terminology has changed since we last talked, so this is called the Style Guides Podcast and you wrote a book called… Front End…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> <a href="http://maban.co.uk/projects/front-end-style-guides/">Front End Style Guides</a>.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right, and we've talked about Pattern Libraries and stuff but I'd say that probably since we last talked and presently, the term Design System as a thing has really taken shape. What do you think about that?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Sorry… I was just put off by your dog snoring!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> (laughs)</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Just to point out, it's not me!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And it's not me either! It's Ziggy the Bulldog!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Lovely! Yeah, I think Design Systems are so hot right now. I feel like that term has made it more accessible to designers, although maybe Style Guides had a lot of baggage with it. Maybe people think of those kind of PDFs that you get and calling them Front End Style Guides kind of helped but I feel like Design Systems, that's the term that people have really latched onto. Which is kind of a shame because my book title is now out of date!</p>
+</div>
+
+<span class="timestamp">(15:11)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Do you equate the two, though? Do you think a Front End Style Guide and a Design System are one and the same or are there differences?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> (laughs)</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Ziggy! Hehehe!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, I feel like a Design System can include so many things; it can include a tone of voice, it can be for not just the website but also various apps; it really is a catch-all term and I kind of… (laughs) Ziggy's making a guest appearance!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yes, he certainly is!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I kind of felt like Front End Style Guides were, in a way, that catch-all term but they didn't really do it that well because just things like tone of voice and when it came to apps that don't use front end code, it's hard to kind of encapsulate that, whereas Design Systems do a better job.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and that's I think where I've led it as well, whereas basically a Design System, as I started thinking about it and talking about it a little bit more is basically everything that goes into doing design at the company. So, that includes high level guidelines, high level philosophies, code standards, voice and tone and all of that stuff, the components themselves; toolkits like a Sketch template and stuff like that, Photoshop templates, design tokens, resources both internal and external, but it's basically, this is how we do things here, you know what I mean? This is the explicit way that we do design and development and we create UIs here and that means a lot of things, not just low-level components. So the Front End Style Guide is still part of it, it's still an important part of it. The components themselves, the Pattern Library, the actual list of components is still important, the sort of manifestation of a lot of this thinking that goes around it, but historically I feel like it's more like, OK, here's buttons, here's cards, here's whatever, but there hasn't been that sort of underpinning bow that goes around…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Here's the spacing and here's the types of shadows you should use, right down to animation.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Right. And why, you know what I mean?</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>I feel like the role of the front end developer is becoming less about mocking-up what their designer has handed over to them and more about maintaining that system…</p>
+    </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> The rationale and all that documentation. Historically it's like here's the what, but you don't really have the ingredients. One example that I've been talking about is the components themselves are like tools in a tool-shed but for certain tasks and processes and whatever, you need to have instructions for here's how to install a sink or here's how to fix your roof or here's how to do whatever, so it's that context that helps provide some real utility for those tools so you're not just going into the tool-shed and going… how do you fix the toilet? I guess I'm going to grab a garden rake, or something… that doesn't make sense!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. I feel like it has also caused a shift in the role of front end developers. Would you agree?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Say more about that?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Just that… now we're working with Living Design Systems, a lot more exposure to the API, a lot more languages, things like Node are being used. I feel like the role of the front end developer is becoming less about mocking-up what their designer has handed over to them and more about maintaining that system, about integrating that into the back end; maybe doing some of the back end, especially from my point of view because our app is built in Node, I'm getting much more into that. Yeah, the role has changed a lot over the years and I feel like Design Systems have contributed to that change.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I think that's really fascinating and I think that in my own work, I feel similar where a lot of the organisations that I've been consulting with and the Design Systems that I've been building for clients, these are companies that use some of their apps are running Angular, some of their apps are running React, some of them are running JQuery, some of them are on dot-net, other ones are SharePoint, other ones are Drupal: it's all over the place and here you are trying to create a unified UI that can serve all of these different environments…</p>
+</div>
+
+<span class="timestamp">(20:25)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> No matter what language they're in.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, exactly, so I one hundred per cent agree with you it's the role of the front end designer, someone who's building the HTML and CSS and stuff, to be thinking about where that stuff is ultimately going to be deployed to and having to craft this system, and I'd say more than just the system itself, but also the processes again.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Ziggy is so bored!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> He is!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So rude!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Sleeping! So, how we ended up doing this for the big client that's running on all sorts of different tech stacks and stuff, basically the sort of canonical design system was really just raw HTML, CSS and very light presentational JavaScript and that presentational JavaScript really just sort of toggles, like switching classes, so for a dropdown it would add a class to show the dropdown list and you'd do it again and then that hides it, but by doing it that way, what we were able to do is build a few bridges between the canonical system and technology specific versions of the system, so what we ended up doing is taking the canonical system and then helping write the Angular version of that. So there'd be an Angular specific version of the Design System; there'd be a React specific version of the Design System, and then building processes by which, OK, if we make a change to that drop-down, for instance: let's say we add an accessibility enhancement to it, what we'll do is then go to the people that are maintaining the individual technology-specific versions and then working together to get that fix in and then that would subsequently get rolled out to the different applications. (laughs) Ziggy! Ziggy is already bored with the new season of the Style Guides Podcast!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's so hard to keep it all in while that's going on!</p>
+</div>
+
+<aside>
+    <blockquote>
+        <p>…I feel like is the biggest role of design and specifically designers that are on a Design Systems team is helping see all the different potential applications of any given component and say, right, how do we come up with our smart default that's going to serve most of these use cases?</p>
+    </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, all that's to say is I think we're on the same page: we're not just, OK, we're taking a Photoshop comp and turning it into code and that's the end of our job. It's like we're all forced, and I'd say designers as well, are forced to take a step back and go, how are these design decisions ultimately going to affect not just my application, my specific corner of the universe, the thing that I'm responsible for right now, but really, how is this thing going to scale? How might this thing be used elsewhere? How might other teams make use of the same component or whatever, so we're all having to think a lot bigger.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That was going to be my next question actually was how does the designer's role fit in here? How has the designer's role changed? And also around managing change. If a designer wants to maybe change the spacing, that's going to have a massive effect on the entire system: all of the apps, all of the websites and what can seem like a very minor change in the graphic software can have… you look at the Git comparison and it's just masses of files and all for one change.</p>
+</div>
+
+<span class="timestamp">(24:20)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and again I think it comes back to that consideration of going… I can't just arbitrarily change this, or I need to have a rationale for why things need to be the way they are. And in our own work and in the consulting work that I've been doing, really working with what's ultimately a sort of cross-disciplinary design systems team, so a team that's dedicated to thinking system-wide needs to partner with people that are on individual applications. So, one of our clients is a Healthcare client and so they have certain products that are facing doctors and nurse practitioners and nurses and healthcare professionals; they have other UIs that are facing patients; they have other UIs that are facing health insurance people and claims people and stuff like that. Those audiences have wildly different needs and preferences, so a doctor wants to see a data-table; they want to see as much stuff as humanly possible on a screen: eight-point type, lay it all out, don't abbreviate, or whatever; it's like, show me all the data in one place.</p>
+
+  <p>If you were to put that in front of a patient, they're going to freak out and just be totally overwhelmed, so the role of the designer has to be: great, we have these different audiences, we have these different use cases for the same component. How do we build it in such a way that it's standardised but it's flexible, it's adaptable; maybe it has a few different variations like a dense version and a comfy version and something in-between and so that I feel like is the biggest role of design and specifically designers that are on a Design Systems team is helping see all the different potential applications of any given component and say, right, how do we come up with our smart default that's going to serve most of these use cases? How do we create the various variants of that component that solved these other use cases and then how do we do it in a way that is still scalable and maintainable and stuff like that, so that's a huge shift compared to… cool, I'm working on this thing, it's meant for doctors and nurse practitioners, so I'm going to design it this way and that’s it, that's as far as you would historically have to think. Now there's just so much more to consider and I think that that's challenging but also hopefully welcome, just because the benefits you get from thinking that way and building things that can scale and be modified and give people options are tremendous.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Something I found quite weird when I think it was <a href="http://styleguides.io/podcast/dave-rupert/">Dave Rupert</a>, when we were interviewing him, he was talking about having a Style Guide or Design System as an npm module or something and I remember thinking that was very strange: why would you make a package for this? But that's what we're doing at Snyk now and it makes total sense; it's all about version control, when you make a change to the Style Guide and you've got a lot of different apps that consume it, being able to iteratively update those apps, bump up the version gradually, make sure that nothing's broken, rather than releasing it and then suddenly everything has changed and you can't control that.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, with package managers and dependency management and stuff, you're able to go… cool, we made this change to our dropdowns or to data tables and then suddenly everyone's app explodes.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So that would be if you're hot-linking a CSS file or a JavaScript file…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Which is exactly what we were doing before and it did cause problems; no matter how much you test it, there's always going to be something that slips through, whereas with this, you can test each endpoint on its own and also it's a lot easier to integrate with visual regression testing: we have visual regression testing for each component…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> …oh, so cool!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And it's kind of changed how we approach testing, because we didn't really have anything for the front end for how things look and when you get a situation where you are just adding, if you're changing a global variable of a spacing unit or something, you want to be able to see where that's changed all across the app and it's just useful to see an overview of what's changed and make sure that nothing has changed that you didn't want to change.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Sure, sure, and so do you have that sort of tooling and stuff set up in your workflow right now? If you were to go in and if you have a variable for margin double or I don't know what that is, so if you were to change that value from two rems to say four, are you able to see what that looks like?</p>
+</div>
+
+<span class="timestamp">(30:00)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yes. The way that it currently works is you go onto the master branch, you run the visual regression testing, you take reference screenshots, then you switch to the branch, like your feature branch, and you run the visual regression testing again which does the comparison, so then you've got your reference screenshots and your comparison screenshots: it lays those images on top of each other and highlights what's changed. What I'd like to do going forward is what we actually did with the previous Style Guide was to host the design system at a URL that we can then point to, so running it isn't a case of switching branches, we can just run it off that branch; the reference screenshots are from the live site which is the most up to date version that's published and then the feature branch is whatever you've got locally. So that's the next step.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. And that makes a lot of sense, it's like, here's what we have now, here's what I'm working on and here's how that's going to change the front end UI. That's fantastic. That stuff is next-level stuff. I think that that's super-cool and I've heard a few people talk about it and I think it especially makes sense in a more pattern-driven process where it's like, cool, if I make a change to my button or to this thing, especially around spacing or positioning or whatever, you have to know what consequences that brings and I'm sure it's not all bad but you don't want to break things.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And that seems like a really great way of going, oh, OK, here's a way to make sure that we're covering our bases.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. I learned it off… I went to <a href="https://speakerdeck.com/aliciasedlock/the-landscape-of-front-end-testing">a talk that Alicia Sedlock gave</a> and she was talking about visual regression testing and I was like, oh, wouldn't it be great to have this on our Style Guide? And so I spent months trying to get it working and eventually got it working and was so happy. I don't use it very much; it's only if I'm changing something that I am not sure what effect it's going to have, or maybe if I'm reviewing someone's pull request and I want to check that it's scoped to that component, but it's been really useful and I'd happily help you set it up, Brad.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Ah, yes: excellent, excellent! I need a lot of help with a lot of things I think! It has been, again, back to changing roles and stuff, this is stuff that historically I've been like, yeah, that's not…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> …that's someone else's job!</p>
+</div>
+
+<span class="timestamp">(32:41)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Exactly. That sounds cool but it's all a bit way over my head and stuff but now, again, at the very least, just sort of understanding a lot of that process and stuff; I feel like in my own world it's finding that understanding of, I'm not going to ever be a hardcore Drupal developer or being someone building out the back-end models and stuff like that and controllers and all that for a given application, but what I do need to understand is how that stuff is generally set up so that I could construct UIs that jive well with how the back end is architected and stuff like that.</p>
+
+  <p>I've found it to be a bit of a two-way street in my own work because a lot of times the clients are dealing with crusty old legacy systems that need an update and even on the back end, it's not component driven and stuff like that, so the introduction of a Design System for a front end of things gives them an opportunity and an excuse to re-structure things on their end to get these things to play nicer together.</p>
+
+  <p>Yeah, It's a lot of fun but I think I especially like… I think it's awesome that you're able to, like you're saying, to be able to work at a company and iterate on things but also put tooling in place that you're going to use for the next few weeks, months, years or whatever, I think is really cool. To be able to deep-dive into your own system and to make that system as good as possible and that's sort of… and on my end I'm still fluttering about going into a bunch of different companies and getting this sort of birds-eye perspective but really, I'm excited for my clients; I'm excited for them to create a system and processes and tools and stuff that they actually feel are useful, that are going to make their lives better, not just in the immediate future but also as they live with this stuff for years and years, because sometimes I'm like, how have you worked here for four years and this is your reality and you're willing to continue… it's like, in order to make this change I have to copy and paste this thing here and it's all very cludgy and it's like… you've accepted that as the norm, so I think that that these Design Systems are really like a breath of fresh air and I think it's getting a lot of people excited and like you said, this term, Design System, I think is a very approachable buzz-word, I guess, for lack of a better word, but it's a great rallying cry, I think, that's helped getting a lot of people, front end people, design people, even business people and stuff, getting the whole organisation to go, OK, let's make this happen; let's put the stuff in place, let's scale our best practices, let's come to some decisions, say this is how we do things and then roll that out to the whole organisation.</p>
+
+  <p>Yeah, so with that in mind, we're going to be talking to a bunch of people, a bunch of cool people, we're lining them up right now, but a lot of different people that have been working at larger organisations; other people that are consulting, helping, again sort of fluttering about the same as me and just I guess I'm really excited to talk to people to see how, in their own organisations, these terms and these processes and these tools and stuff have evolved for them to create successful work because there's been a ton of fantastic thinking coming out and what <a href="http://styleguides.io/examples">the styleguides.io examples page</a> is now up to a hundred and eighty three examples of people that are starting to publish their Style Guides, so I just think that this is going to be a lot of fun; I'm super looking forward to it.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm looking forward to bringing back a couple of guests who we had on the last round and it's going to be interesting to talk to them about what's changed: what have they learned? What has not worked out how they thought it would and basically, what mistakes have they learned from?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and that's big. I feel like it's almost like Responsive Design where, whenever Responsive Design hit the scene, after a year or two or whatever, people were like, oh yeah, we're making Responsive sites. It's like, I'm using media queries: my layout is squishy, and it's like while they were technically Responsive, they weren't necessarily great Responsive experiences, so I sort of feel like we're at that point with Design Systems and Pattern Libraries where it's like now, I'd say most places have at least some semblance of a Style Guide or a Pattern Library but that's it, you know what I mean? With the exception of a few really forward-thinking places, people are like, cool: we have some stuff; we're trying to figure out where to go from here. How do we turn this into something that's bigger than just, here's what our cart looks like, right? So I'm confident that a lot of the guests that we're going to be talking to are going to be able to shine some light on that and say what actually goes into making a solid, holistic, robust Design System? Everything from animation to design principles to back end principles, CSS architecture: we've got some good stuff lined up!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Ziggy doesn't seem to think so!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Ziggy doesn't seem to think so and he'll be here snoring along the whole way! So, thanks everybody for listening and for coming back with us and we hope that you find this stuff useful because I know I'm excited to learn.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> See ya!
+</div>

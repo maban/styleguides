@@ -1,6 +1,6 @@
 ---
 title: University of Manchester Brand Guidelines
-link: http://brand.manchester.ac.uk
+link: http://www.brand.manchester.ac.uk
 image: manchester.jpg
 type: Brand Guidelines
 tags:

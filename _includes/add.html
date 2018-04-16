@@ -1,16 +1,1 @@
-<li class="resource resource-add">
-    <div class="resource-url">
-        <span class="resource-description">
-            {% if page.type == "home" %}
-            <h2 class="resource-title">Add resource</h2>
-            <a href="https://github.com/maban/styleguides#how-to-add-resources-the-easy-way">I'd like to use GitHub</a>
-            {% else %}
-            <h2 class="resource-title">Add {{ page.type }}</h2>
-            <a href="https://github.com/maban/styleguides/tree/gh-pages/_resource{{ page.type }}">I'd like to use GitHub</a>
-            {% endif %}
-            <p class="small">If you're happy using GitHub, you can add a resource using the web interface. This creates a pull request we can merge in automatically.</p>
-            <a href="https://bradfrost.wufoo.com/forms/add-resource-to-styleguidesio/">I'd like to fill out a form instead.</a>
-            <p class="small">If you're not confident using GitHub, or don't have an account, you can just fill out a form with the details and we'll add it to the site for you.</p>
-        </span>
-    </div>
-</li>
+<a href="/add" class="link-add"><span class="link-add__text">Add</span></a>

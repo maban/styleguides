@@ -1,6 +1,6 @@
 ---
 title: Visual design explorations
-link: http://clearleft.com/thinks/visualdesignexplorations/
+link: https://clearleft.com/posts/110
 author: Paul Lloyd
 site: clearleft.com
 ---

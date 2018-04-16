@@ -6,4 +6,4 @@ language: CSS, LESS, SASS, Markdown, JavaScript
 image: documentcss.png
 ---
 
-Live Style Guides for teams, powered by DocumentJS
+Create living style guides with interactive examples, that change as your design does. Powered by DocumentJS.

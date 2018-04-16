@@ -1,5 +1,5 @@
 ---
-title: WordPress Design Handbook
+title: WordPress.com Design Handbook
 link: https://wordpress.com/design-handbook/
 image: wordpress-design-handbook.png
 tags:

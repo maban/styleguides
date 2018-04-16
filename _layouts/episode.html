@@ -14,6 +14,9 @@ layout: episode
       <h1>Style Guides <span class="fancy">with</span> {{page.title}}</h1>
 
       {{page.audio}}
+      {% if page.published %}
+      <small>Published {{page.published}}</small>
+      {% endif %}
 
       {% include podcast-actions.html %}
 
@@ -41,3 +44,6 @@ layout: episode
   </div>
 
   {% include footer.html %}
+
+</body>
+</html>

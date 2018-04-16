@@ -6,6 +6,7 @@ tags:
  - branding
  - patterns
  - frontend
+ - voiceandtone
 ---
 
 Texas State University style guide

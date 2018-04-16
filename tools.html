@@ -3,6 +3,17 @@ layout: page
 title: Tools
 section: tools
 type: tool
+description: Things to help you make your own style guide.
 ---
 
-{% include tools.html %}
+<section>
+
+  <h1 class="title">{{site.tool-title}} ({{site.resourcetool | size}})</h1>
+  <p class="lede">{{site.tool-description}}</p>
+
+  {% assign section = site.resourcetool | sort: 'title'  %}
+  {% include tags.html %}
+  {% include loop-resources.html %}
+  {% include add.html %}
+
+</section>

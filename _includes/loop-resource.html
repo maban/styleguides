@@ -1,0 +1,26 @@
+<li class="resource {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+  <span class="resource__image">
+    {% if item.image %}
+    <img class="lazy-load" data-src="/images/screenshots/{{ item.image }}" alt=""/>
+    <noscript><img src="/images/screenshots/{{ item.image }}" /></noscript>
+    {% endif %}
+  </span>
+  <span class="resource__description">
+    <a href="{{ item.link }}" class="resource__description__url">
+      <h2 class="resource__title">{{ item.title }}</h2>
+    </a>
+    <p class="resource__description__credit">
+    {% if item.author %}<span class="resource__description__author">By <strong>{{ item.author }}</strong> </span>{% endif %}
+    {% if item.conference %}<span class="resource__description__publisher">at <strong>{{ item.conference }}</strong></span>{% endif %}
+    {% if item.dategiven %}<span class="resource__description__date">on <strong>{{ item.dategiven }}</strong></span>{% endif %}
+    </p>
+    <span class="resource__description__content">
+    {{ item.content }}
+    </span>
+    {% if item.tags %}
+    <ul class="resource__description__tags">
+      {% for tags in item.tags %}<li class="resource__description__tags__item">{{ tags }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </span>
+</li>

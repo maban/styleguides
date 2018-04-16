@@ -1,0 +1,454 @@
+---
+layout: episode
+section: podcast
+number: 19
+season: 2
+title: Inayaili de León Persson
+image: inayaili-de-leon-persson.jpg
+published: 10th of September 2017
+about: Inayaili is a Senior Digital Product Designer at <a href="http://www.makeusproud.com">Make Us Proud</a>, a London-based digital product agency. Before that, she worked as a Lead Visual Designer at <a href="https://www.canonical.com/">Canonical</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341761992&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Vanilla Framework", url: "https://vanillaframework.io/", type: "example"},
+    {text: "Vanilla Framework GitHub Issues", url: "https://github.com/vanilla-framework/vanilla-framework/issues", type: "example"},
+    {text: "Percy", url: "https://percy.io/", type: "tool"},
+]
+---
+
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Welcome, everybody, to another episode of The Style Guides Podcast, a podcast dedicated all this Pattern Libraries, Style Guides and Design Systems and all that good stuff and my name is Brad Frost</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are thrilled to have on the show Inayaili de León. Did I get that remotely close?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, remotely, yeah!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Excellent; forgive my American-ness! But no, we're super-thrilled to have you on the show and pick your brains about all sorts of things around Design Systems but I guess maybe to kick off, do you want to give an introduction of who you are and where you work, what your role is and how you got into this whole Design Systems business?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah. So, I'm Lead Designer at Canonical, which is the company that is behind the Ubuntu operating system and I work within the Design Team and currently my main focus is to lead the <a href="https://vanillaframework.io/">Vanilla Framework Project</a> which is the CSS framework that we use, or that we're trying to use as much as possible to build all our websites. What was the second part of the question?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That was a great introduction! So, how did you get into leading that effort?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Well, officially that has been defined as my role fairly recently but it's something that happened organically, I think. Me and a couple of other people and the team, we started very basic CSS guidelines, maybe three or four years ago and it evolved throughout the years into something that's a little bit more robust and a little bit more solid and with that, my role in the team also changed to be the person that is leading that effort.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Got it. So, it sort of had a grassroots beginning and proved its worth and became more of a formal, larger effort?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, yeah, definitely.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, I remember you starting out back in maybe 2007/8 just doing loads of really cool stuff with CSS, that's kind of how I remember you and then kind of going on and talking about Design Systems and introducing them into Canonical and it's kind of cool to see how your career has changed over the years.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> One of the main things around, that I know a lot of people and organisations struggle with, is that starting point where: does it need to be this sort of big, formal thing? Can it be the sort of weekend hackathon project that suddenly transforms the entire organisation? Can you speak to your experience, starting with something and then that evolution into something that's more robust, as you said?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…all of our design work and all of the framework is open source; even the design tasks, they're all on GitHub and you can see the design evolution, anyone can go and see the comments, the feedback that the designs receive and the iterations…</p>
+  </blockquote>
+</aside>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yes, so that first version of what we then called Guidelines which was not really something as complex as what we have right now, it was just basically a CSS file: I don't think it even used SASS or anything like that, so this was, even that project started from existing patterns, so it wasn't a project where we said, oh, let's create a new design and create a Style Guide for it. No, we looked at what we had on the main website which was ubuntu.com and we tried to distil the patterns that were being used there into a more manageable CSS file, or a few different files and I think that one big way that it proved that it worked was that I went on maternity leave for over a year and there was maternity cover but that cover was doing a few different jobs, it wasn't just basically replacing me and for that entire year, that framework that we had basically worked as another designer in the team, if that makes sense.</p>
+</div>
+
+<span class="timestamp">(5:04)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Wow, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic, that's so cool!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So they were able to build the pages that they needed with minimal effort; developers could just be given a Google doc with the copy for that new page or something that needed to be changed that already existed and it was pretty easy just using those guidelines and those CSS files too to build something new.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. What a great success story! I'm going to be over here raising my child and here's all of our thinking and here's all of the best practices, the things that you would historically bother me with emails about or whatever. It's like, here it is! Oh, that's so cool!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, and then it was during that maternity leave that the people in the team that they saw, OK, this is great but we can make it even better and that's when they started to think about making it something bigger and more robust and more flexible as well and just also introducing, I'm not necessarily the best person to talk about in terms of the development side of things but also introducing new development techniques, new methodologies that we hadn't thought about when we first did the first iteration.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And when was that?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So, this was while I was away, so that would have been mid, early 2015, something like that, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> What products does the Vanilla Framework serve? Is it just ubuntu.com or are there other applications in Canonical's universe that can leverage the framework?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, there are, so I can explain a lot or I can explain very little! The way that the framework works is, at least the way that it was initially devised, was that it was… you had a base framework, that's why it was called Vanilla, that was very minimal and not very opinionated in terms of design; the colours were very muted colours.</p>
+  <p>It did use our typography but it was just basically you could use it on any site, it didn't even have to be an Ubuntu site; it just had a nice grid and some nice spacing and very simple patterns and good typography and then on top of that, we created themes, so we have different types of websites: we have websites like ubuntu.com and canonical.com that are more brochure, marketing sites but we also have a handful of cloud applications, very complicated, very technical products and we have a lot of documentation websites so that's a third type of website and we also have blogs, so all of these had different themes that would be applied on top of the base Vanilla but actually just recently, we decided that maybe we're just going to put everything together into one bigger Vanilla without working with themes but it's not just the marketing ubuntu.com website; it's many, many dozens of websites.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's so cool and I'm so happy you touched on the fact that it sounds like you came to a realisation that these very hard-core applications, very interactive, very complex and more marketing or static brochure-y, big heroes and stuff like that, can co-exist in the same system and that you can actually create a system that serves all of course different use cases.</p>
+  <p>That's something that I run into a lot and people will get at me and say, oh well, these examples you're showing are all well and good for if you're making a little brochure website or making a blog or whatever, but we build enterprise software and it's like, OK, well let's talk about that. They're different components you use and which components you reach for obviously is going to depend on what the application is. If it's all data tables and forms, well then, reach for those patterns in the system. If it's a marketing homepage, then reach for the hero unit. They can live side by side, they can live as a family.</p>
+  <p>So it sounds like originally those themes were meant to create that split or that differentiation but now you're starting to ball them all into one, did I hear that right?</p>
+</div>
+
+<span class="timestamp">(10:23)</span>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, that's right, we're working on that, yeah.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>we had a few sets of prioritised GitHub issues that we could work from and everyone was working on it because I wanted to make people really understand where things were, how to create design specs, where they could go and file an issue and just be a little bit less afraid of contributing</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's really interesting to hear you've got this base layer that goes through all of your projects and things. How do you… say you decide one day you want to change the line height of some paragraphs or you want to change the bullet style or something? How does that change trickle through all of the different projects that use it, starting from when someone commits that change?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> The projects that are using the framework, they don't get the latest version; we don't want to make them just get all the changes…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Automatically…</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, automatically. Actually, one of the bigger things that we've done recently was a very big update on the vertical spacing of all of our elements because we wanted people to be able to, if they were just creating a new page with just plain HTML elements with no classes, nothing, the spacing wasn't working very well, so we did a lot of work and that…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Just on the base HTML?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Just on the base, yeah, just so that…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That sounds terrifying!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> It was! It was pretty terrifying and it still is a little bit. I think not all of the websites have received that change yet; we did a lot of testing, we used <a href="https://percy.io/">Percy</a> to do visual regression testing</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Ooh, I've not heard of Percy.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> It's really nice; when you have a PR in GitHub it will, if there's any visual differences, it will show a little icon saying that you need to go and check the screenshots and there were quite a lot of changes but they were all expected changes, so we're hoping that… there's only been, from what I know, there's only been very minor issues, maybe here and there with some patterns that have a little bit where the spacing's a little bit off but overall, it's worked really well but it was a massive effort, not only from designers, but also from developers and just reviewing all the pull requests, making sure that everything was following the design spec. It was really a bit change. We did try to avoid those changes but you can't really avoid it; it's always evolving, so we just tried to be very careful with that.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…sometimes people might submit an issue and maybe they didn't label them as a proposal but that's part of my job, to go through our issues and if I see something that would be really good to have everyone discussing, I might just add the proposal label so it's picked up during that meeting.</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, whenever you made those white space changes, for instance, did you version-up the Canonical… the Canonical framework version and then that is absorbed as a dependency in each of the applications and then they have to go through and iron everything out and make sure that everything is tested and then they'll be on the latest version? Or how do you handle that versioning and stuff?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, it was a different version, this change, because it was such a massive change. Basically everything was going to, even if it was just a few pixels, everything was going to move on the screen. Hopefully for the better but still, so it was… there are still some projects that are not using the new spacing but yeah…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great. And I guess that's a testament to having the design system in the first place means that you can make these very global or nuanced changes very deliberately and then ensure that all of the applications will eventually receive those updates so long as they're updating…</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, I think this was probably the biggest change that we've done. In terms of something that is not only reflected in the code but also visually because I think there's probably been quite big changes that were done in the code but visually this was probably the biggest one and there was lots of big meetings and lots of designs and people saying, I don't want to do this any more!</p>
+</div>
+
+<span class="timestamp">(15:14)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Aww!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> And I don't want to look at it again. I would think it was worth it, and once it was done we were all really happy about it.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> If you got asked to do it again, is there anything you'd do differently?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> No, not really. Not really. One thing that we did learn while we doing it was more in terms of the process; we have… all of our design work and all of the framework is open source; even the design tasks, they're all on GitHub and you can see the design evolution, anyone can go and see the comments, the feedback that the designs receive and the iterations and one of the things that we… it might sound a little bit silly, but one of the things that we learned in this particular thing, the vertical spacing, was that it was really important for us to separate design tasks in a different repository on GitHub than the coding tasks, so we have a Vanilla Framework repo and we have a Vanilla Design repo and when something still needs to be, is still in design, still needs to be iterated on and still needs to be signed off, it won't leave the design repo until it's totally ready to be built because anything that is in the framework repo, the main code base, any developer should be able to just pick up and work on any issue that is there; literally any developer in the world could go and fix any issues, so we were just… we had opened the issue in the coding repo so that caused some problems in our process where something wasn't totally refined to the point where it was ready to be built and it was already being worked in our final code base.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So it was too late to do anything about?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, it's those things that sound a little bit silly, like, why are you bother with something like this? But in end, it makes things really clear in our process if something is being worked on, the design one or the development repo, yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Good plan.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I really like the fact that I'm working on something that is open to the world; anyone can see all of the comments that we make on GitHub and I think that in a way, that makes us a little bit more careful with how we comment on things and make sure that we're polite!</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. And I've run into similar things as well; a lot of talk around Design Systems is like, where's the room for creativity and stuff like that and I do find tracking design related things in tool like GitHub issues and stuff, it all…there is an assumption, almost, around using a tool like GitHub Issues means that OK, this is all mechanical, this is all just set 'em up and knock 'em down; they're just like bugs. But they're not! Design related thing, like the design process of arriving at solutions, at design solutions, is this very amorphous thing, it's not just… fix this accessibility issue. It's not as concrete or it's not as encapsulated. It is something that's just by definition a lot more amorphous, I guess.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, you came up with… you're talking about developers and developers from all over the world. What I'd love to talk to you about is who those people are, what the sort of team structure is, who does what and then also you came up with this probably the most gorgeous decision chart I've ever seen in my life! I've never encountered a chart before that I'm like, oh my God, this is the most gorgeous thing I've ever seen!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Brad has it on his wall!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Like, I really should; I should hang it above my bed or something! It's amazing but what it looks like is, and again I want to talk to you about if you could speak to how people distribute it and stuff like that, but having a formalised process by which patterns get added and modified and stuff like that and just walk through how you manage all that and how developers interact with this decision tree.</p>
+</div>
+
+<span class="timestamp">(20:13)</span>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So, in terms of the team, we just fairly recently did a little bit of re-structuring within the team so we formalised a few groups a little bit more and the core Vanilla theme, so the people that are in theory a hundred per cent always working on Vanilla are just three people.</p>
+  <p>So, it's me and two developers, front-end developers, but the Canonical Design Team has a lot more people and I like to think that everyone in the Design Team and outside of the Design Team contributes to Vanilla. What I do is I try to see where the patterns are, I try to help them and make sure that if they're working on something new, they know where things are or they know what's been done before, so I don't necessarily sit and design new patterns, if that makes sense?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So, we try to have the different UX designers, visual designers, front and back-end developers within the Design Team to work on Vanilla at some point, even if it's just maybe the site that they're working on, it's to be converted to Vanilla, so they will help with that transition. So, one of the things that we did really recently that worked extremely well, we did just a little tiny, three-day mini-sprint where everyone in the Design Team was in a room and we were all working on Vanilla, so we had a few sets of prioritised GitHub issues that we could work from and everyone was working on it because I wanted to make people really understand where things were, how to create design specs, where they could go and file an issue and just be a little bit less afraid of contributing.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> And that worked really well, that's something that we might want to try to do if not monthly, maybe every quarter or every couple of months so that everyone can spent a few days working on it and really contributing to it. What else can I say?</p>
+  <p>So, in terms of the way that things are added to the framework, we have everything on GitHub and if you want to propose a pattern you would submit a GitHub issue, label it as a proposal and every couple of weeks we have something that we call the Vanilla Working Group where we go through… the entire Design Team is invited to that meeting; we're still trying to figure out how we could invite external people but we still haven't figured that out.</p>
+  <p>But any anyone can show up and we go through all of the GitHub issues that have been labelled as proposals; we read them, the person that's submitted it explains a little bit more, we all if we think it should go ahead: if it should go ahead does it need work or can it just be built straight away? Does it need design work, does it need UX work and we make decisions like that.</p>
+  <p>Recently we created a second fortnightly meeting that is more focused on Design Patterns so it's mainly just the Visual and the UX designers that attend and they will come with asking questions about work, ongoing work, but focusing on Design Patterns so they won't say, I'm designing this page, what do you think? They'll say, I'm designing this thing and I'm using this particular pattern; what could I do here, or does this exist, or what can I do to improve this existing pattern? So, it's been working quite well, those two meetings, the regular meetings, and that's basically in a nutshell how things are added.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great.  So, there's these formalised things that you know are coming; they're on your calendar, they're on all of the Design Team's calendar and it's like…so if there's issues or things that you're like, oh, I'd really like to be able to do this, you know that there's some built-in time to discuss that stuff.</p>
+</div>
+
+<span class="timestamp">(25:09)</span>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah; sometimes people might submit an issue and maybe they didn't label them as a proposal but that's part of my job, to go through our issues and if I see something that would be really good to have everyone discussing, I might just add the proposal label so it's picked up during that meeting. Even if I'm not there, it just happens, every couple of weeks and whoever wants to attend can attend.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>there were some of the designers that weren't necessarily very familiar with it and I think maybe were a little bit afraid of it and that three day workshop worked extremely well, it's something that we really want to keep doing in the future.</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic! Cool! So, the people that are… those designers you're saying are not necessarily on the Vanilla team; they're people that are working on ubuntu.com or they're working on one of those applications you referenced earlier or whatever and they're like, cool; I need this application to do this…a date picker or something like that for instance, or something, some variation of a date picker and so they're, for my specific product, I need this thing. So they will, their first step would be to go onto GitHub and write a proposal of what that things is and why it's needed?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Well, maybe the first step, if you haven't done anything, if you haven't actually done any new designs or sketches or anything, the first step might be, if there's a meeting coming up, you might just ask in the meeting: I'm working on this, is there something that looks like this exist? Or, they can just come and ask me or anyone in the Vanilla team, we're all in London, almost all of us are in London, so it's pretty easy to just go and ask, but… sorry, I lost track of what I was saying… but yeah, usually one of these two things happens.</p>
+  <p>The proposals are usually when, it's not necessarily when you have a question, it's more when you have a suggestion or you think that something is wrong that should be improved or you've already created the pattern that we've talked about before and you just want to make a more formal proposal for it to be added to Vanilla because maybe the pattern is currently only being used in your particular application, in the application that you work on and it's still not in Vanilla but you think it should be in Vanilla.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And do you kind of split up the prototyping? Do you have a separate repo for that or do you do it in that design repo you were talking about?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, it would be in the design repo, yep.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And do you use Sketch for that or would you use HTML/CSS?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> For the design repo? What do you mean?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Like when, say you're talking about building this date picker and you've got some requirements, how would you go from getting those requirements to then it being a real thing?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> It would be… I'm not sure if I'm answering the question exactly, but  the design repo, when there's let's say if it's the date picker, for instance, there might be already an initial design; usually there is something already, the Vanilla design issues don't just start from zero; they usually start from something that already exists.</p>
+  <p>It might have to be tweaked to be more flexible so that it can be used by any of the applications or so that it follows, maybe if it integrates other components then the design needs to be tweaked and it needs to be made more flexible and maybe people haven't thought about how it works in small screens or maybe in sized screens, things like that, needs to be refined so that it's a proper pattern and then once that whole… once all of those iterations are finished, the issue is closed and in the code section of the design repo, we have folders for each of the patterns and each folder you have a PNG file with just the visual of that pattern and a mark-down file with all the specs, so the designers need to write the actual specs…</p>
+</div>
+
+<span class="timestamp">(30:08)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Does that include things like margin and padding or is that more kind of general specs?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> No, it's not CSS; you're not supposed to pick it up and use it as CSS but it kind of looks a little bit like CSS; it has the values for border radius, what the colours, font sizes, spacing, anything that you can think of that the developer will need to build the thing, basically.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Right.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> OK.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So, that's how we work within the design repo, so whatever is… so any developer knows that whatever is in the code section of the design repo is the last and final design, that's what they can use to build whatever needs to be built.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's fantastic. So, obviously your culture is built on openness and it sounds like accessibility where you're saying, anyone can join or anyone can contribute and stuff like… how do you see that part of the culture, or (1) do I have that right, and (2) if that is the case, if that openness and inclusion and stuff like that is part of the culture, how do you see that steering the design system's direction and can you attribute some of the success of the system to that participation or that inclusiveness?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> I'm not sure. We haven't really had that many external contributions but it does influence the way that we think about the patterns and how flexible things can be because it's quite a hard balance to get right because we did build Vanilla to cater to the needs of a specific company but at the same time, we want anyone to be able to use it on any website and there's been a handful of people that have tried it and it worked fine and it's really great to see, so we have to, when we make design decisions or development decisions, we always have to balance the fact that this might be used by someone that is completely external to Canonical and doesn't have our constraints or our needs but also at the same time, we're building something that needs to cater for first for the needs of our products and our websites, so I really like the fact that I'm working on something that is open to the world; anyone can see all of the comments that we make on GitHub and I think that in a way, that makes us a little bit more careful with how we comment on things and make sure that we're polite!</p>
+  <p>And that we explain things, so when we have the Vanilla working group meetings and we make certain decisions, just making sure that things are recorded in the issue and we explain why we are saying no to a proposal or why we are accepting a proposal, just communication I think is really important and the way that you explain things is really important.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. And how do you… do you feel that is a pressure then, to have that? I'm thinking certainly when I started writing CSS, I was really paranoid that anyone can view source and see what you've written. Do you think that has helped you stick to the standards?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, I think so, yeah. It's weird, because it's such a normal thing for us to do that I don't think we think about it as much as maybe someone else would if they were working on a totally public project. I don't know.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I guess it's useful for people who are on-boarding as well because they can see all this history, if they're wondering, why don't we have this component and then you kind of look it up and all the information's there and you can see the kind of decision-making process as well. That is really useful for a new person to have, or someone who's been off for a long time and comes back; thinking in your case, when you come back from maternity leave and you see all the progress that's been made, you can keep up to date on it.</p>
+</div>
+
+<span class="timestamp">(35:20)</span>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, and even now that I've been away for a couple of weeks, I can see what the decisions were on certain issues and it works really well.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Nice.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's great. So, what's next for Vanilla? What's next for… are there exciting initiatives or things that, maybe not vertical spacing, but other initiatives under way that are exciting and…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That you're allowed to talk about!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, yeah! We don't want to get you in trouble!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Well, everything there we're working on is public on GitHub. The main thing that we're working on now is to move away from themes and have everything in just one larger code-base. Something that we are working on and it's an ongoing process, is to just moving websites to Vanilla; existing websites, there's dozens and dozens of websites that the web team is responsible for in some way or another and that's, as part of our iteration, we always try to have one or two websites where we apply Vanilla for the first time, so that's an ongoing thing that we have a list of websites and trying to tick them all off.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Do you find that process getting easier as the system gets more robust and stuff, or is it just like a slog?</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> It is always… it takes longer than we think. Always!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> That's always the way!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Yeah, it really takes much longer than you think. And also it's interesting to see how if one of the developers that is more familiar with a framework is converting the site, they will work much faster than if it's someone that is not familiar but on the other hand, you want people that are not familiar to become familiar. We have to decide: we want to do this really quickly but not teach anyone or can we take a little bit more time but get someone else to be introduced to the framework properly?</p>
+  <p>And also I think moving several different websites to Vanilla and having people that are not very familiar with it using it is also really showing us how important it is to have really good documentation.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh yeah.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> So yeah, I think from my point of view, of improved documentation, it's another thing that we're really trying hard to get right, yeah.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> What a great stress-test for that. It sounds like you're doing all these really cool things culturally that you're making sure that everyone's familiar with the framework and that they're comfortable with it and they're forced to get their hands on it and get their hands dirty with it. I just think that that's really, really neat rather than: move over, we're the experts! Just use this thing, just copy and paste; don't think too hard.</p>
+  <p>I think that that's really telling and I would suspect that that's a big part of its success is making sure that that becomes ingrained in the culture, that it's not just this tool or the solution that's thrust upon people against their will: that adoptation, that mindset, I've seen so many organisations fall on their face again and again and again for those very reasons where it's like, OK, the cool kids are over here building this super-flexible system and then we're just going to throw it at you, or whatever, or hold this over your heads.</p>
+  <p>So I think that that's… I just love how you've described those meetings and those projects of migrating something to the framework as good learning opportunities.</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> And the mini-sprint that we had a few weeks ago also worked extremely well; we had people, like I said, we want to make sure that our documentation is really good so we have some people that had never contributed to Vanilla to sit down and try and think of a couple of examples of good documentation for one or two patterns and so now, those two people are taking that project forward and they're not necessarily part of the core Vanilla team but they're the ones that are driving that effort, so it worked really well in that respect as well, to just make sure that people were involved and not afraid to participate because there were some of the designers that weren't necessarily very familiar with it and I think maybe were a little bit afraid of it and that three day workshop worked extremely well, it's something that we really want to keep doing in the future.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's amazing. Great insights: thank you. Well, I'm sure that we could probably talk all day about this and we're really only scratching the surface I feel, but I think that everything that you said is again, just like the culture and the tactics for creating that culture; I just think that I'm so impressed by that, so: great job! Keep it up, keep up the great work, it sounds like you're doing so many things right. But yeah, thank you so much for coming on the show, thank you for all the insights and thank you for sharing everything and making beautiful decision trees! But yeah, so thank you so much for your time and for coming on, I certainly learned a lot. So, keep it up!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Thanks for having me.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Thank you!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> All right, see you next time. Bye bye.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!</p>
+</div>
+
+<div class="inayaili-de-leon-persson guest">
+  <p><b>Inayaili</b> Bye!
+</div>
