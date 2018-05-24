@@ -1,7 +1,7 @@
 .nav-sections {
     clear: both;
     width: 100%;
-    @media (min-width: 1050px) {
+    @media (min-width: 800px) {
         clear: none;
     }
     ul {
@@ -9,61 +9,89 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        @media (min-width: 1050px) {
-            display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: 800px) {
+          justify-content: flex-start;
         }
     }
 
     li {
         margin: 0;
         padding: 0;
-        display: block;
+        display: flex;
         border-bottom: 5px solid #424242;
-        @media (min-width: 600px) {
-            float: left;
+        min-width: 3em;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media (min-width: 800px) {
+          float: left;
+          background-image: none!important;
         }
     }
     a {
+        text-indent: -9999px;
         display: block;
         padding: 15px 15px 10px 15px;
         color: #fff;
         border-bottom: 5px solid #424242;
+        width: 100%;
         &:hover,
         &:focus {
             text-decoration: none;
         }
+        @media (min-width: 800px) {
+          text-indent: 0;
+        }
     }
 
     .section-home {
+      width: 100%;
+      text-align: center;
+      @media (min-width: 500px) {
+        width: auto;
+        text-align: left;
         flex: 1;
+      }
+        a {
+          text-indent: 0;
+        }
     }
 
     .section-podcasts {
         border-bottom-color: $color-1;
+        background-image: url('/images/icons/podcast/podcast--inverse.svg');
+        background-size: 20px;
     }
 
     .section-books {
         border-bottom-color: $color-2;
+        background-image: url('/images/icons/book/book--inverse.svg');
+        background-size: 22px;
     }
 
     .section-articles {
         border-bottom-color: $color-3;
-    }
-
-    .section-podcast {
-        border-bottom-color: $color-4;
+        background-image: url('/images/icons/article/article--inverse.svg');
+        background-size: 22px;
     }
 
     .section-examples {
         border-bottom-color: $color-5;
+        background-image: url('/images/icons/website/website--inverse.svg');
+        background-size: 40px;
     }
 
     .section-tools {
         border-bottom-color: $color-6;
+        background-image: url('/images/icons/wrench/wrench--inverse.svg');
     }
 
     .section-talks {
         border-bottom-color: $color-7;
+        background-image: url('/images/icons/presentation/presentation--inverse.svg');
     }
 
 }

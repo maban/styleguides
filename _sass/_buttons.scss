@@ -12,6 +12,7 @@
     }
 }
 
+.page-content .button,
 .template-podcast .page-content .button {
     background-color: $color-4;
     color: #fff;
@@ -37,4 +38,28 @@
     &:focus {
         background-color: #ccc!important;
     }
+}
+
+.link-view-more,
+.link-view-more:link,
+.link-view-more:visited,
+.link-view-more:hover,
+.link-view-more:focus,
+.link-view-more:active {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #434343;
+  color: #fff;
+  padding: 0.5em 1em;
+  display: table;
+  clear: both;
+  margin-bottom: 2em;
+  text-decoration: none;
+  border-radius: 0.1em;
+}
+
+.link-view-more:hover,
+.link-view-more:focus,
+.link-view-more:active {
+  background-color: #333;
 }

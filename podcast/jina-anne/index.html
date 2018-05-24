@@ -1,0 +1,560 @@
+---
+layout: episode
+section: podcast
+number: 18
+season: 2
+title: Jina Anne
+image: jina-anne.jpg
+published: 31st of July 2017
+about: <a href="https://www.sushiandrobots.com/">Jina</a> is a consultant who worked on <a href="https://www.lightningdesignsystem.com/">Salesforce's Lightning Design System</a>. She's the organizer of <a href="https://twitter.com/clarity_conf">Clarity Conference</a>, founder of the <a href="https://twitter.com/sf_dsc">SF Design Systems Coalition</a>, and the creator and moderator of <a href="http://designsystems.herokuapp.com/">The Design Systems Slack</a>. She also maintains the design and website for <a href="http://sass-lang.com/">Sass</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/335517239&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Salesforce's Lightning Design System", url: "https://www.lightningdesignsystem.com/", type: "example"},
+    {text: "BEM (Block, Element, Modifier)", url: "http://getbem.com/", type: "tool"},
+    {text: "Sass Deprecate", url: "https://github.com/salesforce-ux/sass-deprecate", type: "tool"},
+    {text: "Material Design", url: "https://material.io/", type: "example"},
+    {text: "Design Systems Slack", url: "https://designsystems.herokuapp.com/", type: "tool"},
+    {text: "
+Team Models for Scaling a Design System", url: "https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0", type: "article"},
+    {text: "The Salesforce Team Model for Scaling a Design System", url: "https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b", type: "article"},
+    {text: "Clarity Conference", url: "https://www.clarityconf.com/", type: "talk"},
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hello everybody! Welcome to another episode of The Style Guides Podcast, a podcast about Style Guides, Pattern Libraries, Design Systems and all of that good stuff. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are thrilled to have back on the programme a repeat performance: Jina Anne. Jina; how are you?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> I'm great, thanks for having me back!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, we are so excited to have you back.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> (chants and claps) Jina! Jina! Jina!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> (chants) Jina! Jina! Jina is probably the one person in the Design Systems universe that could just immediately cause people to start chanting! You need to build that into Clarity Conference! Maybe I'll make that happen in the audience; we'll do that.</p>
+
+  <p>But anyway, Jina, we are absolutely thrilled to have you back on the show. The reason why we're so excited to have you back on the show is that the first time we talked to you, you're at <a href="https://www.salesforce.com/">Salesforce</a>, we are talking to you, you've been doing this Pattern Library, Style Guide stuff for ages and the last time we chatted it was helping everybody get their head around hey: here are Style Guides, here are Pattern Libraries, here's Design Systems, here's all these terms and here's how they're helpful. But now, these years later, in the meantime you've just absolutely kicked ass and helped put into place one of what I consider to be the high water mark for Design Systems: <a href="http://lightningdesignsystem.com/">Salesforce's Lightning Design System</a>.</p>
+
+  <p>So, we're excited to talk to you about all that and how that's all evolved and what you've accomplished and what you've struggled with and that stuff. So, thanks for coming back on.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…And so at the start, we had the Salesforce1 Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing…</p>
+  </blockquote>
+</aside>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Awesome, yeah, and I'm excited about talking about Lightning because I still can't believe how big it got.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Well, do you want to just start off I guess by just giving a bit of context, I guess from where we last left off with you, you were I think in the process of working on this thing. What's happened? Tell us a story!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah… let me go way back… so, I switched over to the core team at Salesforce because I saw the Salesforce1 Mobile Style Guide and this team that we have now kinda has evolved many, many times so when I started it was a cross-functional team of visual designers, interaction designers and front end developers and before we called ourselves the Design Systems Team it was called the Salesforce Cloud, because we have all these clouds; I guess now we have Commerce Cloud, Sales Cloud, Service Cloud, Marketing Cloud so Salesforce Cloud was kinda considered the core all-umbrella cloud.</p>
+
+  <p>But that was kind of a confusing name and so we re-branded our team to be the Systems Team and then after a while, Design Systems to be a little bit more obvious about what we do.</p>
+
+  <p>And so at the start, we had the Salesforce1 Style Guide but nobody was really using it. It was really beautiful and like I said, it attracted me to join the team, but it wasn't actually… devs weren't using the code and designers were kind of still doing their own thing and I think there were a lot of reasons for that but one of the things that we worked on, which is what I kinda consider the early genesis of the Lightning Design System were Design Tokens and so we had the Style Guide that nobody was using but we also had the beginnings of what Design Tokens were and that was fully embraced and adopted by our engineers and designers and so we were building that system out and it worked pretty well; people were definitely referencing the tokens in their Sketch files, developers were using tokens in their CSS and then at some point down the road, realised tokens are only going to get you so far and so the idea was, we were going to make a CSS framework and that framework initially was just going to be used by the UX Team for rapid prototyping and using that as a living spec.</p>
+
+  <span class="timestamp">(5:14)</span>
+
+  <p>Then we thought yeah, if this is pretty good, we can offer this to our Open Source developer community for people building apps to basically shoehorn into the Salesforce platform, they want it to look and feel like it belongs and then we thought maybe down the road, this will get used in production and our own engineers will use it! We were thinking this would be two or three years out and oh, it did not happen that way at all!</p>
+
+  <p>So I recruited my really good friend, <a href="https://twitter.com/stefsull">Stephanie Rewis</a> and then we recruited some more along the way. We were building this thing thinking we had a pretty good amount of time ahead of us and then it just all kind of happened really fast. Our engineers were basically copying and pasting our code because they realised the work had already been done by our team and it looked nicer than theirs!</p>
+
+  <p>And so when we realised that was already starting to happen, we had to basically shift our plan around and prioritise our production engineering team instead and so everything kind of got flipped around but it's awesome because it means we're shipping our product much faster and more efficiently, but it also kind of was like… oh crap, what did we just get ourselves into?</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>We started with JSON and then we moved to YAML because we found it to be a lot more designer-friendly</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So it's like you're thinking it's going to be start small and then eventually we'll get to this big thing and then just by way of having something that was already beneficial to your team they're just like: cool, we're using this now, it better be good, I guess!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, and oh man, the times that we've had to completely change things around. The first version of it wasn't prefaced with <code>slds-</code> and in all the classes and then we realised people were combining it with old CSS and there were clashes happening, so we had to go… luckily at this point I think we were still in Alpha phase so we could say, hey, sorry, you've got to change your syntax and then we were using the <a href="http://getbem.com/">BEM</a> syntax and there's all these things that you just find out along the way and you realise, oh, maybe we should have known that at the beginning, so we actually had to deprecate that syntax and introduce a new BEM syntax because it turns out, our production code uses XML and double-dashes cannot be commented. So, just all sorts of little fun, quirky things like that have come up along the way and it's been interesting and definitely educational.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Jina, a couple of minutes ago you mentioned Design Tokens and I've had a few people ask what they are. Could you sum up what they are and how you use them and why they're really awesome?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. I like to think of them as the sub-atomic part of the Design System but it's basically at its… I think one of the easiest ways to define it is it's like a variable; in fact, in most cases that is how it's used, it's a variable.</p>
+
+  <p>So in our case, we use Sass but when we give the CSS over to our Core Production Team, we actually use a different format: they don't use Sass, so we have basically Tokens for them and so basically the idea, Tokens, if you think about when you localise content, you might put all your content into strings that are tokenised and then you can replace those tokens with whatever language, so it's similar to that technology that our Engineering Team are already using for things like colours and font sizes but in our case, we're using them as Sass variables instead, so we built out this entire infrastructure of Tokens which is great because we also have to think about native devices, so this is a way that we can still scale our design without having a contact like the Mobile Android Team, the iOS Team, the Windows Team to make colour changes, we just do it on our end and it all rolls out in the build system to all those different teams.</p>
+
+  <p>And we also generate other things like colour swatches for designers. There's a lot of different ways that you can use Tokens but the most common use case is a variable… </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So they're kind of like super-variables because you'd use them no matter what platform you were on?</p>
+</div>
+
+<span class="timestamp">(10:02)</span>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, exactly, and that was really important for us because we have a huge developer ecosystem where some of our customers are building on Java, some of them are on PHP, Node, all sorts of different formats and they might be using Sass, they might be using Less, they might be using XML for Android: there's all sorts of stuff people could be using and so this is a way we can scale our design to all sorts of different formats agnostically.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I'd love to pick at that a little bit, just because that seems to be a common thread around a lot of different companies are running all these different tech stacks. In your guys' case it's like you have third party developers and other people; things that are out of your control to a degree and so it's like, how did you set up your architecture?</p>
+
+  <p>Tokens obviously are a big part of that but just how did you set things up so that people that are running Java or Node or PHP or whatever would be able to reach for your components and go, I can use this! Because so many places I see, it's like they tie the components to a specific technology: I want those tabs but oh, that means I have to use React. Well, I guess I can't use that now. So, how did you all approach that architecturally and from a marketing standpoint, even? How are you thinking about that stuff?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> I'm going to talk to it as well as I can; there's a lot of technical stuff that I have a lot of help from awesome people on my team but the primary format that we're concerned with for most of Salesforce is the Lightning platform and so that is what we hope that everyone moves over to but we seem to acquire companies all the time and so not everybody is using the Lightning platform so it's very important that we set something up that would work for people that are on Ember or React or whatever, so the way it's set up is… it used to be its own repo; now it actually lives inside the Design System repo but it's a set of files, either JSON or YAML.</p>
+
+  <p>We started with JSON and then we moved to YAML because we found it to be a lot more designer-friendly and at its simplest, it's name and value pairs but you can, depending on how you set it up, you can add in all sorts of other tags, like we can tag an additional comment to describe how it's used or we can flag a Token as deprecated. We can even define which CSS properties are allowed for that Token. So you can add in all sorts of other things to it that you can use for automation and tooling but at its simplest, it's name and value pairs. And then that repo is using Node and so we basically run a command and then it'll generate all the Tokens needed for Sass, Less, Stylus, XML, JSON, Lightning and so on. And then the build process automatically puts that set of Sass variables into our Design System CSS and so it's always going to grab the latest, so that's how we do it on our side of things and then we consume that in our CSS framework as Sass variables.</p>
+
+  <p>The way we deliver it to our engineers is we basically compile… we take the compiled CSS and we retain the Sass variables as is, except we change the format of them to match the Lightning format and that way, things are still tokenised but they're not getting all the mix-ins and functions and stuff that Sass has, so that's how they get it and Brandon and Stef on my team, they will basically put that directly into Core and work very closely with—</p>
+
+  <p>We have a sister-team on that side of things called the Styling Team and they make sure that we're not introducing any bugs. They run a whole bunch of tests on it and sometimes have to corral other devs to fix things if they've done things that over-ride or stomp on things and so on. So that's how they consume it and then when you use our Open Source CSS framework you can either use the Sass files or you can just used the compiled CSS and then we also offer a couple of other formats for other platforms, our older platform VisualForce and like I said, Lightning and then we also have those as packages, like NPM packages, Bower packages, so it kinda depends on… basically, you choose your own adventure!</p>
+</div>
+
+<span class="timestamp">(15:32)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's cool, that's awesome!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> And sometimes people might even have to have different things in their compiled CSS depending on their platform so we'll try to automate all that as much as possible. For example, we can't really use Normalize as is on the VisualForce platform because they do a lot of things that it would actually conflict with, so we give them a very special format of the CSS to the VisualForce for that one.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, Holy crap! Let me just note, real quick, how awesome is it you have a Styling Team!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…We do not have any JavaScript in our Open Source Design System and that is because once you introduce that, it is really difficult to stay agnostic; you basically introduce opinion into the stack.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah! They're really awesome. As far as I'm aware I think it's really two people doing… basically they don't do all the styling but they're sort of like the traffic directors in a way of styling. If you have a bug in your code, they're the ones usually that you're going to be talking to, to get that bug fixed and we're really good friends with them; they're awesome!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> So it sounds like you make a lot of changes and you've got a lot of people consuming this Design System. How do you manage version control? How do you make sure people are using the most up to date version and what do you do if people are using a really old version?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, so that's actually, for the Lightning Platform, we're always just putting our stuff in there so if you're using the Lightning Platform, you're just getting those changes for free; you just have to make sure your component mark-up is correct. For all the other people, we use semver and we try to keep tabs on usually about three releases at once, usually it's the current release that's out right now, the next release and then whatever release was out prior because we don't want to leave people behind, so we're usually keeping aware of three really.</p>
+
+  <p>Sometimes there might be more than one in the future that we're thinking about, depending on whatever's coming and we have a deprecation strategy in place; we use <a href="https://github.com/salesforce-ux/sass-deprecate">Sass Deprecate</a> which is our Open Source mixin that you can use; it's a little tool that Brandon created.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Wait… wait… what does that do? That sounded interesting.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, so it's a really cool idea Brandon came up with where you wrap your deprecated code in this mixin and you tell it through passing of a variable what version it deprecates in, or what version you want it to go away and then basically once you hit that version, it no longer compiles that code that's wrapped in the mixin so it won't be in your output and so… I'm trying to remember how long… I think it's almost two years minimum that we can deprecate things, so we can't remove something next version; it'll be in there for a while but that's because we have this huge promise to our customers that we won't break… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Does it sort of yell at them, though? Hey, it looks like you're using some deprecated stuff; maybe use this instead?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. On our end we use the <code>warn</code> function in Sass, and I believe if you run it locally, yeah, if you run it locally in your command line it'll tell you, hey, you're using some deprecated stuff and it's in our release notes and then we mark in our docs when things are deprecated as well. But because this is still only maybe a year and a half or… we haven't reached a point yet where we've been able to remove anything but I imagine that that would be a ton of communication and support involved.</p>
+</div>
+
+<span class="timestamp">(19:59)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, no doubt, no doubt. And what's determining that stuff deprecating? Is it just… this didn't get used, or we found this is a better UX way to accomplish the same thing, or how are you guys thinking about that?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> We usually deprecate when it's a pattern that no longer meets our standards… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Carousels!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> It might be something that… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yes!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> We have never had a carousel, I am proud to say! People have asked for them, because they're like, well, Bootstrap has a carousel and we're like, we're not Bootstrap.</p>
+
+  <p>And so we only build things when we need them for our platforms so that's kinda nice because we're not building… oh, maybe someday probably one day I’ll need this: No. We're not going to build it until we need it. But I guess the biggest things I've seen happen is maybe a certain way a component is structured doesn't meet accessibility requirements so we have to kind of re-structure it, so then we would deprecate the old way, because some people might still be using some of its classes, unfortunately, and then another reason, like I said, we just had to deprecate our entire class BEM structure and so everything's comma separated now with two class names, the old one and the new one, which kinda sucks but we know it's going to go away one day.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That'll make that code base feel a lot cleaner, I'm sure, whenever that day arrives, right?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, for sure. So there's all sorts of different things. It might even be, here's a pattern we're introducing and then we realise it's not testing well or users aren't able to use it so we basically design a new pattern instead that works much better so we'll deprecate the old one and point our folks at the new one.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> How do you handle the client-side JavaScript? If you've got a pattern and it's got some kind of functionality with it; do you include that in the Design System or do you expect people to do that separately?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, we do not have any JavaScript in our Open Source Design System and that is because once you introduce that, it is really difficult to stay agnostic; you basically introduce opinion into the stack. However, internally, and this actually might be Open Sourced as well; we do have a React version of our Design System that some of our smaller product teams use and then Lightning components come with all that baked in so if a developer at Salesforce is using a Lightning component, they don't have to worry about building that because somebody's already built that into the component.</p>
+
+  <p>In terms of how we tell people what the expectation is, we right now have been doing that through our docs; saying this class gets removed, this one gets added, add these attributes, remove this and so on: it's all through documentation. But I think we're looking again at possibly re-introducing that into the docs but can't confirm that's actually going to happen; it's being explored right now because it's hard to show… it's easier to show than it is to tell and it's been something that we've never loved about the Design System code-base. We want to be able to have JavaScript… </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, I've been coming across that kind of issue myself in the ones I've been working on: where do I put these files? What framework do I use for them? It's something that I've been looking for in yours as well and it's interesting to hear about why you haven't included it.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> There's a lot of business reasons around it too that I can't really talk much about!</p>
+</div>
+
+<span class="timestamp">(24:41)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think it's fascinating and this is something I've seen in my own work as well, just this sort of coupling of specific technologies to a UI which is like, a UI is a UI and in your case, Salesforce is a great example of this: you have native code that looks the same as web code and stuff and people don't care how that stuff is built: they want the result. They want the buttons to be the same, the want the form validations to behave the same, that want the interactivity and all that the same.</p>
+
+  <p>It's really, really the murky waters to navigate because it's like on one hand, yeah, showing not telling is typically a good thing or whatever and you want people to be able to grab the stuff and go but at the same time you want it to scale and I think you've all done just a beautiful job of balancing those considerations because it sounds like you have tech specific things in place that people can reach for, like the whole Lightning language or whatever, but in the actual Style Guide it's not necessarily talked about only in that way, it's not like you need to reach for the specific tech in order to get this UI.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Right. We do surface on our docs when there is a Lightning component available because not everything has been ported over to a Lightning component yet and so it's nice for people internally to be like, oh, this is going to be easy because I can just use this little Lightning tag and I'm good to go!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> If you could just start from scratch, what have you learned, what mistakes have you made that you'd just do again, you'd approach it differently?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> I want to be able to say… find out all of your different use cases first, but how do you ever really do that? If we had known that this was going to be used internally and externally on such a scale so quickly, obviously we would make all sorts of different changes but there's no way to ever predict that but I do think there is a model that we were entertaining at the beginning that we abandoned, that is now being talked about again that I wish we had just done it in the first place, which is the way I was calling it back then was skin and bones which I know sounds a little goth but idea of just having the structural bits of the CSS framework de-coupled from the presentational bits and the reason for that is I could foresee that we've gone through some re-designs; even Lightning itself has been re-designed a couple of times and I wanted to try to just have the structural, interactive and static bits, kind of self-contained and then the theme-ing and stuff through background colours and shadows and all that stuff just be a separate thing.</p>
+
+  <p>We abandoned it because it was, I guess at the time, a little bit too much abstraction for us to really think about to get this thing shipped but now there's a new look that's going to be out at some point soon and it's requiring some overhead work that if we had done this in the first place, would have been a lot easier and so now I was super-excited when I saw Nicole proposing this again… Nicole's my boss, <a href="https://twitter.com/stubbornella">Nicole Sullivan</a>, she's rad! She's basically trying to champion this again and I'm like, yes, this is going to be good because we want to be able to very quickly do a complete new overhaul without having to re-structure a lot of stuff.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, I think that makes perfect sense. I mention that whenever I mention <a href="https://material.io/">Material Design</a> and when you talk about what a Design System provides you, one of the main advantages is the solid foundation you could live with and grow with and you might end up having a radically different look and feel, like Material Design might end up feeling old and stale or whatever, but you're still going to have the bones, you're still going to have those structural bits, there's still going to be an input, there's still going to be a label, so that's awesome that you're thinking hard about that; that's really cool.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. Tokens definitely get you a huge chunk of the way there but if you didn't initially have the Token for a shadow and now you need one, now you've gotta go touch the CSS, so that's kinda… yeah.</p>
+</div>
+
+<span class="timestamp">(30:08)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Is everybody on the team… does everybody geek out about that stuff or do some people or are they like, man, everything's an abstraction? I could sort of see myself being like… and just in my own coding stuff, I'll do two-layer sort of Sass variables or whatever; it's not quite Tokens but you've getting to a level of abstraction… at what point do you feel detached or is that all just… it just makes so much logical sense that it's you get over to the mental stuff, I guess?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, so we've kinda gone back and forth on things. I'm in favour of both being lean and only abstracting when you need to but also trying to think about other use cases such as customisation, theme-ing and all that stuff, so with our Tokens, when we first started architecting that, we had only done the two-tiered naming for colours and I had suggested we also do it for type sizes and our spacing and I did get pushed back because it was seen as over-abstraction. And then, oh, did we wish we had done that because when we first launched Lightning it was big and white spacey and whole aesthetic was about being very modern and fun but we actually ended up annoying some of our customers because they actually need to put as much content on their screen as possible and they didn't need so much space, so we had this huge effort that we called Lightning Tightening!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Nice!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> And it turns out a lot of the engineers thought it was going to be, oh it's just a Token change, this'll be a piece of cake. No, because we probably just want to tighten some gutters and spacing between elements but not adjust spacing inside elements. Spacing Medium on a button, we don't want to touch, but spacing Medium between two cards, we might want to touch and so now this isn't just a simple Token change: we have to now touch some… sorry, is that a fire truck?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Lightning's out of control!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's the Style Guide Police!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> …Like, we now have to touch the CSS and so we did have some annoyed devs that were like, hey, I thought the whole point of Tokens was that we basically put the design changes on the Design Team rather than on our team, and this was a huge overhead for them but then the response is, well, it's not that Design Tokens don't allow for that; we just didn't architect it enough to do that, so now we've got component-specific tokens in some cases, so that now if something like this happens again, such as the upcoming refresh of the visual design, we can now be strategic about where we apply spacing changes because we have the two-tiered system, so I'm a big proponent of using that and I see it all the time in the <a href="https://designsystems.herokuapp.com/">Design Systems Slack</a>; I see it in other conversations where people are like, oh, it's just too much.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I used to be that person! Someone who did that kind of two-level CSS abstraction, I thought, this is so weird, I'll go along with it and we never did come up to a scenario where it was needed but then, now I'm doing it myself and it's like no, we do need this, so I'm sorry I was that person!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> We were all that person around something or another.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>we do this thing called the V2MOM process every year where it's Vision, Values, Methods, Obstacles and Measures. Everybody writes one up for what they're trying to do through the year and it starts with the CEO and then the Execs and kind of rolls all the way down to the individual contributors and you align upwards to your manager or your organisation. The Lightning Design System's adoption is on every Exec's V2MOM at some point.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Sometimes you've just got to learn the hard way.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> I used to be anti-CSS pre-processors because I didn't think I needed them! Now I'm like the Sass fangirl, so…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Did you have that with some users or developers? Because you have this global prefix at the beginning of all of your classes, like the <code>slds-</code>. Did some developers and stuff, were they rolling their eyes and stuff? Because we did that similar for a big Design System that we made and they were like… this is ridiculous: look at how long these classes are… </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> You were like… you don't know what I've seen, man!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Exactly, exactly!</p>
+</div>
+
+<span class="timestamp">(35:00)</span>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, we actually initially didn't have them because I was the nay-sayer: I didn't want them! And then when we realised people were combining our CSS with theirs or even combining it with other frameworks like Bootstrap, we had to introduce them and we definitely, between that plus the BEM syntax, we get people that say, oh, this is just way too verbose but our stance back to people is, clarity is of utmost importance to us and if you can look at a class and know exactly what it does, then that's always going to win over brevity.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think…</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> And it's great because we can now actually apply tooling around these classes: we have a Chrome extension that our devs use that can analyse a screen they're working on and be like, here's the CSS classes that are <code>slds</code>…</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Holy crap!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, so it can detect, these are <code>slds</code> classes and if you are overriding any of those classes, it'll give you an F and you have to… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Whoa! That's so frigging cool, oh my God!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> …before you check in. Yeah, we were making all sorts of cool internal tools.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's really cool. I think I might have mentioned this in episodes past or just even in my conversations: it's amazing that just by way of codifying standards or just picking something and going with it allows you to do this next level stuff where if you didn't make those decisions, if you're just like, you can opt into this, or whatever, it's like you can't do all that fun stuff.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, and then the Style Police!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Is that a carousel? That's an un-prefixed style; what's that doing in there? That's fantastic.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I have a question I get asked a lot and I don't really have a good answer for, and it's around the business case for Style Guides. A lot of people are saying, how do I convince my boss to do this? And it sounds like Salesforce has a whole team dedicated to doing this. What have the Directors seen that it adds value that maybe other companies haven't seen? You mentioned before about wanting to join the team in the first place because you saw their Style Guide. Hiring is obviously one point but are there others that would be useful to know about?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Well yeah; the Lightning Tightening I mentioned before was a huge, huge undertaking that would've been extremely painful without a Design System in the first place and other examples are, we had to change our navigation style and this is across many, many products and different stacks and we were able to do this very quickly and Execs noticed that because the request is coming from Execs in the first place and then they see how quickly this change rolls out, they definitely noticed that. So much so that… we do this thing called the V2MOM process every year where it's Vision, Values, Methods, Obstacles and Measures. Everybody writes one up for what they're trying to do through the year and it starts with the CEO and then the Execs and kind of rolls all the way down to the individual contributors and you align upwards to your manager or your organisation. The Lightning Design System's adoption is on every Exec's V2MOM at some point… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Wow, that's great!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> …for this year so where last year it was all about getting Sales Cloud fully in the mix; now it's like, OK, everybody else. And the reason they did that was because they saw how quickly this one particular use case rolled out and they want to see that happen to everything: they want everything to roll out very quickly.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And does that have impact on… I'd love to just briefly hear how the team's shape has evolved. I'm assuming that over the last couple of years, from when you first started on this to now, the team might be a little bit bigger and have more resources than they had in the past. Can you speak to that a little bit?</p>
+</div>
+
+<span class="timestamp">(39:52)</span>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, I can. I will say, I'm not super-thrilled with where things are right now, but I'll explain why in a minute.</p>
+
+  <p>As I mentioned before, when I started on the team it was a cross-functional team of designers and developers and I really think a good Design Systems team has that awesome mix of talent and skills, but we have grown a lot and a lot of new folks have come in; some folks have left and some things have changed, so now we actually… the team that works on the Lightning Design System is really kind of a virtual team that makes up people from other teams. We still have the Design Systems Team, which is the team I'm on, but the designers have been pulled off my team and put on a new team; we have one that's called Creative UX and they are in charge of basically the visual design and sound and animations and all the really beautiful and experiential parts of our products and then we have a Platform Foundation UX Team which is thinking about the Salesforce eco-system from a platform standpoint; they know how our different patterns and components are used and where and all the different use cases and so they now own that part of the Design System and then our team is focused on the CSS framework and documentation.</p>
+
+  <p>As a hybrid, I loved when our team kind of did a lot of that because I got to kind of jump around and do a bunch of different stuff but I understand why we changed it because we just got really big and I guess the thinking is with people focus on their different areas and then collaborating together, we work on the system together, it pulls some of the stress off of the one single team. But it kind of puts me in a funny position: OK, where do I belong?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Sure.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> But I'm very excited to see where things are going, since Nicole's come in a lot of really good changes have been happening and I don't know if you noticed, but there's a re-design of the Lightning Design System that went out somewhat quietly last week!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh, my goodness! It looks fantastic, yeah, it's quite different! Great!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, and so lots of new stuff is coming down the pipe… yeah, and so… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that's great. But it is really interesting, just like you're talking about some of the apprehensions of having people not necessarily all under the same umbrella I guess, if you will, but I've seen that play out in so many different ways at different organisations just in my own consulting work where it's like you do need to have, at least at the very beginning like that, that very collaborative cross-disciplinary team that's able to communicate very thoroughly and collaborate closely and make something great and then it sounds like whenever you have achieved that, it sounds like, all right, our work here is done! But it's not and so that's the friction I guess, a little bit.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. I really like… I liked <a href="https://medium.com/salesforce-ux/the-salesforce-team-model-for-scaling-a-design-system-d89c2a2d404b">the prior model that I'd even wrote</a> in response to <a href="https://medium.com/eightshapes-llc/team-models-for-scaling-a-design-system-2cf9d03be6a0">an article from Nathan Curtis about team models</a> where he had the centralised team but then you also have federated contributors from product teams and it's a cyclical pairing process where you all own and work on the design system together but that centralised team is really what helps keep the Design System maintained and living and we're slightly different now but we do still have a lot of collaboration and pairing happening so we didn't lose that, which is good.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Jina, we have so many more questions for you, but we're totally out of time! We'll have to save them for Season 3!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Before we go, could you tell us a bit about <a href="https://www.clarityconf.com/">Clarity</a>?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yes!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. Clarity is a Design Systems conference that I started last year. In fact, Brad spoke at it last year and it's at the Alamo Drafthouse in The Mission in San Francisco, so it's kind of fun and quirky. I like to mix it up because when I first announced it, I got some people that were like, really, a whole conference around Design Systems?</p>
+</div>
+
+<span class="timestamp">(45:16)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> We were the same with the podcast!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Guilty!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> But there's so many topics inside the umbrella of Design Systems that it's not boring at all; there were topics on accessibility, topics on animation, topics on content strategy; there's so many different things to cover.</p>
+
+  <p>So, doing it again this year, this time in November and I'm really excited about the line-up. A lot of faces that you might recognise, along with some people that I only just discovered this year like Amélie Lamont's talking and I just found out about her and I'm a big fan.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, she's fantastic.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, very excited to have her and Debbie Millman, who I still can't believe she said yes; that's so exciting that she's going to keynote.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Fantastic!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> And then this time I'm doing some workshops too, so, Nathan is doing a Design Systems workshop and Val Head is doing one on prototyping with animations.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's really cool.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> I think it'll be really fun.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And you also run a community, that's Slack?</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Oh yeah, so… oh my God, that thing has really grown! <a href="https://designsystems.herokuapp.com/">designsystems.herokuapp.com</a> is a little form that'll automatically send you an invite if you want to join. There's over 2,600 people in there.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Holy smokes, that's nuts!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah. I remember when it first started it was just maybe twelve or so people and then it just… </p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Design Systems are so hot right now!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> It's cool!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> We've been trying to work that into every episode of the podcast!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> We've been doing Design Systems since before they were cool!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> There we go!</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Yeah, I think I even used that in a talk once! Yeah, it's cool; I love that there's this huge passion around Design Systems.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think the whole world's just been like… the whole community's just been burned by short-sightedness and people going… oh, this looks cool, I'm going to do this and the next time around, oh, this looks cool, I'm going to do this. And then you end up with a bunch of spaghetti and nobody wants that, so it is, I think a lot of it's coming from people that are like: yes, finally we have some language to avoid those terrible rabbit-holes and stuff.</p>
+
+  <p>So it's awesome. Thank you so much for everything you do for the community… </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Thank you!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And for talking with us and all of this; I'm looking forward to hanging out at Clarity and just from an audience member, I'm so excited to learn more from you. Keep it up, keep the conference talks coming, keep all the writing coming, keep all the evangelising coming, the community organising, everything. Just keep it going because nothing but good things are coming from it, so thank you.</p>
+</div>
+
+<div class="jina-anne guest">
+  <p><b>Jina</b> Awesome.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And I think that's that and I guess we will see you next time Thanks for listening. Bye bye!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Bye!
+</div>

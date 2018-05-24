@@ -1,0 +1,658 @@
+---
+layout: episode
+section: podcast
+number: 15
+season: 2
+title: Val Head
+image: val-head.jpg
+published: 2nd of July 2017
+about: Val is a web and UI animation pro specializing in motion style guides and web animation training. She's the author of <a href="http://rosenfeldmedia.com/books/designing-interface-animation/">Designing Interface Animation</a> and she curates the weekly <a href="http://uianimationnewsletter.com/">UI Animation Newsletter</a>.
+audio: <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/331242136&amp;color=6cbcca&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+links: [
+    {text: "Designing Interface Animation", url: "http://rosenfeldmedia.com/books/designing-interface-animation/", type: "book"},
+    {text: "The CSS Animations Pocket Guide", url: "http://cssanimationspocketguide.com/", type: "book"},
+    {text: "Intuit's Voice and Tone", url: "http://harmony.intuit.com/voice-tone/", type: "example"},
+    {text: "IBM Carbon Design System", url: "http://carbondesignsystem.com/", type: "example"},
+    {text: "Android Wear Design Guidelines", url: "https://www.google.com/design/spec-wear/android-wear/introduction.html", type: "example"},
+    {text: "Apple Human Interface Guidelines", url: "https://developer.apple.com/design/", type: "example"},
+    {text: "Kinect for Windows Human Interface Guidelines", url: "https://msdn.microsoft.com/en-us/library/jj663791.aspx", type: "example"},
+    {text: "Designing Safer Web Animation For Motion Sensitivity", url: "https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity", type: "article"},
+]
+---
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Hi everybody; welcome to another episode of The Style Guides Podcast. My name is Brad Frost.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'm Anna Debenham.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> And today we are thrilled to have with us Val Head. Val!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…a lot of people realise, hey, if we put all this work into this particular animated interaction or defining our brand in motion, we should maybe document that somewhere so we don't have to do it again…</p>
+  </blockquote>
+</aside>
+
+<div class="val-head guest">
+  <p><b>Val</b> Hi! Thanks for having me on the show.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yay!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yay!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Are you broadcasting from literally five doors down from me?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Maybe! I might be just down the street!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Are you waving out the window at each other?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> My headphone cable doesn't reach that far but if it did, I would try!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> We could've recorded this podcast using the old soup-cans and the string!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yes, because that's great audio quality from those, I hear.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…If your brand is supposed to be very confident and reassuring, having things being really squishy and bouncy doesn't really read as confident and reassuring; that would feel like a strange clash…</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, exactly! So, Val, you are, besides living down the street from me, do you want to give an intro into your world, what you do, what you talk about, all of that stuff and sort of how you have come into the magical world of Design Systems and Style Guides and all that good stuff?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah, so I have a secret mission of getting web designers to use more animation and use it more smartly because that's a word and really I've just been, over the last few years, super-excited about what we can do with web animation and how we can really change what animation means on the web, so I've written a couple of books about it, <a href="http://cssanimationspocketguide.com/">one specifically about CSS</a>, a recent one all about <a href="http://rosenfeldmedia.com/books/designing-interface-animation/">designing interface animation</a> and worked with a lot of different clients and folks and taught people how to do animation and worked with a lot of folks on how to make animation work for them and their project and their product, which has been really, really fun.</p>
+  <p>So that's kind of how I've gotten into the Design System things, because a lot of people realise, hey, if we put all this work into this particular animated interaction or defining our brand in motion, we should maybe document that somewhere so we don't have to do it again and I was like, yeah, good idea. So I've also worked with a few different places to help them get motion in their Style Guide so everyone can share from that same knowledge that small group has come up with.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Do you find that different types of animation are appropriate for different brands? Maybe you've got a really fun, young brand and you want to make the animations really bouncy whereas another site might be quite corporate and so you want to make the animations more smooth?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Oh yeah.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Is there any kind of approach that you'd go with that?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Definitely. I mean, I like to always think about what the brand is, what its personality is, how it defines itself because like you just said, there's certain things you want to project and if your brand is supposed to be very confident and reassuring, having things being really squishy and bouncy doesn't really read as confident and reassuring; that would feel like a strange clash</p>
+  <p>But you can definitely have motion that's very confident in the way it moves, very assertive and just knows where it's going and if you have that to match what your brand's trying to say about itself, suddenly your message is that much stronger as opposed to be confusing and mushy and weird.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Personality's a really good word for it.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…all that thought or all that time that has taken place up front can get used over and over and then also conveniently, if you do re-use those same guidelines, that same logic and fitting, you get a really cohesive system and it's win-win.</p>
+  </blockquote>
+</aside>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and I think one of the cool things in the evolution of Design Systems, Anna and I had talked a little earlier about just the evolution of these terms and stuff and how Design System versus say, Front End Style Guide or Pattern Library or whatever is, we'll say, a little more inclusive than just here's your card pattern or here's this media block pattern, or here's this form input or whatever.</p>
+  <p>It's really recognising that yeah, these components, these low-level components actually need to encompass the brand and they need to encompass the voice of the organisation and include things like animation that support that stuff as well, so these Style Guides, and I've talked about this a little bit in my own conference talks is there's a bunch of different flavours but they all seem to me that intersection of brand and voice and tone and components and all that stuff and animation in these Design Systems</p>
+  <p>So I like that, but with your clients, Val, with these places where you're helping them level up their animation game, do those companies already have Pattern Libraries and stuff in place and you're taking these very flat, boring components and putting life into them or are you doing that in conjunction with them actually building out a Pattern Library? How does that usually work?</p>
+</div>
+
+<span class="timestamp">(5:15)</span>
+
+<div class="val-head guest">
+  <p><b>Val</b> Usually I get brought in at a point where they're looking to make changes to things, not necessarily… they might have one already and they're like, hey, we're outgrowing this, we need to fix things but I think you can think about animation and how your brand manifests itself in motion whether you have one already or not; it's not like if you have a Style Guide or a Design System that's all static right now, you're stuck with that and you can't do it; there's really… it can be added at either point: there's no bad time to start considering that thing that you didn't consider before, right? There's ways to make it work, no matter what point of the process you're in.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think that makes a lot of sense. In my own work we've sort of carved out areas for animation and other similar topics that necessitate their own hard thinking but in the process of just getting the damn thing out the door! We're like… we're going to leave this blank for now but we want to come back to it, we recognise it's an important thing that we want to spend a lot of time on but in the process of getting something stood up, we've found that to take a back seat. Have you found that to be the case for a lot of the places you've been into? </p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I think a lot of people have experienced that, especially when it's something that maybe you haven't thought about much before; it almost seems so daunting and we tend to leave it to the end because for whatever reason, we've just collectively figured that you can just add animation at the end and it'll be OK and that's like almost never OK! It almost never works.</p>
+  <p>But I think that's kind of the thing that makes people realise they need to document this stuff because they realise, oh, we had to push this whole project out the door, we had all these animation ideas, we couldn't get any of them in, we just ran out of time.</p>
+  <p>But hey, if we spent a little bit of time documenting how our brand exists in motion, even just making ourselves a small easing library of, these are the easings we use and they encompass our brand because of these reasons, then that's going to make adding animation in the next time or using animation at all the next time around for that next sprint or that next project so much easier because it's right there; you're just like, oh cool, we need that easing, we use this timing: done.</p>
+  <p>And then all that thought or all that time that has taken place up front can get used over and over and then also conveniently, if you do re-use those same guidelines, that same logic and fitting, you get a really cohesive system and it's win-win.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> There we go!</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…people have realised it's not enough just to be like, here is our card pattern, here is our search pattern, there has to be something that holds… like the glue that puts these all together and makes them your card pattern and your search pattern and that kind of, I don't know, just that underlying thing that makes it you and not everyone's card pattern.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> How do you go about deciding on that easing and that animation? Do you do any kind of brainstorming or prototyping?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Lots of prototyping usually. Usually, I go look for some, whatever brand definition people have, because everyone's got something a little different. Some people just have brand guidelines, some people have design guidelines, some people have design guidelines specifically for UX things, or they have voice and tone: there's always something there that's got a short list or at least a summary of what the brand wants to be and then you an pull from some of that.</p>
+  <p>One example I've used in a few of my talks, because they have such a nice concise voice and tone is <a href="http://harmony.intuit.com/voice-tone/">Intuit's</a>, and they have some things, they have this nice little summary on each of their points for voice and tone of the summary characteristics or something like that and you can pull from those kinds of characteristics, those words of things like friendly and human or energetic or confident.</p>
+  <p>All of those kinds of words are things you can manifest in animation as well so it's kind of a case of making some prototypes, maybe prototypes of rebuilding existing interactions and trying to put in that branded motion: let's try a bouncy easing and see how that looks. Nope, that's not the right energy for our brand! OK, let's try a very solid ease in-out and you're like, OK, that feels more confident and more settled.</p>
+  <p>Even an afternoon of prototyping some of those things, you really get a feel of which easings make the most feel like your brand and have that same personality and that can be a really great place to start, it gives you a really solid foundation.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Just hearing you talk about is making want to jump into my Style Guide and start adding that!  </p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah, it's also a fun thing to do!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. How do you sell that to, say, a project manager or something to say no, this is really valuable? What kind of use cases do you have up your sleeve for situations like that?</p>
+</div>
+
+<span class="timestamp">(10:00)</span>
+
+<div class="val-head guest">
+  <p><b>Val</b> Definitely the time-saving factor of you do it once and this means if, for someone bringing me in, it's if I spend this couple of days with this designer and developer and we get this easing palette together or get these prototypes together, that means that a month from now, ten of your other developers don't have to go through this whole thing, because they'll probably all be on different tasks and all repeat this work if it's not somewhere central, so the time-saving definitely.</p>
+  <p>And also just the brand consistency, I think that's something folks are really starting to realise is valuable now, more valuable than we did before: kind of like what you were saying earlier, Brad, just like people have realised it's not enough just to be like, here is our card pattern, here is our search pattern, there has to be something that holds… like the glue that puts these all together and makes them your card pattern and your search pattern and that kind of, I don't know, just that underlying thing that makes it you and not everyone's card pattern.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, one complaint that people have with Style Guides is that they make all the sites look the same. I think animations is a really good way to differentiate the different sites and each site can have a different character. And also I guess you have to think a lot about different platforms, so, Android versus iOS. Do you kind of tweak animations based on the platform or do you generally try and keep it consistent?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I think it's nice to try to keep them consistent but just for the factor of the different eco-systems you usually have to change them up a little but when it comes to things like some general easing guidelines and general timing things, you can keep those consistent across a lot of different platforms; it really depends on which ones and how important they are to you to make enough guidelines that I guess are basic enough that they could apply to all of them too.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah. Makes sense.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>I like to start with the kind of basic foundation of just an easing palette, some of those obvious dos and don'ts, then kind of build from there…</p>
+  </blockquote>
+</aside>
+
+<div class="val-head guest">
+  <p><b>Val</b> It requires thinking ahead, though, which is so annoying!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Urghh, thinking! Urghh!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Who does that?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> There's a few things. What I think is fascinating based on what you've said so far is, it's almost like having a solid brand identity or having some sort of voice and tone or at least some set of principles, those sort of design principles that underpin all of the decisions in the Design System, as they pertain to animation but also things like performance or accessibility or form input or data display or whatever; having this sort of underlying sense of what the brand is and what it's trying to accomplish helps you have these specific conversation about things like animation and I think that that's really important and is again, something that has historically been missing in the conversations around Pattern Libraries and stuff where it's just like again, all the focus was on, here's the UI components and then we're realising, why do those components look and behave the way they do?</p>
+  <p>And to Anna's point, there's huge opportunities to take it from…it's a card that looks like any other card that anyone else has ever seen into something that is ownable or brandable or will help you stand out, so that's just an observation. It sounds like whenever you're going into places, if there's stuff, whether that's a brand deck or brand identity guidelines or voice and tone guidelines or design principles, that gives you something to latch onto. Is that right?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah, yeah. It's really the difference between looking for what is the one right answer and what is the right answer for us. I feel like just as an industry, we’re realising there isn't always one right way and sometimes there's five perfectly acceptable ways and to figure out which one is best for you is the bigger question. It's not necessarily which is right for everyone and I think that's a more interesting question but I guess in ways it's also sometimes the harder question!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah because it involves you taking a stand on something. It's like, we did it this way and not this way, even though either way is a valid approach, you have to make decisions and that is though. I've found that very….in my own work with clients sometimes people get really freaked out, they're like, what do you mean, we have to decide one way or the other or something.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Right, but the most interesting Design Systems are the ones that have a point of view and the way you get a point of view is by making those decisions like no, we are going to go this direction as opposed to that and that's what makes them unique and interesting, I think. But definitely harder, more scarier, definitely, too!</p>
+</div>
+
+<span class="timestamp">(15:06)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah. I think one thing that I've found really fascinating in my own work at least is, we've actually put in place conventions just around CSS architecture and stuff like that and then the client was like, you know what? We actually decided that this way would make more sense and while we're like, OK, we could debate whether or not this double underscore as our global prefix is the right idea or not, but if by simply having conventions and using conventions right out of the gate, it became like a matter of find and replace, which is awesome because you can have conventions, you can have a point of view and you can change those points of view down the road as the system evolves…</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Oh, right.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> But just by having a bounce animation and then you're maybe like, ah, let's actually pull that out and any instance of the bounce animation you can replace with one that might make more sense for the brand or something.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Right; whatever decisions you make, whatever your point of view is today doesn't necessarily have to last forever. Brands change and evolve and your goal is, whatever the product is, the goals change, so definitely it's not like it's set in stone forever, which I think makes it a little easier to make those decisions, you're like, all right, we'll do this and we know if we decide in six months this did not work or isn't us, we can change it!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, and again, by doing it in a smart way, having variables, building modularly and stuff like that, you're able to…it does just become a really change-out versus this, oh, we have to burn the whole thing to the ground and start from scratch. All that's to say is just these kinds of mentalities, it is scary to have to make decisions and stuff but by setting things up in a smart way that anticipates future change, those changes become almost trivial, it's like a find and replace or something versus some giant re-design.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Right, it's like once there's a system, you've got that ease of access, as long as you maintain that infrastructure.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Is there a way that you'd recommend categorising animation? I'm just thinking, would you create say a folder and put all the animations in there? Would you merge them with the components? And also with things like Sass files, do you tend to create mix-ins or are they mainly I the JavaScript?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, what are all the ways that animation…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Tell us your secrets!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> …how does it all manifest itself in a Style Guide? How do you actually, to Anna's point, how does all this show up in a Style Guide and how it's documented?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah. Kind of all of those ways. It definitely depends on how the team works already. I usually like to start with a written thing of really focusing on here are the brand traits that are important, here's how they will be manifested in motion and then also some really good defaults of some tings about performance and accessibility. Stick to these properties because it's a better idea for performance: don't move the button people are trying to click; some of those really….</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> LinkedIn! LinkedIn: don't do that!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Cruel!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I think it's true for all aspects of a Style Guide or a Design System. You want some basic defaults of, seriously, here's the good way to do it. And then you also want your personality and your point of view in it, so I like to start with the kind of basic foundation of just an easing palette, some of those obvious dos and don'ts, then kind of build from there and that might be building it out into the code base of adding some of those timings, Sass variables or design tokens or whatever else</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…you want it to be empowering, any part of it; people read it and are like, I can do that.</p>
+  </blockquote>
+</aside>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Its variables.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Getting those easings, those cubic beziers into the actual code base and then suddenly you have four different easings every time you want to make something move and that just saves you time from having to come up with your own.</p>
+  <p>And then for some people that are maybe more involved or bigger teams or covering more ground, even creating a small animation library that's got named animations: here's our fade-out, here's our scale-up. There can be specific mix-ins or whatever to call them as well as a little demo of what they all do, so I think you can get into all of those places and probably the more… getting it into your code base I think is going to make it more likely it'll get used, obviously, if people don't have to write it from scratch but also the code base has to exist to put it in there too! So I kinda like to go from that top-down approach, the really high level things of why we're doing this, then get down to the more specifics of specifically which components or specifically which bits of the code base it goes into. I think that helps because then you have that justification of this is why we're doing it; here's the personality a brand has or here's why our brand uses motion, because you can totally decide you don't and that is a point of view too, but it's a very different thing to just not use it because you're like… no, versus no, we don't use animation because our brand stands for whatever. That's a very different decision.</p>
+</div>
+
+<span class="timestamp">(20:42)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> We are intentionally boring, yeah! Which is fine, I guess, but yeah, I love how you're classifying these; there's like a high-level guideline and that often lives as maybe a page in the Style Guide or something, so you have things like voice and one and there's a page for that and then you have a page for, here's our philosophy on animation. But then that's going to manifest itself in those low-level components so within the documentation for a given component, you're able to say…and remember those animation guidelines? Here's where as this accordion slides down or as this modal pops up and goes away or whatever, here's where that stuff is actually taking place and if you want a justification, I guess it's as easy as cross-linking to that high level page in the Style Guide.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> You could even say, like you're saying the accordion thing, like our accordion opens with an over-shooting follow-through action because we want to have a high sense of energy as outlined in our design guidelines or design values. And having those values stated it makes it easier for future things, right? Because the components you have right now you might have new ones later and if you have that idea of, these are our brands, motion style values and this is how we use easing and this is why we use this easing. It's going to make those new components so much easier to fit in because you're like, OK, we go back to our base level of what our brand stands for: How do we make that happen in this component versus you just have this one component that stands out from all the rest because it doesn't use the same thing! I think it makes it more future-proof.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I've seen that so many times; I always think of those WordPress sites that use some default plug-in that's a light-box photo gallery thing and it's like the rest of the UI is no-nonsense or whatever but then there's this crazy highly animated whizz-bang photo gallery, you're like, whoa! That clearly is a third party thing!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Someone had fun!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Somebody had fun!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> When you have these high level design guidelines, if you're in a place where someone's like, check out this whizz-bang photo gallery and you're like, actually, we can't use that because it doesn't fit our clearly outlined Design Guidelines around animation! And then you can get that thing outta there!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> You mentioned design tokens a few minutes ago. Could you explain what they are? Just for people who haven't heard of them before. I've had a few people on Twitter ask me what they are and I don't really have a good answer.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I wonder if I know what they are exactly? I always think of them, and what I've called design tokens is those bits of code that refer to specific design related things like the timing for an animation or the easing for an animation when it comes to that, you just call those specific pieces to put things in together, to build up whatever thing that you're actually making that component or that page. That may or may not be the right definition; I'm not even sure now!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh my God, panic!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> My take on them and back to Anna's question earlier about differences between platforms and stuff like that too. Design tokens, I guess as I understand them is like you're elevating that bounce value or that cubic bezier or that animation duration or whatever and you're elevating that  outside of any given technology; I just want the value, the value of that ease-in or whatever is the thing I'm after, it's like implementation agnostic version of this ease, it's just the definition. And that will get piped into a web code-base in the form of the Sass variable but it will also get piped into the iOS codebase and the iOS appropriate version and the Android version, so it's like…but that value is the thing that you're really caring about; you're defining these animation values, thinking about…not tying them to any specific technology, I guess, so it's like one step above Sass variables or something like that.</p>
+</div>
+
+<span class="timestamp">(25:13)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> The way I see them as kind of top-level variables; they're the things that are the least likely to change, things like colour swatches, they'd be consistent across different mediums, across different devices; typography would likely be the same across different devices unless you're doing some things specific for a device. Some spacing, maybe, but then you've got the lower level variables that might dictate what a component like the background colour uses, which might include a design token in it, but it's easier to change if it were.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah, you both describe it so much better than I did!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> It's tough; I think again, these are all concepts that we're finally just now getting our heads around, especially as things like if an iOS app is, or vice versa, if a web app is looking over the shoulder of the organisation's amazing iOS app and they're like, ooh, I want that animation; how do I make sure that I achieve the same animation bouncing and easing and all of that stuff?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> And it's also like which parts do you actually…you don't necessarily want to replicate it exactly, you want to replicate, I guess it's ethos, or there's a better word for that, I'm sure, but it doesn't have to be pixel-perfect the exact animation but it needs to read the same and I think that's where design tokens come in is you have those same base values so you're making similar decisions, even if they may not be precisely duplicates of each other.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I like it.</p>
+</div>
+
+<aside>
+  <blockquote>
+    <p>…I think that's a big reason why animation's become more acceptable or almost expected in interfaces, because of the touch-screens; there it just felt natural and normal…</p>
+  </blockquote>
+</aside>
+
+<div class="val-head guest">
+  <p><b>Val</b> We've got to get definitions, let's write that down! Whatever we just said!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's like with all these terms that are just coming out of the woodwork and there's still not a solid definition of but we're getting there.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah and again, I'm sure people, Jina Bolton, who's helped really pave the way for a lot of this thinking, I'm sure that she could weigh in on this stuff too but it's like we need different people that are all kicking the tyres to these concepts at individual organisations and stuff and coming to similar conclusions. I like seeing this stuff, I like seeing the evolution of, and Val, I'm sure you've seen it just with thinking about animation. Doesn't it make you happy whenever you see other people talk about similar things? You're not necessarily trying to claim ownership over a concept, It's like, yes, more people are thinking about this and are implementing it in their own work and they're coming out with case studies and stuff like that and data and anecdotes and all that. I love that part of this industry, just because we're all figuring this out together! This is why it's good to talk about this stuff. So yeah, it's awesome!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> That's how we come up with better ideas or different ideas; they don't  necessarily have to be better but it's awesome to see other people implement some of the things that you've thought about and come out to different conclusions or different results and you're like, oh my goodness, we're amazing! I don't know, that always makes me really happy when I see people doing similar things but coming to different conclusions or different outcomes you're just like, wow, collectively we are so smart!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, that's great! And it is in that sort of showing, back to just like documentation, it's like taking that extra little bit to go, oh, we put a lot of blood, sweat and tears into this thing; we implemented it and we found that it worked or didn't work or whatever, and that's actually worth sharing. I love that; that's great. </p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Do you have any examples that you really love, that you'd love us to look at and share?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> For Style Guides, Design System stuff?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, that include animation, things that you think they've done it really well.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> One of my recent favourites is the IBM Carbon, that's what they called it, right?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, <a href="http://carbondesignsystem.com/">Carbon Design System</a>!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah. I know it's like the kind of… I think it's their second iteration because they had their Machines in Motion before. Sometimes I lose track because IBM is so giant!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah!</p>
+</div>
+
+<span class="timestamp">(28:46)</span>
+
+<div class="val-head guest">
+  <p><b>Val</b> Sorry, IBM! But what I love that they've done, it's like one page of their Style Guide, it's a really great example of just the basic things you'd need to do motion well; they talk about first why they're doing motion, their goals for motion, the things it should be, what they would judge motion against and then they have a simple short-list of easings that they use and I think they talk a bit about performance and they talk about durations and that's kind of it; they've just really boiled it down to the main core things you need to do animation well on a system; they have those values, they have the ease-in, the duration and that is a perfect starting point to really create a system around your animation and make animation part of your design system and the way they put it together, they make it seem so effortless too, which I'm sure it was not as effortless as it looks but they really put it together in a way that's very appealing; you read it and you're like, I could do that! I got it! And I think that's just a really great example of having motion in your Style Guide because you want it to be empowering, any part of it; people read it and are like, I can do that. You don't want it to be yelling at people and being like, you're doing it all wrong because then no one's going to use it, so I really love how they've put that together.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, it is, it's always fun whenever you just hit a web page at a URL that just contains so much gold; I'm looking at this page now and it's like, yeah, just a really nicely laid out piece of HTML, and it's awesome! It really gets the point across; that's fantastic.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Exactly, they're like, the Guide gets across exactly what they need to and just perfectly executed in that sense; they've said what they need to say, it's useful and you're not drowning in it. You can just actually take it and go with it, so, well done!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah and I'm looking at some of their low-level components; I'm on their modal and stuff and you can actually see those motion guidelines in play and stuff like that, so again, it's that sort of cross-linking or that interplay between high level philosophy and principles and then low-level execution of those principles and those, together, is what makes the system solid.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah, exactly.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> There was, I think it was <a href="https://www.google.com/design/spec-wear/android-wear/introduction.html">Android Wear</a> had a really good Style Guide for that because so much of the watch interface is around animation and motion and I really liked that one. They had some gifs demo-ing how different transitions should work and the speed and I thought that was really great.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I haven't seen that one, I'm going to have to check it out; that sounds like a good one.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I'll send you a link.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yeah!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I think that there's obviously a lot, at that sort of native or OS level stuff I think that those are…have you found that, Val? Outside of the world of the web I feel like people like Windows and iOS and whatever, they've been really blazing trails with respect to animation, especially, I would assume, because of performance and stuff. The web has always been lagging behind as far as actual performance goes but have you taken a look at those like the <a href="https://developer.apple.com/design/">HIG</a> and other stuff like that and Windows Guidelines and stuff for animation, do they talk about that stuff?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Apple's doesn't a whole lot, at least not the public-facing one, but I always kind of imagine, I mean, I'm just totally making this up, that they have some internal one they're all following because they seem to do some pretty consistent use of animation that I feel like there's something there that they're all following!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> They're just not sharing it with the rest of the community; come on!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Or maybe it's just like the Apple hive mind, I don't know, but I feel like there's something there and I know Windows had a little bit of something but I haven't looked at theirs recently.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh, they've got a really good one around <a href="https://msdn.microsoft.com/en-us/library/jj663791.aspx">Xbox, the Kinect</a>, they have really intense documentation on gesture and the types of interfaces that are appropriate for that.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Oh, great.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> But I'm also thinking with a lot of devices, phones and things, just the things that have touch-screens; animation just makes so much sense there because it is something that you're touching and it's more human in a way, whereas with a keyboard and a mouse interface, you don't have that connection. It's a bit more abstract.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I think that's a big reason why animation's become more acceptable or almost expected in interfaces, because of the touch-screens; there it just felt natural and normal and now when we go to this computer keyboard thing we're like, wait: why aren't we seeing it here? Which I think might also be part of the reason why the web feels like it's a little behind some of these but I think we're catching up quickly.</p>
+</div>
+
+<span class="timestamp">(35:03)</span>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Good job, web! Well done!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah! And that's just it, it all again comes back to stand on the shoulders of giants, learn from different places, learn where the seams are where it's like, maybe this doesn't make sense to bring into the world of the web or maybe it does, I don't know, but just having those resources available, which is why it's so great for more organisations to share these things, it's just helpful for everyone.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Oh, definitely.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> I'd love to talk real quickly, just because… so, I hate to say that animation is a niche within the Design System universe, but it tends to get bucketed out; looking at the Carbon stuff it's its own page; it exists beside iconography or beside typography and stuff like that and that's how I've seen them in other guidelines and stuff as well. One of the other ones that tends to get bucketed out is around accessibility; I'd love to talk about the intersection of motion and accessibility and what that means for patterns that live inside of a Design System Pattern Library. How does all that come to be…how should teams that are building these systems be thinking about creating things that are moving and have some life to them and encompass the brand but are also being cognisant of being accessible?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Right. And it's like animation opens up some different ways of thinking about accessibility that we didn't have to before. There's some, hopefully, basic obvious things like we were talking about before, like, don't move the button people are trying to click on, but honestly, as silly as it is to state that, I have definitely seen sites that move the button I'm trying to click on!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Oh no!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> LinkedIn; LinkedIn!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> It happens, so I think having some basic stuff like that; there's still the things in their web content accessibility guidelines that has some pretty good basic things, even though it was written quite some time ago; they say, have pause and play controls for things that play for more than five seconds and if you think about it, most carousel like anything or any sort of slideshow-y situation that loops forever, that's more than five seconds: maybe you should be able to pause that! And things about having those controls flashing the screen, obviously, but those kind of basic things. And there's also some more sophisticated things, like the idea of, depending on what sort of accessibility you're talking about, having things shown in motion and visible on screen can actually reduce the cognitive load for some people; it can make things easier to follow that might have been difficult to understand before, so I think that's kind of the things you want to do versus the other ones you don't want to do.</p>
+  <p>And then the other one that comes up is obviously vestibular disorders and the idea that you could actually make people dizzy or ill from giant, huge movement, which we never had to think about before because we couldn't do it!</p>
+  <p>So I think there's a lot going on with the reduce motion query and things like that, that I think are going to be super-helpful; I really love that that allows users to say, hey, I need reduced motion and then websites can respond to that as opposed to individual sites having to deal with it themselves, so I think being cognisant of that, of realising when maybe you do have those really big movements and those parallax things that might cause some harm in that sense is having a way to either tone it down or use that reduced motion query so that way, if someone has that set, they won't see as much motion, so I think being responsible in that sense of thinking about the user and the effect it might have on it. And then it's not to say you shouldn't use any animation at all because there's plenty of animation that may not affect those sorts of things ever, but if you don't think about it, how do you know?</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah, so, do I have this right? I've only read various cursory overview of this whole reduced motion query. If I was building a modal pattern for the Pattern Library, you can write a media query-ish looking thing that basically says, if the user has ticked the box that says, I don't prefer motion, or whatever language is associated with that, then you can write some rules that basically say, OK, tone down this giant bouncy fly-end modal or something like that, is that…</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It feels like it should be the other way round; you have a media query that…</p>
+</div>
+
+<span class="timestamp">(40:02)</span>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Progressively enhances it?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, yeah.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> I think, from what I've read, the WebKit blog just put a really great more detailed version of it but I think it is more looking for the reduce flag and toning it down, but I wonder if you could make it the other way of more progressive enhancement sort of thing of adding it in if it's acceptable. But that'd be kind of a cooler way to do it. But… <a href="https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity">I wrote a thing on A List Apart</a> talking about some of the motion that could be triggering; I talked to a lot of people that had these vestibular disorders to figure out what kind of motion should we be worried about because it's not all of it; a button hover, probably not going to be an issue; and there's such a range of the kind of animation you might use in a UI and then there's stuff like, what if it's a game, does that change things? Context is a really big deal too and then the WebKit blog recently put out an even more detailed look at some of the things that could affect people and how to handle it, specifically in the context of that reduced motion query, so I thought that was a really interesting one as well; I think it's definitely something that's useful to be aware of because you don't want to be on those extremes of creating something that's going to make people sick in either way.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Yeah. I'm on the demo on the WebKit thing now and I'm actually getting queasy just looking at some of this!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Well, some of it's like this…some of the examples of stuff that makes people sick, when I look at it on my giant thirty-four inch monitor: Holy Crap, it hurts me! But then on my laptop that's only thirteen inch I'm like, oh, I can deal with it, so some of it's completely even device specific</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Context.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Which I think is fascinating. But I'm a weirdo!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> So, what you're saying is that every site should use parallax for everything?</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Constantly! 3D cubes: parallax.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> And just move the buttons around as you're clicking on them!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Just wrap it all into the progressively enhanced motion media feature. If browser supports parallax, go nuts!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Could you imagine? Everyone would just turn off their parallax support if that was the effect! And I love that parallax would be given that kind of weight that there would be parallax support. I don't like this future world we are coming up with!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> It's going to be even better with VR!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Oh my goodness, yeah!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> That's a whole other thing though, VR, I don't even know, it's just when it comes to animation and environments and all of this stuff with vestibular disorders and even just anything, that's so much different when it's VR. I don't know, that's going to be interesting to find, or to find out about.</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Well, I'm sure we can talk to you about it in a couple of years!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> There we go! When we're all living in The Matrix!</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> Yes, in our virtual VR podcast couch or whatever it was people do podcasting on then!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> I want that to be a thing!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> That's awesome! Well, all right, we could probably talk about…we could paint a whole picture of a dystopian future if we wanted to but just looking at the time, we should probably wrap up but this has been crazy helpful. I think that again, just thinking about the evolution of Design Systems and what goes into these next-level more sophisticated Design Systems that think about more things, that consider more things and I think that talking about this through the lens of animation is fantastic and really enlightening. Does it say, yeah, here's how you take something and really elevate it to a level that you wouldn't otherwise be able to do if you're just rebuilding the same card pattern over and over and over again; here are these great opportunities to take things to the next level. So, thank you for that; that's great.</p>
+</div>
+
+<div class="val-head guest">
+  <p><b>Val</b> No, thanks for having me on, it was a really fun chat.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Anna? (laughs)</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> She's hungry!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Anna, are you there? Are you all right?</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Yeah, yeah: I'm there, I'm there; I didn't know what to say! This is how we always end our podcasts.</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> This is how we end our podcasts!</p>
+</div>
+
+<div class="anna-debenham host">
+  <p><b>Anna</b> Giggle!</p>
+</div>
+
+<div class="brad-frost host">
+  <p><b>Brad</b> Giggle and awkwardly say, everyone: thank you so much for listening. Val, thanks again for coming on the show and we will see you next time.</p>
+</div>

@@ -3,7 +3,7 @@ title: Carbon Design System
 link: http://carbondesignsystem.com/
 author: IBM
 status: recommended
-image: carbon.png
+image: carbon-image.png
 tags:
 - frontend
 - code
@@ -11,4 +11,4 @@ tags:
 - voiceandtone
 ---
 
-Carbon Design System is a series of individual styles and components, that when combined make beautiful, intuitive designs.
+Carbon is the design system for IBM Cloud products. It is a series of individual styles, components, and guidelines used for creating unified UI.

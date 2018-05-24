@@ -1,6 +1,6 @@
 ---
 title: WordPress Brand Guidelines
-link: http://wordpress.org/about/logos/
+link: https://make.wordpress.org/design/handbook/design-guide/
 image: wordpress.jpg
 type: Brand Guidelines
 tags:

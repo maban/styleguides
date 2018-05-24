@@ -2,18 +2,18 @@
 
 To add a talk:
 
-1. [create a new file within the _resourcetalk folder](https://github.com/maban/styleguides/new/gh-pages/_resourcetalk) (the same one as this README). 
+1. [create a new file within the _resourcetalk folder](https://github.com/maban/styleguides/new/gh-pages/_resourcetalk) (the same one as this README).
 2. Give it a name that's the same as the title of the talk, with words separated by hyphens, with .md at the end.
 3. Paste the following templating code into it:
 
 ```
 ---
-title: Title of talk
-link: A static link to the talk (A Lanyrd link is preferable because further resources about the talk can be added)
-author: The speaker's name
-conference: The conference that the talk was given at
-date: The date the talk was given
-image: file name with extension
+title: "Title of talk"
+link: "A static link to the talk (A Lanyrd link is preferable because further resources about the talk can be added)"
+author: "The speaker's name"
+conference: "The conference that the talk was given at"
+date: "The date the talk was given (format: YYYY-MM-DD)"
+image: "file name with extension"
 ---
 
 An optional short description of the talk goes here
@@ -35,12 +35,12 @@ Here's an example of a talk I've added to the _resourcetalk folder:
 
 ```
 ---
-title: Future Friendly Style Guides
-link: https://speakerdeck.com/lukebrooker/future-friendly-style-guides
-author: Luke Brooker
-conference: Web Directions
-status: recommended
-image: future-friendly-styleguides.jpg
+title: "Future Friendly Style Guides"
+link: "https://speakerdeck.com/lukebrooker/future-friendly-style-guides"
+author: "Luke Brooker"
+conference: "Web Directions"
+date: "2013-02-28"
+image: "future-friendly-styleguides.jpg"
 ---
 
 How style guides can help in a responsive design workflow.

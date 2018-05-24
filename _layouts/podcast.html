@@ -21,5 +21,15 @@
 
     {% include footer.html %}
 
+    <script src="/scripts/vendor/lazyload.min.js"></script>
+    <script>
+      var oLazyLoad = new LazyLoad({
+        threshold: 200,
+        throttle: 200,
+        elements_selector: ".lazy-load",
+        class_loaded: "lazy-loaded",
+        data_src: "src",
+      });
+    </script>
   </body>
-</html>
+  </html>

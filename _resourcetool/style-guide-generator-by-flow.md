@@ -1,6 +1,6 @@
 ---
 title: The Style Guide Guide
-link: http://vinspee.me/style-guide-guide/
+link: https://gist.github.com/VinSpee/10429352
 author: Vince Speelman
 language: Assorted
 ---

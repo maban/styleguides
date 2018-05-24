@@ -1,18 +1,23 @@
-<ul class="resources episodes">
+{% assign podcast = site.podcast | sort: 'number'  %}
 
-    {% assign podcast = site.podcast | sort: 'number'  %}
-
+<section>
+  <h2 class="title">Season 2</h2>
+  <ol class="resources episodes">
     {% for podcast in podcast reversed %}
-    <li class="resource {{ podcast.status }}">
-        <span class="number">{{ podcast.number }}</span>
-        <a href="/podcast{{ podcast.link }}" class="resource-url">
-            {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>{% endif %}
-            <span class="resource-description">
-                <h2 class="resource-title">{{ podcast.title }}</h2>
-                <div class="resource-summary">{{ podcast.content }}</div>
-            </span>
-        </a>
-    </li>
+      {% if podcast.season == 2 %}
+        {% include episode.html %}
+      {% endif %}
     {% endfor %}
+  </ol>
+</section>
 
-</ul>
+<section>
+  <h2 class="title">Season 1</h2>
+  <ol class="resources episodes">
+    {% for podcast in podcast reversed %}
+      {% if podcast.season == 1 %}
+        {% include episode.html %}
+      {% endif %}
+    {% endfor %}
+  </ol>
+</section>
