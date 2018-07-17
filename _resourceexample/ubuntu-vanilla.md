@@ -1,11 +1,17 @@
 ---
-title: Ubuntu Vanilla Framework
-link: https://docs.vanillaframework.io/en/
+title: Vanilla Framework
+link: https://vanillaframework.io
 image: ubuntu-vanilla.png
 author: Ubuntu
 tags:
-- patterns
+- accessibility
+- code
+- components
+- css
 - frontend
+- patterns
+- sass
+- ui
 ---
 
-Pattern library for Ubuntu
+Vanilla is a simple extensible CSS framework, written in Sass, by the Ubuntu Web Team.
