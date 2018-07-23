@@ -1,11 +1,11 @@
 ---
 title: Malvid
 link: https://malvid.io/
-author: Malvid team
+author: Tobias Reich
 image: malvid.png
 tags:
  - frontend
  - JSON
 ---
 
-Generate an interactive UI to develop, preview and document web components.
+UI to help you build and document web components.
