@@ -1,8 +1,8 @@
 ---
-title: Jekyll Living Styleguide
-link: http://livingstyleguide.cc
+title: Jekyll Living Style Guide
+link: https://jekyllstyleguide.com/
 author: Matthew Elsom
 language: HTML, CSS, SCSS, Jekyll, Liquid, Markdown
 image: jekyll-living-styleguide.jpg
 ---
-Free to use styleguide tool. Organise design styles, create code standards, and maintain a consistent user interface design across your digital product with this boilerplate living styleguide. Made with the power of Jekyll.
+A free Jekyll-based tool that you can use to generate and document product or system user interface (UI) patterns in a simple Style Guide.
