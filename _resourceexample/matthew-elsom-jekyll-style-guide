@@ -1,0 +1,12 @@
+---
+title: "Matthew Elsom's Jekyll Style Guide"
+link: "https://jekyllstyleguide.com/"
+image: "jekyll-living-styleguide.jpg"
+tags:
+ - jekyll
+ - livingstyleguide
+ - frontend
+ - patterns
+---
+
+A Jekyll-based tool that you can use to generate and document product or system user interface (UI) patterns in a simple Style Guide.
