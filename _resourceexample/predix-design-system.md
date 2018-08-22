@@ -1,6 +1,6 @@
 ---
 title: Predix Design System
-link: http://styleguide.pageuppeople.com/
+link: https://www.predix-ui.com/
 image: predix-design-system.png
 tags:
 - frontend
