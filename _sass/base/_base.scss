@@ -1,4 +1,7 @@
-// Podcasts
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
 $color-1: #F3B8B3;
 $color-1-darken: #EFAAA4;
 
@@ -37,13 +40,20 @@ dl, dd, ol, ul, figure {
 }
 
 
+html {
+    min-height: 100vh;
+}
+
 
 /**
  * Basic styling
  */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-size: $font-size-med;
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
@@ -85,7 +95,7 @@ figure > img {
 }
 
 figcaption {
-    font-size: $small-font-size;
+    font-size: $font-size-small;
 }
 
 
@@ -110,7 +120,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-family: $font-secondary;
+    font-weight: 200;
 }
 
 
@@ -119,13 +130,8 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $color-brand-blue;
     text-decoration: none;
-    font-weight: normal;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
 
     &:hover {
         color: $text-color;

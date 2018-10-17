@@ -1,0 +1,41 @@
+.c-card__number {
+    position: absolute;
+    top: -1px;
+    left: 0.3em;
+    padding: 0.3em 0.5em;
+    min-width: 1em;
+    text-align: center;
+    display: block;
+    background-color: $color-4;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.c-card__media {
+    background-color: #F1F1F1;
+    min-height: 100px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+}
+
+.c-card__content {
+    padding: 1em;
+    display: block;
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.c-card__title {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    line-height: 1.25;
+}
+
+.c-card__credit {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}

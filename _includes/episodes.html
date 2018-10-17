@@ -2,7 +2,7 @@
 
 <section>
   <h2 class="title">Season 2</h2>
-  <ol class="resources episodes">
+  <ol class="c-card-list episodes">
     {% for podcast in podcast reversed %}
       {% if podcast.season == 2 %}
         {% include episode.html %}
@@ -13,7 +13,7 @@
 
 <section>
   <h2 class="title">Season 1</h2>
-  <ol class="resources episodes">
+  <ol class="c-card-list episodes">
     {% for podcast in podcast reversed %}
       {% if podcast.season == 1 %}
         {% include episode.html %}

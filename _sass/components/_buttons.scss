@@ -1,0 +1,54 @@
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+
+.c-btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: $color-brand-blue;
+    color: $color-white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: normal;
+    transition: background-color $anim-fade-quick $anim-ease;
+    &:hover,
+    &:focus {
+        background-color: $color-brand-blue-light;
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    .c-btn-group & {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.c-btn--center {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.c-btn.disabled {
+    opacity: 0.5;
+    background-color: #ccc!important;
+    &:hover,
+    &:focus {
+        background-color: #ccc!important;
+    }
+}
+
+.c-btn__icon {
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.c-btn__icon + .c-btn__text {
+    margin-left: 0.5rem;
+}
+
+.c-btn__text + .c-btn__icon {
+    margin-left: 0.5rem;
+}

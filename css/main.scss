@@ -3,61 +3,72 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: 'Karla', Helvetica, Arial, sans-serif;
-$base-font-size:   18px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #ced4da;
-$background-color: #000000;
-$brand-color:      #15aabf;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
+/*------------------------------------*\
+   #TABLE OF CONTENTS
+\*------------------------------------*/
+/**
+* ABSTRACTS..............................Declarations of Sass variables & mixins
+* BASE...................................Default element styles
+* COMPONENTS.............................Component-specific styles
+* LAYOUT.................................Layout-specific styles
+*/
 
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "lazy-load",
-        "buttons",
-        "tags",
-        "icons",
-        "layout",
-        "main",
-        "nav-sections",
-        "people",
-        "podcast",
-        "resources",
-        "episodes",
-        "syntax-highlighting",
-        "pattern-lib"
-;
+
+/*------------------------------------*\
+   #ABSTRACTS
+\*------------------------------------*/
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+
+
+
+
+/*------------------------------------*\
+   #BASE
+\*------------------------------------*/
+@import "base/base";
+@import "base/main";
+
+
+
+
+
+/*------------------------------------*\
+   #COMPONENTS
+\*------------------------------------*/
+@import "components/buttons";
+@import "components/button-group";
+@import "components/card";
+@import "components/card-list";
+@import "components/episodes";
+@import "components/footer";
+@import "components/header";
+@import "components/icons";
+@import "components/inline-list";
+@import "components/lazy-load";
+@import "components/list";
+@import "components/main";
+@import "components/nav-sections";
+@import "components/page-header";
+@import "components/pattern-lib";
+@import "components/people";
+@import "components/podcast";
+@import "components/primary-nav";
+@import "components/section";
+@import "components/section-header";
+@import "components/syntax-highlighting";
+@import "components/tags";
+@import "components/toggle";
+
+
+
+
+
+/*------------------------------------*\
+   #LAYOUTS
+\*------------------------------------*/
+@import "layouts/layout";

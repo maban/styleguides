@@ -4,33 +4,42 @@ section: home
 type: home
 ---
 
-<section>
-<h1 class="title"><span id="total-resource-count"></span> Website Style Guide Resources</h1>
-<ul class="list--inline">
-  <li class="list__item"><a href="https://github.com/maban/styleguides">GitHub repo</a></li>
-  <li class="list__item"><a href="https://twitter.com/styleguidesio">Twitter updates</a></li>
-  <li class="list__item"><a href="/contributors">Contributors</a></li>
-</ul>
+<section class="c-section">
+    <header class="c-page-header">
+        <div class="c-page-header__kicker">
+            <span id="total-resource-count"></span>
+        </div>
+        <h1 class="c-page-header__title">Website Style Guide Resources</h1>
+    </header>
+    <ul class="list--inline">
+        <li class="list__item"><a href="https://github.com/maban/styleguides">GitHub repo</a></li>
+        <li class="list__item"><a href="https://twitter.com/styleguidesio">Twitter updates</a></li>
+        <li class="list__item"><a href="/contributors">Contributors</a></li>
+    </ul>
 </section>
 
-<section>
-<h1 class="title"><a href="examples">{{site.example-title}}</a></h1>
-<p class="lede">{{site.example-description}}</p>
-<ul class="resources resource-type-example">
-{% assign section = site.resourceexample | sort: 'title'  %}
-{% for item in section %}
-{% if item.status == 'recommended' %}
-{% include loop-resource.html %}
-{% endif %}
-{% endfor %}
-</ul>
-<a href="/examples" class="link-view-more">See all {{site.resourceexample | size}} examples…</a>
+<section class="c-section">
+    <header class="c-section-header">
+        <h2 class="c-section-header__title"><a class="c-section-header__link" href="examples">{{site.example-title}}</a></h2>
+        <p class="c-section-header__description">{{site.example-description}}</p>
+    </header>
+    <ul class="c-card-list resource-type-example">
+        {% assign section = site.resourceexample | sort: 'title'  %}
+        {% for item in section %}
+        {% if item.status == 'recommended' %}
+        {% include loop-resource.html %}
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="/examples" class="c-btn c-btn--center">See all {{site.resourceexample | size}} examples…</a>
 </section>
 
-<section>
-<h1 class="title"><a href="articles">{{site.article-title}}</a></h1>
-<p class="lede">{{site.article-description}}</p>
-<ul class="resources resource-type-article">
+<section class="c-section">
+    <header class="c-section-header">
+        <h2 class="c-section-header__title"><a class="c-section-header__link" href="articles">{{site.article-title}}</a></h2>
+        <p class="c-section-header__description">{{site.article-description}}</p>
+    </header>
+<ul class="c-card-list resource-type-article">
 {% assign section = site.resourcearticle | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
@@ -38,13 +47,15 @@ type: home
 {% endif %}
 {% endfor %}
 </ul>
-<a href="/articles" class="link-view-more">See all {{site.resourcearticle | size}} articles…</a>
+<a href="/articles" class="c-btn c-btn--center">See all {{site.resourcearticle | size}} articles…</a>
 </section>
 
-<section>
-<h1 class="title"><a href="books">{{site.book-title}}</a></h1>
-<p class="lede">{{site.book-description}}</p>
-<ul class="resources resource-type-book">
+<section class="c-section">
+    <header class="c-section-header">
+        <h1 class="c-section-header__title"><a class="c-section-header__link" href="books">{{site.book-title}}</a></h2>
+        <p class="c-section-header__description">{{site.book-description}}</p>
+    </header>
+<ul class="c-card-list resource-type-book">
 {% assign section = site.resourcebook | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
@@ -52,13 +63,15 @@ type: home
 {% endif %}
 {% endfor %}
 </ul>
-<a href="/books" class="link-view-more">See all {{site.resourcebook | size}} books…</a>
+<a href="/books" class="c-btn c-btn--center">See all {{site.resourcebook | size}} books…</a>
 </section>
 
-<section>
-<h1 class="title"><a href="podcasts">{{site.podcast-title}}</a></h1>
-<p class="lede">{{site.podcast-description}}</p>
-<ul class="resources resource-type-podcast">
+<section class="c-section">
+    <header class="c-section-header">
+        <h2 class="c-section-header__title"><a class="c-section-header__link" href="podcasts">{{site.podcast-title}}</a></h2>
+        <p class="c-section-header__description">{{site.podcast-description}}</p>
+    </header>
+<ul class="c-card-list resource-type-podcast">
 {% assign section = site.resourcepodcast | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
@@ -66,13 +79,15 @@ type: home
 {% endif %}
 {% endfor %}
 </ul>
-<a href="/podcasts" class="link-view-more">See all {{site.resourcepodcast | size}} podcasts…</a>
+<a href="/podcasts" class="c-btn c-btn--center">See all {{site.resourcepodcast | size}} podcasts…</a>
 </section>
 
-<section>
-<h1 class="title"><a href="talks">{{site.talk-title}}</a></h1>
-<p class="lede">{{site.talk-description}}</p>
-<ul class="resources resource-type-talk">
+<section class="c-section">
+    <header class="c-section-header">
+        <h2 class="c-section-header__title"><a class="c-section-header__link" href="talks">{{site.talk-title}}</a></h2>
+        <p class="c-section-header__description">{{site.talk-description}}</p>
+    </header>
+<ul class="c-card-list resource-type-talk">
 {% assign section = site.resourcetalk | sort: 'title'  %}
 {% for item in section %}
 {% if item.status == 'recommended' %}
@@ -80,28 +95,32 @@ type: home
 {% endif %}
 {% endfor %}
 </ul>
-<a href="/talks" class="link-view-more">See all {{site.resourcetalk | size}} talks…</a>
+<a href="/talks" class="c-btn c-btn--center">See all {{site.resourcetalk | size}} talks…</a>
 </section>
 
-<section>
-<h1 class="title"><a href="tools">{{site.tool-title}}</a></h1>
-<p class="lede">{{site.tool-description}}</p>
-<ul class="resources resource-type-tool">
-{% assign section = site.resourcetool | sort: 'title'  %}
-{% for item in section %}
-{% if item.status == 'recommended' %}
-{% include loop-resource.html %}
-{% endif %}
-{% endfor %}
-</ul>
-<a href="/tools" class="link-view-more">See all {{site.resourcetool | size}} tools…</a>
+<section class="c-section">
+    <header class="c-section-header">
+        <h2 class="c-section-header__title"><a class="c-section-header__link" href="tools">{{site.tool-title}}</a></h2>
+        <p class="c-section-header__description">{{site.tool-description}}</p>
+    </header>
+    <ul class="c-card-list resource-type-tool">
+    {% assign section = site.resourcetool | sort: 'title'  %}
+    {% for item in section %}
+    {% if item.status == 'recommended' %}
+    {% include loop-resource.html %}
+    {% endif %}
+    {% endfor %}
+    </ul>
+    <a href="/tools" class="c-btn c-btn--center">See all {{site.resourcetool | size}} tools…</a>
 </section>
 
-<section>
-  <h1 class="title">Contributors</h1>
-  <p class="lede">Resources on this site have been added by the following contributers:</p>
+<section class="c-section">
+<header class="c-section-header">
+  <h1 class="c-section-header__title">Contributors</h1>
+  <p class="c-section-header__description">Resources on this site have been added by the following contributers:</p>
+</header>
   <ul id="people" class="people"></ul>
-  <p class="lede"><a class="button" href="https://github.com/maban/styleguides/graphs/contributors">View on GitHub</a></p>
+  <p class="lede"><a class="c-btn c-btn--center" href="https://github.com/maban/styleguides/graphs/contributors">View on GitHub</a></p>
   <script src="/scripts/contributors.js"></script>
 </section>
 

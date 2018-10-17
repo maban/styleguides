@@ -1,0 +1,35 @@
+/*------------------------------------*\
+    #PRIMARY NAV
+\*------------------------------------*/
+
+/**
+ * Primary navigation
+ */
+.c-primary-nav {
+    margin-left: auto;
+}
+
+.c-primary-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.c-primary-nav__link {
+    padding: 1rem 1rem 1rem 0;
+    font-size: $font-size-small;
+    color: $color-dim-80;
+    text-transform: uppercase;
+    transition: color $anim-fade-quick $anim-ease;
+
+    &:hover, &:focus {
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: $color-dim-80;
+    }
+}

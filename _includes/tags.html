@@ -19,17 +19,17 @@
 
   {% assign previous = tag %}
 {% endfor %}
-<div class="tags">
-  <ul class="tag">
-    <li class="tag__item">
-      <input class="tag__item__checkbox show-all" type="checkbox" value="show-all" checked id="show-all"/>
-      <label class="tag__item__label" for="show-all">Show All</label>
-    </li>
-    {% for tag in unique_tags %}
-    <li class="tag__item">
-      <input class="tag__item__checkbox" type="checkbox" value="{{tag | downcase}}" id="{{tag | downcase}}" />
-      <label class="tag__item__label" for="{{tag | downcase}}">{{tag}}</label>
-    </li>
-    {% endfor %}
-  </ul>
+<div class="c-toggle">
+    <ul class="c-toggle__list">
+        <li class="c-toggle__item">
+          <input class="c-toggle__checkbox show-all" type="checkbox" value="show-all" checked id="show-all"/>
+          <label class="c-toggle__label" for="show-all">Show All</label>
+        </li>
+        {% for tag in unique_tags %}
+        <li class="c-toggle__item">
+          <input class="c-toggle__checkbox" type="checkbox" value="{{tag | downcase}}" id="{{tag | downcase}}" />
+          <label class="c-toggle__label" for="{{tag | downcase}}">{{tag}}</label>
+        </li>
+        {% endfor %}
+    </ul>
 </div>

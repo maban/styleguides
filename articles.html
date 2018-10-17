@@ -7,12 +7,14 @@ type: article
 
 <section>
 
-  <h1 class="title">{{site.article-title}} ({{site.resourcearticle | size}})</h1>
-  <p class="lede">{{site.article-description}}</p>
+    <header class="c-page-header">
+        <h1 class="c-page-header__title">{{site.article-title}} ({{site.resourcearticle | size}})</h1>
+        <p class="c-page-header__description">{{site.article-description}}</p>
+    </header>
 
-  {% assign section = site.resourcearticle | sort: 'title'  %}
-  {% include tags.html %}
-  {% include loop-resources.html %}
-  {% include add.html %}
+    {% assign section = site.resourcearticle | sort: 'title'  %}
+    {% include tags.html %}
+    {% include loop-resources.html %}
+    {% include add.html %}
 
 </section>

@@ -1,0 +1,102 @@
+.c-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0 0 0;
+}
+
+.c-card-list__item {
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 2px;
+    list-style-type: none;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+    font-size: 0.8em;
+    position: relative;
+    word-wrap: break-word;
+
+    @media (min-width: 550px) {
+    width: calc(50% - 1.5em);
+        margin-right: 1.5em;
+    }
+
+    @media (min-width: 800px) {
+        width: calc(33.333% - 1.5em);
+    }
+
+    @media (min-width: 1200px) {
+        width: calc(25% - 1.5em);
+    }
+}
+
+.c-card-list__item.recommended:after {
+    content: "★";
+    position: absolute;
+    top: -1px;
+    right: 0.3em;
+    padding: 0.3em 0.5em;
+    display: block;
+    background-color: $color-white;
+}
+
+.resource-type-podcast {
+    .c-card__media {
+        background-image: url('/images/icons/podcast/podcast-faded.svg');
+        background-size: 40px;
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-1;
+    }
+}
+
+.resource-type-book {
+    .c-card__media {
+        background-image: url('/images/icons/book/book-faded.svg');
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-brand-blue;
+        color: $color-white;
+    }
+}
+
+.resource-type-article {
+    .c-card__media {
+        background-image: url('/images/icons/article/article-faded.svg');
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-brand-blue;
+        color: $color-white;
+    }
+}
+
+.resource-type-example {
+    .c-card__media {
+        background-image: url('/images/icons/website/website-faded.svg');
+        background-size: 100px;
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-brand-blue;
+        color: $color-white;
+    }
+}
+
+.resource-type-tool {
+    .c-card__media {
+        background-image: url('/images/icons/wrench/wrench-faded.svg');
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-6;
+    }
+}
+
+.resource-type-talk {
+    .c-card__media {
+        background-image: url('/images/icons/presentation/presentation-faded.svg');
+        background-size: 80px;
+    }
+    .c-card-list__item.recommended:after {
+        background-color: $color-brand-blue;
+        color: $color-white;
+    }
+}

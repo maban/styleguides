@@ -1,0 +1,60 @@
+/*------------------------------------*\
+    #VARIABLES
+\*------------------------------------*/
+
+/**
+ * Font family
+ */
+$base-font-family: 'Karla', Helvetica, Arial, sans-serif;
+$font-secondary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+/**
+ * Font size
+ */
+$font-size-small: 1rem;
+$font-size-med: 1.125rem;
+$font-size-med-2: 2rem;
+$font-size-large: 3rem;
+$font-size-xl: 5rem;
+
+/**
+ * Line Height
+ */
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #ced4da;
+$background-color: #000000;
+$color-brand-blue: #15aabf;
+$color-brand-blue-light: #66d9e8;
+
+$color-white: #fff;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+$color-dim-80: rgba(250, 250, 250, 0.8);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$anim-fade-quick: 0.2s;
+$anim-ease: ease;
+
+/**
+ * Breakpoints
+ */
+$bp-small : 24em;
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+$bp-med : 46.8em;
+$bp-med-2 : 48em;
+$bp-large : 50em;
+$bp-large-2 : 66em;
+$bp-xl : 79em;
+$bp-xxl : 89em;
+$bp-xxxl : 93em;

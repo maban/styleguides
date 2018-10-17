@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #SECTION HEADER
+\*------------------------------------*/
+
+/**
+ * Page header
+ */
+.c-section-header {
+    text-align: center;
+}
+
+.c-section-header__title {
+    text-transform: lowercase;
+    font-size: $font-size-med-2;
+    font-weight: 200;
+
+    @media all and (min-width: $bp-large) {
+        font-size: $font-size-large;
+    }
+}
+
+.c-section-header__link {
+    font-family: inherit;
+}

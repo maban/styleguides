@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    #FOOTER
+\*------------------------------------*/
+
+/**
+ * Footer
+ */
+ .c-footer {
+     padding: $spacing-unit 0;
+     background-color: $grey-color-dark;
+     color: #fff;
+ }
+
+ .c-footer__inner {
+
+     @media all and (min-width: $bp-large) {
+         display: flex;
+     }
+ }
+
+
+ .c-footer__top {
+      margin-bottom: 2rem;
+
+     @media all and (min-width: $bp-large) {
+         order: 2;
+         margin-bottom: 0;
+         margin-left: auto;
+     }
+ }
+
+ .c-footer__bottom {
+     @media all and (min-width: $bp-large) {
+         order: 1;
+          margin-right: 2rem;
+
+     }
+ }

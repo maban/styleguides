@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+/**
+ * Header inner
+ */
+.c-header__inner {
+    padding: 2rem 1rem;
+
+    @media all and (min-width: $bp-large) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.c-header__title {
+    margin-bottom: 0;
+}
+
+/**
+ * Header title link
+ */
+.c-header__title-link {
+    display: block;
+    color: $color-white;
+    font-size: $font-size-med;
+}

@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    #PAGE HEADER
+\*------------------------------------*/
+
+/**
+ * Page header
+ */
+.c-page-header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.c-page-header__kicker {
+    font-family: $font-secondary;
+    font-weight: 200;
+    font-size: $font-size-med-2;
+
+    @media all and (min-width: $bp-large) {
+        font-size: $font-size-large;
+    }
+}
+
+/**
+ * Page header title
+ */
+.c-page-header__title {
+    font-size: $font-size-large;
+    text-transform: lowercase;
+
+    @media all and (min-width: $bp-large) {
+        font-size: $font-size-xl;
+    }
+}
+
+.c-page-header__description {
+    margin-bottom: 0;
+}

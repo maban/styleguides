@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    #TOGGLE
+\*------------------------------------*/
+
+/**
+ * Data toggle on
+ */
+[data-toggle='on'] {
+    display:block;
+}
+
+/**
+ * Data toggle off
+ */
+[data-toggle='off'] {
+    display:none;
+}
+
+/**
+ * Toggle
+ */
+.c-toggle {
+    margin: 0;
+    text-align: center;
+}
+
+/**
+ * Toggle list
+ */
+.c-toggle__list {
+    margin: 0 0 2em 0;
+}
+
+/**
+ * Toggle item
+ */
+.c-toggle__item {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    margin: 0 0 0.25em 0;
+}
+
+/**
+ * Toggle label
+ */
+.c-toggle__label {
+    font-size: 0.8em;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.1em 0.5em 0.05em;
+    background-color: $color-brand-blue;
+    border-radius: 2px;
+    margin-right: 0.3em;
+    text-transform: uppercase;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/**
+ * Toggle checkbox
+ */
+.c-toggle__checkbox {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    &:checked + .c-toggle__label,
+    &:hover + .c-toggle__label {
+        background-color: $color-brand-blue-light;
+        color: #fff;
+    }
+
+    // Based on https://ghinda.net/article/mimic-native-focus-css/
+    &:focus + .c-toggle__label {
+        outline: 2px auto Highlight;
+
+        @media (-webkit-min-device-pixel-ratio: 0) {
+          outline: 5px auto -webkit-focus-ring-color;
+        }
+    }
+}

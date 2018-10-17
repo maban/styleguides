@@ -1,13 +1,17 @@
+/*------------------------------------*\
+    #EPISODES
+\*------------------------------------*/
+
 .episodes {
   justify-content: center;
- .resource {
+ .c-card-list__item {
     display: flex;
     width: 100%;
-    .resource__description {
+    .c-card__content {
       width: 65%;
       box-sizing: border-box;
     }
-    .resource__image {
+    .c-card__media {
       width: 35%;
     }
     @media (min-width: 500px) {
@@ -15,10 +19,10 @@
       margin-left: 0.75em;
       margin-right: 0.75em;
       display: block;
-      .resource__description {
+      .c-card__content {
         width: 100%;
       }
-      .resource__image {
+      .c-card__media {
         width: 100%;
       }
     }
