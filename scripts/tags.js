@@ -3,37 +3,37 @@ $(document).ready(function() {
   var hash = location.hash;
   if (hash.length) {
     var selected_tags = hash.substr(1).split(',');
-    $('.resource').hide();
-    $('.tags :checkbox').prop('checked', false);
+    $('.c-card-list__item').hide();
+    $('.c-toggle :checkbox').prop('checked', false);
 
     selected_tags.forEach(function(value) {
-      $('.tags :checkbox[value="' + value + '"]').prop('checked', true);
+      $('.c-toggle :checkbox[value="' + value + '"]').prop('checked', true);
       $('.' + value).show();
     });
   }
 
   // Toggle tag state & url history
-  $('.tags :checkbox').click(function() {
+  $('.c-toggle :checkbox').click(function() {
     var selected_tags = [];
-    $('.resource').hide();
+    $('.c-card-list__item').hide();
 
-    if ($('.tags :checkbox:checked').length) {
-      $('.tags .show-all:checkbox').prop('checked', false);
-      $('.tags :checkbox:checked').each(function() {
+    if ($('.c-toggle :checkbox:checked').length) {
+      $('.c-toggle .show-all:checkbox').prop('checked', false);
+      $('.c-toggle :checkbox:checked').each(function() {
         selected_tags.push($(this).val());
         $('.' + $(this).val()).show();
       });
       history.pushState(undefined, '', '#' + selected_tags.join(','));
     } else {
-      $('.tags .show-all:checkbox').trigger('click');
+      $('.c-toggle .show-all:checkbox').trigger('click');
     }
   });
 
   // Show all resources and uncheck tags
-  $('.tags .show-all:checkbox').click(function() {
-    $('.resource').show();
-    $('.tags :checkbox').prop('checked', false);
-    $('.tags .show-all:checkbox').prop('checked', true);
+  $('.c-toggle .show-all:checkbox').click(function() {
+    $('.c-card-list__item').show();
+    $('.c-toggle :checkbox').prop('checked', false);
+    $('.c-toggle .show-all:checkbox').prop('checked', true);
     history.pushState(undefined, '', window.location.pathname);
   });
 });

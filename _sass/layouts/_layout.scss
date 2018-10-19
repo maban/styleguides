@@ -164,5 +164,33 @@
 .l-container {
     margin-right: auto;
     margin-left: auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
+}
+
+.l-grid {
+    display: flex;
+    margin: 0 -1rem;
+
+    @supports (display: grid) {
+        display: grid;
+        grid-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        margin: 0;
+    }
+}
+
+.l-grid__item {
+    .l-grid--3up & {
+        @media all and (min-width: $bp-med) {
+            width: 50%;
+        }
+
+        @media all and (min-width: $bp-med) {
+            width: 33.33%;
+        }
+
+        @supports (display: grid) {
+            width: 100%;
+        }
+    }
 }

@@ -1,0 +1,93 @@
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+.c-tabs__heading {
+	.c-tabs--center & {
+		text-align: center;
+	}
+}
+
+/**
+ * Tabs list
+ */
+.c-tabs__list {
+	display: flex;
+	margin-bottom: 2rem;
+
+	.c-tabs--center & {
+		justify-content: center;
+	}
+}
+
+/**
+ * Tab Item
+ * 1) Don't flex tab items so overflow auto can scroll them instead
+ */
+.c-tabs__item {
+	flex-shrink: 0;
+	margin-right: 1rem;
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+/**
+ * Tabs list
+ * 1) Overlap the tabs bottom border
+ */
+.c-tabs__link {
+	display: block;
+	padding: 0.125rem 0.5rem;
+	background: $color-brand-blue;
+	color: $color-white;
+	border-radius: 2px;
+	transition: all $anim-fade-quick $anim-ease;
+
+	/**
+	 * Active tab link
+	 */
+	&.is-active {
+		background: $color-brand-blue-light;
+	}
+
+	&:hover,
+	&:focus {
+		color: $color-white;
+		background: $color-brand-blue-light;
+	}
+}
+
+/**
+ * Tab Body
+ */
+.c-tabs__body {
+}
+
+/**
+ * Tab Panel
+ * 1) Display by default, and only hide if JS is available
+ */
+.c-tabs__panel {
+
+	/**
+	 * Tabs panel when activated
+	 */
+	&.is-active {
+
+		/**
+		 * Tabs panel when activated and JS is available
+		 */
+		.js & {
+			display: block; /* 1 */
+		}
+	}
+
+	/**
+	 * Tabs panel when JS is available
+	 */
+	.js & {
+		display: none; /* 1 */
+	}
+}

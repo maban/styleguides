@@ -40,6 +40,8 @@
 /*------------------------------------*\
    #COMPONENTS
 \*------------------------------------*/
+@import "components/avatar";
+@import "components/avatar-list";
 @import "components/buttons";
 @import "components/button-group";
 @import "components/card";
@@ -50,6 +52,7 @@
 @import "components/icons";
 @import "components/inline-list";
 @import "components/lazy-load";
+@import "components/link-list";
 @import "components/list";
 @import "components/main";
 @import "components/nav-sections";
@@ -60,7 +63,9 @@
 @import "components/primary-nav";
 @import "components/section";
 @import "components/section-header";
+@import "components/subsection";
 @import "components/syntax-highlighting";
+@import "components/tabs";
 @import "components/tags";
 @import "components/toggle";
 
@@ -72,3 +77,12 @@
    #LAYOUTS
 \*------------------------------------*/
 @import "layouts/layout";
+
+
+
+
+
+/*------------------------------------*\
+   #UTILITIES
+\*------------------------------------*/
+@import "utilities/visibility";
