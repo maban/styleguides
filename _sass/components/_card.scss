@@ -1,3 +1,16 @@
+.c-card {
+    position: relative;
+    background-color: $color-white;
+    border: 1px solid #ededed;
+    border-radius: 2px;
+    font-size: $font-size-tiny-2;
+    word-wrap: break-word;
+
+    .l-grid--fill-space & {
+        flex: 1;
+    }
+}
+
 .c-card__number {
     position: absolute;
     top: -1px;

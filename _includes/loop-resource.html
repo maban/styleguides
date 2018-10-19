@@ -1,4 +1,4 @@
-<li class="c-card-list__item {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
+<li class="c-card-list__item l-grid__item {{ item.status }} {% for tags in item.tags %}{{ tags | downcase }} {% endfor %}" data-tags="{% for tags in item.tags %}{{ tags | downcase }} {% endfor %}">
     <div class="c-card">
         <span class="c-card__media">
             {% if item.image %}

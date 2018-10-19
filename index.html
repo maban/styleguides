@@ -131,7 +131,7 @@ type: home
                     <h2 class="c-section-header__title"><a class="c-section-header__link" href="examples">{{site.example-title}}</a></h2>
                     <p class="c-section-header__description">{{site.example-description}}</p>
                 </header>
-                <ul class="c-card-list resource-type-example">
+                <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-example">
                     {% assign section = site.resourceexample | sort: 'title'  %}
                     {% for item in section %}
                     {% if item.status == 'recommended' %}
@@ -147,7 +147,7 @@ type: home
                     <h2 class="c-section-header__title"><a class="c-section-header__link" href="articles">{{site.article-title}}</a></h2>
                     <p class="c-section-header__description">{{site.article-description}}</p>
                 </header>
-            <ul class="c-card-list resource-type-article">
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-article">
             {% assign section = site.resourcearticle | sort: 'title'  %}
             {% for item in section %}
             {% if item.status == 'recommended' %}
@@ -163,7 +163,7 @@ type: home
                     <h1 class="c-section-header__title"><a class="c-section-header__link" href="books">{{site.book-title}}</a></h2>
                     <p class="c-section-header__description">{{site.book-description}}</p>
                 </header>
-            <ul class="c-card-list resource-type-book">
+            <ul class="c-card-list l-grid l-grid--4up resource-type-book">
             {% assign section = site.resourcebook | sort: 'title'  %}
             {% for item in section %}
             {% if item.status == 'recommended' %}
@@ -179,7 +179,7 @@ type: home
                     <h2 class="c-section-header__title"><a class="c-section-header__link" href="podcasts">{{site.podcast-title}}</a></h2>
                     <p class="c-section-header__description">{{site.podcast-description}}</p>
                 </header>
-            <ul class="c-card-list resource-type-podcast">
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-podcast">
             {% assign section = site.resourcepodcast | sort: 'title'  %}
             {% for item in section %}
             {% if item.status == 'recommended' %}
@@ -195,7 +195,7 @@ type: home
                     <h2 class="c-section-header__title"><a class="c-section-header__link" href="talks">{{site.talk-title}}</a></h2>
                     <p class="c-section-header__description">{{site.talk-description}}</p>
                 </header>
-            <ul class="c-card-list resource-type-talk">
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-talk">
             {% assign section = site.resourcetalk | sort: 'title'  %}
             {% for item in section %}
             {% if item.status == 'recommended' %}
@@ -211,7 +211,7 @@ type: home
                     <h2 class="c-section-header__title"><a class="c-section-header__link" href="tools">{{site.tool-title}}</a></h2>
                     <p class="c-section-header__description">{{site.tool-description}}</p>
                 </header>
-                <ul class="c-card-list resource-type-tool">
+                <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-tool">
                 {% assign section = site.resourcetool | sort: 'title'  %}
                 {% for item in section %}
                 {% if item.status == 'recommended' %}
