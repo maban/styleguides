@@ -39,10 +39,10 @@ type: home
                     <li class="c-subsection-list__item l-grid__item">
                         <div class="c-subsection">
                             <header class="c-subsection-header">
-                                <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
+                                <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="examples">{{site.example-title}}</a></h3>
                             </header>
                             <ul class="c-link-list">
-                                {% assign section = site.resourcearticle | sort: 'title'  %}
+                                {% assign section = site.resourceexample | sort: 'title'  %}
                                 {% for item in section %}
                                 {% if item.status == 'recommended' %}
                                 <li class="c-link-list__item">
@@ -56,10 +56,10 @@ type: home
                     <li class="c-subsection-list__item l-grid__item">
                         <div class="c-subsection">
                             <header class="c-subsection-header">
-                                <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="examples">{{site.example-title}}</a></h3>
+                                <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
                             </header>
                             <ul class="c-link-list">
-                                {% assign section = site.resourceexample | sort: 'title'  %}
+                                {% assign section = site.resourcearticle | sort: 'title'  %}
                                 {% for item in section %}
                                 {% if item.status == 'recommended' %}
                                 <li class="c-link-list__item">

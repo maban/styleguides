@@ -185,8 +185,26 @@
             width: 50%;
         }
 
-        @media all and (min-width: $bp-med) {
+        @media all and (min-width: $bp-large) {
             width: 33.33%;
+        }
+
+        @supports (display: grid) {
+            width: 100%;
+        }
+    }
+
+    .l-grid--4up & {
+        @media all and (min-width: $bp-med) {
+            width: 50%;
+        }
+
+        @media all and (min-width: $bp-large) {
+            width: 33.33%;
+        }
+
+        @media all and (min-width: $bp-xl) {
+            width: 25%;
         }
 
         @supports (display: grid) {
