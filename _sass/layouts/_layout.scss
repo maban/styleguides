@@ -167,6 +167,11 @@
     padding: 0 2rem;
 }
 
+
+.l-container--narrow {
+    max-width: $l-max-width-narrow;
+}
+
 .l-grid {
     display: flex;
     margin: 0 -1rem;

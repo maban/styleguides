@@ -7,18 +7,19 @@
  */
 
 .c-avatar {
-  padding: 0;
-  list-style: none;
-  width: 80px;
-  border: none;
-  background-color: transparent;
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+    display: block;
+    padding: 0;
+    list-style: none;
+    width: 80px;
+    border: none;
+    background-color: transparent;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .c-avatar__image {
-  width: 100%;
-  background-color: transparent;
-  border: 1px solid #ededed;
-  min-height: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #ededed;
+    min-height: inherit;
 }

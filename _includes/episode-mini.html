@@ -1,7 +1,7 @@
-<li class="{{ podcast.status }} episode">
-  <a href="/podcast{{ podcast.link }}" class="episode__url">
-    <span class="episode__image">
-      {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.title }}" title="{{ podcast.title }}"/>{% endif %}
-    </span>
+<li class="c-avatar-list__item {{ podcast.status }}">
+  <a href="/podcast{{ podcast.link }}" class="c-avatar">
+    <div class="c-avatar__media">
+      {% if podcast.image %}<img src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.title }}" class="c-avatar__image" title="{{ podcast.title }}"/>{% endif %}
+    </div>
   </a>
 </li>

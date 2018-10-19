@@ -19,7 +19,7 @@ description: Episodes from various podcasts where style guides are discussed.
 <header class="c-section-header">
   <h2 class="c-section-header__title">Season 2</h2>
 </header>
-  <ol class="resources episodes episodes--mini">
+  <ol class="c-avatar-list">
     {% for podcast in podcast reversed %}
       {% if podcast.season == 2 %}
         {% include episode-mini.html %}
@@ -30,7 +30,7 @@ description: Episodes from various podcasts where style guides are discussed.
   <header class="c-section-header">
     <h2 class="c-section-header__title">Season 1</h2>
   </header>
-  <ol class="resources episodes episodes--mini">
+  <ol class="c-avatar-list">
     {% for podcast in podcast reversed %}
       {% if podcast.season == 1 %}
         {% include episode-mini.html %}

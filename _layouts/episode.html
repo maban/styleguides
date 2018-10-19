@@ -8,42 +8,44 @@ layout: episode
 <body class="template-{{ page.section }} template-episode">
   {% include header.html %}
 
-  <div class="page-content">
-    <div class="wrapper podcast-episode">
+    <main class="page-content">
+        <div class="l-container l-container--narrow">
+            <header class="c-page-header">
+                <h1 class="c-page-header__title">Style Guides <span class="fancy">with</span> {{page.title}}</h1>
+            </header>
 
-      <h1>Style Guides <span class="fancy">with</span> {{page.title}}</h1>
+            {{page.audio}}
 
-      {{page.audio}}
-      {% if page.published %}
-      <small>Published {{page.published}}</small>
-      {% endif %}
+            {% if page.published %}
+            <small>Published {{page.published}}</small>
+            {% endif %}
 
-      {% include podcast-actions.html %}
+            {% include podcast-actions.html %}
 
-      <section class="bio">
-        <h2>About {{page.title}}</h2>
-        <p>{{ page.about }}</p>
-      </section>
+            <section class="bio">
+            <h2>About {{page.title}}</h2>
+            <p>{{ page.about }}</p>
+            </section>
 
-      <section class="episode-links">
-          <h2>Links</h2>
-          <ul class="links">
-              {% for item in page.links %}
-              <li><a href="{{ item.url }}">{{ item.text }}</a></li>
-              {% endfor %}
-          </ul>
-      </section>
+            <section class="episode-links">
+            <h2>Links</h2>
+            <ul class="links">
+            {% for item in page.links %}
+            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+            {% endfor %}
+            </ul>
+            </section>
 
-      <section class="transcript">
-        <h2 class="heading">The Transcript</h2>
-        <p class="credit">Transcribed by <a href="http://amddat.com/">Alison</a></p>
-        {{ content }}
-      </section>
+            <section class="transcript">
+            <h2 class="heading">The Transcript</h2>
+            <p class="credit">Transcribed by <a href="http://amddat.com/">Alison</a></p>
+            {{ content }}
+            </section>
 
-    </div>
-  </div>
+        </div>
+    </main>
 
-  {% include footer.html %}
+{% include footer.html %}
 
 </body>
 </html>
