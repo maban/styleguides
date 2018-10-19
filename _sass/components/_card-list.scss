@@ -1,3 +1,17 @@
+.c-card-list__item {
+    position: relative;
+}
+
+.c-card-list__item.recommended:after {
+    content: "★";
+    position: absolute;
+    top: -1px;
+    right: 0.3em;
+    padding: 0.3em 0.5em;
+    display: block;
+    background-color: $color-white;
+}
+
 .resource-type-podcast {
     .c-card__media {
         background-image: url('/images/icons/podcast/podcast-faded.svg');
