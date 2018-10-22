@@ -184,6 +184,15 @@
     }
 }
 
+.l-grid--2up {
+    @supports (display: grid) {
+        @media all and (min-width: $bp-med) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+
 .l-grid--3up {
     @supports (display: grid) {
         @media all and (min-width: $bp-med) {
@@ -217,6 +226,16 @@
     .l-grid--fill-space & {
         display: flex;
         flex-direction: column;
+    }
+
+    .l-grid--3up & {
+        @media all and (min-width: $bp-med) {
+            width: 50%;
+        }
+
+        @supports (display: grid) {
+            width: 100%;
+        }
     }
 
     .l-grid--3up & {

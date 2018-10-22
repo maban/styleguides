@@ -22,24 +22,32 @@ layout: episode
 
             {% include podcast-actions.html %}
 
-            <section class="bio">
-            <h2>About {{page.title}}</h2>
-            <p>{{ page.about }}</p>
+            <section class="c-section">
+                <header class="c-section-header">
+                    <h2 class="c-section-header__title">About {{page.title}}</h2>
+                </header>
+                <div class="c-text-passsage">
+                    <p>{{ page.about }}</p>
+                </div>
             </section>
 
             <section class="episode-links">
-            <h2>Links</h2>
-            <ul class="links">
-            {% for item in page.links %}
-            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
-            {% endfor %}
-            </ul>
+                <header class="c-section-header">
+                    <h2 class="c-section-header__title">Links</h2>
+                </header>
+                <ul class="c-link-list c-link-list--2up">
+                    {% for item in page.links %}
+                    <li class="c-link-list__item"><a href="{{ item.url }}" class="c-link-list__link">{{ item.text }}</a></li>
+                    {% endfor %}
+                </ul>
             </section>
 
             <section class="transcript">
-            <h2 class="heading">The Transcript</h2>
-            <p class="credit">Transcribed by <a href="http://amddat.com/">Alison</a></p>
-            {{ content }}
+                <header class="c-section-header">
+                    <h2 class="c-section-header__title">The Transcript</h2>
+                </header>
+                <p class="credit">Transcribed by <a href="http://amddat.com/">Alison</a></p>
+                {{ content }}
             </section>
 
         </div>

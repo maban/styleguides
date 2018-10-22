@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    #TEXT PASSAGE
+\*------------------------------------*/
+
+/**
+ * 1) A passage of text, including various components (i.e. article, blog post)
+ */
+.c-text-passage {
+	font-family: $font-primary;
+
+	/**
+	 * Paragraph within text passage
+	 */
+	p {
+		margin-bottom: 2rem;
+	}
+
+	/**
+	 * Link within the text passage
+	 */
+	a:not(.c-btn) {
+		color: $color-brand-blue;
+	}
+
+	/**
+	 * First-level heading within text passage
+	 */
+	h1 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * Second-level heading within text passage
+	 */
+	h2 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * Third-level heading within text passage
+	 */
+	h3 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * Fourth-level heading within text passage
+	 */
+	h4 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * Fifth-level heading within text passage
+	 */
+	h5 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * Sixth-level heading within text passage
+	 */
+	h6 {
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+
+	/**
+	 * List items within text passage
+	 */
+	li {
+		margin-bottom: 0.5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	/**
+	 * Unordered list within text passage
+	 * 1) Align text bullet with li text
+	 */
+	ul {
+		list-style: disc;
+		margin-bottom: 2rem;
+
+		/**
+		 * Unordered list item within text passage
+		 */
+		li {
+			position: relative;
+			padding-left: 1rem;
+		}
+	}
+
+	/**
+	 * Ordered list within text passage
+	 */
+	ol {
+		list-style: decimal;
+		margin-left: 1rem;
+		margin-bottom: 2rem;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 2rem;
+	}
+}

@@ -2,3 +2,10 @@
     margin: 0;
     list-style: none;
 }
+
+.c-link-list--2up {
+    @media all and (min-width: $bp-med) {
+        column-count: 2;
+        column-gap: 3rem;
+    }
+}
