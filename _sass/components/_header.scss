@@ -15,7 +15,10 @@
 }
 
 .c-header__title {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    @media all and (min-width: $bp-large) {
+        margin-bottom: 0;
+    }
 }
 
 /**

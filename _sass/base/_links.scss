@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+
+/**
+ * Links
+ */
+a {
+    text-decoration: none;
+    color: $color-brand-blue;
+
+    &:hover {
+        color: $text-color;
+    }
+}

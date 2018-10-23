@@ -21,9 +21,6 @@
         background-image: url('/images/icons/podcast/podcast-faded.svg');
         background-size: 40px;
     }
-    .c-card-list__item.recommended:after {
-        background-color: $color-1;
-    }
 }
 
 .resource-type-book {
@@ -60,9 +57,6 @@
 .resource-type-tool {
     .c-card__media {
         background-image: url('/images/icons/wrench/wrench-faded.svg');
-    }
-    .c-card-list__item.recommended:after {
-        background-color: $color-6;
     }
 }
 

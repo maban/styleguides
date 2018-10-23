@@ -30,8 +30,15 @@
 /*------------------------------------*\
    #BASE
 \*------------------------------------*/
-@import "base/base";
+@import "base/body";
+@import "base/buttons";
+@import "base/headings";
+@import "base/links";
+@import "base/lists";
 @import "base/main";
+@import "base/media";
+@import "base/reset";
+@import "base/text";
 
 
 
@@ -53,7 +60,6 @@
 @import "components/inline-list";
 @import "components/lazy-load";
 @import "components/link-list";
-@import "components/list";
 @import "components/main";
 @import "components/nav-sections";
 @import "components/page-header";
@@ -64,7 +70,6 @@
 @import "components/section";
 @import "components/section-header";
 @import "components/subsection";
-@import "components/syntax-highlighting";
 @import "components/tabs";
 @import "components/tags";
 @import "components/toggle";

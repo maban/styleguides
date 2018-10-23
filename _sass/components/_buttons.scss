@@ -30,6 +30,12 @@
     width: fit-content;
 }
 
+.c-btn--fixed {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
 .c-btn.disabled {
     opacity: 0.5;
     background-color: #ccc!important;

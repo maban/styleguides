@@ -11,10 +11,10 @@ type: home
         </div>
         <h1 class="c-page-header__title">Website Style Guide Resources</h1>
     </header>
-    <ul class="list--inline">
-        <li class="list__item"><a href="https://github.com/maban/styleguides">GitHub repo</a></li>
-        <li class="list__item"><a href="https://twitter.com/styleguidesio">Twitter updates</a></li>
-        <li class="list__item"><a href="/contributors">Contributors</a></li>
+    <ul class="c-inline-list">
+        <li class="c-inline-list__item"><a href="https://github.com/maban/styleguides" class="c-inline-list__link">GitHub repo</a></li>
+        <li class="c-inline-list__item"><a href="https://twitter.com/styleguidesio" class="c-inline-list__link">Twitter updates</a></li>
+        <li class="c-inline-list__item"><a href="/contributors" class="c-inline-list__link">Contributors</a></li>
     </ul>
 </section>
 
@@ -94,6 +94,23 @@ type: home
                             </header>
                             <ul class="c-link-list">
                                 {% assign section = site.resourcepodcast | sort: 'title'  %}
+                                {% for item in section %}
+                                {% if item.status == 'recommended' %}
+                                <li class="c-link-list__item">
+                                    <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                </li>
+                                {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="c-subsection-list__item l-grid__item">
+                        <div class="c-subsection">
+                            <header class="c-subsection-header">
+                                <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="talks">{{site.talk-title}}</a></h3>
+                            </header>
+                            <ul class="c-link-list">
+                                {% assign section = site.resourcetalk | sort: 'title'  %}
                                 {% for item in section %}
                                 {% if item.status == 'recommended' %}
                                 <li class="c-link-list__item">

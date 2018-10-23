@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+
+
+/**
+ * Base image styles
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+/**
+ * Base audio styles
+ */
+audio {
+    width: 100%;
+}
+
+/**
+* Figure image base styles
+*/
+figure > img {
+    display: block;
+}
+
+/**
+* Figure caption base styles
+*/
+figcaption {
+font-size: $font-size-small;
+}
