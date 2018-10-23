@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    #STRIPE
+\*------------------------------------*/
+
+/**
+ * Stripe
+ */
+.c-stripe {
+    padding: 1rem 0;
+
+    @media all and (min-width: $bp-med) {
+        display: flex;
+    }
+}
+
+.c-stripe-list__item {
+    border-bottom: 1px solid $color-white;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

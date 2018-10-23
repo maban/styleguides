@@ -13,7 +13,8 @@
     right: 0.3em;
     padding: 0.3em 0.5em;
     display: block;
-    background-color: $color-white;
+    background-color: $color-brand-blue;
+    color: $color-white;
 }
 
 .resource-type-podcast {
@@ -27,19 +28,11 @@
     .c-card__media {
         background-image: url('/images/icons/book/book-faded.svg');
     }
-    .c-card-list__item.recommended:after {
-        background-color: $color-brand-blue;
-        color: $color-white;
-    }
 }
 
 .resource-type-article {
     .c-card__media {
         background-image: url('/images/icons/article/article-faded.svg');
-    }
-    .c-card-list__item.recommended:after {
-        background-color: $color-brand-blue;
-        color: $color-white;
     }
 }
 
@@ -47,10 +40,6 @@
     .c-card__media {
         background-image: url('/images/icons/website/website-faded.svg');
         background-size: 100px;
-    }
-    .c-card-list__item.recommended:after {
-        background-color: $color-brand-blue;
-        color: $color-white;
     }
 }
 
@@ -64,9 +53,5 @@
     .c-card__media {
         background-image: url('/images/icons/presentation/presentation-faded.svg');
         background-size: 80px;
-    }
-    .c-card-list__item.recommended:after {
-        background-color: $color-brand-blue;
-        color: $color-white;
     }
 }

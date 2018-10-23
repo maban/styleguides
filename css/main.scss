@@ -38,6 +38,7 @@
 @import "base/main";
 @import "base/media";
 @import "base/reset";
+@import "base/sections";
 @import "base/text";
 
 
@@ -60,7 +61,6 @@
 @import "components/inline-list";
 @import "components/lazy-load";
 @import "components/link-list";
-@import "components/main";
 @import "components/nav-sections";
 @import "components/page-header";
 @import "components/pattern-lib";
@@ -69,6 +69,8 @@
 @import "components/primary-nav";
 @import "components/section";
 @import "components/section-header";
+@import "components/stripe";
+@import "components/stripe-list";
 @import "components/subsection";
 @import "components/tabs";
 @import "components/tags";

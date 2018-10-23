@@ -6,56 +6,58 @@ type: podcast
 description: Episodes from various podcasts where style guides are discussed.
 ---
 
-<header class="c-page-header">
-    <h1 class="c-page-header__title">Style Guide Podcast</h1>
-    <p class="c-page-header__description">A small batch series of interviews on Style Guides, hosted by <a href="http://twitter.com/anna_debenham">Anna Debenham</a> and <a href="http://twitter.com/brad_frost">Brad Frost</a>.</p>
-</header>
+<div class="l-container">
+    <header class="c-page-header">
+        <h1 class="c-page-header__title">Style Guide Podcast</h1>
+        <p class="c-page-header__description">A small batch series of interviews on Style Guides, hosted by <a href="http://twitter.com/anna_debenham">Anna Debenham</a> and <a href="http://twitter.com/brad_frost">Brad Frost</a>.</p>
+    </header>
 
-<section class="c-section">
-  {% include podcast-actions.html %}
+    <section class="c-section">
+      {% include podcast-actions.html %}
 
-  {% assign podcast = site.podcast | sort: 'number'  %}
+      {% assign podcast = site.podcast | sort: 'number'  %}
 
-<header class="c-section-header">
-  <h2 class="c-section-header__title">Season 2</h2>
-</header>
-  <ol class="c-avatar-list">
-    {% for podcast in podcast reversed %}
-      {% if podcast.season == 2 %}
-        {% include episode-mini.html %}
-      {% endif %}
-    {% endfor %}
-  </ol>
+    <header class="c-section-header">
+      <h2 class="c-section-header__title">Season 2</h2>
+    </header>
+      <ol class="c-avatar-list">
+        {% for podcast in podcast reversed %}
+          {% if podcast.season == 2 %}
+            {% include episode-mini.html %}
+          {% endif %}
+        {% endfor %}
+      </ol>
 
-  <header class="c-section-header">
-    <h2 class="c-section-header__title">Season 1</h2>
-  </header>
-  <ol class="c-avatar-list">
-    {% for podcast in podcast reversed %}
-      {% if podcast.season == 1 %}
-        {% include episode-mini.html %}
-      {% endif %}
-    {% endfor %}
-  </ol>
+      <header class="c-section-header">
+        <h2 class="c-section-header__title">Season 1</h2>
+      </header>
+      <ol class="c-avatar-list">
+        {% for podcast in podcast reversed %}
+          {% if podcast.season == 1 %}
+            {% include episode-mini.html %}
+          {% endif %}
+        {% endfor %}
+      </ol>
 
-  <a href="/podcast" class="c-btn c-btn--center">See more…</a>
+      <a href="/podcast" class="c-btn c-btn--center">See more…</a>
 
-</section>
+    </section>
 
-<section class="c-section">
+    <section class="c-section">
 
-<header class="c-section-header">
-  <h1 class="c-section-header__title">{{site.podcast-title}} ({{site.resourcepodcast | size}})</h1>
-  <div class="c-section-header__description">
-      <p>{{site.podcast-description}}</p>
-      <p>Through the magic of Huffduffer, you can subscribe to our curated list of style guide related podcasts in your favourite podcast app.</p>
-  </div>
-</header>
+    <header class="c-section-header">
+      <h1 class="c-section-header__title">{{site.podcast-title}} ({{site.resourcepodcast | size}})</h1>
+      <div class="c-section-header__description">
+          <p>{{site.podcast-description}}</p>
+          <p>Through the magic of Huffduffer, you can subscribe to our curated list of style guide related podcasts in your favourite podcast app.</p>
+      </div>
+    </header>
 
-  {% include external-podcast-actions.html %}
+      {% include external-podcast-actions.html %}
 
-  {% assign section = site.resourcepodcast | sort: 'title'  %}
-  {% include tags.html %}
-  {% include loop-resources.html %}
-  {% include add.html %}
-</section>
+      {% assign section = site.resourcepodcast | sort: 'title'  %}
+      {% include tags.html %}
+      {% include loop-resources.html %}
+      {% include add.html %}
+    </section>
+</div>

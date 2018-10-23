@@ -40,22 +40,20 @@
 .c-tabs__link {
 	display: block;
 	padding: 0.125rem 0.5rem;
-	background: $color-brand-blue;
-	color: $color-white;
-	border-radius: 2px;
+	border-bottom: 3px solid transparent;
 	transition: all $anim-fade-quick $anim-ease;
 
 	/**
 	 * Active tab link
 	 */
 	&.is-active {
-		background: $color-brand-blue-light;
+		color: $color-white;
+		border-bottom-color: $color-brand-blue;
 	}
 
 	&:hover,
 	&:focus {
 		color: $color-white;
-		background: $color-brand-blue-light;
 	}
 }
 

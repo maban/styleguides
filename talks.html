@@ -5,13 +5,16 @@ section: talks
 type: talk
 description: Conference presentations about style guides.
 ---
-<header class="c-page-header">
-    <h1 class="c-page-header__title">{{site.talk-title}} ({{site.resourcetalk | size}})</h1>
-    <p class="c-page-header__description">{{site.talk-description}}</p>
-</header>
-<section>
-  {% assign section = site.resourcetalk | sort: 'title'  %}
-  {% include tags.html %}
-  {% include loop-resources.html %}
-  {% include add.html %}
-</section>
+
+<div class="l-container">
+    <header class="c-page-header">
+        <h1 class="c-page-header__title">{{site.talk-title}} ({{site.resourcetalk | size}})</h1>
+        <p class="c-page-header__description">{{site.talk-description}}</p>
+    </header>
+    <section>
+      {% assign section = site.resourcetalk | sort: 'title'  %}
+      {% include tags.html %}
+      {% include loop-resources.html %}
+      {% include add.html %}
+    </section>
+</div>

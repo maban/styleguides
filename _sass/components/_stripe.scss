@@ -1,0 +1,46 @@
+/*------------------------------------*\
+    #STRIPE
+\*------------------------------------*/
+
+/**
+ * Stripe
+ */
+.c-stripe {
+    padding: 1rem 0;
+
+    @media all and (min-width: $bp-med) {
+        display: flex;
+    }
+}
+
+.c-stripe__header {
+    @media all and (min-width: $bp-med) {
+        margin-right: 2rem;
+    }
+}
+
+.c-stripe__body {
+    @media all and (min-width: $bp-med) {
+        margin-left: auto;
+    }
+}
+
+.c-stripe__body + .c-stripe__footer {
+    @media all and (min-width: $bp-med) {
+        margin-left: 2rem;
+    }
+}
+
+.c-stripe__header + .c-stripe__footer {
+    @media all and (min-width: $bp-med) {
+        margin-left: auto;
+    }
+}
+
+.c-stripe__link {
+    transition: color $anim-fade-quick $anim-ease;
+}
+
+.c-stripe__meta {
+    font-size: $font-size-small;
+}
