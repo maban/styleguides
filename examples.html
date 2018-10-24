@@ -35,7 +35,8 @@ description: Real life pattern libraries, code standards documents and content s
                 <div class="l-container l-container--narrow">
                     <ul class="c-stripe-list">
                         {% for item in section %}
-                        <li class="c-stripe-list__item">
+                        {% if item.status == 'recommended' %}
+                        <li class="c-stripe-list__item {{ item.status }}">
                             <div class="c-stripe">
                                 <header class="c-stripe__header">
                                     <h3 class="c-stripe_title"><a class="c-stripe__link" href="{{ item.url }}">{{ item.title }}</a></h3>
@@ -59,6 +60,35 @@ description: Real life pattern libraries, code standards documents and content s
                                 {% endif %}
                             </div>
                         </li>
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.status == null %}
+                        <li class="c-stripe-list__item {{ item.status }}">
+                            <div class="c-stripe">
+                                <header class="c-stripe__header">
+                                    <h3 class="c-stripe_title"><a class="c-stripe__link" href="{{ item.url }}">{{ item.title }}</a></h3>
+                                    {% if item.author %}<span class="c-stripe__meta">By {{ item.author }} </span>{% endif %}
+                                </header>
+                                <div class="c-stripe__body">
+                                    <div class="c-tags">
+                                        <ul class="c-tags__list">
+                                            {% for tags in item.tags %}<li class="c-tags__item">{{ tags }}</li>{% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                                {% if item.languages %}
+                                <footer class="c-stripe__footer">
+                                    <div class="c-inline-list">
+                                        <ul class="c-inline__list">
+                                            {% for language in item.languages %}<li class="c-inline-list__item">{{ language }}</li>{% endfor %}
+                                        </ul>
+                                    </div>
+                                </footer>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% endif %}
                         {% endfor %}
                     </ul>
                 </div>

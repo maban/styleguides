@@ -38,7 +38,19 @@
 }
 
 .c-stripe__link {
+    .c-stripe-list__item.recommended & {
+        &:before {
+            content: "★";
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            color: $color-white;
+        }
+    }
     transition: color $anim-fade-quick $anim-ease;
+}
+
+.c-stripe__title {
 }
 
 .c-stripe__meta {

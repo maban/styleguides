@@ -5,16 +5,187 @@ section: articles
 type: article
 ---
 
-<section>
+<div class="l-container">
 
     <header class="c-page-header">
         <h1 class="c-page-header__title">{{site.article-title}} ({{site.resourcearticle | size}})</h1>
         <p class="c-page-header__description">{{site.article-description}}</p>
     </header>
 
-    {% assign section = site.resourcearticle | sort: 'title'  %}
-    {% include tags.html %}
-    {% include loop-resources.html %}
-    {% include add.html %}
-
-</section>
+    <section class="c-section">
+        <header class="c-section-header">
+            <h2 class="c-section-header__title">Strategy</h2>
+        </header>
+        <ul class="c-subsection-list l-grid l-grid--3up">
+            {% assign section = site.resourcearticle | sort: 'title'  %}
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Code</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'code' or item.tags contains 'Code' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Frontend</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Living</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'living' or item.tags contains 'Living' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Sass</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">UNTAGGED</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="c-section">
+        <header class="c-section-header">
+            <h2 class="c-section-header__title">Technology</h2>
+        </header>
+        <ul class="c-subsection-list l-grid l-grid--3up">
+            {% assign section = site.resourcearticle | sort: 'title'  %}
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Code</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'code' or item.tags contains 'Code' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Frontend</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Living</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'living' or item.tags contains 'Living' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">Sass</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+            <li class="c-subsection-list__item l-grid__item">
+                <div class="c-subsection">
+                    <header class="c-subsection-header">
+                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">UNTAGGED</a></h3>
+                    </header>
+                    <ul class="c-link-list">
+                        {% for item in section %}
+                        {% if item.tags %}
+                        <li class="c-link-list__item">
+                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </section>
+</div>
