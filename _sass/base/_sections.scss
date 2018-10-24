@@ -4,14 +4,4 @@
 
 section + section {
   margin-top: 2em;
-
-  &:before {
-    content: "";
-    display: block;
-    width: 200px;
-    text-align: center;
-    margin: 0 auto;
-    padding-bottom: 2em;
-  border-top: 2px solid #ccc;
-  }
 }

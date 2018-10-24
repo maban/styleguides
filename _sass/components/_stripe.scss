@@ -38,6 +38,8 @@
 }
 
 .c-stripe__link {
+    transition: color $anim-fade-quick $anim-ease;
+
     .c-stripe-list__item.recommended & {
         &:before {
             content: "★";
@@ -47,7 +49,6 @@
             color: $color-white;
         }
     }
-    transition: color $anim-fade-quick $anim-ease;
 }
 
 .c-stripe__title {

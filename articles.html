@@ -26,9 +26,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'code' or item.tags contains 'Code' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'code' or item.tags contains 'Code'  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -42,9 +53,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -58,9 +80,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'living' or item.tags contains 'Living' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'living' or item.tags contains 'Living' %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -74,9 +107,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -89,10 +133,21 @@ type: article
                     </header>
                     <ul class="c-link-list">
                         {% for item in section %}
-                        {% if item.tags %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                        {% if item.tags and item.status == 'recommended' %}
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags and item.status == null  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -100,6 +155,7 @@ type: article
             </li>
         </ul>
     </section>
+
     <section class="c-section">
         <header class="c-section-header">
             <h2 class="c-section-header__title">Technology</h2>
@@ -114,9 +170,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'code' or item.tags contains 'Code' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'code' or item.tags contains 'Code'  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -130,9 +197,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -146,9 +224,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'living' or item.tags contains 'Living' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'living' or item.tags contains 'Living' %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -162,9 +251,20 @@ type: article
                     <ul class="c-link-list">
                         {% for item in section %}
                         {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -177,10 +277,21 @@ type: article
                     </header>
                     <ul class="c-link-list">
                         {% for item in section %}
-                        {% if item.tags %}
-                        <li class="c-link-list__item">
-                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
-                        </li>
+                        {% if item.tags and item.status == 'recommended' %}
+                            {% if item.status == 'recommended' %}
+                            <li class="c-link-list__item {{ item.status }}">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
+                        {% endif %}
+                        {% endfor %}
+                        {% for item in section %}
+                        {% if item.tags and item.status == null  %}
+                            {% if item.status == null %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                            </li>
+                            {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -188,4 +299,5 @@ type: article
             </li>
         </ul>
     </section>
+
 </div>

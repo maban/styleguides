@@ -9,3 +9,24 @@
         column-gap: 3rem;
     }
 }
+
+.c-link-list__item {
+    &.recommended {
+        position: relative;
+    }
+}
+
+.c-link-list__link {
+    .c-link-list__item.recommended & {
+        &:before {
+            content: "★";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -1.5rem;
+            display: block;
+            color: $color-white;
+            font-size: $font-size-tiny;
+        }
+    }
+}
