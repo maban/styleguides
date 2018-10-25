@@ -10,7 +10,7 @@
             <a href="{{ item.link }}" class="c-card__link">
               <h2 class="c-card__title">{{ item.title }}</h2>
             </a>
-            <p class="c-card__credit">
+            <p class="c-card__meta">
             {% if item.author %}<span class="c-card__author">By <strong>{{ item.author }}</strong> </span>{% endif %}
             {% if item.conference %}<span class="c-card__publisher">at <strong>{{ item.conference }}</strong></span>{% endif %}
             {% if item.dategiven %}<span class="c-card__date">on <strong>{{ item.dategiven }}</strong></span>{% endif %}

@@ -2,7 +2,18 @@
     #TABS
 \*------------------------------------*/
 
+/**
+ * 1) A set of links that toggles associated content when selected
+ */
+
+/**
+ * Tabs heading
+ */
 .c-tabs__heading {
+
+	/**
+	 * Tabs heading within centered tabs
+	 */
 	.c-tabs--center & {
 		text-align: center;
 	}
@@ -10,32 +21,39 @@
 
 /**
  * Tabs list
+ * 1) Set to display flex to place tabs list items side by side
  */
 .c-tabs__list {
-	display: flex;
+	display: flex; /* 1 */
 	margin-bottom: 2rem;
 
+	/**
+	 * Tabs list within centered tabs
+	 * 1) Center the list of tabs
+	 */
 	.c-tabs--center & {
-		justify-content: center;
+		justify-content: center; /* 1 */
 	}
 }
 
 /**
  * Tab Item
- * 1) Don't flex tab items so overflow auto can scroll them instead
  */
 .c-tabs__item {
 	flex-shrink: 0;
 	margin-right: 1rem;
 
+	/**
+	 * Last tabs item
+	 * 1) Remove right margin from last tabs item in the list
+	 */
 	&:last-child {
 		margin-right: 0;
 	}
 }
 
 /**
- * Tabs list
- * 1) Overlap the tabs bottom border
+ * Tabs link
  */
 .c-tabs__link {
 	display: block;
@@ -55,12 +73,6 @@
 	&:focus {
 		color: $color-white;
 	}
-}
-
-/**
- * Tab Body
- */
-.c-tabs__body {
 }
 
 /**

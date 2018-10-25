@@ -1,7 +1,18 @@
+/*------------------------------------*\
+    #INLINE LIST
+\*------------------------------------*/
+
+/**
+ * Inline list
+ * 1) Horizontal list, usually containing links
+ */
 .c-inline-list {
   text-align: center;
 }
 
+/**
+ * Inline list item
+ */
 .c-inline-list__item {
   display: inline-block;
   padding: 0 1em;

@@ -3,13 +3,16 @@
 \*------------------------------------*/
 
 /**
- * Page header
+ * 1) Container of title and descriptions that headlines the page
  */
 .c-page-header{
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/**
+ * Page header kicker
+ */
 .c-page-header__kicker {
     font-family: $font-secondary;
     font-weight: 200;
@@ -32,6 +35,9 @@
     }
 }
 
+/**
+ * Page header description
+ */
 .c-page-header__description {
     margin-bottom: 0;
 }

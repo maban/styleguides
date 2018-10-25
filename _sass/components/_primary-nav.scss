@@ -3,20 +3,27 @@
 \*------------------------------------*/
 
 /**
- * Primary navigation
+ * 1) List of links that help navigate throughout the site
  */
 .c-primary-nav {
     margin-left: auto;
 }
 
+/**
+ * Primary navigation list
+ * 1) Set to display flex tot place primary nav items side by side
+ */
 .c-primary-nav__list {
-    display: flex;
+    display: flex; /* 1 */
     flex-wrap: wrap;
     list-style: none;
     margin-bottom: 0;
     margin-left: 0;
 }
 
+/**
+ * Primary navigation link
+ */
 .c-primary-nav__link {
     padding: 1rem 1rem 1rem 0;
     font-size: $font-size-small;

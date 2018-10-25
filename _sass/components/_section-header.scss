@@ -3,13 +3,16 @@
 \*------------------------------------*/
 
 /**
- * Page header
+ * Section header
  */
 .c-section-header {
     text-align: center;
     margin-bottom: 1rem;
 }
 
+/**
+ * Section header title
+ */
 .c-section-header__title {
     text-transform: lowercase;
     font-size: $font-size-med-2;
@@ -20,6 +23,9 @@
     }
 }
 
+/**
+ * Section header link
+ */
 .c-section-header__link {
     font-family: inherit;
 }

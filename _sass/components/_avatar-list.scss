@@ -4,11 +4,12 @@
 
 /**
  * Avatar List
+ * 1) Set to display: flex to list avatars side by side and then
+ * flex-wrap: wrap to wrap these items when space runs out
  */
-
 .c-avatar-list {
-  display: flex;
+  display: flex; /* 1 */
+  flex-wrap: wrap; /* 1 */
   justify-content: center;
   margin: 0 0 1.5em 0;
-  flex-wrap: wrap;
 }

@@ -6,9 +6,9 @@
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
-    padding-left: $spacing-unit / 2;
+    color: $color-gray-27;
+    border-left: 4px solid $color-gray-13;
+    padding-left: 1rem;
     font-size: 18px;
     letter-spacing: -1px;
     font-style: italic;
@@ -19,24 +19,33 @@ blockquote {
 }
 
 /**
- * Code formatting
+ * Preformatted text and code base styles
  */
 pre,
 code {
     font-size: 15px;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $color-gray-13;
     border-radius: 3px;
     background-color: #eef;
 }
 
+/**
+ * Code base styles
+ */
 code {
     padding: 1px 5px;
 }
 
+/**
+ * Preformatted text base styles
+ */
 pre {
     padding: 8px 12px;
     overflow-x: scroll;
 
+    /**
+     * Code within preformatted text base styles
+     */
     > code {
         border: 0;
         padding-right: 0;
@@ -44,6 +53,9 @@ pre {
     }
 }
 
+/**
+ * Preformatted text and code base styles
+ */
 abbr {
     border-bottom: 1px dotted #888;
 }

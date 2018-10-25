@@ -1,3 +1,12 @@
+/*------------------------------------*\
+    #MAIN
+\*------------------------------------*/
+
+/**
+ * Main content container
+ * 1) Flex: 1 0 auto set to take up the remaining space so the footer sticks
+ * to the bottom even when there is little content on the page.
+ */
 [role="main"] {
     flex: 1 0 auto;
 }

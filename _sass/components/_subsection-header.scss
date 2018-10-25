@@ -1,23 +1,18 @@
 /*------------------------------------*\
-    #SUBSECTION
+    #SUBSECTION HEADER
 \*------------------------------------*/
 
 /**
- * Subsection List
+ * Subsection header
  */
-.c-subsection-list {
-    list-style: none;
-}
-
 .c-subsection-header {
     margin-bottom: 2rem;
     border-bottom: 1px solid $color-white;
 }
 
+/**
+ * Subsection header title
+ */
 .c-subsection-header__title {
     margin-bottom: 0;
-}
-
-.c-subsection-header__link {
-    
 }
