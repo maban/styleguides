@@ -1,14 +1,19 @@
 <li class="c-card-list__item {{ podcast.status }}">
+
     <div class="c-card">
+
         <div class="c-card__media">
             {% if podcast.image %}<img class="c-card__image lazy-load" data-src="/images/avatars/{{ podcast.image }}" alt="{{ podcast.image }}"/>
             <noscript><img src="lazy.jpg" /></noscript>
             {% endif %}
-        </div>
+        </div><!-- end c-card__media -->
+
         <div class="c-card__content">
             <span class="c-card__number">{{ podcast.number }}</span>
             <h3 class="c-card__title"><a href="/podcast{{ podcast.link }}" class="c-card__link">{{ podcast.title }}</a></h3>
             <div class="c-card__summary">{{ podcast.content }}</div>
-        </div>
-    </div>
-</li>
+        </div><!-- end c-card__content -->
+
+    </div><!-- end c-card -->
+
+</li><!-- end c-card-list__item -->

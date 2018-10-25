@@ -3,57 +3,68 @@ layout: episode
 ---
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+    {% include head.html %}
 
-<body class="template-{{ page.section }} template-episode">
-  {% include header.html %}
+    <body class="template-{{ page.section }} template-episode">
 
-    <main class="page-content">
-        <div class="l-container l-container--narrow">
-            <header class="c-page-header">
-                <h1 class="c-page-header__title">Style Guides <span class="fancy">with</span> {{page.title}}</h1>
-            </header>
+        {% include header.html %}
 
-            {{page.audio}}
+        <main role="main">
+            <div class="l-container l-container--narrow">
+                <header class="c-page-header">
+                    <h1 class="c-page-header__title">Style Guides <span class="fancy">with</span> {{page.title}}</h1>
+                </header>
 
-            {% if page.published %}
-            <small>Published {{page.published}}</small>
-            {% endif %}
+                {{page.audio}}
 
-            {% include podcast-actions.html %}
+                {% if page.published %}
+                <small>Published {{page.published}}</small>
+                {% endif %}
 
-            <section class="c-section">
-                <header class="c-section-header">
+                {% include podcast-actions.html %}
+
+                <section class="c-section">
+
+                    <header class="c-section-header">
                     <h2 class="c-section-header__title">About {{page.title}}</h2>
-                </header>
-                <div class="c-text-passsage">
-                    <p>{{ page.about }}</p>
-                </div>
-            </section>
+                    </header>
 
-            <section class="episode-links">
-                <header class="c-section-header">
-                    <h2 class="c-section-header__title">Links</h2>
-                </header>
-                <ul class="c-link-list c-link-list--2up">
-                    {% for item in page.links %}
-                    <li class="c-link-list__item"><a href="{{ item.url }}" class="c-link-list__link">{{ item.text }}</a></li>
-                    {% endfor %}
-                </ul>
-            </section>
+                    <div class="c-text-passsage">
+                        <p>{{ page.about }}</p>
+                    </div><!-- end c-text-passage  -->
 
-            <section class="transcript podcast-episode">
-                <header class="c-section-header">
-                    <h2 class="c-section-header__title">The Transcript</h2>
-                    <p class="c-section-header__description">Transcribed by <a href="http://amddat.com/">Alison</a></p>
-                </header>
-                {{ content }}
-            </section>
+                </section><!-- end c-section -->
 
-        </div>
-    </main>
+                <section class="c-section">
 
-{% include footer.html %}
+                    <header class="c-section-header">
+                        <h2 class="c-section-header__title">Links</h2>
+                    </header>
 
-</body>
+                    <ul class="c-link-list c-link-list--2up">
+                        {% for item in page.links %}
+                        <li class="c-link-list__item"><a href="{{ item.url }}" class="c-link-list__link">{{ item.text }}</a></li>
+                        {% endfor %}
+                    </ul><!-- end c-link-list -->
+
+                </section><!-- end c-section  -->
+
+                <section class="c-section transcript podcast-episode">
+
+                    <header class="c-section-header">
+                        <h2 class="c-section-header__title">The Transcript</h2>
+                        <p class="c-section-header__description">Transcribed by <a href="http://amddat.com/">Alison</a></p>
+                    </header>
+
+                    {{ content }}
+
+                </section><!-- end c-section -->
+
+            </div><!-- end l-container -->
+
+        </main><!-- end main -->
+
+        {% include footer.html %}
+
+    </body>
 </html>

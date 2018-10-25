@@ -11,9 +11,10 @@ description: Things to help you make your own style guide.
         <h1 class="tc-page-header__title">{{site.tool-title}} ({{site.resourcetool | size}})</h1>
         <p class="c-page-header__description">{{site.tool-description}}</p>
     </header>
-</div>
+</div><!-- end l-container -->
 
 <div class="c-tabs c-tabs--center js-tabs">
+
     <h3 class="c-tabs__heading">View</h3>
 
 	<ul class="c-tabs__list">
@@ -27,11 +28,14 @@ description: Things to help you make your own style guide.
 	</ul><!-- end c-tabs__list -->
 
     <div class="c-tabs__body">
+
         <div class="c-tabs__panel js-tabs-panel" id="list-toggle">
             {% assign section = site.resourcetool | sort: 'title'  %}
 
             <section class="c-section">
+
                 <div class="l-container l-container--narrow">
+
                     <ul class="c-stripe-list">
                         {% for item in section %}
                         {% if item.status == 'recommended' %}
@@ -58,7 +62,7 @@ description: Things to help you make your own style guide.
                                 </footer>
                                 {% endif %}
                             </div>
-                        </li>
+                        </li><!-- end c-stripe-list__item -->
                         {% endif %}
                         {% endfor %}
                         {% for item in section %}
@@ -86,22 +90,31 @@ description: Things to help you make your own style guide.
                                 </footer>
                                 {% endif %}
                             </div>
-                        </li>
+                        </li><!-- end c-stripe-list__item -->
                         {% endif %}
                         {% endfor %}
-                    </ul>
-                </div>
-            </section>
-        </div>
+
+                    </ul><!-- end c-stripe-list -->
+
+                </div><!-- end l-container -->
+
+            </section><!-- end c-section -->
+
+        </div><!-- end c-tabs__panel -->
+
         <div class="c-tabs__panel js-tabs-panel" id="card-toggle">
-            <section>
+
+            <section class="c-section">
                 {% assign section = site.resourcetool | sort: 'title'  %}
                 <div class="l-container">
                     {% include tags.html %}
                     {% include loop-resources.html %}
                     {% include add.html %}
                 </div>
-            </section>
-        </div>
-    </div>
-</div>
+            </section><!-- end c-section -->
+
+        </div><!-- end c-tabs__panel -->
+
+    </div><!-- end c-tabs__body -->
+
+</div><!-- end c-tabs -->

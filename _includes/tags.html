@@ -20,7 +20,9 @@
   {% assign previous = tag %}
 {% endfor %}
 <div class="c-toggle">
+
     <ul class="c-toggle__list">
+
         <li class="c-toggle__item">
           <input class="c-toggle__checkbox show-all" type="checkbox" value="show-all" checked id="show-all"/>
           <label class="c-toggle__label" for="show-all">Show All</label>
@@ -31,5 +33,7 @@
           <label class="c-toggle__label" for="{{tag | downcase}}">{{tag}}</label>
         </li>
         {% endfor %}
-    </ul>
-</div>
+
+    </ul><!-- end c-toggle__list -->
+    
+</div><!-- end c-toggle -->
