@@ -15,7 +15,9 @@
 }
 
 .c-header__title {
+    text-transform: lowercase;
     margin-bottom: 1rem;
+
     @media all and (min-width: $bp-large) {
         margin-bottom: 0;
     }
