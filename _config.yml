@@ -25,17 +25,17 @@ tool-description: "Things to help you make your own style guide."
 markdown: kramdown
 
 collections:
-    resourcearticle:
+    ds-article:
         output: true
-    resourcebook:
+    ds-book:
         output: true
-    resourceexample:
+    ds-example:
         output: true
-    resourcepodcast:
+    ds-podcast:
         output: true
-    resourcetalk:
+    ds-talk:
         output: true
-    resourcetool:
+    ds-tool:
         output: true
     podcast:
         output: true

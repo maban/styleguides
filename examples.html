@@ -8,7 +8,7 @@ description: Real life pattern libraries, code standards documents and content s
 
 <div class="l-container">
     <header class="c-page-header">
-        <h1 class="c-page-header__title">{{site.example-title}} ({{site.resourceexample | size}})</h1>
+        <h1 class="c-page-header__title">{{site.example-title}} ({{site.ds-example | size}})</h1>
         <p class="c-page-header__description">{{site.example-description}}</p>
     </header>
 </div><!-- end l-container -->
@@ -30,7 +30,7 @@ description: Real life pattern libraries, code standards documents and content s
 
         <div class="c-tabs__panel js-tabs-panel" id="list-toggle">
 
-            {% assign section = site.resourceexample | sort: 'title'  %}
+            {% assign section = site.ds-example | sort: 'title'  %}
 
             <section class="c-section">
 
@@ -109,7 +109,7 @@ description: Real life pattern libraries, code standards documents and content s
 
                 <div class="l-container">
 
-                    {% assign section = site.resourceexample | sort: 'title'  %}
+                    {% assign section = site.ds-example | sort: 'title'  %}
                     {% include tags.html %}
                     {% include loop-resources.html %}
                     {% include add.html %}

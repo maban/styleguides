@@ -61,4 +61,11 @@
             transform: translateY(-50%);
         }
     }
+
+    .c-link-list__item.book & {
+        &:before {
+            content: "\xF0";
+            display: block;
+        }
+    }
 }

@@ -51,11 +51,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="examples">{{site.example-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourceexample | sort: 'title'  %}
+                                        {% assign section = site.ds-example | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
                                         <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "example" %}<span>🔗</span> {% endif %}{{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -69,11 +71,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourcearticle | sort: 'title'  %}
+                                        {% assign section = site.ds-article | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
                                         <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "article" %}<span>📝</span> {% endif %}{{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -87,11 +91,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="books">{{site.book-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourcebook | sort: 'title'  %}
+                                        {% assign section = site.ds-book | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                        <li class="c-link-list__item ">
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "book" %}📘 {% endif %} {{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -105,11 +111,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="podcasts">{{site.podcast-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourcepodcast | sort: 'title'  %}
+                                        {% assign section = site.ds-podcast | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
                                         <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "podcast" %}🎤 {% endif %} {{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -123,11 +131,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="talks">{{site.talk-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourcetalk | sort: 'title'  %}
+                                        {% assign section = site.ds-talk | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
                                         <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "talk" %}🗣️ {% endif %} {{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -141,11 +151,13 @@ type: home
                                         <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="tools">{{site.tool-title}}</a></h3>
                                     </header>
                                     <ul class="c-link-list">
-                                        {% assign section = site.resourcetool | sort: 'title'  %}
+                                        {% assign section = site.ds-tool | sort: 'title'  %}
                                         {% for item in section %}
                                         {% if item.status == 'recommended' %}
                                         <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
+                                            <a class="c-link-list__link" href="{{ item.link }}">
+                                                {% if item.type == "tool" %}🛠️ {% endif %} {{ item.title }}
+                                            </a>
                                         </li>
                                         {% endif %}
                                         {% endfor %}
@@ -168,7 +180,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-example">
-                            {% assign section = site.resourceexample | sort: 'title'  %}
+                            {% assign section = site.ds-example | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -176,7 +188,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/examples" class="c-btn c-btn--center">See all {{site.resourceexample | size}} examples…</a>
+                        <a href="/examples" class="c-btn c-btn--center">See all {{site.ds-example | size}} examples…</a>
 
                     </section><!-- end c-section -->
 
@@ -188,7 +200,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-article">
-                            {% assign section = site.resourcearticle | sort: 'title'  %}
+                            {% assign section = site.ds-article | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -196,7 +208,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/articles" class="c-btn c-btn--center">See all {{site.resourcearticle | size}} articles…</a>
+                        <a href="/articles" class="c-btn c-btn--center">See all {{site.ds-article | size}} articles…</a>
 
                     </section><!-- end c-section -->
 
@@ -208,7 +220,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--4up resource-type-book">
-                            {% assign section = site.resourcebook | sort: 'title'  %}
+                            {% assign section = site.ds-book | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -216,7 +228,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/books" class="c-btn c-btn--center">See all {{site.resourcebook | size}} books…</a>
+                        <a href="/books" class="c-btn c-btn--center">See all {{site.ds-book | size}} books…</a>
 
                     </section><!-- end c-section -->
 
@@ -228,7 +240,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-podcast">
-                            {% assign section = site.resourcepodcast | sort: 'title'  %}
+                            {% assign section = site.ds-podcast | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -236,7 +248,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/podcasts" class="c-btn c-btn--center">See all {{site.resourcepodcast | size}} podcasts…</a>
+                        <a href="/podcasts" class="c-btn c-btn--center">See all {{site.ds-podcast | size}} podcasts…</a>
 
                     </section><!-- end c-section -->
 
@@ -248,7 +260,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-talk">
-                            {% assign section = site.resourcetalk | sort: 'title'  %}
+                            {% assign section = site.ds-talk | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -256,7 +268,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/talks" class="c-btn c-btn--center">See all {{site.resourcetalk | size}} talks…</a>
+                        <a href="/talks" class="c-btn c-btn--center">See all {{site.ds-talk | size}} talks…</a>
 
                     </section><!-- end c-section -->
 
@@ -268,7 +280,7 @@ type: home
                         </header><!-- end c-section-header -->
 
                         <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-tool">
-                            {% assign section = site.resourcetool | sort: 'title'  %}
+                            {% assign section = site.ds-tool | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
                             {% include loop-resource.html %}
@@ -276,7 +288,7 @@ type: home
                             {% endfor %}
                         </ul><!-- end c-card-list -->
 
-                        <a href="/tools" class="c-btn c-btn--center">See all {{site.resourcetool | size}} tools…</a>
+                        <a href="/tools" class="c-btn c-btn--center">See all {{site.ds-tool | size}} tools…</a>
 
                     </section><!-- end c-section -->
 
@@ -327,12 +339,12 @@ type: home
 
     fadeIn(el);
 
-    var total = Number('{{site.resourcearticle | size}}') +
-                Number('{{site.resourcebook | size}}') +
-                Number('{{site.resourcepodcast | size}}') +
-                Number('{{site.resourcetalk | size}}') +
-                Number('{{site.resourcetool | size}}') +
-                Number('{{site.resourceexample | size}}');
+    var total = Number('{{site.ds-article | size}}') +
+                Number('{{site.ds-book | size}}') +
+                Number('{{site.ds-podcast | size}}') +
+                Number('{{site.ds-talk | size}}') +
+                Number('{{site.ds-tool | size}}') +
+                Number('{{site.ds-example | size}}');
     document.getElementById('total-resource-count').innerHTML = total;
 
     </script>

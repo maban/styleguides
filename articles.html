@@ -8,7 +8,7 @@ type: article
 <div class="l-container">
 
     <header class="c-page-header">
-        <h1 class="c-page-header__title">{{site.article-title}} ({{site.resourcearticle | size}})</h1>
+        <h1 class="c-page-header__title">{{site.article-title}} ({{site.ds-article | size}})</h1>
         <p class="c-page-header__description">{{site.article-description}}</p>
     </header>
 
@@ -20,7 +20,7 @@ type: article
 
         <ul class="c-subsection-list l-grid l-grid--3up">
 
-            {% assign section = site.resourcearticle | sort: 'title'  %}
+            {% assign section = site.ds-article | sort: 'title'  %}
 
             <li class="c-subsection-list__item l-grid__item">
                 <div class="c-subsection">
@@ -174,7 +174,7 @@ type: article
 
         <ul class="c-subsection-list l-grid l-grid--3up">
 
-            {% assign section = site.resourcearticle | sort: 'title'  %}
+            {% assign section = site.ds-article | sort: 'title'  %}
 
             <li class="c-subsection-list__item l-grid__item">
                 <div class="c-subsection">

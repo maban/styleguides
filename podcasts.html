@@ -48,7 +48,7 @@ description: Episodes from various podcasts where style guides are discussed.
     <section class="c-section">
 
         <header class="c-section-header">
-            <h1 class="c-section-header__title">{{site.podcast-title}} ({{site.resourcepodcast | size}})</h1>
+            <h1 class="c-section-header__title">{{site.podcast-title}} ({{site.ds-podcast | size}})</h1>
             <div class="c-section-header__description">
                 <p>{{site.podcast-description}}</p>
                 <p>Through the magic of Huffduffer, you can subscribe to our curated list of style guide related podcasts in your favourite podcast app.</p>
@@ -57,7 +57,7 @@ description: Episodes from various podcasts where style guides are discussed.
 
         {% include external-podcast-actions.html %}
 
-        {% assign section = site.resourcepodcast | sort: 'title'  %}
+        {% assign section = site.ds-podcast | sort: 'title'  %}
         {% include tags.html %}
         {% include loop-resources.html %}
         {% include add.html %}

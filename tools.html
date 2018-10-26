@@ -8,7 +8,7 @@ description: Things to help you make your own style guide.
 
 <div class="l-container">
     <header class="c-page-header">
-        <h1 class="tc-page-header__title">{{site.tool-title}} ({{site.resourcetool | size}})</h1>
+        <h1 class="tc-page-header__title">{{site.tool-title}} ({{site.ds-tool | size}})</h1>
         <p class="c-page-header__description">{{site.tool-description}}</p>
     </header>
 </div><!-- end l-container -->
@@ -30,7 +30,7 @@ description: Things to help you make your own style guide.
     <div class="c-tabs__body">
 
         <div class="c-tabs__panel js-tabs-panel" id="list-toggle">
-            {% assign section = site.resourcetool | sort: 'title'  %}
+            {% assign section = site.ds-tool | sort: 'title'  %}
 
             <section class="c-section">
 
@@ -105,7 +105,7 @@ description: Things to help you make your own style guide.
         <div class="c-tabs__panel js-tabs-panel" id="card-toggle">
 
             <section class="c-section">
-                {% assign section = site.resourcetool | sort: 'title'  %}
+                {% assign section = site.ds-tool | sort: 'title'  %}
                 <div class="l-container">
                     {% include tags.html %}
                     {% include loop-resources.html %}
