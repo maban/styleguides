@@ -22,6 +22,7 @@
  */
 .c-header__title {
     text-transform: lowercase;
+    font-size: $font-size-small;
     margin-bottom: 1rem;
 
     @media all and (min-width: $bp-large) {
@@ -35,6 +36,4 @@
  */
 .c-header__title-link {
     display: block;
-    color: $color-white;
-    font-size: $font-size-med;
 }
