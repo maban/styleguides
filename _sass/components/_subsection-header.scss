@@ -6,7 +6,8 @@
  * Subsection header
  */
 .c-subsection-header {
-    margin-bottom: 2rem;
+    font-size: $font-size-med-2;
+    margin-bottom: 1rem;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid $color-gray-73;
 }
@@ -16,4 +17,16 @@
  */
 .c-subsection-header__title {
     margin-bottom: 0;
+    text-transform: lowercase;
+}
+
+/**
+ * Subsection header link 
+ */
+.c-subsection-header__link {
+    color: $color-brand-blue-dark;
+
+    &:hover, &:focus {
+        color: $color-brand-blue;
+    }
 }
