@@ -1,3 +1,10 @@
+/*------------------------------------*\
+    #CARD LIST
+\*------------------------------------*/
+
+/**
+ * Card
+ */
 .c-card {
     background-color: $color-white;
     border: 1px solid #ededed;
@@ -5,11 +12,19 @@
     font-size: $font-size-tiny-2;
     word-wrap: break-word;
 
+    /**
+     * Card within fill space grid
+     * 1) Flex 1 added to fill the space of the grid item so each card's height
+     * is equal to the height of the tallest card in the row
+     */
     .l-grid--fill-space & {
         flex: 1;
     }
 }
 
+/**
+ * Card number
+ */
 .c-card__number {
     position: absolute;
     top: -1px;
@@ -22,6 +37,9 @@
     color: #fff;
 }
 
+/**
+ * Card media
+ */
 .c-card__media {
     background-color: #F1F1F1;
     min-height: 100px;
@@ -29,24 +47,84 @@
     background-repeat: no-repeat;
     background-size: 50px;
     background-position: center;
+
+    /**
+     * Card media within podcast resource type
+     */
+    .resource-type-podcast & {
+        background-image: url('/images/icons/podcast/podcast-faded.svg');
+        background-size: 40px;
+    }
+
+    /**
+     * Card media within book resource type
+     */
+    .resource-type-book & {
+        background-image: url('/images/icons/book/book-faded.svg');
+    }
+
+    /**
+     * Card media within article resource type
+     */
+    .resource-type-article & {
+        background-image: url('/images/icons/article/article-faded.svg');
+    }
+
+    /**
+     * Card media within example resource type
+     */
+    .resource-type-example & {
+        background-image: url('/images/icons/website/website-faded.svg');
+        background-size: 100px;
+    }
+
+    /**
+     * Card media within tool resource type
+     */
+    .resource-type-tool & {
+        background-image: url('/images/icons/wrench/wrench-faded.svg');
+    }
+
+    /**
+     * Card media within talk resource type
+     */
+    .resource-type-talk & {
+        background-image: url('/images/icons/presentation/presentation-faded.svg');
+        background-size: 80px;
+    }
 }
 
+/**
+ * Card content
+ * 1) Wrapper around the body of the card
+ */
 .c-card__content {
     padding: 1em;
     display: block;
 
+    /**
+     * Last child within card content
+     * 1) Zero out bottom margin on last item within card content
+     */
     & > *:last-child {
-        margin-bottom: 0;
+        margin-bottom: 0; /* 1 */
     }
 }
 
+/**
+ * Card title
+ */
 .c-card__title {
     font-size: 1.2em;
     margin-bottom: 0.2em;
     line-height: 1.25;
 }
 
-.c-card__credit {
+/**
+ * Card meta
+ * 1) Contains meta data within the card (author, organization, etc.)
+ */
+.c-card__meta {
     margin-bottom: 1em;
     font-size: 0.9em;
 }

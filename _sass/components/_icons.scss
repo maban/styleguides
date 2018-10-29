@@ -1,43 +1,11 @@
-.icon-itunes {
-    background-image: url("/images/icons/itunes/itunes.png");
-    background-image: url("/images/icons/itunes/itunes.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
-}
+/*------------------------------------*\
+    #ICONS
+\*------------------------------------*/
 
-
-
-.button.icon-itunes {
-    background-image: url("/images/icons/itunes/itunes-white.png");
-    background-image: url("/images/icons/itunes/itunes-white.svg");
-    padding-left: 45px;
-    background-position: 15px center;
-}
-
-.icon-download {
-    background-image: url("/images/icons/download/download.png");
-    background-image: url("/images/icons/download/download.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
-}
-
-.button.icon-download {
-    padding-left: 45px;
-    background-position: 17px center;
-    background-image: url("/images/icons/download/download-white.png");
-    background-image: url("/images/icons/download/download-white.svg");
-}
-
-.icon-feed {
-    background-image: url("/images/icons/feed/feed.png");
-    background-image: url("/images/icons/feed/feed.svg");
-    background-repeat: no-repeat;
-    background-position: left center;
-}
-
-.button.icon-feed {
-    background-image: url("/images/icons/feed/feed-white.png");
-    background-image: url("/images/icons/feed/feed-white.svg");
-    padding-left: 45px;
-    background-position: 18px center;
+/**
+ * Icon
+ */
+.c-icon {
+    height: 16px;
+    width: 16px;
 }

@@ -1,80 +1,38 @@
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit;
-    }
-}
-
-.post-meta {
-    font-size: $font-size-small;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 24px;
-}
-
-
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
 
 /**
- * Posts
+ * Layout Container
+ * 1) Container for normalizing the alignment of content and adding padding
  */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
-
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-
 .l-container {
     margin-right: auto;
     margin-left: auto;
     padding: 0 2rem;
 }
 
-
+/**
+ * Narrow layout container
+ * 1) Caps the width of the content within the layout container at a width
+ * suitable for text passages for example.
+ */
 .l-container--narrow {
     max-width: $l-max-width-narrow;
 }
 
+
+
+
+
+/*------------------------------------*\
+    #GRID
+\*------------------------------------*/
+
+/**
+ * Grid Container
+ * 1) Fallback to flexbox grid if CSS Grid Layout is not supported
+ */
 .l-grid {
     display: flex;
     margin: 0 -1rem;
@@ -87,6 +45,11 @@
     }
 }
 
+/**
+ * 2up Grid
+ * 1) Grid that breaks items from 1 per row to 2 per row with increasing
+ * browser window width
+ */
 .l-grid--2up {
     @supports (display: grid) {
         @media all and (min-width: $bp-med) {
@@ -95,7 +58,11 @@
     }
 }
 
-
+/**
+ * 3up Grid
+ * 1) Grid that breaks items from 1 per row, to 2 per row, to 3 per row with
+ * increasing browser window width
+ */
 .l-grid--3up {
     @supports (display: grid) {
         @media all and (min-width: $bp-med) {
@@ -108,6 +75,11 @@
     }
 }
 
+/**
+ * 4up Grid
+ * 1) Grid that breaks items from 1 per row, to 2 per row, to 3 per row, to
+ * 4 per row with increasing browser window width
+ */
 .l-grid--4up {
     @supports (display: grid) {
         @media all and (min-width: $bp-med) {
@@ -124,14 +96,25 @@
     }
 }
 
+/**
+ * Grid item
+ */
 .l-grid__item {
 
+    /**
+     * Grid item that fills the extra vertical space
+     * 1) Set to display: flex to expand content within so items like cards
+     * can have equal heights
+     */
     .l-grid--fill-space & {
         display: flex;
         flex-direction: column;
     }
 
-    .l-grid--3up & {
+    /**
+     * Grid item within 2up grid
+     */
+    .l-grid--2up & {
         @media all and (min-width: $bp-med) {
             width: 50%;
         }
@@ -141,6 +124,9 @@
         }
     }
 
+    /**
+     * Grid item within 3up grid
+     */
     .l-grid--3up & {
         @media all and (min-width: $bp-med) {
             width: 50%;
@@ -155,6 +141,9 @@
         }
     }
 
+    /**
+     * Grid item within 4up grid
+     */
     .l-grid--4up & {
         @media all and (min-width: $bp-med) {
             width: 50%;

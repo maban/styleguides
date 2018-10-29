@@ -1,3 +1,10 @@
+/*------------------------------------*\
+    #LAZY LOAD
+\*------------------------------------*/
+
+/**
+ * Lazy load and lazy loaded classes
+ */
 .lazy-load, .lazy-loaded {
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -7,4 +14,10 @@
   opacity: 0;
 }
 
-.lazy-loaded { opacity: 1; }
+/**
+ * Lazy loaded class
+ * 1) Fade in item when lazy loaded class is applied
+ */
+.lazy-loaded { 
+    opacity: 1; /* 1 */
+}

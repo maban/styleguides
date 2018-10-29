@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+    {% include head.html %}
 
-  <body class="template-{{ page.section }}">
-    {% include header.html %}
+    <body class="template-{{ page.section }}">
 
-    <main class="page-content" role="main">
-      <div class="l-container">
-         <header class="c-page-header">
-            <h1 class="c-page-header__title">{{ page.title }}</h1>
-            <p class="c-page-header__description">{{ content }}</p>
-        </header>
+        {% include header.html %}
 
-        {% include podcast-actions.html %}
+        <main class="page-content" role="main">
 
-        {% include episodes.html %}
+            <div class="l-container">
 
-      </div>
-  </main>
+                <header class="c-page-header">
+                    <h1 class="c-page-header__title">{{ page.title }}</h1>
+                    <p class="c-page-header__description">{{ content }}</p>
+                </header>
 
-    {% include footer.html %}
+                {% include podcast-actions.html %}
 
-    <script src="/scripts/vendor/lazyload.min.js"></script>
-    <script>
-      var oLazyLoad = new LazyLoad({
-        threshold: 200,
-        throttle: 200,
-        elements_selector: ".lazy-load",
-        class_loaded: "lazy-loaded",
-        data_src: "src",
-      });
-    </script>
-  </body>
+                {% include episodes.html %}
+
+            </div><!-- end l-container -->
+
+        </main><!-- end main -->
+
+        {% include footer.html %}
+
+        <script src="/scripts/vendor/lazyload.min.js"></script>
+        <script>
+            var oLazyLoad = new LazyLoad({
+                threshold: 200,
+                throttle: 200,
+                elements_selector: ".lazy-load",
+                class_loaded: "lazy-loaded",
+                data_src: "src",
+            });
+        </script>
+    </body>
   </html>

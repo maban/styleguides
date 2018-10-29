@@ -7,32 +7,46 @@
  */
  .c-footer {
      margin-top: 2rem;
-     padding: $spacing-unit 0;
-     background-color: $grey-color-dark;
+     padding: 2rem 0;
+     background-color: $color-gray-73;
      color: #fff;
  }
 
+ /**
+  * Footer inner
+  * 1) Inner container set to display flex on larger screens to place content
+  * side by side
+  */
  .c-footer__inner {
 
      @media all and (min-width: $bp-large) {
-         display: flex;
+         display: flex; /* 1 */
      }
  }
 
-
+ /**
+  * Footer top container
+  * 1) Order: 2 places this container after the bottom container on larger screens
+  * due to flexbox
+  */
  .c-footer__top {
       margin-bottom: 2rem;
 
      @media all and (min-width: $bp-large) {
-         order: 2;
+         order: 2; /* 1 */
          margin-bottom: 0;
          margin-left: auto;
      }
  }
 
+ /**
+  * Footer bottom container
+  * 1) Order: 1 places this container before the top container on larger screens
+  * due to flexbox
+  */
  .c-footer__bottom {
      @media all and (min-width: $bp-large) {
-         order: 1;
+         order: 1; /* 1 */
           margin-right: 2rem;
 
      }

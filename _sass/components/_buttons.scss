@@ -2,16 +2,23 @@
     #BUTTONS
 \*------------------------------------*/
 
+/**
+ * Button
+ * 1) Set to display: flex to place contents side by side (i.e. icon beside text)
+ * 2) Align items: center vertically aligns content
+ * 3) Width: fit-content helps the button not expand with display: flex set to it
+ */
 .c-btn {
-    display: flex;
-    align-items: center;
-    width: fit-content;
+    display: flex; /* 1 */
+    align-items: center; /* 2 */
+    width: fit-content; /* 3 */
     background-color: $color-brand-blue;
     color: $color-white;
     padding: 10px 15px;
     border-radius: 4px;
     font-weight: normal;
     transition: background-color $anim-fade-quick $anim-ease;
+
     &:hover,
     &:focus {
         background-color: $color-brand-blue-light;
@@ -19,24 +26,37 @@
         color: $color-white;
     }
 
+    /**
+     * Button within a button group
+     */
     .c-btn-group & {
         margin-right: 0.5rem;
         margin-bottom: 0.5rem;
     }
 }
 
+/**
+ * Centered button
+ * 1) Margin: 0 auto helps center the button within its container
+ */
 .c-btn--center {
-    margin: 0 auto;
-    width: fit-content;
+    margin: 0 auto; /* 1 */
 }
 
+/**
+ * Fixed button
+ * 1) Fixes the button to the bottom right portion of the browser window
+ */
 .c-btn--fixed {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
+    position: fixed; /* 1 */
+    bottom: 2rem; /* 1 */
+    right: 2rem; /* 1 */
 }
 
-.c-btn.disabled {
+/**
+ * Disabled button
+ */
+.c-btn.is-disabled {
     opacity: 0.5;
     background-color: #ccc!important;
     &:hover,
@@ -45,16 +65,27 @@
     }
 }
 
+/**
+ * Button icon
+ */
 .c-btn__icon {
     display: block;
     height: 16px;
     width: 16px;
 }
 
+/**
+ * Button text directly after button icon
+ * 1) Add left margin to text to space icon from text
+ */
 .c-btn__icon + .c-btn__text {
-    margin-left: 0.5rem;
+    margin-left: 0.5rem; /* 1 */
 }
 
+/**
+ * Button icon directly after button text
+ * 1) Add left margin to icon to space it from text
+ */
 .c-btn__text + .c-btn__icon {
-    margin-left: 0.5rem;
+    margin-left: 0.5rem; /* 1 */
 }

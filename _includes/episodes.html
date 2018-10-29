@@ -1,23 +1,33 @@
 {% assign podcast = site.podcast | sort: 'number'  %}
 
-<section>
-  <h2 class="title">Season 2</h2>
-  <ol class="c-avatar-list">
-    {% for podcast in podcast reversed %}
-      {% if podcast.season == 2 %}
-        {% include episode.html %}
-      {% endif %}
-    {% endfor %}
-  </ol>
-</section>
+<section class="c-section">
 
-<section>
-  <h2 class="title">Season 1</h2>
-  <ol class="c-avatar-list">
-    {% for podcast in podcast reversed %}
-      {% if podcast.season == 1 %}
+    <header class="c-section-header">
+        <h2 class="title">Season 2</h2>
+    </header>
+
+    <ol class="c-avatar-list">
+        {% for podcast in podcast reversed %}
+        {% if podcast.season == 2 %}
         {% include episode.html %}
-      {% endif %}
-    {% endfor %}
-  </ol>
-</section>
+        {% endif %}
+        {% endfor %}
+    </ol><!-- end c-avatar-list -->
+
+</section><!-- end c-section -->
+
+<section class="c-section">
+
+    <header class="c-section-header">
+        <h2 class="title">Season 1</h2>
+    </header>
+
+    <ol class="c-avatar-list">
+        {% for podcast in podcast reversed %}
+        {% if podcast.season == 1 %}
+        {% include episode.html %}
+        {% endif %}
+        {% endfor %}
+    </ol><!-- end c-avatar-list -->
+
+</section><!-- end c-section -->

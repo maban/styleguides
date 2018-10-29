@@ -5,15 +5,18 @@ section: books
 type: book
 description: Books written about style guides.
 ---
+<div class="l-container">
 
-<header class="c-page-header">
-    <h1 class="c-page-header__title">{{site.book-title}} ({{site.resourcebook | size}})</h1>
-    <p class="c-page-header__description">{{site.book-description}}</p>
-</header>
+    <header class="c-page-header">
+        <h1 class="c-page-header__title">{{site.book-title}} ({{site.ds-book | size}})</h1>
+        <p class="c-page-header__description">{{site.book-description}}</p>
+    </header>
 
-<section>
-  {% assign section = site.resourcebook | sort: 'title'  %}
-  {% include tags.html %}
-  {% include loop-resources.html %}
-  {% include add.html %}
-</section>
+    <section class="c-section">
+      {% assign section = site.ds-book | sort: 'title'  %}
+      {% include tags.html %}
+      {% include loop-resources.html %}
+      {% include add.html %}
+    </section>
+
+</div>

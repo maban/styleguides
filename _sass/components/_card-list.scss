@@ -1,11 +1,18 @@
-.c-card-list {
-    margin-bottom: 2rem;
-}
+/*------------------------------------*\
+    #CARD LIST
+\*------------------------------------*/
 
+/**
+ * Card list item
+ */
 .c-card-list__item {
     position: relative;
 }
 
+/**
+ * Recommended card list item after pseudoelement
+ * 1) Star placed within the card
+ */
 .c-card-list__item.recommended:after {
     content: "★";
     position: absolute;
@@ -15,43 +22,4 @@
     display: block;
     background-color: $color-brand-blue;
     color: $color-white;
-}
-
-.resource-type-podcast {
-    .c-card__media {
-        background-image: url('/images/icons/podcast/podcast-faded.svg');
-        background-size: 40px;
-    }
-}
-
-.resource-type-book {
-    .c-card__media {
-        background-image: url('/images/icons/book/book-faded.svg');
-    }
-}
-
-.resource-type-article {
-    .c-card__media {
-        background-image: url('/images/icons/article/article-faded.svg');
-    }
-}
-
-.resource-type-example {
-    .c-card__media {
-        background-image: url('/images/icons/website/website-faded.svg');
-        background-size: 100px;
-    }
-}
-
-.resource-type-tool {
-    .c-card__media {
-        background-image: url('/images/icons/wrench/wrench-faded.svg');
-    }
-}
-
-.resource-type-talk {
-    .c-card__media {
-        background-image: url('/images/icons/presentation/presentation-faded.svg');
-        background-size: 80px;
-    }
 }

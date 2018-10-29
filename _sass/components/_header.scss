@@ -4,16 +4,22 @@
 
 /**
  * Header inner
+ * 1) Inner container set to display flex on larger screens to place content
+ * side by side
+ * 2) Align items center vertically centers content
  */
 .c-header__inner {
     padding: 2rem;
 
     @media all and (min-width: $bp-large) {
-        display: flex;
-        align-items: center;
+        display: flex; /* 1 */
+        align-items: center; /* 2 */
     }
 }
 
+/**
+ * Header title
+ */
 .c-header__title {
     text-transform: lowercase;
     margin-bottom: 1rem;
@@ -25,6 +31,7 @@
 
 /**
  * Header title link
+ * 1) Link within the header title
  */
 .c-header__title-link {
     display: block;

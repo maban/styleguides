@@ -3,15 +3,9 @@
 \*------------------------------------*/
 
 /**
- * Lists
+ * List base styles
+ * 1) Remove any bullets/numbers from unordered and ordered lists
  */
 ul, ol {
-    list-style: none;
-}
-
-li {
-    > ul,
-    > ol {
-         margin-bottom: 0;
-    }
+    list-style: none; /* 1 */
 }

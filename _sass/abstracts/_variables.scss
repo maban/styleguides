@@ -24,29 +24,47 @@ $font-size-xl: 5rem;
  */
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
-
+/**
+ * Brand colors
+ */
 $text-color:       #ced4da;
-$background-color: #000000;
 $color-brand-blue: #15aabf;
 $color-brand-blue-light: #66d9e8;
 
+/**
+ * Neutral colors
+ */
 $color-white: #fff;
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$color-gray-02: #f9f9f9;
+$color-gray-07: #eee;
+$color-gray-13: #ddd;
+$color-gray-15: #d9d9d9;
+$color-gray-27: #bbb;
+$color-gray-39: #9c9c9c;
+$color-gray-50: #808080;
+$color-gray-60: #666;
+$color-gray-73: #444;
+$color-gray-93: #131313;
+$color-black: #000000;
 
+/**
+ * Neutral dim colors
+ */
 $color-dim-80: rgba(250, 250, 250, 0.8);
 
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
+/**
+ * Transition duration
+ */
 $anim-fade-quick: 0.2s;
+
+/**
+ * Transition timing function
+ */
 $anim-ease: ease;
 
+/**
+ * Widths
+ */
 $l-max-width-narrow: 44rem;
 
 /**

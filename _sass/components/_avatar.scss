@@ -5,18 +5,20 @@
 /**
  * Avatar
  */
-
 .c-avatar {
     display: block;
-    padding: 0;
-    list-style: none;
     width: 80px;
-    border: none;
-    background-color: transparent;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
+    padding: 0;
+    list-style: none;
+    border: none;
+    background-color: transparent;
 }
 
+/**
+ * Avatar image
+ */
 .c-avatar__image {
     width: 100%;
     background-color: transparent;

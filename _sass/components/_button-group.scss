@@ -2,11 +2,20 @@
     #BUTTON GROUP
 \*------------------------------------*/
 
+/**
+ * Button group
+ * 1) Set to display: flex to list avatars side by side and then
+ * flex-wrap: wrap to wrap these items when space runs out
+ */
 .c-btn-group {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* 1 */
+    flex-wrap: wrap; /* 1 */
 }
 
+/**
+ * Centered button group
+ * 1) Centers the button group within its container
+ */
 .c-btn-group--center {
-    justify-content: center;
+    justify-content: center; /* 1 */
 }

@@ -1,5 +1,13 @@
+/*------------------------------------*\
+    #PODCAST
+\*------------------------------------*/
+/**
+ * TODO: Should we refactor this?
+ */
 
-
+/**
+ * Name under the avatar
+ */
 b {
     position: absolute;
     left: 0;
@@ -9,6 +17,9 @@ b {
     width: 50px;
 }
 
+/**
+ * Host and guest block
+ */
 .host, .guest {
     background-position: top left;
     min-height: 60px;
@@ -17,113 +28,206 @@ b {
     padding-left: 65px;
     position: relative;
     padding-top: 10px;
+
+    /**
+     * Paragraph within host/guest blocks
+     */
+    p {
+        margin-bottom: 1rem;
+    }
 }
 
+/**
+ * Anna Debenham block
+ */
 .anna-debenham {
     background-image: url("/images/avatars/anna-debenham.jpg");
 }
 
+/**
+ * Brad Frost block
+ */
 .brad-frost {
     background-image: url("/images/avatars/brad-frost.jpg");
 }
 
+/**
+ * Jina Bolton block
+ */
 .jina-bolton {
     background-image: url("/images/avatars/jina-bolton.jpg");
 }
 
+/**
+ * Federico Holgado block
+ */
 .federico-holgado {
     background-image: url("/images/avatars/federico-holgado.jpg");
 }
 
+/**
+ * Lincoln Mongillo block
+ */
 .lincoln-mongillo {
     background-image: url("/images/avatars/lincoln-mongillo.jpg");
 }
 
+/**
+ * Dave Olsen block
+ */
 .dave-olsen {
     background-image: url("/images/avatars/dave-olsen.jpg");
 }
 
+/**
+ * Dan Mall block
+ */
 .dan-mall {
     background-image: url("/images/avatars/dan-mall.jpg");
 }
 
+/**
+ * Ian Feather block
+ */
 .ian-feather {
     background-image: url("/images/avatars/ian-feather.jpg");
 }
 
+/**
+ * Samantha Warren block
+ */
 .samantha-warren {
     background-image: url("/images/avatars/samantha-warren.jpg");
 }
 
+/**
+ * Susan Robertson block
+ */
 .susan-robertson {
     background-image: url("/images/avatars/susan-robertson.jpg");
 }
 
+/**
+ * Dave Rupert block
+ */
 .dave-rupert {
     background-image: url("/images/avatars/dave-rupert.jpg");
 }
 
+/**
+ * Rob Huddleston block
+ */
 .rob-huddleston {
     background-image: url("/images/avatars/rob-huddleston.jpg");
 }
 
+/**
+ * Nathan Curtis block
+ */
 .nathan-curtis {
     background-image: url("/images/avatars/nathan-curtis.jpg");
 }
 
+/**
+ * Jeremy Keith block
+ */
 .jeremy-keith {
     background-image: url("/images/avatars/jeremy-keith.jpg");
 }
 
+/**
+ * Mina Markham block
+ */
 .mina-markham {
     background-image: url("/images/avatars/mina-markham.jpg");
 }
 
+/**
+ * Val Head block
+ */
 .val-head {
     background-image: url("/images/avatars/val-head.jpg");
 }
 
+/**
+ * Micah Godbolt block
+ */
 .micah-godbolt {
     background-image: url("/images/avatars/micah-godbolt.jpg");
 }
 
+/**
+ * Josh Clark
+ */
 .josh-clark {
     background-image: url("/images/avatars/josh-clark.jpg");
 }
 
+/**
+ * Jina Anne block
+ */
 .jina-anne {
     background-image: url("/images/avatars/jina-anne.jpg");
 }
 
+/**
+ * Inayaili De Leon Persson block
+ */
 .inayaili-de-leon-persson {
     background-image: url("/images/avatars/inayaili-de-leon-persson.jpg");
 }
 
+/**
+ * Maya Benari block
+ */
 .maya-benari {
     background-image: url("/images/avatars/maya-benari.jpg");
 }
 
+/**
+ * Bio
+ */
 .bio {
     position: relative;
     margin-bottom: 2em;
 }
 
+/**
+ * Download
+ */
 .download {
     margin: 1em auto 2em;
     text-align: center;
 }
 
+/**
+ * Podcast episode
+ */
+.podcast-episode {
+    max-width: 700px;
+}
+
+
+/**
+ * Podcast episode aside
+ */
 .podcast-episode aside {
-    float: right;
-    width: 50%;
-    margin-left: 1em;
     margin-bottom: 1em;
     margin-top: 0.5em;
     font-size: 1.1em;
     font-weight: lighter;
     line-height: 1.4em;
+
+    @media all and (min-width: $bp-med) {
+        float: right;
+        width: 50%;
+        margin-left: 1em;
+    }
 }
 
+/**
+ * Podcast episode aside blockquote
+ */
 .podcast-episode aside blockquote {
     font-style: normal;
     font-size: 1em;
@@ -135,6 +239,7 @@ b {
     padding: 0;
     position: relative;
     padding-left: 30px;
+
     &:before {
         content: "“";
         font-size: 2.5em;
@@ -144,10 +249,9 @@ b {
     }
 }
 
-.podcast-episode {
-    max-width: 700px;
-}
-
+/**
+ * Links
+ */
 .links {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -155,12 +259,19 @@ b {
     margin: 0;
     list-style-type: disc;
     margin-bottom: 2em;
+
+    /**
+     * Links list item
+     */
     li {
         margin-bottom: 1em;
         display: block;
     }
 }
 
+/**
+ * Podcast template h1
+ */
 .template-podcast h1 {
     text-align: center;
     margin-bottom: 1em;
@@ -168,11 +279,17 @@ b {
     line-height: 1.2em;
 }
 
+/**
+ * Transcript heading
+ */
 .transcript .heading {
     margin-bottom: 2px;
     line-height: 1.25em;
 }
 
+/**
+ * Transcript credit
+ */
 .transcript .credit {
     margin-bottom: 20px;
     font-size: 15px;

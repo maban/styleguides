@@ -6,14 +6,14 @@
  * Data toggle on
  */
 [data-toggle='on'] {
-    display:block;
+    display: block;
 }
 
 /**
  * Data toggle off
  */
 [data-toggle='off'] {
-    display:none;
+    display: none;
 }
 
 /**
@@ -70,15 +70,21 @@
     height: 1px;
     overflow: hidden;
 
+    /**
+     * Checked and hovered checkbox's toggle label
+     */
     &:checked + .c-toggle__label,
     &:hover + .c-toggle__label {
         background-color: $color-brand-blue-light;
         color: #fff;
     }
 
-    // Based on https://ghinda.net/article/mimic-native-focus-css/
+    /**
+     * Focused checkbox's toggle label
+     * 1) Based on https://ghinda.net/article/mimic-native-focus-css/
+     */
     &:focus + .c-toggle__label {
-        outline: 2px auto Highlight;
+        outline: 2px auto highlight;
 
         @media (-webkit-min-device-pixel-ratio: 0) {
           outline: 5px auto -webkit-focus-ring-color;

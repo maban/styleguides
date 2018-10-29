@@ -3,16 +3,12 @@
 \*------------------------------------*/
 
 /**
- * Stripe
+ * 1) A list of stripes
  */
-.c-stripe {
-    padding: 1rem 0;
 
-    @media all and (min-width: $bp-med) {
-        display: flex;
-    }
-}
-
+/**
+ * Stripe list item
+ */
 .c-stripe-list__item {
     position: relative;
     border-bottom: 1px solid $color-white;

@@ -7,14 +7,17 @@ description: Conference presentations about style guides.
 ---
 
 <div class="l-container">
+
     <header class="c-page-header">
-        <h1 class="c-page-header__title">{{site.talk-title}} ({{site.resourcetalk | size}})</h1>
+        <h1 class="c-page-header__title">{{site.talk-title}} ({{site.ds-talk | size}})</h1>
         <p class="c-page-header__description">{{site.talk-description}}</p>
     </header>
-    <section>
-      {% assign section = site.resourcetalk | sort: 'title'  %}
-      {% include tags.html %}
-      {% include loop-resources.html %}
-      {% include add.html %}
-    </section>
-</div>
+
+    <section class="c-section">
+        {% assign section = site.ds-talk | sort: 'title'  %}
+        {% include tags.html %}
+        {% include loop-resources.html %}
+        {% include add.html %}
+    </section><!-- end c-section -->
+
+</div><!-- end l-container -->
