@@ -4,296 +4,261 @@ section: home
 type: home
 ---
 
+<header class="c-page-header">
+    <h1 class="c-page-header__title"><span class="c-page-header__kicker" id="total-resource-count"></span> {{ site.title }}</h1>
+</header>
+
 <div class="l-container">
 
     <section class="c-section">
 
-        <header class="c-page-header">
-            <h1 class="c-page-header__title"><span class="c-page-header__kicker" id="total-resource-count"></span> {{ site.title }}</h1>
-        </header>
+        <section class="c-section">
 
-        <ul class="c-inline-list">
-            <li class="c-inline-list__item"><a href="https://github.com/maban/styleguides" class="c-inline-list__link">GitHub repo</a></li>
-            <li class="c-inline-list__item"><a href="https://twitter.com/styleguidesio" class="c-inline-list__link">Twitter updates</a></li>
-            <li class="c-inline-list__item"><a href="/contributors" class="c-inline-list__link">Contributors</a></li>
-        </ul><!-- end c-inline-list -->
+            <ul class="c-subsection-list l-grid l-grid--3up">
 
-    </section><!-- end c-section -->
-
-    <section class="c-section">
-        <div class="c-tabs c-tabs--center js-tabs">
-            <h3 class="c-tabs__heading">View</h3>
-
-        	<ul class="c-tabs__list">
-                <li class="c-tabs__item">
-        			<a href="#list-toggle" class="c-tabs__link js-tab">List</a>
-        		</li><!-- end c-tabs__item -->
-        		<li class="c-tabs__item">
-        			<a href="#card-toggle" class="c-tabs__link js-tab">Card</a>
-        		</li><!-- end c-tabs__item -->
-
-        	</ul><!-- end c-tabs__list -->
-
-        	<div class="c-tabs__body">
-
-                <div class="c-tabs__panel js-tabs-panel" id="list-toggle">
-
-                    <section class="c-section">
-
-                        <ul class="c-subsection-list l-grid l-grid--3up">
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="examples">{{site.example-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-example | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "example" %}<span>🔗</span> {% endif %}{{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-article | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "article" %}<span>📝</span> {% endif %}{{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="books">{{site.book-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-book | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item ">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "book" %}📘 {% endif %} {{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="podcasts">{{site.podcast-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-podcast | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "podcast" %}🎤 {% endif %} {{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="talks">{{site.talk-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-talk | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "talk" %}🗣️ {% endif %} {{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                            <li class="c-subsection-list__item l-grid__item">
-                                <div class="c-subsection">
-                                    <header class="c-subsection-header">
-                                        <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="tools">{{site.tool-title}}</a></h3>
-                                    </header>
-                                    <ul class="c-link-list">
-                                        {% assign section = site.ds-tool | sort: 'title'  %}
-                                        {% for item in section %}
-                                        {% if item.status == 'recommended' %}
-                                        <li class="c-link-list__item">
-                                            <a class="c-link-list__link" href="{{ item.link }}">
-                                                {% if item.type == "tool" %}🛠️ {% endif %} {{ item.title }}
-                                            </a>
-                                        </li>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </ul><!-- end c-link-list -->
-                                </div><!-- end c-subsection -->
-                            </li><!-- end c-subsection-list__item -->
-
-                        </ul><!-- end c-subsection-list -->
-
-                    </section><!-- end c-section -->
-
-        		</div><!-- end c-tabs__panel -->
-
-        		<div class="c-tabs__panel js-tabs-panel" id="card-toggle">
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h2 class="c-section-header__title"><a class="c-section-header__link" href="examples">{{site.example-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.example-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-example">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="examples">{{site.example-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-example | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "example" %}<span>🔗</span> {% endif %}{{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/examples" class="c-btn c-btn--center">See all {{site.ds-example | size}} examples…</a>
-
-                    </section><!-- end c-section -->
-
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h2 class="c-section-header__title"><a class="c-section-header__link" href="articles">{{site.article-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.article-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-article">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-article | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "article" %}<span>📝</span> {% endif %}{{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/articles" class="c-btn c-btn--center">See all {{site.ds-article | size}} articles…</a>
-
-                    </section><!-- end c-section -->
-
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h1 class="c-section-header__title"><a class="c-section-header__link" href="books">{{site.book-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.book-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--4up resource-type-book">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="books">{{site.book-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-book | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item ">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "book" %}📘 {% endif %} {{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/books" class="c-btn c-btn--center">See all {{site.ds-book | size}} books…</a>
-
-                    </section><!-- end c-section -->
-
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h2 class="c-section-header__title"><a class="c-section-header__link" href="podcasts">{{site.podcast-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.podcast-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-podcast">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="podcasts">{{site.podcast-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-podcast | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "podcast" %}🎤 {% endif %} {{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/podcasts" class="c-btn c-btn--center">See all {{site.ds-podcast | size}} podcasts…</a>
-
-                    </section><!-- end c-section -->
-
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h2 class="c-section-header__title"><a class="c-section-header__link" href="talks">{{site.talk-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.talk-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-talk">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="talks">{{site.talk-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-talk | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "talk" %}🗣️ {% endif %} {{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/talks" class="c-btn c-btn--center">See all {{site.ds-talk | size}} talks…</a>
-
-                    </section><!-- end c-section -->
-
-                    <section class="c-section">
-
-                        <header class="c-section-header">
-                            <h2 class="c-section-header__title"><a class="c-section-header__link" href="tools">{{site.tool-title}}</a></h2>
-                            <p class="c-section-header__description">{{site.tool-description}}</p>
-                        </header><!-- end c-section-header -->
-
-                        <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-tool">
+                <li class="c-subsection-list__item l-grid__item">
+                    <div class="c-subsection">
+                        <header class="c-subsection-header">
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="tools">{{site.tool-title}}</a></h3>
+                        </header>
+                        <ul class="c-link-list">
                             {% assign section = site.ds-tool | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            {% include loop-resource.html %}
+                            <li class="c-link-list__item">
+                                <a class="c-link-list__link" href="{{ item.link }}">
+                                    {% if item.type == "tool" %}🛠️ {% endif %} {{ item.title }}
+                                </a>
+                            </li>
                             {% endif %}
                             {% endfor %}
-                        </ul><!-- end c-card-list -->
+                        </ul><!-- end c-link-list -->
+                    </div><!-- end c-subsection -->
+                </li><!-- end c-subsection-list__item -->
 
-                        <a href="/tools" class="c-btn c-btn--center">See all {{site.ds-tool | size}} tools…</a>
+            </ul><!-- end c-subsection-list -->
 
-                    </section><!-- end c-section -->
+        </section><!-- end c-section -->
 
-                </div><!-- end c-tabs__panel -->
+        <section class="c-section">
 
-        	</div><!-- end c-tabs__body -->
+            <header class="c-section-header">
+                <h2 class="c-section-header__title"><a class="c-section-header__link" href="examples">{{site.example-title}}</a></h2>
+                <p class="c-section-header__description">{{site.example-description}}</p>
+            </header><!-- end c-section-header -->
 
-        </div><!-- end c-tabs -->
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-example">
+                {% assign section = site.ds-example | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/examples" class="c-btn c-btn--center">See all {{site.ds-example | size}} examples…</a>
+
+        </section><!-- end c-section -->
+
+        <section class="c-section">
+
+            <header class="c-section-header">
+                <h2 class="c-section-header__title"><a class="c-section-header__link" href="articles">{{site.article-title}}</a></h2>
+                <p class="c-section-header__description">{{site.article-description}}</p>
+            </header><!-- end c-section-header -->
+
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-article">
+                {% assign section = site.ds-article | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/articles" class="c-btn c-btn--center">See all {{site.ds-article | size}} articles…</a>
+
+        </section><!-- end c-section -->
+
+        <section class="c-section">
+
+            <header class="c-section-header">
+                <h1 class="c-section-header__title"><a class="c-section-header__link" href="books">{{site.book-title}}</a></h2>
+                <p class="c-section-header__description">{{site.book-description}}</p>
+            </header><!-- end c-section-header -->
+
+            <ul class="c-card-list l-grid l-grid--4up resource-type-book">
+                {% assign section = site.ds-book | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/books" class="c-btn c-btn--center">See all {{site.ds-book | size}} books…</a>
+
+        </section><!-- end c-section -->
+
+        <section class="c-section">
+
+            <header class="c-section-header">
+                <h2 class="c-section-header__title"><a class="c-section-header__link" href="podcasts">{{site.podcast-title}}</a></h2>
+                <p class="c-section-header__description">{{site.podcast-description}}</p>
+            </header><!-- end c-section-header -->
+
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-podcast">
+                {% assign section = site.ds-podcast | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/podcasts" class="c-btn c-btn--center">See all {{site.ds-podcast | size}} podcasts…</a>
+
+        </section><!-- end c-section -->
+
+        <section class="c-section">
+
+            <header class="c-section-header">
+                <h2 class="c-section-header__title"><a class="c-section-header__link" href="talks">{{site.talk-title}}</a></h2>
+                <p class="c-section-header__description">{{site.talk-description}}</p>
+            </header><!-- end c-section-header -->
+
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-talk">
+                {% assign section = site.ds-talk | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/talks" class="c-btn c-btn--center">See all {{site.ds-talk | size}} talks…</a>
+
+        </section><!-- end c-section -->
+
+        <section class="c-section">
+
+            <header class="c-section-header">
+                <h2 class="c-section-header__title"><a class="c-section-header__link" href="tools">{{site.tool-title}}</a></h2>
+                <p class="c-section-header__description">{{site.tool-description}}</p>
+            </header><!-- end c-section-header -->
+
+            <ul class="c-card-list l-grid l-grid--fill-space l-grid--4up resource-type-tool">
+                {% assign section = site.ds-tool | sort: 'title'  %}
+                {% for item in section %}
+                {% if item.status == 'recommended' %}
+                {% include loop-resource.html %}
+                {% endif %}
+                {% endfor %}
+            </ul><!-- end c-card-list -->
+
+            <a href="/tools" class="c-btn c-btn--center">See all {{site.ds-tool | size}} tools…</a>
+
+        </section><!-- end c-section -->
 
     </section><!-- end c-section -->
 

@@ -6,12 +6,10 @@ type: tool
 description: Things to help you make your own style guide.
 ---
 
-<div class="l-container">
-    <header class="c-page-header">
-        <h1 class="tc-page-header__title">{{site.tool-title}} ({{site.ds-tool | size}})</h1>
-        <p class="c-page-header__description">{{site.tool-description}}</p>
-    </header>
-</div><!-- end l-container -->
+<header class="c-page-header">
+    <h1 class="c-page-header__title"><span class="c-page-header__kicker">{{site.ds-tool | size}}</span> {{site.tool-title}}</h1>
+    <p class="c-page-header__description">{{site.tool-description}}</p>
+</header>
 
 <div class="c-tabs c-tabs--center js-tabs">
 
