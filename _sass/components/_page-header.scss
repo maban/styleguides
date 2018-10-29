@@ -14,7 +14,9 @@
  * Page header kicker
  */
 .c-page-header__kicker {
-
+    background: linear-gradient(330deg, #F3B8B3 0%, #F1DF80 25%, $color-brand-blue 50%, #9C9BC6 75%, #C28EC2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /**

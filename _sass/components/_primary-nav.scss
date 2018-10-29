@@ -26,9 +26,13 @@
  * Primary navigation link
  */
 .c-primary-nav__link {
-    padding: 1rem 0 1rem 2rem;
+    padding: 1rem 2rem 1rem 0;
 
     &:hover, &:focus {
         text-decoration: none;
+    }
+
+    .c-primary-nav__item:last-of-type & {
+        padding-right: 0;
     }
 }
