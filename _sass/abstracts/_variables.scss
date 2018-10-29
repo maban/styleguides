@@ -15,7 +15,7 @@ $font-size-tiny: 0.75rem;
 $font-size-tiny-2: 0.875rem;
 $font-size-small: 1rem;
 $font-size-med: 1.125rem;
-$font-size-med-2: 2rem;
+$font-size-med-2: 1.4rem;
 $font-size-large: 3rem;
 $font-size-xl: 5rem;
 
@@ -27,9 +27,10 @@ $base-line-height: 1.5;
 /**
  * Brand colors
  */
-$text-color:       #ced4da;
 $color-brand-blue: #15aabf;
 $color-brand-blue-light: #66d9e8;
+$color-brand-blue-dark: #0b7285;
+$color-brand-blue-extra-dark: #495057;
 
 /**
  * Neutral colors
