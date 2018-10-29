@@ -6,7 +6,6 @@
  * Section header
  */
 .c-section-header {
-    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -17,6 +16,7 @@
     text-transform: lowercase;
     font-size: $font-size-med-2;
     font-weight: 200;
+    color: $color-gray-60;
 
     @media all and (min-width: $bp-large) {
         font-size: $font-size-large;
