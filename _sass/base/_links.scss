@@ -8,6 +8,7 @@
 a {
     text-decoration: none;
     color: $color-brand-blue;
+    transition: all $anim-fade-quick $anim-ease;
 
     &:hover, &:focus {
         color: $color-brand-blue-light;
