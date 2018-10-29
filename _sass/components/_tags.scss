@@ -5,21 +5,24 @@
 /**
  * 1) A list of items that contain keywords
  */
-
+.c-tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
 
 /**
  * Tags item
  */
 .c-tags__item {
-    padding: 0;
-    font-size: 0.8rem;
+    font-size: $font-size-tiny;
     list-style-type: none;
     display: inline-block;
     padding: 0.125rem 0.5rem;
-    background-color: $color-brand-blue;
+    background-color: $color-gray-73;
     color: $color-white;
-    border-radius: 2px;
-    margin-right: 0.5rem;
+    border-radius: $border-radius;
+    margin-left: 0.5rem;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
 }
