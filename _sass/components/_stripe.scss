@@ -54,7 +54,11 @@
  * Stripe link
  */
 .c-stripe__link {
-    transition: color $anim-fade-quick $anim-ease;
+    color: $color-brand-blue-dark;
+
+    &:hover, &:focus {
+        color: $color-brand-blue;
+    }
 
     /**
      * Stripe link within recommended stripe list item
