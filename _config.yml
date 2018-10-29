@@ -3,26 +3,14 @@ title: Design System Resources
 description: A collaborative collection of resources for design systems, front-End style guides, and component-based design and development.
 baseurl: ""
 
-article-title: "Articles"
-article-description: "Things people have written about style guides."
-
-book-title: "Books"
-book-description: "Books written about style guides."
-
 example-title: "Design System Examples"
 example-description: "A collection of design systems and style guides out in the wild."
-
-podcast-title: "Podcasts"
-podcast-description: "Episodes from various podcasts where style guides are discussed."
-
-talk-title: "Talks"
-talk-description: "Conference presentations about style guides."
 
 resource-title: "Design System Resources"
 resource-description: "Articles, talks, slides, and more all about design systems and style guides"
 
 tool-title: "Tools"
-tool-description: "Things to help you make your own style guide."
+tool-description: "Things to help you make design systems happen."
 
 # Build settings
 markdown: kramdown
