@@ -2,6 +2,10 @@
     #HEADER
 \*------------------------------------*/
 
+.c-header {
+    background: $color-black;
+}
+
 /**
  * Header inner
  * 1) Inner container set to display flex on larger screens to place content
@@ -21,7 +25,6 @@
  * Header title
  */
 .c-header__title {
-    text-transform: lowercase;
     font-size: $font-size-small;
     margin-bottom: 1rem;
 
