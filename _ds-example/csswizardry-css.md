@@ -4,7 +4,6 @@ type: example
 link: http://cssguidelin.es/
 image: css-guidelines.jpg
 author: Harry Roberts
-type: CSS Style Guide
 status: recommended
 tags:
 - code

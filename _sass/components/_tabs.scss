@@ -65,13 +65,7 @@
 	 * Active tab link
 	 */
 	&.is-active {
-		color: $color-white;
 		border-bottom-color: $color-brand-blue;
-	}
-
-	&:hover,
-	&:focus {
-		color: $color-white;
 	}
 }
 

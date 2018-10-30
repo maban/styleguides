@@ -5,10 +5,10 @@ section: resources
 type: resources
 ---
 
-<header class="c-page-header">
-    <h1 class="c-page-header__title"><span class="c-page-header__kicker">{{site.ds-article | size}}</span> {{site.resource-title}}</h1>
-    <p class="c-page-header__description">{{site.resource-description}}</p>
-</header>
+{% assign count = site.ds-resource | size %}
+{% assign title = site.resource-title %}
+{% assign description = site.resource-description %}
+{% include page-header.html %}
 
 <div class="l-container">
 
@@ -31,7 +31,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'code' or item.tags contains 'Code' %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item {{ item.status }}">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -40,7 +40,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'code' or item.tags contains 'Code'  %}
                             {% if item.status == null %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -59,7 +59,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item {{ item.status }}">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -68,7 +68,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'frontend' or item.tags contains 'Frontend'  %}
                             {% if item.status == null %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -87,7 +87,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'living' or item.tags contains 'Living' %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item {{ item.status }}">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -96,7 +96,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'living' or item.tags contains 'Living' %}
                             {% if item.status == null %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -115,7 +115,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags contains 'sass' or item.tags contains 'Sass' %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item {{ item.status }}">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -143,7 +143,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags and item.status == 'recommended' %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item {{ item.status }}">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}
@@ -152,7 +152,7 @@ type: resources
                         {% for item in section %}
                         {% if item.tags and item.status == null  %}
                             {% if item.status == null %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">{{ item.title }}</a>
                             </li>
                             {% endif %}

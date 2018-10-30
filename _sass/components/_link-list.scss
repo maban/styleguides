@@ -25,23 +25,66 @@
  * Link list item
  */
 .c-link-list__item {
-
-    /**
-     * Recommended link list item
-     * 1) Set to position relative to place link-list__link:after within this item
-     */
-    &.recommended {
-        position: relative; /* 1 */
-    }
+    position: relative;
 }
 
 /**
  * Link list link
  */
 .c-link-list__link {
-    display: block;
+    display: flex;
     padding: 0.5rem 0;
 
+    .c-link-list__item--example & {
+        &:before {
+            content: "🔗";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .c-link-list__item--article & {
+        &:before {
+            content: "📝";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .c-link-list__item--book & {
+        &:before {
+            content: "📘";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .c-link-list__item--talk & {
+        &:before {
+            content: "🗣️";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .c-link-list__item--podcast & {
+        &:before {
+            content: "🎤";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+
+    .c-link-list__item--tool & {
+        &:before {
+            content: "🛠️ ";
+            display: block;
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.c-link-list__text {
     /**
      * Link list link within recommended link list item
      */
@@ -51,21 +94,8 @@
          * Link list link before pseudoelement within recommended link list item
          */
         &:before {
-            content: "★";
-            position: absolute;
-            top: 50%;
-            left: -1.5rem;
-            display: block;
-            color: $color-white;
-            font-size: $font-size-tiny;
-            transform: translateY(-50%);
-        }
-    }
-
-    .c-link-list__item.book & {
-        &:before {
-            content: "\xF0";
-            display: block;
+            content: "*";
+            color: $color-black;
         }
     }
 }

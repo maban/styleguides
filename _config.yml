@@ -6,7 +6,7 @@ baseurl: ""
 example-title: "Design System Examples"
 example-description: "A collection of design systems and style guides out in the wild."
 
-resource-title: "Design System Resources"
+resource-title: "Resources"
 resource-description: "Articles, talks, slides, and more all about design systems and style guides"
 
 tool-title: "Tools"
@@ -23,6 +23,8 @@ collections:
     ds-example:
         output: true
     ds-podcast:
+        output: true
+    ds-resource:
         output: true
     ds-talk:
         output: true

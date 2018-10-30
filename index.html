@@ -4,9 +4,7 @@ section: home
 type: home
 ---
 
-<header class="c-page-header">
-    <h1 class="c-page-header__title"><span class="c-page-header__kicker" id="total-resource-count"></span> {{ site.title }}</h1>
-</header>
+{% include page-header.html %}
 
 <div class="l-container">
 
@@ -25,9 +23,9 @@ type: home
                             {% assign section = site.ds-example | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "example" %}<span>🔗</span> {% endif %}{{ item.title }}
+                                    <span class="c-link-list__text">{{ item.title }}</span>
                                 </a>
                             </li>
                             {% endif %}
@@ -39,75 +37,15 @@ type: home
                 <li class="c-subsection-list__item l-grid__item">
                     <div class="c-subsection">
                         <header class="c-subsection-header">
-                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="articles">{{site.article-title}}</a></h3>
+                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="resources">{{site.resource-title}}</a></h3>
                         </header>
                         <ul class="c-link-list">
-                            {% assign section = site.ds-article | sort: 'title'  %}
+                            {% assign section = site.ds-resource | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "article" %}<span>📝</span> {% endif %}{{ item.title }}
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul><!-- end c-link-list -->
-                    </div><!-- end c-subsection -->
-                </li><!-- end c-subsection-list__item -->
-
-                <li class="c-subsection-list__item l-grid__item">
-                    <div class="c-subsection">
-                        <header class="c-subsection-header">
-                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="books">{{site.book-title}}</a></h3>
-                        </header>
-                        <ul class="c-link-list">
-                            {% assign section = site.ds-book | sort: 'title'  %}
-                            {% for item in section %}
-                            {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item ">
-                                <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "book" %}📘 {% endif %} {{ item.title }}
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul><!-- end c-link-list -->
-                    </div><!-- end c-subsection -->
-                </li><!-- end c-subsection-list__item -->
-
-                <li class="c-subsection-list__item l-grid__item">
-                    <div class="c-subsection">
-                        <header class="c-subsection-header">
-                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="podcasts">{{site.podcast-title}}</a></h3>
-                        </header>
-                        <ul class="c-link-list">
-                            {% assign section = site.ds-podcast | sort: 'title'  %}
-                            {% for item in section %}
-                            {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item">
-                                <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "podcast" %}🎤 {% endif %} {{ item.title }}
-                                </a>
-                            </li>
-                            {% endif %}
-                            {% endfor %}
-                        </ul><!-- end c-link-list -->
-                    </div><!-- end c-subsection -->
-                </li><!-- end c-subsection-list__item -->
-
-                <li class="c-subsection-list__item l-grid__item">
-                    <div class="c-subsection">
-                        <header class="c-subsection-header">
-                            <h3 class="c-subsection-header__title"><a class="c-subsection-header__link" href="talks">{{site.talk-title}}</a></h3>
-                        </header>
-                        <ul class="c-link-list">
-                            {% assign section = site.ds-talk | sort: 'title'  %}
-                            {% for item in section %}
-                            {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item">
-                                <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "talk" %}🗣️ {% endif %} {{ item.title }}
+                                    <span class="c-link-list__text">{{ item.title }}</span>
                                 </a>
                             </li>
                             {% endif %}
@@ -125,9 +63,9 @@ type: home
                             {% assign section = site.ds-tool | sort: 'title'  %}
                             {% for item in section %}
                             {% if item.status == 'recommended' %}
-                            <li class="c-link-list__item">
+                            <li class="c-link-list__item c-link-list__item--{{ item.type }} {{ item.status }}">
                                 <a class="c-link-list__link" href="{{ item.link }}">
-                                    {% if item.type == "tool" %}🛠️ {% endif %} {{ item.title }}
+                                    <span class="c-link-list__text">{{ item.title }}</span>
                                 </a>
                             </li>
                             {% endif %}
@@ -283,10 +221,7 @@ type: home
 
     var el = document.getElementById("total-resource-count");
 
-    var total = Number('{{site.ds-article | size}}') +
-                Number('{{site.ds-book | size}}') +
-                Number('{{site.ds-podcast | size}}') +
-                Number('{{site.ds-talk | size}}') +
+    var total = Number('{{site.ds-resource | size }}') +
                 Number('{{site.ds-tool | size}}') +
                 Number('{{site.ds-example | size}}');
     document.getElementById('total-resource-count').innerHTML = total;

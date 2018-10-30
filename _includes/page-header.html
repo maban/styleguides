@@ -1,0 +1,18 @@
+<header class="c-page-header">
+    <h1 class="c-page-header__title">
+        {% if page.type == "home" %}
+        <span class="c-page-header__kicker" id="total-resource-count"></span>
+        {% else %}
+        <span class="c-page-header__kicker">{{ count }}</span>
+        {% endif %}
+        {% if page.type == "home" %}
+        {{ site.title }}
+        {% else %}
+        {{ title }}
+        {% endif %}
+    </h1>
+
+    {% if page.type != "home" %}
+    <p class="c-page-header__description">{{ description }}</p>
+    {% endif %}
+</header>
