@@ -48,8 +48,9 @@ gem install jekyll
 …then…
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 …to get the server address where the static files are built. You only need to worry about the files in the folders prefixed
 by _resource, and you can follow the instructions in the README in each folder if you’re not sure what to do.
+
