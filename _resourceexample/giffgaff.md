@@ -1,7 +1,7 @@
 ---
 title: giffgaff's Design System
 link: https://www.giffgaff.design/
-image: https://www.giffgaff.design/og-image.png
+image: giffgaff.png
 tags:
 - branding
 - frontend
