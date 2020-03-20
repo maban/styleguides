@@ -1,7 +1,7 @@
 ---
 title: U.S. Web Design System
 link: https://designsystem.digital.gov/
-image: uswds.png
+image: is-web-design-system.png
 status: recommended
 tags:
  - frontend
