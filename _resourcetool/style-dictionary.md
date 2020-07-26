@@ -1,6 +1,6 @@
 ---
 title: Style Dictionary
-link: https://amzn.github.io/style-dictionary/#/
+link: https://amzn.github.io/style-dictionary/
 author: Amazon
 language: CSS
 image: style-dictionary.png
