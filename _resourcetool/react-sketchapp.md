@@ -5,8 +5,8 @@ author: airbnb
 image: react-sketchapp.png
 language: HTML, CSS
 tags:
- - HTML
- - CSS
+ - html
+ - css
  - react
 ---
 

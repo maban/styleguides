@@ -3,7 +3,7 @@ title: Basscss
 link: http://www.basscss.com
 language: CSS, SCSS
 tags:
- - CSS
+ - css
  - SCSS
 ---
 

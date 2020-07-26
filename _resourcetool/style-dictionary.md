@@ -1,10 +1,9 @@
 ---
-title: "Style Dictionary"
-link: "https://amzn.github.io/style-dictionary/"
-author: "Amazon"
-language: "Javascript"
+title: Style Dictionary
+link: https://amzn.github.io/style-dictionary/
+author: Amazon
+language: CSS
+image: style-dictionary.png
 ---
 
-Style Dictionary is a build system that takes style definitions and translates them to any platform or language, creating design consistency across all of your apps, sites, and doumentation.
-
-
+Style Dictionary is a build system that allows you to define styles once, in a way for any platform or language to consume.

@@ -1,11 +1,12 @@
 ---
-title: "Pega product design"
+title: "Pega UX Design System"
 link: "https://design.pega.com"
 image: "Pega_design.png"
 tags:
- - designlanguage
+ - patterns
  - designlanguage
  - voiceandtone
+ - design
 ---
 
-Pega focuses on creating ideal designs for specific business use cases.
+Pega's design system is a scalable and complete design system for enterprise applications. 

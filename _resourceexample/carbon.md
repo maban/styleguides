@@ -1,6 +1,6 @@
 ---
 title: Carbon Design System
-link: http://carbondesignsystem.com/
+link: https://www.carbondesignsystem.com/
 author: IBM
 status: recommended
 image: carbon-image.png
