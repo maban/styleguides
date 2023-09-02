@@ -1,6 +1,6 @@
 ---
 title: Poor Man's Styleguide
-link: http://www.poormansstyleguide.com/
+link: https://www.bryanbraun.com/poor-mans-styleguide
 author: Bryan Braun
 language: HTML, Markdown
 ---
